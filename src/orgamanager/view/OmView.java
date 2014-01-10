@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class OmView implements ActionListener{
+	private JButton signatureButton = new JButton();
 	private JButton[] button_array = new JButton[4];
     private JButton[] numbered_array = new JButton[11];
     private String[] button_name = {"+", "-", "*", "/"};
@@ -55,9 +56,15 @@ public class OmView implements ActionListener{
             number_buttons.add(numbered_array[i]);
         }
 
+        // signaturesButton
+        JPanel signaturesPanel = new JPanel(); // FlowLayout
+        this.signatureButton = new JButton("Signaturen");
+        signaturesPanel.add(this.signatureButton);
+        
         totalGUI.add(input, BorderLayout.PAGE_START);
         totalGUI.add(number_buttons, BorderLayout.CENTER);
         totalGUI.add(action_buttons, BorderLayout.LINE_END);
+        totalGUI.add(signaturesPanel); // TODO adapt layout
         
         totalGUI.setOpaque(true);
         return totalGUI;
@@ -115,6 +122,10 @@ public class OmView implements ActionListener{
             button_array[i].setActionCommand(button_name[i]);
             button_array[i].addActionListener(al);
         }
+        
+        // signatures button
+        this.signatureButton.setActionCommand("Signatures");
+        this.signatureButton.addActionListener(al);
     }
 
     // Gets the text from the Text Box and converts it into a Double.

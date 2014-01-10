@@ -58,5 +58,10 @@ public class OmModel {
     {
         answer = initial_number;
     }
+    
+    public int doSignatures(){
+    	System.out.println("doSignatures");
+    	return 0;
+    }
 	
 }

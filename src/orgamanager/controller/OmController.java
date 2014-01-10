@@ -41,6 +41,9 @@ public class OmController implements  ActionListener {
         {
             model.doDivision(view.getFieldText());
         }
+        else if (ae.getActionCommand().equals("Signatures")){
+        	model.doSignatures();
+        }
 
         view.setFieldText(""+model.getAnswer());
     }
