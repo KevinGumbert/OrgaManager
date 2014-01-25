@@ -20,16 +20,15 @@ public class OmLoginPanel extends JPanel {
         private JButton submit;
         
         public OmLoginPanel(){
-                // TODO design
                 this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
                 headerLabel = new JLabel("Einloggen");
                 headerLabel.setPreferredSize(new Dimension(600, 50));
                 usernameLabel = new JLabel("Nutzername", JLabel.RIGHT);
                 passwordLabel = new JLabel("Passwort", JLabel.RIGHT);
                 username = new JTextField();
-                username.setPreferredSize(new Dimension(200, 30));
+                username.setMaximumSize(new Dimension(250, 30));
                 password = new JPasswordField();
-                password.setPreferredSize(new Dimension(200, 30));
+                password.setMaximumSize(new Dimension(250,30));
                 submit = new JButton("Absenden");
                 this.add(headerLabel);
                 this.add(usernameLabel);

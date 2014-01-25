@@ -25,21 +25,15 @@ public class OmModelTest {
 		OmConfig config = new OmConfig();
 		String username = config.username;
 		String password = config.password;
-		
 		boolean act = omModel.doLogin(username, password);
-		
 		assertTrue("doLoginTest", act);
 	}
 	
 	@Test
-	/*
-	 * Eingabe falscher Logindaten
-	 */
 	public void doLoginFailedTest(){
 		OmModel omModel = new OmModel();
 		String username = "falsch";
 		String password = "falsch";
-		
 		boolean act = omModel.doLogin(username, password);
 		assertFalse("doLoginFailedTest", act);
 	}
