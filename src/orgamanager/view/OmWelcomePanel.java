@@ -13,8 +13,8 @@ import orgamanager.utilities.OmConfig;
 
 public class OmWelcomePanel extends JPanel {
 	
-	private JPanel rightPanel;
-	private JPanel leftPanel;
+	private JPanel innerPanel;
+	private JPanel outerPanel;
 	private JButton signaturesButton;
 	private JButton publicationsButton;
 	private JButton developmentButton;
@@ -28,8 +28,7 @@ public class OmWelcomePanel extends JPanel {
 		this.setBorder(BorderFactory.createTitledBorder(config.getMessage("welcomePanelTitleText")));
 		this.setPreferredSize(config.getMainPanelDimension());
 		logoutButton = new JButton(config.getMessage("logoutButtonText"));
-		// size in relation to overall height
-		double buttonDimWidth = config.getMainPanelDimension().getWidth() - 10;
+		double buttonDimWidth = config.getMainPanelDimension().getWidth() - 20;
 		double buttonDimHeight = config.getMainPanelDimension().getHeight() * 0.1;
 		Dimension buttonDim = new Dimension((int) buttonDimWidth, (int) buttonDimHeight);
 		logoutButton.setPreferredSize(buttonDim);
@@ -46,16 +45,28 @@ public class OmWelcomePanel extends JPanel {
 		officeButton = new JButton(config.getMessage("officeButtonText"));
 		officeButton.setPreferredSize(buttonDim);
 		officeButton.setMinimumSize(buttonDim);
-		this.add(Box.createRigidArea(new Dimension(10,10)));
-		this.add(publicationsButton);
-		this.add(Box.createRigidArea(new Dimension(10,10)));
-		this.add(signaturesButton);
-		this.add(Box.createRigidArea(new Dimension(10,10)));
-		this.add(officeButton);
-		this.add(Box.createRigidArea(new Dimension(10,10)));
-		this.add(developmentButton);
-		this.add(Box.createRigidArea(new Dimension(10,10)));
-		this.add(logoutButton);
+		innerPanel = new JPanel();
+		double panelWidth = config.getMainPanelDimension().getWidth() - 15;
+		double panelHeightInner = config.getMainPanelDimension().getHeight() * 0.7;
+		double panelHeightOuter = config.getMainPanelDimension().getHeight() * 0.25;
+		innerPanel.setPreferredSize(new Dimension((int) panelWidth, (int) panelHeightInner));
+		innerPanel.setBorder(BorderFactory.createTitledBorder(config.getMessage("welcomePanelInnerTitleText")));
+		innerPanel.add(Box.createRigidArea(new Dimension(10,10)));
+		innerPanel.add(publicationsButton);
+		innerPanel.add(Box.createRigidArea(new Dimension(10,10)));
+		innerPanel.add(signaturesButton);
+		innerPanel.add(Box.createRigidArea(new Dimension(10,10)));
+		innerPanel.add(officeButton);
+		innerPanel.add(Box.createRigidArea(new Dimension(10,10)));
+		innerPanel.add(developmentButton);
+		innerPanel.add(Box.createRigidArea(new Dimension(10,10)));
+		this.add(innerPanel);
+		outerPanel = new JPanel();
+		outerPanel.setPreferredSize(new Dimension((int) panelWidth, (int) panelHeightOuter));
+		outerPanel.add(Box.createRigidArea(new Dimension(10,10)));
+		outerPanel.add(logoutButton);
+		innerPanel.add(Box.createRigidArea(new Dimension(10,10)));
+		this.add(outerPanel);
 	}
 
 	public JButton getSignaturesButton() {
