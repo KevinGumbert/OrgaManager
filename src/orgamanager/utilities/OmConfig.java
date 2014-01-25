@@ -1,8 +1,8 @@
 package orgamanager.utilities;
 
 public class OmConfig {
-	public String username = "joba";
-	public String password = "geheim";
+	public String username = "xxx";
+	public String password = "xxx";
 
 	public String getUsername() {
 		return username;
