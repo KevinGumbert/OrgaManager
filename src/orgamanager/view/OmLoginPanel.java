@@ -1,7 +1,10 @@
 package orgamanager.view;
 
+import java.awt.Color;
 import java.awt.Dimension;
 
+import javax.swing.BorderFactory;
+import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -14,40 +17,35 @@ import orgamanager.utilities.OmConfig;
 
 public class OmLoginPanel extends JPanel {
 
-	private JLabel headerLabel;
 	private JLabel usernameLabel;
 	private JLabel passwordLabel;
 	private JTextField username;
 	private JPasswordField password;
 	private JButton submitButton;
+	private OmConfig config;
 
 	public OmLoginPanel() {
+		config = new OmConfig();
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-		OmConfig config = new OmConfig();
+		this.setBorder(BorderFactory.createTitledBorder(config.getMessage("loginPanelTitleText")));
 		this.setPreferredSize(config.getMainPanelDimension());
-		headerLabel = new JLabel("Einloggen");
-		headerLabel.setPreferredSize(new Dimension(600, 50));
-		usernameLabel = new JLabel("Nutzername", JLabel.RIGHT);
-		passwordLabel = new JLabel("Passwort", JLabel.RIGHT);
+		usernameLabel = new JLabel("Nutzername", JLabel.LEFT);
+		passwordLabel = new JLabel("Passwort", JLabel.LEFT);
 		username = new JTextField();
 		username.setMaximumSize(new Dimension(250, 30));
+		username.setAlignmentX(LEFT_ALIGNMENT);
 		password = new JPasswordField();
 		password.setMaximumSize(new Dimension(250, 30));
+		password.setAlignmentX(LEFT_ALIGNMENT);
 		submitButton = new JButton("Absenden");
-		this.add(headerLabel);
+		this.add(Box.createRigidArea(new Dimension(10,10)));
 		this.add(usernameLabel);
 		this.add(username);
+		this.add(Box.createRigidArea(new Dimension(10,10)));
 		this.add(passwordLabel);
 		this.add(password);
+		this.add(Box.createRigidArea(new Dimension(10,10)));
 		this.add(submitButton);
-	}
-
-	public JLabel getHeaderLabel() {
-		return headerLabel;
-	}
-
-	public void setHeaderLabel(JLabel headerLabel) {
-		this.headerLabel = headerLabel;
 	}
 
 	public JLabel getUsernameLabel() {
