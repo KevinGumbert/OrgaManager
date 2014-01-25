@@ -11,8 +11,10 @@ import orgamanager.utilities.OmConfig;
 public class OmView {
 
 	private JPanel mainPanel;
+	OmConfig config;
 
 	public OmView() {
+		config = new OmConfig();
 		createAndShowGUI();
 	}
 
@@ -35,7 +37,7 @@ public class OmView {
 
 	private void createAndShowGUI() {
 		JFrame.setDefaultLookAndFeelDecorated(true);
-		JFrame frame = new JFrame("OrgaManager");
+		JFrame frame = new JFrame(config.getMessage("mainFrameTitle"));
 		frame.setContentPane(createContentPane());
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.pack();
