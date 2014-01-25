@@ -20,11 +20,8 @@ public class OmModel {
 	}
 
 	public boolean doLogin(String username, String password) {
-		if (username.equals(config.getUsername())
-				&& password.equals(config.getPassword())) {
+		if (username.equals(config.getUsername()) && password.equals(config.getPassword())) {
 			isAuthorized = true;
-			// JOptionPane.showMessageDialog(null, "BP1", "Debug",
-			// JOptionPane.WARNING_MESSAGE);
 			return true;
 		}
 		return false;
@@ -32,6 +29,14 @@ public class OmModel {
 
 	public boolean doLogout() {
 		isAuthorized = false;
+		return true;
+	}
+	
+	public boolean doInvoice(){
+		if (!isAuthorized){
+			return false;
+		}
+		JOptionPane.showMessageDialog(null, "BP0","Debug", JOptionPane.WARNING_MESSAGE);
 		return true;
 	}
 

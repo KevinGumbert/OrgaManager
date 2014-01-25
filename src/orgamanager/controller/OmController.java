@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import orgamanager.model.OmModel;
+import orgamanager.utilities.OmViewConstant;
 import orgamanager.view.OmLoginPanel;
 import orgamanager.view.OmView;
 import orgamanager.view.OmWelcomePanel;
@@ -18,10 +19,7 @@ public class OmController {
 	private OmView view;
 	private OmLoginPanel loginPanel;
 	private OmWelcomePanel welcomePanel;
-	private boolean isLoginView;
-	private boolean isWelcomeView;
-	private boolean isPublicationsView;
-	private boolean isSignaturesView;
+	private OmViewConstant currentView;
 	private boolean isAuthorized;
 	private String formUsername;
 	private String formPassword;
@@ -29,32 +27,41 @@ public class OmController {
 	public OmController(OmModel model, OmView view) {
 		this.model = model;
 		this.view = view;
-		isWelcomeView = false;
-		isLoginView = false;
-		isPublicationsView = false;
-		isSignaturesView = false;
+		setCurrentView(OmViewConstant.LOGIN);
+		isAuthorized = false;
 	}
 
 	public void prepareForView() {
-		if (isWelcomeView) {
-
-		} else if (isPublicationsView) {
-
-		} else if (isSignaturesView) {
-
-		} else {
-			isLoginView = true;
-			prepareForLoginView();
+		switch (currentView){
+			case DEVELOPMENT:
+				prepareForDevelopmentView();
+				break;
+			case LOGIN:
+				prepareForLoginView();
+				break;
+			case OFFICE:
+				prepareForOfficeView();
+				break;
+			case PUBLICATIONS:
+				prepareForPublicationsView();
+				break;
+			case SIGNATURES:
+				prepareForSignaturesView();
+				break;
+			case WELCOME:
+				prepareForWelcomeView();
+				break;
+			default:
+				setCurrentView(OmViewConstant.LOGIN);
+				prepareForLoginView();
+				break;
 		}
 	}
 
 	private void prepareForLoginView() {
-		isWelcomeView = false;
-		isLoginView = true;
-		isPublicationsView = false;
-		isSignaturesView = false;
+		setCurrentView(OmViewConstant.LOGIN);
 		loginPanel = new OmLoginPanel();
-		JButton submitButton = loginPanel.getSubmit();
+		JButton submitButton = loginPanel.getSubmitButton();
 		ActionListener submitAction = new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
@@ -74,12 +81,41 @@ public class OmController {
 	}
 
 	private void prepareForWelcomeView() {
-		isWelcomeView = true;
-		isLoginView = false;
-		isPublicationsView = false;
-		isSignaturesView = false;
+		setCurrentView(OmViewConstant.WELCOME);
 		welcomePanel = new OmWelcomePanel();
-		JButton logoutButton = welcomePanel.getLogout();
+		JButton officeButton = welcomePanel.getOfficeButton();
+		ActionListener officeAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				prepareForOfficeView();
+			}
+		};
+		officeButton.addActionListener(officeAction);
+		JButton developmentButton = welcomePanel.getDevelopmentButton();
+		ActionListener developmentAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				prepareForDevelopmentView();
+			}
+		};
+		developmentButton.addActionListener(developmentAction);
+		JButton signaturesButton = welcomePanel.getSignaturesButton();
+		ActionListener signaturesAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				prepareForSignaturesView();
+			}
+		};
+		signaturesButton.addActionListener(signaturesAction);
+		JButton publicationsButton = welcomePanel.getPublicationsButton();
+		ActionListener publicationsAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				prepareForPublicationsView();
+			}
+		};
+		publicationsButton.addActionListener(publicationsAction);
+		JButton logoutButton = welcomePanel.getLogoutButton();
 		ActionListener logoutAction = new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
@@ -90,6 +126,24 @@ public class OmController {
 		view.setMainPanel(welcomePanel);
 	}
 
+	private void prepareForDevelopmentView(){
+		setCurrentView(OmViewConstant.DEVELOPMENT);
+	}
+	
+	private void prepareForSignaturesView() {
+		setCurrentView(OmViewConstant.SIGNATURES);
+		
+	}
+
+	private void prepareForPublicationsView() {
+		setCurrentView(OmViewConstant.PUBLICATIONS);
+		
+	}
+
+	private void prepareForOfficeView() {
+		setCurrentView(OmViewConstant.OFFICE);
+	}
+	
 	@SuppressWarnings("deprecation")
 	public void doLogin() {
 		formUsername = loginPanel.getUsername().getText();
@@ -110,5 +164,9 @@ public class OmController {
 			isAuthorized = false;
 			prepareForLoginView();
 		}
+	}
+	
+	private void setCurrentView(OmViewConstant currentViewConstant){
+		this.currentView = currentViewConstant;
 	}
 }

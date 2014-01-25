@@ -19,7 +19,7 @@ public class OmLoginPanel extends JPanel {
 	private JLabel passwordLabel;
 	private JTextField username;
 	private JPasswordField password;
-	private JButton submit;
+	private JButton submitButton;
 
 	public OmLoginPanel() {
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -33,13 +33,13 @@ public class OmLoginPanel extends JPanel {
 		username.setMaximumSize(new Dimension(250, 30));
 		password = new JPasswordField();
 		password.setMaximumSize(new Dimension(250, 30));
-		submit = new JButton("Absenden");
+		submitButton = new JButton("Absenden");
 		this.add(headerLabel);
 		this.add(usernameLabel);
 		this.add(username);
 		this.add(passwordLabel);
 		this.add(password);
-		this.add(submit);
+		this.add(submitButton);
 	}
 
 	public JLabel getHeaderLabel() {
@@ -82,11 +82,11 @@ public class OmLoginPanel extends JPanel {
 		this.password = password;
 	}
 
-	public JButton getSubmit() {
-		return submit;
+	public JButton getSubmitButton() {
+		return submitButton;
 	}
 
-	public void setSubmit(JButton submit) {
-		this.submit = submit;
+	public void setSubmit(JButton submitButton) {
+		this.submitButton = submitButton;
 	}
 }
