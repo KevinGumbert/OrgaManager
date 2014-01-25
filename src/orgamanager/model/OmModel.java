@@ -32,7 +32,7 @@ public class OmModel {
 		return true;
 	}
 	
-	public boolean doInvoice(){
+	public boolean doCreateInvoice(){
 		if (!isAuthorized){
 			return false;
 		}

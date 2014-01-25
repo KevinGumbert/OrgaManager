@@ -10,6 +10,7 @@ import javax.swing.JTextField;
 import orgamanager.model.OmModel;
 import orgamanager.utilities.OmViewConstant;
 import orgamanager.view.OmLoginPanel;
+import orgamanager.view.OmOfficePanel;
 import orgamanager.view.OmView;
 import orgamanager.view.OmWelcomePanel;
 
@@ -19,6 +20,7 @@ public class OmController {
 	private OmView view;
 	private OmLoginPanel loginPanel;
 	private OmWelcomePanel welcomePanel;
+	private OmOfficePanel officePanel;
 	private OmViewConstant currentView;
 	private boolean isAuthorized;
 	private String formUsername;
@@ -52,7 +54,6 @@ public class OmController {
 				prepareForWelcomeView();
 				break;
 			default:
-				setCurrentView(OmViewConstant.LOGIN);
 				prepareForLoginView();
 				break;
 		}
@@ -142,6 +143,32 @@ public class OmController {
 
 	private void prepareForOfficeView() {
 		setCurrentView(OmViewConstant.OFFICE);
+		officePanel = new OmOfficePanel();
+		JButton backButton = officePanel.getBackButton();
+		ActionListener backAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				prepareForWelcomeView();
+			}
+		};
+		backButton.addActionListener(backAction);
+		JButton createInvoiceButton = officePanel.getCreateInvoiceButton();
+		ActionListener createInvoiceAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doCreateInvoice();
+			}
+		};
+		createInvoiceButton.addActionListener(createInvoiceAction);
+		JButton signaturesButton = welcomePanel.getSignaturesButton();
+		ActionListener signaturesAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				prepareForSignaturesView();
+			}
+		};
+		view.setMainPanel(officePanel);
+
 	}
 	
 	@SuppressWarnings("deprecation")
@@ -164,6 +191,10 @@ public class OmController {
 			isAuthorized = false;
 			prepareForLoginView();
 		}
+	}
+	
+	public void doCreateInvoice(){
+		model.doCreateInvoice();
 	}
 	
 	private void setCurrentView(OmViewConstant currentViewConstant){
