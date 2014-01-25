@@ -6,6 +6,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import orgamanager.utilities.OmConfig;
+
 public class OmView {
 
 	private JPanel mainPanel;
@@ -19,12 +21,15 @@ public class OmView {
 	}
 
 	public void setMainPanel(JPanel mainPanel) {
-		this.mainPanel = mainPanel;
+		this.mainPanel.removeAll();
+		this.mainPanel.add(mainPanel);
+		this.mainPanel.revalidate();
 	}
 
 	private JPanel createContentPane() {
 		mainPanel = new JPanel(); // FlowLayout
-		this.mainPanel.setPreferredSize(new Dimension(605, 405));
+		OmConfig config = new OmConfig();
+		this.mainPanel.setPreferredSize(config.getMainPanelDimension());
 		return mainPanel;
 	}
 

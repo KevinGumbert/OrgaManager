@@ -7,6 +7,8 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import orgamanager.utilities.OmConfig;
+
 public class OmWelcomePanel extends JPanel {
 
 	private JLabel headerLabel;
@@ -14,6 +16,8 @@ public class OmWelcomePanel extends JPanel {
 
 	public OmWelcomePanel() {
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+		OmConfig config = new OmConfig();
+		this.setPreferredSize(config.getMainPanelDimension());
 		headerLabel = new JLabel("Cockpit");
 		headerLabel.setPreferredSize(new Dimension(600, 50));
 		logout = new JButton("Ausloggen");

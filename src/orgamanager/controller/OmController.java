@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 import orgamanager.model.OmModel;
 import orgamanager.view.OmLoginPanel;
@@ -57,13 +58,19 @@ public class OmController {
 		ActionListener submitAction = new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				doSubmit();
+				doLogin();
 			}
 		};
 		submitButton.addActionListener(submitAction);
-		view.getMainPanel().removeAll();
-		view.getMainPanel().add(loginPanel);
-		view.getMainPanel().validate();
+		ActionListener submitKeyAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doLogin();
+			}
+		};
+		JTextField passwordField = loginPanel.getPassword();
+		passwordField.addActionListener(submitKeyAction);
+		view.setMainPanel(loginPanel);
 	}
 
 	private void prepareForWelcomeView() {
@@ -80,13 +87,11 @@ public class OmController {
 			}
 		};
 		logoutButton.addActionListener(logoutAction);
-		view.getMainPanel().removeAll();
-		view.getMainPanel().add(welcomePanel);
-		view.getMainPanel().validate();
+		view.setMainPanel(welcomePanel);
 	}
 
 	@SuppressWarnings("deprecation")
-	public void doSubmit() {
+	public void doLogin() {
 		formUsername = loginPanel.getUsername().getText();
 		formPassword = loginPanel.getPassword().getText();
 		boolean successfulLoggedIn = model.doLogin(formUsername, formPassword);
@@ -97,7 +102,6 @@ public class OmController {
 			isAuthorized = false;
 			prepareForLoginView();
 		}
-		// TODO
 	}
 
 	public void doLogout() {

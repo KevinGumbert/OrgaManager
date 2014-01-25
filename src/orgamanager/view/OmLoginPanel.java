@@ -10,6 +10,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
+import orgamanager.utilities.OmConfig;
+
 public class OmLoginPanel extends JPanel {
 
 	private JLabel headerLabel;
@@ -21,6 +23,8 @@ public class OmLoginPanel extends JPanel {
 
 	public OmLoginPanel() {
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+		OmConfig config = new OmConfig();
+		this.setPreferredSize(config.getMainPanelDimension());
 		headerLabel = new JLabel("Einloggen");
 		headerLabel.setPreferredSize(new Dimension(600, 50));
 		usernameLabel = new JLabel("Nutzername", JLabel.RIGHT);
