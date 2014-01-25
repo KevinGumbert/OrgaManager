@@ -9,6 +9,7 @@ import javax.swing.JTextField;
 
 import orgamanager.model.OmModel;
 import orgamanager.utilities.OmViewConstant;
+import orgamanager.view.OmDevelopmentPanel;
 import orgamanager.view.OmLoginPanel;
 import orgamanager.view.OmOfficePanel;
 import orgamanager.view.OmView;
@@ -21,6 +22,7 @@ public class OmController {
 	private OmLoginPanel loginPanel;
 	private OmWelcomePanel welcomePanel;
 	private OmOfficePanel officePanel;
+	private OmDevelopmentPanel developmentPanel;
 	private OmViewConstant currentView;
 	private boolean isAuthorized;
 	private String formUsername;
@@ -129,6 +131,31 @@ public class OmController {
 
 	private void prepareForDevelopmentView(){
 		setCurrentView(OmViewConstant.DEVELOPMENT);
+		developmentPanel = new OmDevelopmentPanel();
+		JButton backButton = developmentPanel.getBackButton();
+		ActionListener backAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				prepareForWelcomeView();
+			}
+		};
+		backButton.addActionListener(backAction);
+		JButton createClientReportButton = developmentPanel.getCreateClientReportButton();
+		ActionListener createClientReportAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doCreateClientReport();
+			}
+		};
+		createClientReportButton.addActionListener(createClientReportAction);
+		JButton createGalleryButton = developmentPanel.getCreateGalleryButton();
+		ActionListener createGalleryAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doCreateGallery();
+			}
+		};
+		view.setMainPanel(developmentPanel);
 	}
 	
 	private void prepareForSignaturesView() {
@@ -159,14 +186,6 @@ public class OmController {
 				doCreateInvoice();
 			}
 		};
-		createInvoiceButton.addActionListener(createInvoiceAction);
-		JButton signaturesButton = welcomePanel.getSignaturesButton();
-		ActionListener signaturesAction = new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				prepareForSignaturesView();
-			}
-		};
 		view.setMainPanel(officePanel);
 
 	}
@@ -191,6 +210,14 @@ public class OmController {
 			isAuthorized = false;
 			prepareForLoginView();
 		}
+	}
+	
+	public void doCreateClientReport(){
+		model.doCreateClientReport();
+	}
+	
+	public void doCreateGallery(){
+		model.doCreateGallery();
 	}
 	
 	public void doCreateInvoice(){

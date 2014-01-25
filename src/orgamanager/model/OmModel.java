@@ -43,4 +43,12 @@ public class OmModel {
 		return true;
 	}
 
+	public void doCreateClientReport() {
+		JOptionPane.showMessageDialog(null, "TODO","Debug", JOptionPane.WARNING_MESSAGE);
+	}
+
+	public void doCreateGallery() {
+		JOptionPane.showMessageDialog(null, "TODO","Debug", JOptionPane.WARNING_MESSAGE);
+	}
+
 }
