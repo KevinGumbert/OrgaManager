@@ -1,67 +1,37 @@
 package orgamanager.model;
 
+import javax.swing.JOptionPane;
+
+import orgamanager.utilities.OmConfig;
+
 public class OmModel {
 
-	private double answer, initial_number;
+        private OmConfig config;
+        private boolean isAuthorized;
 
-    // Constructor sets both numbers. 
-    public OmModel()
-    {
-        answer = 0.0;
-        initial_number = 0.0;
-    }
-
-    // Adds a number to the existing answer.
-    public void doAddition(double y)
-    {
-        answer = answer + y;
-    }
-
-    // Subtracts a number to the existing answer.
-    public void doSubtraction(double y)
-    {
-        answer = answer - y;
-    }
-
-    // Multiplies the existing answer by a number.
-    public void doMultiply(double y)
-    {
-        answer = answer * y;
-    }
-
-    // Divides the existing answer by a number.
-    public void doDivision(double y)
-    {
-        answer = answer / y;
-    }
-
-    // Gets the current answer.
-    public double getAnswer()
-    {
-        return answer;
-    }
-
-    // Sets the current answer.
-    public void setAnswer(double new_answer)
-    {
-        answer = new_answer;
-    }
-
-    // Sets the initial number.
-    public void setInitialNumber(double new_initial)
-    {
-        initial_number = new_initial;
-    }
-
-    // Sets the answer to be the initial number.
-    public void reset()
-    {
-        answer = initial_number;
+    
+    public OmModel(){
+            config = new OmConfig();
+            isAuthorized = false;
     }
     
     public int doSignatures(){
-    	System.out.println("doSignatures");
-    	return 0;
+            System.out.println("doSignatures");
+            return 0;
     }
-	
+    
+    public boolean doLogin(String username, String password){
+            if (username.equals(config.getUsername()) && password.equals(config.getPassword())){
+                    isAuthorized = true;
+                    //JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);
+                    return true;
+            }
+            return false;
+    }
+
+        public boolean doLogout(){
+                isAuthorized = false;
+                return true;
+        }
+        
 }
