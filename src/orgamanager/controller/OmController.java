@@ -186,8 +186,8 @@ public class OmController {
 				doCreateInvoice();
 			}
 		};
+		createInvoiceButton.addActionListener(createInvoiceAction);
 		view.setMainPanel(officePanel);
-
 	}
 	
 	@SuppressWarnings("deprecation")

@@ -8,7 +8,7 @@ public class Invoice {
 
 	// Vorname Rechnungssteller
 	// Nachname Rechnungssteller
-	// Straße Rechnungssteller
+	// Straï¿½e Rechnungssteller
 	// Hausnummer Rechnungssteller
 	// Ort Rechnungssteller
 	// PLZ Rechnungssteller
@@ -22,7 +22,7 @@ public class Invoice {
 	// Vorname Rechnungsempfaenger
 	// Nachname Rechnungsempfaenger
 	// Firma Rechnungsempfaenger
-	// Straße Rechnungsempfaenger
+	// Straï¿½e Rechnungsempfaenger
 	// Ort Rechnungsempfaenger
 	// Kundennummer Rechnungsempfaenger
 	
@@ -76,9 +76,11 @@ public class Invoice {
 	}
 	
 	public boolean printAsPdf(){
-		String dir = "C:\\Users\\joba\\Desktop\\javatest";
+		//String dir = "C:\\Users\\joba\\Desktop\\javatest";
+		//String path = dir + "\\" + file;
+		String dir = "/home/jay/curdir/javatest";
 		String file = "meinedatei.txt";
-		String path = dir + "\\" + file;
+		String path = dir + "/" + file;
 		String content = "Test";
 		OmUtilities utils = new OmUtilities();
 		boolean res = utils.printStringToFile(content, path);

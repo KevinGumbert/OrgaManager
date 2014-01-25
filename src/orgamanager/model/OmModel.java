@@ -36,10 +36,8 @@ public class OmModel {
 		if (!isAuthorized){
 			return false;
 		}
-		JOptionPane.showMessageDialog(null, "BP0","Debug", JOptionPane.WARNING_MESSAGE);
 		Invoice invoice = new Invoice();
 		invoice.printAsPdf();
-		JOptionPane.showMessageDialog(null, "BP1","Debug", JOptionPane.WARNING_MESSAGE);
 		return true;
 	}
 
