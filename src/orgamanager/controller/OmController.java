@@ -140,6 +140,14 @@ public class OmController {
 			}
 		};
 		backButton.addActionListener(backAction);
+		JButton runTestsOrgaManagerButton = developmentPanel.getRunTestsOrgaManagerButton();
+		ActionListener runTestsOrgaManagerAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doRunTestsOrgaManager();
+			}
+		};
+		runTestsOrgaManagerButton.addActionListener(runTestsOrgaManagerAction);
 		JButton createClientReportButton = developmentPanel.getCreateClientReportButton();
 		ActionListener createClientReportAction = new ActionListener() {
 			@Override
@@ -155,6 +163,7 @@ public class OmController {
 				doCreateGallery();
 			}
 		};
+		createGalleryButton.addActionListener(createGalleryAction);
 		view.setMainPanel(developmentPanel);
 	}
 	
@@ -222,6 +231,10 @@ public class OmController {
 	
 	public void doCreateInvoice(){
 		model.doCreateInvoice();
+	}
+	
+	public void doRunTestsOrgaManager(){
+		model.doRunTestsOrgaManager();
 	}
 	
 	private void setCurrentView(OmViewConstant currentViewConstant){

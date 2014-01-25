@@ -17,6 +17,7 @@ public class OmDevelopmentPanel extends JPanel {
 	JPanel clientsPanel;
 	JButton createGalleryButton;
 	JButton createClientReportButton;
+	JButton runTestsOrgaManagerButton;
 	JButton backButton;
 	
 	public OmDevelopmentPanel(){
@@ -31,8 +32,9 @@ public class OmDevelopmentPanel extends JPanel {
 		customActionsPanel = new JPanel(); // FlowLayout
 		customActionsPanel.setBorder(BorderFactory.createTitledBorder(config.getMessage("developmentPanelCustomActionsPanelTitleText")));
 		createGalleryButton = new JButton(config.getMessage("developmentCustomActionsCreateGalleryButtonText"));
-		createGalleryButton = new JButton(config.getMessage("developmentCustomActionsCreateGalleryButtonText"));
+		runTestsOrgaManagerButton = new JButton(config.getMessage("developmentCustomActionsRunTestsButtonText"));
 		customActionsPanel.add(createGalleryButton);
+		customActionsPanel.add(runTestsOrgaManagerButton );
 		backButton = new JButton(config.getMessage("backButtonText"));
 		this.add(Box.createRigidArea(new Dimension(10,10)));
 		this.add(clientsPanel);
@@ -49,6 +51,11 @@ public class OmDevelopmentPanel extends JPanel {
 	public JButton getCreateGalleryButton() {
 		return this.createGalleryButton;
 	}
+	
+	public JButton getRunTestsOrgaManagerButton() {
+		return this.runTestsOrgaManagerButton;
+	}
+	
 	
 	public JButton getBackButton(){
 		return this.backButton;

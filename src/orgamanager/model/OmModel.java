@@ -2,6 +2,13 @@ package orgamanager.model;
 
 import javax.swing.JOptionPane;
 
+import junit.textui.TestRunner;
+
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runners.JUnit4;
+
+import orgamanager.tests.OmModelTest;
 import orgamanager.utilities.OmConfig;
 
 public class OmModel {
@@ -41,6 +48,12 @@ public class OmModel {
 		return true;
 	}
 
+	public void doRunTestsOrgaManager(){
+		Result result = JUnitCore.runClasses(OmModelTest.class);
+		String message = "Ran: " + result.getRunCount() + ", Ignored: " + result.getIgnoreCount() + ", Failed: " + result.getFailureCount();
+		JOptionPane.showMessageDialog(null, message, "JUnit Tests OrgaManager", JOptionPane.WARNING_MESSAGE);
+	}
+	
 	public void doCreateClientReport() {
 		JOptionPane.showMessageDialog(null, "TODO","Debug", JOptionPane.WARNING_MESSAGE);
 	}
