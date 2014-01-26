@@ -140,6 +140,7 @@ public class OmController {
 			}
 		};
 		backButton.addActionListener(backAction);
+		
 		JButton runTestsSeleniumEhcButton = developmentPanel.getRunTestsSeleniumEhcButton();
 		ActionListener runTestsSeleniumEhcAction = new ActionListener() {
 			@Override
@@ -148,6 +149,34 @@ public class OmController {
 			}
 		};
 		runTestsSeleniumEhcButton.addActionListener(runTestsSeleniumEhcAction);
+		
+		JButton runTestsSeleniumJobaButton = developmentPanel.getRunTestsSeleniumJobaButton();
+		ActionListener runTestsSeleniumJobaAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doRunTestsSeleniumJoba();
+			}
+		};
+		runTestsSeleniumJobaButton.addActionListener(runTestsSeleniumJobaAction);
+		
+		JButton runTestsSeleniumSkpButton = developmentPanel.getRunTestsSeleniumSkpButton();
+		ActionListener runTestsSeleniumSkpAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doRunTestsSeleniumSkp();
+			}
+		};
+		runTestsSeleniumSkpButton.addActionListener(runTestsSeleniumSkpAction);
+		
+		JButton runTestsSeleniumTcBwSuroButton = developmentPanel.getRunTestsSeleniumTcBwSuroButton();
+		ActionListener runTestsSeleniumTcBwSuroAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doRunTestsSeleniumTcBwSuro();
+			}
+		};
+		runTestsSeleniumTcBwSuroButton.addActionListener(runTestsSeleniumTcBwSuroAction);
+		
 		JButton createClientReportButton = developmentPanel.getCreateClientReportButton();
 		ActionListener createClientReportAction = new ActionListener() {
 			@Override
@@ -156,6 +185,7 @@ public class OmController {
 			}
 		};
 		createClientReportButton.addActionListener(createClientReportAction);
+		
 		JButton runTestsOrgaManagerButton = developmentPanel.getRunTestsOrgaManagerButton();
 		ActionListener runTestsOrgaManagerAction = new ActionListener() {
 			@Override
@@ -164,6 +194,7 @@ public class OmController {
 			}
 		};
 		runTestsOrgaManagerButton.addActionListener(runTestsOrgaManagerAction);
+		
 		JButton createGalleryButton = developmentPanel.getCreateGalleryButton();
 		ActionListener createGalleryAction = new ActionListener() {
 			@Override
@@ -172,6 +203,7 @@ public class OmController {
 			}
 		};
 		createGalleryButton.addActionListener(createGalleryAction);
+		
 		view.setMainPanel(developmentPanel);
 	}
 	
@@ -247,6 +279,18 @@ public class OmController {
 	
 	public void doRunTestsSeleniumEhc(){
 		model.doRunTestsSeleniumEhc();
+	}
+	
+	public void doRunTestsSeleniumJoba(){
+		model.doRunTestsSeleniumJoba();
+	}
+	
+	public void doRunTestsSeleniumSkp() {
+		model.doRunTestsSeleniumSkp();
+	}
+	
+	public void doRunTestsSeleniumTcBwSuro(){
+		model.doRunTestsSeleniumTcBwSuro();
 	}
 	
 	private void setCurrentView(OmViewConstant currentViewConstant){

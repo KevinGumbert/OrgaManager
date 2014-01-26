@@ -19,6 +19,9 @@ public class OmDevelopmentPanel extends JPanel {
 	JButton createClientReportButton;
 	JButton runTestsOrgaManagerButton;
 	JButton runTestsSeleniumEhcButton;
+	JButton runTestsSeleniumJobaButton;
+	JButton runTestsSeleniumTcBwSuroButton;
+	JButton runTestsSeleniumSkpButton;
 	JButton backButton;
 	
 	public OmDevelopmentPanel(){
@@ -30,8 +33,14 @@ public class OmDevelopmentPanel extends JPanel {
 		clientsPanel.setBorder(BorderFactory.createTitledBorder(config.getMessage("developmentPanelClientsPanelTitleText")));
 		createClientReportButton = new JButton(config.getMessage("developmentClientActionsCreateReportButtonText"));
 		runTestsSeleniumEhcButton = new JButton(config.getMessage("developmentClientActionsRunSeleniumEhcButtonText"));
+		runTestsSeleniumJobaButton = new JButton(config.getMessage("developmentClientActionsRunSeleniumJobaButtonText"));
+		runTestsSeleniumTcBwSuroButton = new JButton(config.getMessage("developmentClientActionsRunSeleniumTcBwSuroButtonText"));
+		runTestsSeleniumSkpButton = new JButton(config.getMessage("developmentClientActionsRunSeleniumSkpButtonText"));
 		clientsPanel.add(createClientReportButton);
 		clientsPanel.add(runTestsSeleniumEhcButton);
+		clientsPanel.add(runTestsSeleniumJobaButton);
+		clientsPanel.add(runTestsSeleniumSkpButton);
+		clientsPanel.add(runTestsSeleniumTcBwSuroButton);
 		customActionsPanel = new JPanel(); // FlowLayout
 		customActionsPanel.setBorder(BorderFactory.createTitledBorder(config.getMessage("developmentPanelCustomActionsPanelTitleText")));
 		createGalleryButton = new JButton(config.getMessage("developmentCustomActionsCreateGalleryButtonText"));
@@ -63,8 +72,19 @@ public class OmDevelopmentPanel extends JPanel {
 		return this.runTestsSeleniumEhcButton;
 	}
 	
+	public JButton getRunTestsSeleniumJobaButton() {
+		return runTestsSeleniumJobaButton;
+	}
+
+	public JButton getRunTestsSeleniumTcBwSuroButton() {
+		return runTestsSeleniumTcBwSuroButton;
+	}
+
+	public JButton getRunTestsSeleniumSkpButton() {
+		return runTestsSeleniumSkpButton;
+	}
+	
 	public JButton getBackButton(){
 		return this.backButton;
 	}
-	
 }

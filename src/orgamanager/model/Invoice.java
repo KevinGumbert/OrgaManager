@@ -2,13 +2,14 @@ package orgamanager.model;
 
 import java.util.ArrayList;
 
+import orgamanager.utilities.OmOperatingSystemConstant;
 import orgamanager.utilities.OmUtilities;
 
 public class Invoice {
 
 	// Vorname Rechnungssteller
 	// Nachname Rechnungssteller
-	// Stra�e Rechnungssteller
+	// Strasse Rechnungssteller
 	// Hausnummer Rechnungssteller
 	// Ort Rechnungssteller
 	// PLZ Rechnungssteller
@@ -22,7 +23,7 @@ public class Invoice {
 	// Vorname Rechnungsempfaenger
 	// Nachname Rechnungsempfaenger
 	// Firma Rechnungsempfaenger
-	// Stra�e Rechnungsempfaenger
+	// Strasse Rechnungsempfaenger
 	// Ort Rechnungsempfaenger
 	// Kundennummer Rechnungsempfaenger
 	
@@ -76,13 +77,26 @@ public class Invoice {
 	}
 	
 	public boolean printAsPdf(){
-		//String dir = "C:\\Users\\joba\\Desktop\\javatest";
-		//String path = dir + "\\" + file;
-		String dir = "/home/jay/curdir/javatest";
-		String file = "meinedatei.txt";
-		String path = dir + "/" + file;
+		String dir = "";
+		String file = "";
+		String path = "";
 		String content = "Test";
 		OmUtilities utils = new OmUtilities();
+		OmOperatingSystemConstant osConst = OmOperatingSystemConstant.UNKNOWN;
+		osConst = utils.detectOperatingSystem();
+		if (osConst == OmOperatingSystemConstant.WINDOWS){ // Windows
+			dir = "C:\\Users\\joba\\Desktop\\javatest";
+			file = "meinedatei.txt";
+			path = dir + "\\" + file;
+		} else if (osConst == OmOperatingSystemConstant.LINUX) { // Linux
+			dir = "/home/jay/curdir/javatest";
+			file = "meinedatei.txt";
+			path = dir + "/" + file;
+		} else { // Windows
+			dir = "C:\\Users\\joba\\Desktop\\javatest";
+			file = "meinedatei.txt";
+			path = dir + "\\" + file;
+		}
 		boolean res = utils.printStringToFile(content, path);
 		if (res){
 			return true;

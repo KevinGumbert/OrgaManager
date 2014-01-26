@@ -9,6 +9,8 @@ import org.junit.runner.Result;
 import org.junit.runners.JUnit4;
 
 import orgamanager.selenium.ehc.EhcTests;
+import orgamanager.selenium.joba.JobaTests;
+import orgamanager.selenium.skp.SkpTests;
 import orgamanager.tests.OmModelTest;
 import orgamanager.utilities.OmConfig;
 
@@ -67,6 +69,24 @@ public class OmModel {
 
 	public void doCreateGallery() {
 		JOptionPane.showMessageDialog(null, "TODO","Debug", JOptionPane.WARNING_MESSAGE);
+	}
+
+	public void doRunTestsSeleniumJoba() {
+		Result result = JUnitCore.runClasses(JobaTests.class);
+		String message = "Ran: " + result.getRunCount() + ", Ignored: " + result.getIgnoreCount() + ", Failed: " + result.getFailureCount();
+		JOptionPane.showMessageDialog(null, message, "Selenium Tests Joba", JOptionPane.WARNING_MESSAGE);
+	}
+
+	public void doRunTestsSeleniumSkp() {
+		Result result = JUnitCore.runClasses(SkpTests.class);
+		String message = "Ran: " + result.getRunCount() + ", Ignored: " + result.getIgnoreCount() + ", Failed: " + result.getFailureCount();
+		JOptionPane.showMessageDialog(null, message, "Selenium Tests Skp", JOptionPane.WARNING_MESSAGE);
+	}
+
+	public void doRunTestsSeleniumTcBwSuro() {
+		Result result = JUnitCore.runClasses(SkpTests.class);
+		String message = "Ran: " + result.getRunCount() + ", Ignored: " + result.getIgnoreCount() + ", Failed: " + result.getFailureCount();
+		JOptionPane.showMessageDialog(null, message, "Selenium Tests TCBW", JOptionPane.WARNING_MESSAGE);
 	}
 
 }
