@@ -8,6 +8,7 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runners.JUnit4;
 
+import orgamanager.selenium.ehc.EhcTests;
 import orgamanager.tests.OmModelTest;
 import orgamanager.utilities.OmConfig;
 
@@ -52,6 +53,12 @@ public class OmModel {
 		Result result = JUnitCore.runClasses(OmModelTest.class);
 		String message = "Ran: " + result.getRunCount() + ", Ignored: " + result.getIgnoreCount() + ", Failed: " + result.getFailureCount();
 		JOptionPane.showMessageDialog(null, message, "JUnit Tests OrgaManager", JOptionPane.WARNING_MESSAGE);
+	}
+	
+	public void doRunTestsSeleniumEhc(){
+		Result result = JUnitCore.runClasses(EhcTests.class);
+		String message = "Ran: " + result.getRunCount() + ", Ignored: " + result.getIgnoreCount() + ", Failed: " + result.getFailureCount();
+		JOptionPane.showMessageDialog(null, message, "Selenium Tests Ehc", JOptionPane.WARNING_MESSAGE);
 	}
 	
 	public void doCreateClientReport() {

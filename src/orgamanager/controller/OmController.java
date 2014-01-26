@@ -140,14 +140,14 @@ public class OmController {
 			}
 		};
 		backButton.addActionListener(backAction);
-		JButton runTestsOrgaManagerButton = developmentPanel.getRunTestsOrgaManagerButton();
-		ActionListener runTestsOrgaManagerAction = new ActionListener() {
+		JButton runTestsSeleniumEhcButton = developmentPanel.getRunTestsSeleniumEhcButton();
+		ActionListener runTestsSeleniumEhcAction = new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				doRunTestsOrgaManager();
+				doRunTestsSeleniumEhc();
 			}
 		};
-		runTestsOrgaManagerButton.addActionListener(runTestsOrgaManagerAction);
+		runTestsSeleniumEhcButton.addActionListener(runTestsSeleniumEhcAction);
 		JButton createClientReportButton = developmentPanel.getCreateClientReportButton();
 		ActionListener createClientReportAction = new ActionListener() {
 			@Override
@@ -156,6 +156,14 @@ public class OmController {
 			}
 		};
 		createClientReportButton.addActionListener(createClientReportAction);
+		JButton runTestsOrgaManagerButton = developmentPanel.getRunTestsOrgaManagerButton();
+		ActionListener runTestsOrgaManagerAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doRunTestsOrgaManager();
+			}
+		};
+		runTestsOrgaManagerButton.addActionListener(runTestsOrgaManagerAction);
 		JButton createGalleryButton = developmentPanel.getCreateGalleryButton();
 		ActionListener createGalleryAction = new ActionListener() {
 			@Override
@@ -235,6 +243,10 @@ public class OmController {
 	
 	public void doRunTestsOrgaManager(){
 		model.doRunTestsOrgaManager();
+	}
+	
+	public void doRunTestsSeleniumEhc(){
+		model.doRunTestsSeleniumEhc();
 	}
 	
 	private void setCurrentView(OmViewConstant currentViewConstant){
