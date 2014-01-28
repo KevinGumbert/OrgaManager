@@ -9,9 +9,11 @@ import javax.swing.JTextField;
 
 import orgamanager.model.OmModel;
 import orgamanager.utilities.OmViewConstant;
+import orgamanager.view.OmAssignmentPanel;
 import orgamanager.view.OmDevelopmentPanel;
 import orgamanager.view.OmLoginPanel;
 import orgamanager.view.OmOfficePanel;
+import orgamanager.view.OmPublicationsPanel;
 import orgamanager.view.OmView;
 import orgamanager.view.OmWelcomePanel;
 
@@ -19,10 +21,12 @@ public class OmController {
 
 	private OmModel model;
 	private OmView view;
+	private OmAssignmentPanel assignmentPanel;
 	private OmLoginPanel loginPanel;
 	private OmWelcomePanel welcomePanel;
 	private OmOfficePanel officePanel;
 	private OmDevelopmentPanel developmentPanel;
+	private OmPublicationsPanel publicationsPanel;
 	private OmViewConstant currentView;
 	private boolean isAuthorized;
 	private String formUsername;
@@ -37,6 +41,9 @@ public class OmController {
 
 	public void prepareForView() {
 		switch (currentView){
+			case ASSIGNMENT:
+				prepareForAssignmentView();
+				break;
 			case DEVELOPMENT:
 				prepareForDevelopmentView();
 				break;
@@ -61,6 +68,28 @@ public class OmController {
 		}
 	}
 
+	private void prepareForAssignmentView(){
+		setCurrentView(OmViewConstant.ASSIGNMENT);
+		assignmentPanel =  new OmAssignmentPanel();
+		JButton backButton = assignmentPanel.getBackButton();
+		ActionListener backAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				prepareForWelcomeView();
+			}
+		};
+		backButton.addActionListener(backAction);
+		JButton createAssignmentButton = assignmentPanel.getCreateAssignmentButton();
+		ActionListener createAssignmentAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doCreateAssignment();
+			}
+		};
+		createAssignmentButton.addActionListener(createAssignmentAction);
+		view.setMainPanel(assignmentPanel);
+	}
+	
 	private void prepareForLoginView() {
 		setCurrentView(OmViewConstant.LOGIN);
 		loginPanel = new OmLoginPanel();
@@ -86,6 +115,14 @@ public class OmController {
 	private void prepareForWelcomeView() {
 		setCurrentView(OmViewConstant.WELCOME);
 		welcomePanel = new OmWelcomePanel();
+		JButton assignmentButton = welcomePanel.getAssignmentButton();
+		ActionListener assignmentAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				prepareForAssignmentView();
+			}
+		};
+		assignmentButton.addActionListener(assignmentAction);
 		JButton officeButton = welcomePanel.getOfficeButton();
 		ActionListener officeAction = new ActionListener() {
 			@Override
@@ -214,7 +251,24 @@ public class OmController {
 
 	private void prepareForPublicationsView() {
 		setCurrentView(OmViewConstant.PUBLICATIONS);
-		
+		publicationsPanel =  new OmPublicationsPanel();
+		JButton backButton = publicationsPanel.getBackButton();
+		ActionListener backAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				prepareForWelcomeView();
+			}
+		};
+		backButton.addActionListener(backAction);
+		JButton createInvoiceButton = publicationsPanel.getCreatePublicationsButton();
+		ActionListener createInvoiceAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doCreatePublications();
+			}
+		};
+		createInvoiceButton.addActionListener(createInvoiceAction);
+		view.setMainPanel(publicationsPanel);
 	}
 
 	private void prepareForOfficeView() {
@@ -261,6 +315,10 @@ public class OmController {
 		}
 	}
 	
+	public void doCreateAssignment(){
+		model.doCreateAssignment();
+	}
+	
 	public void doCreateClientReport(){
 		model.doCreateClientReport();
 	}
@@ -271,6 +329,10 @@ public class OmController {
 	
 	public void doCreateInvoice(){
 		model.doCreateInvoice();
+	}
+	
+	public void doCreatePublications(){
+		model.doCreatePublications();
 	}
 	
 	public void doRunTestsOrgaManager(){

@@ -89,4 +89,12 @@ public class OmModel {
 		JOptionPane.showMessageDialog(null, message, "Selenium Tests TCBW", JOptionPane.WARNING_MESSAGE);
 	}
 
+	public void doCreatePublications(){
+		JOptionPane.showMessageDialog(null, "BP0","Debug", JOptionPane.WARNING_MESSAGE);
+	}
+
+	public void doCreateAssignment(){
+		JOptionPane.showMessageDialog(null, "BP1","Debug", JOptionPane.WARNING_MESSAGE);
+	}
+
 }

@@ -15,6 +15,7 @@ public class OmWelcomePanel extends JPanel {
 	
 	private JPanel innerPanel;
 	private JPanel outerPanel;
+	private JButton assignmentButton;
 	private JButton signaturesButton;
 	private JButton publicationsButton;
 	private JButton developmentButton;
@@ -33,6 +34,9 @@ public class OmWelcomePanel extends JPanel {
 		Dimension buttonDim = new Dimension((int) buttonDimWidth, (int) buttonDimHeight);
 		logoutButton.setPreferredSize(buttonDim);
 		logoutButton.setMinimumSize(buttonDim);
+		assignmentButton = new JButton(config.getMessage("assignmentButtonText"));
+		assignmentButton.setPreferredSize(buttonDim);
+		assignmentButton.setMinimumSize(buttonDim);
 		signaturesButton = new JButton(config.getMessage("signaturesButtonText"));
 		signaturesButton.setPreferredSize(buttonDim);
 		signaturesButton.setMinimumSize(buttonDim);
@@ -51,15 +55,16 @@ public class OmWelcomePanel extends JPanel {
 		double panelHeightOuter = config.getMainPanelDimension().getHeight() * 0.25;
 		innerPanel.setPreferredSize(new Dimension((int) panelWidth, (int) panelHeightInner));
 		innerPanel.setBorder(BorderFactory.createTitledBorder(config.getMessage("welcomePanelInnerTitleText")));
-		innerPanel.add(Box.createRigidArea(new Dimension(10,10)));
+		innerPanel.add(assignmentButton);
+		innerPanel.add(Box.createRigidArea(new Dimension(2, 2)));
 		innerPanel.add(publicationsButton);
-		innerPanel.add(Box.createRigidArea(new Dimension(10,10)));
+		innerPanel.add(Box.createRigidArea(new Dimension(2, 2)));
 		innerPanel.add(signaturesButton);
-		innerPanel.add(Box.createRigidArea(new Dimension(10,10)));
+		innerPanel.add(Box.createRigidArea(new Dimension(2, 2)));
 		innerPanel.add(officeButton);
-		innerPanel.add(Box.createRigidArea(new Dimension(10,10)));
+		innerPanel.add(Box.createRigidArea(new Dimension(2, 2)));
 		innerPanel.add(developmentButton);
-		innerPanel.add(Box.createRigidArea(new Dimension(10,10)));
+		innerPanel.add(Box.createRigidArea(new Dimension(2, 2)));
 		this.add(innerPanel);
 		outerPanel = new JPanel();
 		outerPanel.setPreferredSize(new Dimension((int) panelWidth, (int) panelHeightOuter));
@@ -69,6 +74,14 @@ public class OmWelcomePanel extends JPanel {
 		this.add(outerPanel);
 	}
 
+	public JButton getAssignmentButton() {
+		return assignmentButton;
+	}
+
+	public void setAssignmentButton(JButton assignmentButton) {
+		this.assignmentButton = assignmentButton;
+	}
+	
 	public JButton getSignaturesButton() {
 		return signaturesButton;
 	}
