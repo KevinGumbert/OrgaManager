@@ -98,6 +98,9 @@ public class Citation {
 			if (line.contains("@inproceedings")){ // start of entry
 				citationAttributes.put("type", "inproceeding");
         		continue;
+			} else if (line.contains("@misc")){ // start of misc entry
+				citationAttributes.put("type", "misc"); // attributes: author, year, title, address, series;
+        		continue;
         	} else if (line.equals("} ") || line.equals("}")){ // end of entry 
         		validate();
         		continue;
@@ -136,6 +139,9 @@ public class Citation {
 				} else if (firstWord.equals("address")) {
 					String addressString = utils.pickChildString(line, leftDelimiter, rightDelimiter);
 					citationAttributes.put("address", addressString);
+				} else if (firstWord.equals("series")) {
+					String seriesString = utils.pickChildString(line, leftDelimiter, rightDelimiter);
+					citationAttributes.put("series", seriesString);
 				} else {
 					// throw(new
 					// RuntimeException("Unrecognized citation attribute!"));
@@ -148,6 +154,8 @@ public class Citation {
 		// set attributes to object
 		if (citationAttributes.get("type").equals("inproceeding")){
 			this.citationType = OmCitationConstant.INPROCEEDING;
+		} else if (citationAttributes.get("type").equals("misc")){
+			this.citationType = OmCitationConstant.MISC;
 		} else {
 			System.out.println("WARNING - unknown OmCitationConstant!");
 		}
@@ -160,6 +168,7 @@ public class Citation {
 		String publisher = "";
 		String year = "";
 		String pages = "";
+		String series = ""; // used by misc-type
 		String isbn = ""; // used for proceeding search
 		// overwrite
 		if (citationAttributes.get("title") != null && !citationAttributes.get("title").equals("")){
@@ -183,16 +192,19 @@ public class Citation {
 		if (citationAttributes.get("pages") != null && !citationAttributes.get("pages").equals("")){
 			pages = citationAttributes.get("pages");
 		}
+		if (citationAttributes.get("series") != null && !citationAttributes.get("series").equals("")){
+			series = citationAttributes.get("series");
+		}
 		if (citationAttributes.get("isbn") != null && !citationAttributes.get("isbn").equals("")){
 			isbn = citationAttributes.get("isbn");
 		}
 		// unused attributes: abstract, keywords, ...
-		this.year = year;
+		createYear(year); // sets the attribute for web api, keeps the long version for typed reference
 		this.isbn = isbn;
 		if (proceedings != null){
 			connectToParent();
 		}
-		createReferences(author, title, editor, booktitle, location, publisher, year, pages);
+		createReferences(author, title, editor, booktitle, location, publisher, year, pages, series);
 	}
 	
 	private void connectToParent(){
@@ -208,8 +220,7 @@ public class Citation {
 		}
 	}
 	
-	private void createReferences(String author, String title, String editor, String booktitle, String location, String publisher, String year, String pages){
-		// ggf. TODO der Tagungsuntertitel wird nicht genannt!
+	private void createReferences(String author, String title, String editor, String booktitle, String location, String publisher, String year, String pages, String series){
 		String ref = "";
 		String authors = "";
 		authors = new String(author);
@@ -235,29 +246,52 @@ public class Citation {
 	    ref += ". ";
 	    // add in 
 	    ref += "In: ";
-	    if (editor != null && !editor.equals("")){
-	    	String editorFinal = createEditor(editor);
-	    	ref += editorFinal;
-	    	ref += " (Hrsg.)";
-	    	ref += ": ";
-	    }
-	    if (this.parent != null && this.parent.getTitle() != null && !this.parent.getTitle().equals("")){
-	    	ref += this.parent.getTitle();
-	    } else {
-	    	ref += booktitle;
-	    }
-	    ref += ". ";
-	    ref += location;
-	    ref += ": ";
-	    ref += publisher;
-	    ref += ", ";
-	    ref += year;
-	    if (pages != null && !pages.equals("")){
-	    	ref += ", ";
-	    	ref += "S. ";
-	    	ref += pages;
-	    }
-	    this.reference = ref;
+		if (this.citationType == OmCitationConstant.INPROCEEDING){ 
+			if (editor != null && !editor.equals("")){
+		    	String editorFinal = createEditor(editor);
+		    	ref += editorFinal;
+		    	ref += " (Hrsg.)";
+		    	ref += ": ";
+		    }
+		    if (this.parent != null && this.parent.getTitle() != null && !this.parent.getTitle().equals("")){
+		    	ref += this.parent.getTitle();
+		    } else {
+		    	ref += booktitle;
+		    }
+		    ref += ". ";
+		    ref += location;
+		    ref += ": ";
+		    ref += publisher;
+		    ref += ", ";
+		    ref += year;
+		    if (pages != null && !pages.equals("")){
+		    	ref += ", ";
+		    	ref += "S. ";
+		    	ref += pages;
+		    }
+		} else if (this.citationType == OmCitationConstant.MISC){
+			// add in 
+			ref += series;
+			ref += ". ";
+			ref += location;
+			ref += ", ";
+			ref += year;
+			// misc: series
+		} else {
+			// 
+		}
+		this.reference = ref;
+	}
+	
+	private void createYear(String year){
+		String formatted = "";
+		if (year.length() > 4){
+			int length = year.length(); // take just the last four letters;
+			formatted = year.substring((length - 4), length);
+			this.year = formatted;
+		} else {
+			this.year = year;
+		}
 	}
 	
 	private void createAuthor(String authorStringPara){

@@ -1,5 +1,5 @@
 package orgamanager.utilities;
 
 public enum OmCitationConstant {
-	INPROCEEDING, PROCEEDING
+	MISC, INPROCEEDING, PROCEEDING
 }

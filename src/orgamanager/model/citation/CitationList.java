@@ -54,6 +54,11 @@ public class CitationList {
         		entry = "";
         		entry += line + "\n";
         		continue;
+			} else if (line.contains("@misc")){ // start of proceeding
+				activeEntry = true;
+        		entry = "";
+        		entry += line + "\n";
+        		continue;
         	} else if (line.equals("} ") || line.equals("}")) {
         		activeEntry = false;
         		entries.add(new String(entry));
@@ -73,14 +78,19 @@ public class CitationList {
 				proceedings.add(proceeding);
 			}
 		}
-		System.out.println("Proceedings created ...");
+		System.out.println("Proceedings created ..." + proceedings.size());
 		for (String item : entries){
 			if (item.contains("@inproceedings")){
 				Citation citation = new Citation(item, proceedings);
 				citations.add(citation);
+			} else if (item.contains("@misc")){
+				Citation citation = new Citation(item);
+				citations.add(citation);
+			} else {
+				System.out.println("WARNING - unknown entry in citation-strings-list.");
 			}
 		}
-		System.out.println("Citations created ...");
+		System.out.println("Citations created ... " + citations.size());
 	}
 	
 	public void saveAsCsv(String path){
