@@ -1,5 +1,7 @@
 package orgamanager.model;
 
+import java.io.FileNotFoundException;
+
 import javax.swing.JOptionPane;
 
 import junit.textui.TestRunner;
@@ -8,6 +10,7 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runners.JUnit4;
 
+import orgamanager.model.citation.CitationList;
 import orgamanager.selenium.ehc.EhcTests;
 import orgamanager.selenium.joba.JobaTests;
 import orgamanager.selenium.skp.SkpTests;
@@ -90,7 +93,16 @@ public class OmModel {
 	}
 
 	public void doCreatePublications(){
-		JOptionPane.showMessageDialog(null, "BP0","Debug", JOptionPane.WARNING_MESSAGE);
+		String path = "testfile0.txt";
+		CitationList citations;
+		try {
+			citations = new CitationList(path);
+			citations.saveAsCsv("testfile.txt");
+			JOptionPane.showMessageDialog(null, "BP9","Debug", JOptionPane.WARNING_MESSAGE);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public void doCreateAssignment(){

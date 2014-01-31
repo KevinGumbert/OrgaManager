@@ -1,0 +1,12 @@
+@inproceedings{Bauer.2014,
+ abstract = {Mit dem Konzept des Ambient Assisted Living (AAL) sollen technische Hilfestellungen entwickelt werden, um den l{\"a}ngeren Verbleib {\"a}lterer Menschen im gewohnten Umfeld zu erm{\"o}glichen. Meist werden solche technischen Hilfestellungen jedoch stark technologiegetrieben entwickelt und entsprechen nicht dem tats{\"a}chlichen Bed{\"u}rfnis der Endanwender. Das im Projekt verwendete Vorgehen der menschzentrierten Gestaltung stellt hingegen den Benutzer in den Mittelpunkt: Auf diese Weise sollen Fehlentwicklungen von Anfang an vermieden werden und ein gebrauchstaugliches System entstehen. Durch Usability-Tests werden zielgruppenspezifische Probleme im Umgang mit AAL-Serviceplattformen erkannt und m{\"o}gliche L{\"o}sungsvorschl{\"a}ge durchdacht.},
+ author = {Bauer, Jochen and Kettschau, Anna and Franke, J{\"o}rg},
+ title = {Optimierung der Datenvisualisierung von AAL-Serviceplattformen durch Usability-Tests},
+ keywords = {E|Home;AAL;Smart Home;Mensch-Maschine-Interaktion},
+ publisher = {VDE Verlag Gmbh},
+ isbn = {978-3-8007-3574-7},
+ editor = {VDE and BMBF and {Sozialverband VdK} and Fraunhofer-AAL},
+ booktitle = {Wohnen - Pflege - Teilhabe {\dq}Besser leben durch Technik{\dq}},
+ year = {2014},
+ address = {Berlin}
+} 

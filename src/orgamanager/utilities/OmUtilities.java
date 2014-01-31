@@ -17,6 +17,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
+import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
@@ -31,7 +32,7 @@ public class OmUtilities {
 			OmConfig config = new OmConfig();
 			String dialogTitle = config.getMessage("dialogTitle");
 			String dialogText = config.getMessage("dialogTextFilePrinted");
-			JOptionPane.showMessageDialog(null, dialogText, dialogTitle, JOptionPane.PLAIN_MESSAGE);
+			//JOptionPane.showMessageDialog(null, dialogText, dialogTitle, JOptionPane.PLAIN_MESSAGE);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			return false;
@@ -40,6 +41,66 @@ public class OmUtilities {
 			return false;
 		}
 		return true;
+	}
+	
+	public String readStringFromFile(String path) throws FileNotFoundException{
+		String content = "";
+		Scanner in = new Scanner(new FileReader(path));
+        while (in.hasNextLine()){
+        	content += in.nextLine() + "\n";
+        }
+        in.close();
+		return content;
+	}
+	
+	public String cutStringAfterFirstOccuranceOfDelimiter(String fullString, char delimiter){
+		String shortString = "";
+		int indexOf = fullString.indexOf(delimiter);
+		shortString = fullString.substring((indexOf + 1));
+		return shortString;
+	}
+	
+	public String cutStringAfterLastOccuranceOfDelimiter(String fullString, char delimiter){
+		String shortString = "";
+		int lastIndexOf = fullString.lastIndexOf(delimiter);
+		shortString = fullString.substring(0, lastIndexOf);
+		return shortString;
+	}
+	
+	public String pickChildString(String str, char leftDelimiter, char rightDelimiter){
+		String s1 = cutStringAfterFirstOccuranceOfDelimiter(str, leftDelimiter);
+		String shortString = cutStringAfterLastOccuranceOfDelimiter(s1, rightDelimiter);
+		return shortString;
+	}
+	
+	public String replaceBibtexChars(String str){
+		// Note: new instances are necessary due to replace-method;
+		// ae, oe, ue, dg(""), ss, ~ (-), Ae, Oe, Ue
+		String newStringInstance = "";
+		String afterOe = "";
+		CharSequence targetOe = "{\\\"o}";
+		CharSequence replacementOe = "ö";
+		afterOe = str.replace(targetOe, replacementOe);
+		String afterUe = "";
+		CharSequence targetUe = "{\\\"u}";
+		CharSequence replacementUe = "ü";
+		afterUe = afterOe.replace(targetUe, replacementUe);
+		String afterAe = "";
+		CharSequence targetAe = "{\\\"a}";
+		CharSequence replacementAe = "ä";
+		afterAe = afterUe.replace(targetAe, replacementAe);
+		String afterDg = "";
+//		CharSequence targetDg = "{\\dg}";
+//		CharSequence replacementDg = "\"";
+//		afterDg = afterAe.replace(targetDg, replacementDg);
+		afterDg = afterAe.replaceAll("\\{\\\\dq\\}", "\"");
+		String afterTilde = "";
+		CharSequence targetTilde = "~";
+		CharSequence replacementTilde = "-";
+		afterTilde = afterDg.replace(targetTilde, replacementTilde);
+		
+		newStringInstance = afterTilde;
+		return newStringInstance;
 	}
 	
 	public OmOperatingSystemConstant detectOperatingSystem(){
@@ -66,6 +127,16 @@ public class OmUtilities {
 	public boolean createFile(String path){
 		File file = new File(path);
 		if (file.exists()){
+		    return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public boolean deleteFile(String path){
+		File file = new File(path);
+		boolean res = file.delete();
+		if (res){
 		    return true;
 		} else {
 			return false;
@@ -103,17 +174,6 @@ public class OmUtilities {
         } catch(IOException e1) { return false; 
         } catch(InterruptedException e2) { return false;}
         System.out.println("exec finished.");
-//		ProcessBuilder call = new ProcessBuilder(command, param);
-//	    try {
-//	        Process process = call.start();
-//	        process.waitFor();
-//	    } catch (IOException e) {
-//	        e.printStackTrace();
-//	        return false;
-//	    } catch (InterruptedException e) {
-//	        e.printStackTrace();
-//	        return false;
-//	    }
 	    return true;
 	}
     
