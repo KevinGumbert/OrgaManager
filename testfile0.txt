@@ -40,6 +40,27 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
  editor = {VDE and BMBF and {Sozialverband VdK} and Fraunhofer-AAL}
 }
 
+@book{Shen.2006,
+ year = {2006},
+ title = {Computer Supported Cooperative Work in Design},
+ address = {Berlin and Heidelberg},
+ volume = {2},
+ publisher = {Springer Verlag},
+ editor = {Shen, W. and Chao, K.-M and Lin, Z. and Barthes, Jean-Paul and James, A.}
+}
+
+@incollection{Ruckel.2006,
+ author = {R{\"u}ckel, Veit and Koch, Alexander and Feldmann, Klaus and Meerkamm, Harald},
+ title = {Process Data Management for the Shortening of the whole Product Creation Process},
+ pages = {616--625},
+ volume = {2},
+ publisher = {Springer Verlag},
+ editor = {Shen, W. and Chao, K.-M and Lin, Z. and Barthes, Jean-Paul and James, A.},
+ booktitle = {Computer Supported Cooperative Work in Design},
+ year = {2006},
+ address = {Berlin and Heidelberg}
+}
+
 @misc{Bauer.13.11.2013,
  author = {Bauer, Jochen and Kettschau, Anna},
  year = {13.11.2013},
@@ -47,5 +68,35 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
  address = {N{\"u}rnberg},
  series = {Energie und Forschung {\dq} Die Forschung von heute - die Energie von morgen{\dq}}
 }
+
+@inproceedings{Schuler.2005,
+ author = {Sch{\"u}{\ss}ler, Florian and Bigl, Thomas},
+ title = {Reel-to-Reel-System zur hocheffizienten Produktion von Folienschaltungen},
+ publisher = {Eigendruck},
+ editor = {{FAPS-TT GmbH}},
+ booktitle = {Folienschaltungen - Innovative Produktgestaltung und Prozesse},
+ year = {2005},
+ address = {Erlangen}
+}
+
+@proceedings{Franke.2013e,
+ year = {2013},
+ title = {Fachworkshop Elektromaschinenbau - Aktuelle Entwicklungen in der Wickeltechnik},
+ address = {N{\"u}rnberg},
+ edition = {130},
+ publisher = {FAPS-TT GmbH},
+ series = {FAPS-TT Seminare},
+ editor = {Franke, J{\"o}rg}
+}
+
+@book{Franke.2013f,
+ year = {2013},
+ title = {R{\"a}umliche elektronische Baugruppen (3D-MID): Werkstoffe, Herstellung, Montage und Anwendungen f{\"u}r spritzgegossene Schaltungstr{\"a}ger},
+ address = {M{\"u}nchen},
+ publisher = {Carl Hanser Verlag},
+ isbn = {978-3-446-43441-7},
+ editor = {Franke, J{\"o}rg}
+}
+
 
 

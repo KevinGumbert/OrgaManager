@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
+import orgamanager.utilities.OmConfig;
 import orgamanager.utilities.OmPublicationConstant;
 import orgamanager.utilities.OmUtilities;
 
@@ -47,22 +48,22 @@ public class Publication {
 		validate();
 	}
 	
-	public String getCsvString(){
+	public String getCsvString() {
 		String csv = "";
 		String type = ""; 				// db web
 		String author = this.authors; 	// db web
-		String publisher = "";			// db web
-		String title = "";				// db web
-		String year = this.year;		// db web
-		String isbn = "";				// db web
-		String doi = "";				// db web
-		String note = this.reference;	// db web
-		String location = "";			// db web
-		String approval = "";			// db web
-		String date = "";				// db web
-		csv += type; 
+		String publisher = ""; 			// db web
+		String title = ""; 				// db web
+		String year = this.year; 		// db web
+		String isbn = ""; 				// db web
+		String doi = ""; 				// db web
+		String note = this.reference; 	// db web
+		String location = ""; 			// db web
+		String approval = ""; 			// db web
+		String date = ""; 				// db web
+		csv += type;
 		csv += "$";
-		csv += author; 
+		csv += author;
 		csv += "$";
 		csv += publisher;
 		csv += "$";
@@ -191,8 +192,11 @@ public class Publication {
 		} else {
 			System.out.println("WARNING - unknown OmCitationConstant!");
 		}
-		createAuthor(citationAttributes.get("author"));
-		String author = this.authors;
+		String author = "";
+		if (citationAttributes.get("author") != null){ // books do not have authors just editors
+			createAuthor(citationAttributes.get("author"));
+			author = this.authors;
+		}
 		String title = "";
 		String editor = "";
 		String booktitle = ""; 	// used for proceeding search
@@ -262,18 +266,18 @@ public class Publication {
 		String isbn = this.isbn;
 		String booktitle = this.booktitle;
 		String year = this.year; // object attribute will be formatted like '2012'
-		for (PublicationParent proceeding : possibleParents){
-			String procIsbn = proceeding.getIsbn();
-			String procBooktitle = proceeding.getTitle();
-			String procYear = proceeding.getYear();
+		for (PublicationParent parent : possibleParents){
+			String procIsbn = parent.getIsbn();
+			String procBooktitle = parent.getTitle();
+			String procYear = parent.getYear();
 			if (isbn.equals(procIsbn) && !isbn.equals("")){
 				System.out.println("MATCH! (isbn)");
-				this.parent = proceeding;
+				this.parent = parent;
 				break;
 			} else if (booktitle.equals(procBooktitle)){ // booktitle is ok, go for year
 				if (year.equals(procYear)){
 					System.out.println("MATCH! (title + year)");
-					this.parent = proceeding;
+					this.parent = parent;
 					break;
 				}
 			}
@@ -283,6 +287,9 @@ public class Publication {
 	private void createReferences(String author, String title, String editor, String booktitle, String location, String publisher, String year, String pages, String series, String volume, String number, String journal, String issn){
 		String ref = "";
 		String authors = "";
+		if (author.equals("") && publicationType == OmPublicationConstant.BOOK){ // empty author string means it is a book as a publication // TODO Unittest
+			author = new String(editor);
+		}
 		authors = new String(author);
 		StringTokenizer st = new StringTokenizer(authors, " ");
 	    while (st.hasMoreTokens()) {
@@ -306,7 +313,7 @@ public class Publication {
 	    ref += ". ";
 	    // add in 
 	    ref += "In: ";
-		if (this.publicationType == OmPublicationConstant.INPROCEEDING){ 
+		if (this.publicationType == OmPublicationConstant.INPROCEEDING || this.publicationType == OmPublicationConstant.INCOLLECTION){ 
 			if (editor != null && !editor.equals("")){
 		    	String editorFinal = createEditor(editor);
 		    	ref += editorFinal;
@@ -319,11 +326,17 @@ public class Publication {
 		    	ref += booktitle;
 		    }
 		    ref += ". ";
-		    ref += location;
+		    ref += createLocation(location);
 		    ref += ": ";
 		    ref += publisher;
 		    ref += ", ";
 		    ref += year;
+		    if (volume != null && !volume.equals("")){
+		    	ref += " ";
+		    	ref += "(";
+		    	ref += volume;
+		    	ref += ")";
+		    }
 		    if (pages != null && !pages.equals("")){
 		    	ref += ", ";
 		    	ref += "S. ";
@@ -354,6 +367,30 @@ public class Publication {
 			// 
 		}
 		this.reference = ref;
+	}
+	
+	private String createLocation(String locationString){
+		String str = "";
+		ArrayList<String> locations = new ArrayList<String>();
+		StringTokenizer st = new StringTokenizer(locationString, " ");
+	    while (st.hasMoreTokens()) {
+	        String tok = st.nextToken();
+	        if (tok.equals("and")){ 
+	        	continue; 
+	        } else { // one name to include
+	        	locations.add(tok);
+	        	continue;
+	        }
+	    }
+	    for (int i = 0; i < locations.size(); i++){
+	    	if (i == locations.size() - 1){
+	    		str += locations.get(i);
+	    	} else {
+	    		str += locations.get(i);
+	    		str += "; ";
+	    	}
+	    }
+	    return str;
 	}
 	
 	private void createYear(String year){
@@ -425,12 +462,16 @@ public class Publication {
 					if (tok.charAt(tok.length() - 1) == ','){
 						String editorToAddString = "";
 						String lastName = tok.substring(0, (tok.length() - 1));
-						String firstName = st.nextToken();
-						String tokenAfterFirstName = st.nextToken();
-						editorToAddString += firstName;
-						if (!tokenAfterFirstName.equals("")){
-							editorToAddString += " ";
-							editorToAddString += tokenAfterFirstName;
+						if (st.hasMoreTokens()){
+							String firstName = st.nextToken();
+							editorToAddString += firstName;
+							if (st.hasMoreTokens()){
+								String tokenAfterFirstName = st.nextToken();
+								if (!tokenAfterFirstName.equals("") && !tokenAfterFirstName.equals("and")){
+									editorToAddString += " ";
+									editorToAddString += tokenAfterFirstName;
+								}
+							}
 						}
 						editorToAddString += " ";
 						editorToAddString += lastName;

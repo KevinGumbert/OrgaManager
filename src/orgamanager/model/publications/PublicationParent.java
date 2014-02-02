@@ -28,9 +28,12 @@ public class PublicationParent {
 		Scanner in = new Scanner(cleanedEntry);
 		while (in.hasNextLine()){
 			String line = in.nextLine(); // each line of bibtex string
-			if (line.contains("@proceedings")){ // start of entry
-				citationAttributes.put("type", "proceeding");
+			if (line.contains("@book")){ // start of entry
+				citationAttributes.put("type", "book");
         		continue;
+			} else if (line.contains("@proceedings")){ // start of entry
+    			citationAttributes.put("type", "proceeding");
+            	continue;
         	} else if (line.equals("} ") || line.equals("}")){ // end of entry 
         		validate();
         		continue;
@@ -48,14 +51,16 @@ public class PublicationParent {
 					citationAttributes.put("year", yearString);
 				} else {
 					// abstract, address, number, publisher, editor
-					System.out.println("ACHTUNG - Proceeding.parseBibtexString(): ungenutztes Wort - " + firstWord);
+					System.out.println("ACHTUNG - PublicationParent.parseBibtexString(): ungenutztes Wort - " + firstWord);
 				}
 				continue;
 			}
 		}
 		in.close();
 		// set attributes to object
-		if (citationAttributes.get("type").equals("proceeding")){
+		if (citationAttributes.get("type").equals("book")){
+			this.citationType = OmPublicationConstant.BOOK;
+		} else if (citationAttributes.get("type").equals("proceeding")){
 			this.citationType = OmPublicationConstant.PROCEEDING;
 		} else {
 			System.out.println("WARNING Proceeding - unknown OmCitationConstant!");

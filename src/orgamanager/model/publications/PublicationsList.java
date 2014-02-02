@@ -6,28 +6,34 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 import javax.swing.JOptionPane;
 
+import orgamanager.utilities.OmConfig;
+import orgamanager.utilities.OmPublicationConstant;
 import orgamanager.utilities.OmUtilities;
 
 public class PublicationsList {
-	public ArrayList<Publication> citations;
-	public ArrayList<PublicationParent> proceedings;
+	public OmConfig config;
+	public ArrayList<Publication> publications;
+	public ArrayList<PublicationParent> parents;
 	
 	public PublicationsList(String path) throws FileNotFoundException{
-		citations = new ArrayList<Publication>();
-		proceedings = new ArrayList<PublicationParent>();
+		config = new OmConfig(); // maybe: use dependancy injection
+		publications = new ArrayList<Publication>();
+		parents = new ArrayList<PublicationParent>();
 		parseBibtexFile(path);
 	}
 	
 //	public CitationList(ArrayList<Proceeding> proceedings, ArrayList<Citation> citations) { // important for unit tests
+//		config = new OmConfig(); // maybe: use dependancy injection
 //		citations = new ArrayList<Citation>(citations);
 //		proceedings = new ArrayList<Proceeding>(proceedings);
 //	}
 	
 	public List<Publication> getCitations(){
-		return this.citations;
+		return this.publications;
 	}
 	
 	public void parseBibtexFile(String path){
@@ -49,17 +55,32 @@ public class PublicationsList {
 			if (line.equals("") || line.equals(" ")){ // leere Zeile
 				continue;
 			}
-			if (line.contains("@inproceedings")){ // start of entry
+			if (line.contains("@article")){ // start of entry
         		activeEntry = true;
         		entry = "";
         		entry += line + "\n";
         		continue;
-			} else if (line.contains("@proceedings")){ // start of proceeding
+			} else if (line.contains("@book")){ 
+        		activeEntry = true;
+        		entry = "";
+        		entry += line + "\n";
+        		continue;
+			} else if (line.contains("@incollection")){ 
+        		activeEntry = true;
+        		entry = "";
+        		entry += line + "\n";
+        		continue;
+			} else if (line.contains("@inproceedings")){ 
+        		activeEntry = true;
+        		entry = "";
+        		entry += line + "\n";
+        		continue;
+			} else if (line.contains("@misc")){ 
 				activeEntry = true;
         		entry = "";
         		entry += line + "\n";
         		continue;
-			} else if (line.contains("@misc")){ // start of proceeding
+			} else if (line.contains("@proceedings")){ 
 				activeEntry = true;
         		entry = "";
         		entry += line + "\n";
@@ -78,31 +99,92 @@ public class PublicationsList {
 		in.close();
 		// create object - make sure that all proceedings are created first.
 		for (String item : entries){
+			if (item.contains("@book")){
+				PublicationParent book = new PublicationParent(item);
+				parents.add(book);
+			}
 			if (item.contains("@proceedings")){
 				PublicationParent proceeding = new PublicationParent(item);
-				proceedings.add(proceeding);
+				parents.add(proceeding);
 			}
 		}
-		System.out.println("Proceedings created ..." + proceedings.size());
+		System.out.println("PublicationsParents created ..." + parents.size());
 		for (String item : entries){
-			if (item.contains("@inproceedings")){
-				Publication citation = new Publication(item, proceedings);
-				citations.add(citation);
+			if (item.contains("@article")){
+				Publication article = new Publication(item, parents);
+				publications.add(article);
+			} else if (item.contains("@book")){
+				boolean createBookPublication = shouldBePublished(item, OmPublicationConstant.BOOK, this.config);
+				if (createBookPublication){
+					Publication book = new Publication(item, parents);
+					publications.add(book);
+				}
+			} else if (item.contains("@incollection")){
+				Publication incollection = new Publication(item, parents);
+				publications.add(incollection);
+			} else if (item.contains("@inproceedings")){
+				Publication citation = new Publication(item, parents);
+				publications.add(citation);
 			} else if (item.contains("@misc")){
-				Publication citation = new Publication(item);
-				citations.add(citation);
+				boolean createMiscPublication = shouldBePublished(item, OmPublicationConstant.MISC, this.config);
+				if (createMiscPublication){
+					Publication citation = new Publication(item);
+					publications.add(citation);
+				}
 			} else {
 				System.out.println("WARNING - unknown entry in citation-strings-list.");
 			}
 		}
-		System.out.println("Citations created ... " + citations.size());
+		System.out.println("Publications created ... " + publications.size());
+	}
+	
+	private boolean shouldBePublished(String item, OmPublicationConstant type, OmConfig config) {
+		ArrayList<OmPublicationConstant> typesToShow = config.getPublicationsTypesToShow();
+		boolean typeMatch = false;
+		for (OmPublicationConstant typeToCompare : typesToShow) { // check type
+			if (type == typeToCompare) {
+				typeMatch = true;
+				break;
+			}
+		}
+		if (!typeMatch) {
+			return false; // no publishable type, quit
+		}
+		boolean stopPublishKeyMatch = false; // check for keywords like Faps-TT which stops publishing
+		ArrayList<String> stopPubWords = config.getPublicationsBookConstraints();
+		for (String key : stopPubWords){
+			if (item.contains(key)){
+				stopPublishKeyMatch = true;
+				break;
+			}
+		}
+		if (stopPublishKeyMatch){
+			return false; // no publishable item, quit
+		}
+		if (type == OmPublicationConstant.BOOK){ // special case book as publication
+			boolean authorMatch = false;
+			ArrayList<String> authors = config.getPublicationsBookAuthorsToShow();
+			for (String author : authors){
+				StringTokenizer st = new StringTokenizer(author, " ");
+				String firstName = st.nextToken();
+				String lastName = st.nextToken();
+				if (item.contains(lastName)){
+					authorMatch = true;
+					break;
+				}
+			}
+			if (!authorMatch){
+				return false; // no special author like Franke, Feldmann, quit
+			}
+		}
+		return true;
 	}
 	
 	public void saveAsCsv(String path){
 		String fileName = path;
 		//String fileName = "Gespeichert_als_CSV-Datei.csv";
 		String content = "";
-		for (Publication citation : this.citations){
+		for (Publication citation : this.publications){
 			content += citation.getCsvString();
 		}
 		OmUtilities utils = new OmUtilities();

@@ -57,11 +57,11 @@ public class OmModelTest {
 	public void doCreatePublicationsTest() throws InterruptedException, FileNotFoundException{ //fail("Not yet implemented!");
 		
 		// Development area, trigger model without gui ...
-//		OmModel model = new OmModel();
-//		model.doCreatePublications();
-//		String act0 = "Test";
-//		String exp0 = "Test";
-//		assertEquals("doCreatePublicationsTest-0", exp0, act0);
+		OmModel model = new OmModel();
+		model.doCreatePublications();
+		String act0 = "Test";
+		String exp0 = "Test";
+		assertEquals("doCreatePublicationsTest-0", exp0, act0);
 		
 		// Vorgehen Validierung Eintrag: Publikation von Website holen - Buschhaus, A. ; Franke, J.: Industrial Robots Accuracy Optimization in the Area of Structuring and Metallization of Three Dimensional Molded Interconnect Devices. In: Pedro Neto; Antonio Paulo Moreira (Hrsg.): Robotics in Smart Manufacturing (FAIM). Heidelberg : Springer, 2013
 		// Publikation in citavi-db.txt suchen und Art ermitteln: inproceeding
@@ -77,7 +77,8 @@ public class OmModelTest {
 		// Datentypen
 		// article - Zeitschriftenaufsatz, nichts gehoert dazu;
 		// book - Buch (Monographie); Zusatzinfo geht verloren ist vom Sammelwerk nicht unterscheidbar;
-		// book - Buch (Sammelwerk); Beispiel 17. Workshop Mikrotechnische Produktion Feldmann
+		// book - Buch (Sammelwerk); Beispiel 17. Workshop Mikrotechnische Produktion Feldmann;
+		// Konvention: OmConfig regelt Schluesselwoerter und anzuzeigende Typkennungen fuer Parser;
 		// incollection - Beitrag in ..., book gehoert dazu, vgl. inproceedings und proceedings; 
 		// inproceedings - Beitrag in ..., proceedings gehoeren dazu;
 		// misc - etwa Vortraege; oft ungelistet!
@@ -175,38 +176,69 @@ public class OmModelTest {
 		String act3 = publication3.getReference();
 		assertEquals("doCreatePublicationsTest-3", exp3, act3);
 		
-		// TODO Artikel weicht von Zitationspattern ab!
-//		String articleString4 = "";
-//		articleString4 += "@article{Albrecht.2012,\n";
-//		articleString4 += " author = {Albrecht, Thomas and Risch, Florian and Franke, J{\"o}rg and Tremel, Jan},\n";
-//		articleString4 += " year = {2012},\n";
-//		articleString4 += " title = {Recyclinggerechte Montagetechnik f{\"u}r permanent erregte Synchronmotoren},\n";
-//		articleString4 += " pages = {146--151},\n";
-//		articleString4 += " volume = {5},\n";
-//		articleString4 += " number = {03},\n";
-//		articleString4 += " journal = {ATZ produktion}\n";
-//		articleString4 += "}\n";
-//		Publication publication4 = new Publication(articleString4);
-//		String act4 = publication4.getReference();
-//		String exp4 = "Albrecht, T.; Risch, F.; Franke, J.; Tremel, J.: Recyclinggerechte Montagetechnik für permanent erregte Synchronmotoren. In: ATZ produktion 03 (2012)";
-//		assertEquals("doCreatePublicationsTest-4", exp4, act4);
-		
 		String articleString4 = "";
-		articleString4 += "@article{Risch.2011,\n";
-		articleString4 += " author = {Risch, Florian and Bernt, R{\\\"u}diger and Franke, J{\\\"o}rg},\n";
-		articleString4 += " year = {2011},\n";
-		articleString4 += " title = {Schlanke Informationsfl{\\\"u}sse f{\\\"u}r eine effiziente Produktion},\n";
-		articleString4 += " pages = {706--710},\n";
-		articleString4 += " volume = {106},\n";
-		articleString4 += " number = {10},\n";
-		articleString4 += " issn = {0947-0085},\n";
-		articleString4 += " journal = {Zeitschrift f{\\\"u}r wirtschaftlichen Fabrikbetrieb}\n";
+		articleString4 += "@article{Albrecht.2012,\n";
+		articleString4 += " author = {Albrecht, Thomas and Risch, Florian and Franke, J{\\\"o}rg and Tremel, Jan},\n";
+		articleString4 += " year = {2012},\n";
+		articleString4 += " title = {Recyclinggerechte Montagetechnik f{\\\"u}r permanent erregte Synchronmotoren},\n";
+		articleString4 += " pages = {146--151},\n";
+		articleString4 += " volume = {5},\n";
+		articleString4 += " number = {03},\n";
+		articleString4 += " journal = {ATZ produktion}\n";
 		articleString4 += "}\n";
 		Publication publication4 = new Publication(articleString4);
 		String act4 = publication4.getReference();
-		String exp4 = "Risch, F.; Bernt, R.; Franke, J.: Schlanke Informationsflüsse für eine effiziente Produktion. In: Zeitschrift für wirtschaftlichen Fabrikbetrieb 106 (2011), Nr. 10, S. 706--710";
+		//String exp4 = "Albrecht, T.; Risch, F.; Franke, J.; Tremel, J.: Recyclinggerechte Montagetechnik für permanent erregte Synchronmotoren. In: ATZ produktion 03 (2012)";
+		String exp4 = "Albrecht, T.; Risch, F.; Franke, J.; Tremel, J.: Recyclinggerechte Montagetechnik für permanent erregte Synchronmotoren. In: ATZ produktion 5 (2012), Nr. 03, S. 146--151";
 		assertEquals("doCreatePublicationsTest-4", exp4, act4);
+		
+		String articleString5 = "";
+		articleString5 += "@article{Risch.2011,\n";
+		articleString5 += " author = {Risch, Florian and Bernt, R{\\\"u}diger and Franke, J{\\\"o}rg},\n";
+		articleString5 += " year = {2011},\n";
+		articleString5 += " title = {Schlanke Informationsfl{\\\"u}sse f{\\\"u}r eine effiziente Produktion},\n";
+		articleString5 += " pages = {706--710},\n";
+		articleString5 += " volume = {106},\n";
+		articleString5 += " number = {10},\n";
+		articleString5 += " issn = {0947-0085},\n";
+		articleString5 += " journal = {Zeitschrift f{\\\"u}r wirtschaftlichen Fabrikbetrieb}\n";
+		articleString5 += "}\n";
+		Publication publication5 = new Publication(articleString5);
+		String act5 = publication5.getReference();
+		String exp5 = "Risch, F.; Bernt, R.; Franke, J.: Schlanke Informationsflüsse für eine effiziente Produktion. In: Zeitschrift für wirtschaftlichen Fabrikbetrieb 106 (2011), Nr. 10, S. 706--710";
+		assertEquals("doCreatePublicationsTest-5", exp5, act5);
 
+		String bookString6 = "";
+		bookString6 += "@book{Shen.2006,\n";
+		bookString6 += " year = {2006},\n";
+		bookString6 += " title = {Computer Supported Cooperative Work in Design},\n";
+		bookString6 += " address = {Berlin and Heidelberg},\n";
+		bookString6 += " volume = {2},\n";
+		bookString6 += " publisher = {Springer Verlag},\n";
+		bookString6 += " editor = {Shen, W. and Chao, K.-M and Lin, Z. and Barthes, Jean-Paul and James, A.}\n";
+		bookString6 += "}\n";
+		String publicationString6 = "";
+		publicationString6 += "@incollection{Ruckel.2006,\n";
+		publicationString6 += " author = {R{\\\"u}ckel, Veit and Koch, Alexander and Feldmann, Klaus and Meerkamm, Harald},\n";
+		publicationString6 += " title = {Process Data Management for the Shortening of the whole Product Creation Process},\n";
+		publicationString6 += " pages = {616--625},\n";
+		publicationString6 += " volume = {2},\n";
+		publicationString6 += " publisher = {Springer Verlag},\n";
+		publicationString6 += " editor = {Shen, W. and Chao, K.-M and Lin, Z. and Barthes, Jean-Paul and James, A.},\n";
+		publicationString6 += " booktitle = {Computer Supported Cooperative Work in Design},\n";
+		publicationString6 += " year = {2006},\n";
+		publicationString6 += " address = {Berlin and Heidelberg}\n";
+		publicationString6 += "}\n";
+		PublicationParent book6 = new PublicationParent(bookString6);
+		ArrayList<PublicationParent> parents6 = new ArrayList<PublicationParent>();
+		parents6.add(book6);
+		Publication publication6 = new Publication(publicationString6, parents6);
+		String act6 = publication6.getReference();
+		//String exp6 = "Rückel, V.; Koch, A.; Feldmann, K.; Meerkamm, H.: Process Data Management for the Shortening of the whole Product Creation Process. In: Shen, W.; Chao, K.-M.; Lin, Z.; Barthes, J.-P.; James, A. (Hrsg.): Computer Supported Cooperative Work in Design. Berlin; Heidelberg: Springer Verlag, 2006 (2), S. 616--625";
+		String exp6 = "Rückel, V.; Koch, A.; Feldmann, K.; Meerkamm, H.: Process Data Management for the Shortening of the whole Product Creation Process. In: W. Shen; K.-M Chao; Z. Lin; Jean-Paul Barthes; A. James (Hrsg.): Computer Supported Cooperative Work in Design. Berlin; Heidelberg: Springer Verlag, 2006 (2), S. 616--625";
+		assertEquals("doCreatePublicationsTest-6", exp6, act6);
+		
+		
 	}
 	
 }

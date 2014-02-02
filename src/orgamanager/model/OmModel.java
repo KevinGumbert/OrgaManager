@@ -94,10 +94,10 @@ public class OmModel {
 
 	public void doCreatePublications(){
 		String path = "testfile0.txt";
-		PublicationsList citations;
+		PublicationsList publications;
 		try {
-			citations = new PublicationsList(path);
-			citations.saveAsCsv("testfile.txt");
+			publications = new PublicationsList(path);
+			publications.saveAsCsv("testfile.txt");
 			JOptionPane.showMessageDialog(null, "BP9","Debug", JOptionPane.WARNING_MESSAGE);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
