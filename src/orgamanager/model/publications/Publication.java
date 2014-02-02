@@ -1,41 +1,48 @@
-package orgamanager.model.citation;
+package orgamanager.model.publications;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-import orgamanager.utilities.OmCitationConstant;
+import orgamanager.utilities.OmPublicationConstant;
 import orgamanager.utilities.OmUtilities;
 
-public class Citation {
-	private OmCitationConstant citationType;
-	private boolean valid; // flag for validation
-	private Proceeding parent; // proceeding for inproceeding, null if journal article
-	private ArrayList<Proceeding> proceedings; 
-	private String isbn;
+/**
+ * Class represents a publication.
+ * 
+ * Publication items will be shown on website.
+ */
+public class Publication {
 	
-	// data used from bibtex-web-api
-	private String authors; 
-	private String reference; // = citation, note
-	private String year;
+	private OmPublicationConstant publicationType;
+	private boolean valid; 
+	private PublicationParent parent; 	/** book for incollection, proceeding for inproceeding, null for article or book */ 
+	private ArrayList<PublicationParent> possibleParents; 
+	private String isbn; 				// important for connectToParent()
+	private String booktitle; 			// important for connectToParent()
+	private String authors; 			// used in web-api
+	private String reference; 			// used in web-api; citation, note
+	private String year;				// used in web-api
 	
-	public Citation(String entry){
+	public Publication(String entry){
 		this.parent = null;
 		this.valid = true;
 		this.isbn = "";
+		this.booktitle = "";
 		this.year = "";
-		this.proceedings = null;
+		this.possibleParents = null;
 		parseBibtexString(entry);
 		validate();
 	}
 	
-	public Citation(String entry, ArrayList<Proceeding> proceedings){
+	public Publication(String entry, ArrayList<PublicationParent> proceedings){
 		this.parent = null;
 		this.valid = true;
 		this.isbn = "";
+		this.booktitle = "";
 		this.year = "";
-		this.proceedings = new ArrayList<Proceeding>(proceedings);
+		this.possibleParents = new ArrayList<PublicationParent>(proceedings);
 		parseBibtexString(entry);
 		validate();
 	}
@@ -87,19 +94,28 @@ public class Citation {
 	}
 	
 	private void parseBibtexString(String entry){
-		char leftDelimiter = '{';
+		char leftDelimiter 	= '{';
 		char rightDelimiter = '}';
-		OmUtilities utils = new OmUtilities();
+		OmUtilities utils 	= new OmUtilities();
 		String cleanedEntry = utils.replaceBibtexChars(entry);
 		HashMap<String, String> citationAttributes = new HashMap<String, String>();
 		Scanner in = new Scanner(cleanedEntry);
 		while (in.hasNextLine()){
-			String line = in.nextLine(); // each line of bibtex string
-			if (line.contains("@inproceedings")){ // start of entry
+			String line = in.nextLine(); 
+			if (line.contains("@article")){ 				// start of article entry
+				citationAttributes.put("type", "article");
+        		continue;// each line of bibtex string
+			} else if (line.contains("@book")){ 			// start of book entry
+				citationAttributes.put("type", "book"); 	// attributes: author, year, title, address, series;
+        		continue;
+			} else if (line.contains("@inproceedings")){ 	// start of entry
 				citationAttributes.put("type", "inproceeding");
         		continue;
-			} else if (line.contains("@misc")){ // start of misc entry
-				citationAttributes.put("type", "misc"); // attributes: author, year, title, address, series;
+			} else if (line.contains("@incollection")){ 			// start of book entry
+				citationAttributes.put("type", "incollection"); 	// attributes: author, year, title, address, series;
+        		continue;
+			} else if (line.contains("@misc")){ 			// start of misc entry
+				citationAttributes.put("type", "misc"); 	// attributes: author, year, title, address, series;
         		continue;
         	} else if (line.equals("} ") || line.equals("}")){ // end of entry 
         		validate();
@@ -139,23 +155,39 @@ public class Citation {
 				} else if (firstWord.equals("address")) {
 					String addressString = utils.pickChildString(line, leftDelimiter, rightDelimiter);
 					citationAttributes.put("address", addressString);
-				} else if (firstWord.equals("series")) {
+				} else if (firstWord.equals("series")) { // misc type;
 					String seriesString = utils.pickChildString(line, leftDelimiter, rightDelimiter);
 					citationAttributes.put("series", seriesString);
-				} else {
-					// throw(new
-					// RuntimeException("Unrecognized citation attribute!"));
-					System.out.println("ACHTUNG: unerkanntes Wort - " + firstWord);
+				} else if (firstWord.equals("volume")) { // article type;
+					String volumeString = utils.pickChildString(line, leftDelimiter, rightDelimiter);
+					citationAttributes.put("volume", volumeString);
+				} else if (firstWord.equals("number")) { // article type;
+					String numberString = utils.pickChildString(line, leftDelimiter, rightDelimiter);
+					citationAttributes.put("number", numberString);
+				} else if (firstWord.equals("journal")) { // article type;
+					String journalString = utils.pickChildString(line, leftDelimiter, rightDelimiter);
+					citationAttributes.put("journal", journalString);
+				} else if (firstWord.equals("issn")) { // article type;
+					String issnString = utils.pickChildString(line, leftDelimiter, rightDelimiter);
+					citationAttributes.put("issn", issnString);
+				} else { // abstract often has more than one line
+					System.out.println("WARNING: Publication.parseBibtexString(), unknown word - " + firstWord);
 				}
 				continue;
 			}
 		}
 		in.close();
 		// set attributes to object
-		if (citationAttributes.get("type").equals("inproceeding")){
-			this.citationType = OmCitationConstant.INPROCEEDING;
+		if (citationAttributes.get("type").equals("article")){
+			this.publicationType = OmPublicationConstant.ARTICLE;
+		} else if (citationAttributes.get("type").equals("book")){
+			this.publicationType = OmPublicationConstant.BOOK;
+		} else if (citationAttributes.get("type").equals("incollection")){
+			this.publicationType = OmPublicationConstant.INCOLLECTION;
+		} else if (citationAttributes.get("type").equals("inproceeding")){
+			this.publicationType = OmPublicationConstant.INPROCEEDING;
 		} else if (citationAttributes.get("type").equals("misc")){
-			this.citationType = OmCitationConstant.MISC;
+			this.publicationType = OmPublicationConstant.MISC;
 		} else {
 			System.out.println("WARNING - unknown OmCitationConstant!");
 		}
@@ -163,13 +195,17 @@ public class Citation {
 		String author = this.authors;
 		String title = "";
 		String editor = "";
-		String booktitle = "";
+		String booktitle = ""; 	// used for proceeding search
 		String location = "";
 		String publisher = "";
-		String year = "";
+		String year = ""; 		// used for proceeding search
 		String pages = "";
-		String series = ""; // used by misc-type
-		String isbn = ""; // used for proceeding search
+		String series = ""; 	// used by misc-type
+		String isbn = ""; 		// used for proceeding search
+		String journal = "";
+		String number = "";
+		String volume = "";
+		String issn = "";
 		// overwrite
 		if (citationAttributes.get("title") != null && !citationAttributes.get("title").equals("")){
 			title = citationAttributes.get("title");
@@ -198,29 +234,53 @@ public class Citation {
 		if (citationAttributes.get("isbn") != null && !citationAttributes.get("isbn").equals("")){
 			isbn = citationAttributes.get("isbn");
 		}
+		if (citationAttributes.get("journal") != null && !citationAttributes.get("journal").equals("")){
+			journal = citationAttributes.get("journal");
+		}
+		if (citationAttributes.get("number") != null && !citationAttributes.get("number").equals("")){
+			number = citationAttributes.get("number");
+		}
+		if (citationAttributes.get("volume") != null && !citationAttributes.get("volume").equals("")){
+			volume = citationAttributes.get("volume");
+		}
+		if (citationAttributes.get("issn") != null && !citationAttributes.get("issn").equals("")){
+			issn = citationAttributes.get("issn");
+		}
 		// unused attributes: abstract, keywords, ...
-		createYear(year); // sets the attribute for web api, keeps the long version for typed reference
+		createYear(year); // sets the object attribute for web api, keeps the long version for typed reference
 		this.isbn = isbn;
-		if (proceedings != null){
+		this.booktitle = booktitle;
+		if (possibleParents != null){
 			connectToParent();
 		}
-		createReferences(author, title, editor, booktitle, location, publisher, year, pages, series);
+		createReferences(author, title, editor, booktitle, location, publisher, year, pages, series, volume, number, journal, issn);
 	}
 	
 	private void connectToParent(){
 		// look for corresponding isbn
 		System.out.println("Citation ... try connect to parent!");
-		String key = this.isbn;
-		for (Proceeding proceeding : proceedings){
-			String procKey = proceeding.getIsbn();
-			if (procKey.equals(key)){
-				System.out.println("MATCH!");
+		String isbn = this.isbn;
+		String booktitle = this.booktitle;
+		String year = this.year; // object attribute will be formatted like '2012'
+		for (PublicationParent proceeding : possibleParents){
+			String procIsbn = proceeding.getIsbn();
+			String procBooktitle = proceeding.getTitle();
+			String procYear = proceeding.getYear();
+			if (isbn.equals(procIsbn) && !isbn.equals("")){
+				System.out.println("MATCH! (isbn)");
 				this.parent = proceeding;
+				break;
+			} else if (booktitle.equals(procBooktitle)){ // booktitle is ok, go for year
+				if (year.equals(procYear)){
+					System.out.println("MATCH! (title + year)");
+					this.parent = proceeding;
+					break;
+				}
 			}
 		}
 	}
 	
-	private void createReferences(String author, String title, String editor, String booktitle, String location, String publisher, String year, String pages, String series){
+	private void createReferences(String author, String title, String editor, String booktitle, String location, String publisher, String year, String pages, String series, String volume, String number, String journal, String issn){
 		String ref = "";
 		String authors = "";
 		authors = new String(author);
@@ -246,7 +306,7 @@ public class Citation {
 	    ref += ". ";
 	    // add in 
 	    ref += "In: ";
-		if (this.citationType == OmCitationConstant.INPROCEEDING){ 
+		if (this.publicationType == OmPublicationConstant.INPROCEEDING){ 
 			if (editor != null && !editor.equals("")){
 		    	String editorFinal = createEditor(editor);
 		    	ref += editorFinal;
@@ -269,13 +329,26 @@ public class Citation {
 		    	ref += "S. ";
 		    	ref += pages;
 		    }
-		} else if (this.citationType == OmCitationConstant.MISC){
+		} else if (this.publicationType == OmPublicationConstant.MISC){
 			// add in 
 			ref += series;
 			ref += ". ";
 			ref += location;
 			ref += ", ";
 			ref += year;
+			// misc: series
+		} else if (this.publicationType == OmPublicationConstant.ARTICLE){
+			// add in 
+			ref += journal;
+			ref += " ";
+			ref += volume;
+			ref += " (";
+			ref += year;
+			ref += ")";
+			ref += ", Nr. ";
+			ref += number;
+			ref += ", S. ";
+			ref += pages;
 			// misc: series
 		} else {
 			// 
@@ -348,7 +421,24 @@ public class Citation {
 		        	multipleWordEditor += tok;
 		        	multipleWordEditor += " ";
 				} else {
-					editors.add(tok); // add Single Word Item
+					// check for authors notation, i.e. lastname, firstname(s)
+					if (tok.charAt(tok.length() - 1) == ','){
+						String editorToAddString = "";
+						String lastName = tok.substring(0, (tok.length() - 1));
+						String firstName = st.nextToken();
+						String tokenAfterFirstName = st.nextToken();
+						editorToAddString += firstName;
+						if (!tokenAfterFirstName.equals("")){
+							editorToAddString += " ";
+							editorToAddString += tokenAfterFirstName;
+						}
+						editorToAddString += " ";
+						editorToAddString += lastName;
+						editors.add(editorToAddString);// add name
+					} else {
+						editors.add(tok); // add Single Word Item
+					}
+					
 				}
 			}
 	    }

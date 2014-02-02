@@ -1,4 +1,4 @@
-package orgamanager.model.citation;
+package orgamanager.model.publications;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -11,17 +11,22 @@ import javax.swing.JOptionPane;
 
 import orgamanager.utilities.OmUtilities;
 
-public class CitationList {
-	public ArrayList<Citation> citations;
-	public ArrayList<Proceeding> proceedings;
+public class PublicationsList {
+	public ArrayList<Publication> citations;
+	public ArrayList<PublicationParent> proceedings;
 	
-	public CitationList(String path) throws FileNotFoundException{
-		citations = new ArrayList<Citation>();
-		proceedings = new ArrayList<Proceeding>();
+	public PublicationsList(String path) throws FileNotFoundException{
+		citations = new ArrayList<Publication>();
+		proceedings = new ArrayList<PublicationParent>();
 		parseBibtexFile(path);
 	}
 	
-	public List<Citation> getCitations(){
+//	public CitationList(ArrayList<Proceeding> proceedings, ArrayList<Citation> citations) { // important for unit tests
+//		citations = new ArrayList<Citation>(citations);
+//		proceedings = new ArrayList<Proceeding>(proceedings);
+//	}
+	
+	public List<Publication> getCitations(){
 		return this.citations;
 	}
 	
@@ -74,17 +79,17 @@ public class CitationList {
 		// create object - make sure that all proceedings are created first.
 		for (String item : entries){
 			if (item.contains("@proceedings")){
-				Proceeding proceeding = new Proceeding(item);
+				PublicationParent proceeding = new PublicationParent(item);
 				proceedings.add(proceeding);
 			}
 		}
 		System.out.println("Proceedings created ..." + proceedings.size());
 		for (String item : entries){
 			if (item.contains("@inproceedings")){
-				Citation citation = new Citation(item, proceedings);
+				Publication citation = new Publication(item, proceedings);
 				citations.add(citation);
 			} else if (item.contains("@misc")){
-				Citation citation = new Citation(item);
+				Publication citation = new Publication(item);
 				citations.add(citation);
 			} else {
 				System.out.println("WARNING - unknown entry in citation-strings-list.");
@@ -97,7 +102,7 @@ public class CitationList {
 		String fileName = path;
 		//String fileName = "Gespeichert_als_CSV-Datei.csv";
 		String content = "";
-		for (Citation citation : this.citations){
+		for (Publication citation : this.citations){
 			content += citation.getCsvString();
 		}
 		OmUtilities utils = new OmUtilities();

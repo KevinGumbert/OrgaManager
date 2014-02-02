@@ -1,19 +1,20 @@
-package orgamanager.model.citation;
+package orgamanager.model.publications;
 
 import java.util.HashMap;
 import java.util.Scanner;
 
-import orgamanager.utilities.OmCitationConstant;
+import orgamanager.utilities.OmPublicationConstant;
 import orgamanager.utilities.OmUtilities;
 
-public class Proceeding {
+public class PublicationParent {
 	
-	OmCitationConstant citationType;
+	OmPublicationConstant citationType;
 	String isbn;
 	String title;
+	String year;
 	boolean valid;
 	
-	public Proceeding(String entry){
+	public PublicationParent(String entry){
 		this.valid = true;
 		parseBibtexString(entry);
 	}
@@ -42,8 +43,11 @@ public class Proceeding {
 				} else if (firstWord.equals("title")) {
 					String titleString = utils.pickChildString(line, leftDelimiter, rightDelimiter);
 					citationAttributes.put("title", titleString);
+				} else if (firstWord.equals("year")) {
+					String yearString = utils.pickChildString(line, leftDelimiter, rightDelimiter);
+					citationAttributes.put("year", yearString);
 				} else {
-					// abstract, year, address, number, publisher, editor
+					// abstract, address, number, publisher, editor
 					System.out.println("ACHTUNG - Proceeding.parseBibtexString(): ungenutztes Wort - " + firstWord);
 				}
 				continue;
@@ -52,12 +56,13 @@ public class Proceeding {
 		in.close();
 		// set attributes to object
 		if (citationAttributes.get("type").equals("proceeding")){
-			this.citationType = OmCitationConstant.PROCEEDING;
+			this.citationType = OmPublicationConstant.PROCEEDING;
 		} else {
 			System.out.println("WARNING Proceeding - unknown OmCitationConstant!");
 		}
 		String isbn = "";
 		String title = "";
+		String year = "";
 		// overwrite
 		if (citationAttributes.get("title") != null && !citationAttributes.get("title").equals("")){
 			title = citationAttributes.get("title");
@@ -65,19 +70,23 @@ public class Proceeding {
 		if (citationAttributes.get("isbn") != null && !citationAttributes.get("isbn").equals("")){
 			isbn = citationAttributes.get("isbn");
 		}
+		if (citationAttributes.get("year") != null && !citationAttributes.get("year").equals("")){
+			year = citationAttributes.get("year");
+		}
 		this.title = title;
 		this.isbn = isbn;
+		this.year = year;
 	}
 	
 	public void validate(){
 		// TODO
 	}
 	
-	public OmCitationConstant getCitationType(){
+	public OmPublicationConstant getCitationType(){
 		return citationType;
 	}
 
-	public void setCitationType(OmCitationConstant citationType){
+	public void setCitationType(OmPublicationConstant citationType){
 		this.citationType = citationType;
 	}
 
@@ -91,6 +100,10 @@ public class Proceeding {
 
 	public String getTitle(){
 		return title;
+	}
+	
+	public String getYear(){
+		return year;
 	}
 
 	public boolean isValid(){

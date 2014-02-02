@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import orgamanager.model.citation.Citation;
+import orgamanager.model.publications.Publication;
 import orgamanager.utilities.OmUtilities;
 
 public class OmUtilitiesTest {

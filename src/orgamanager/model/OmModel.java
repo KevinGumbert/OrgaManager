@@ -10,7 +10,7 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runners.JUnit4;
 
-import orgamanager.model.citation.CitationList;
+import orgamanager.model.publications.PublicationsList;
 import orgamanager.selenium.ehc.EhcTests;
 import orgamanager.selenium.joba.JobaTests;
 import orgamanager.selenium.skp.SkpTests;
@@ -94,9 +94,9 @@ public class OmModel {
 
 	public void doCreatePublications(){
 		String path = "testfile0.txt";
-		CitationList citations;
+		PublicationsList citations;
 		try {
-			citations = new CitationList(path);
+			citations = new PublicationsList(path);
 			citations.saveAsCsv("testfile.txt");
 			JOptionPane.showMessageDialog(null, "BP9","Debug", JOptionPane.WARNING_MESSAGE);
 		} catch (FileNotFoundException e) {
