@@ -50,9 +50,14 @@ public class PublicationsList {
 		Scanner in = new Scanner(cleanedContent);
 		boolean activeEntry = false;
 		String entry = "";
+		int lineCounter = 0;
 		while (in.hasNextLine()){
 			String line = in.nextLine(); // each line of bibtex file
-			if (line.equals("") || line.equals(" ")){ // leere Zeile
+			int curLine = lineCounter++;
+			if (line.contains("Closed-loop control of patient handling robots")){
+				System.out.println("Read " + curLine + ": " + line);
+			}
+			if (line.equals("") || line.equals(" ") || line.contains("@patent")){ // leere Zeile, Patentschrift
 				continue;
 			}
 			if (line.contains("@article")){ // start of entry
@@ -108,7 +113,7 @@ public class PublicationsList {
 				parents.add(proceeding);
 			}
 		}
-		System.out.println("PublicationsParents created ..." + parents.size());
+		//System.out.println("PublicationsParents created ..." + parents.size());
 		for (String item : entries){
 			if (item.contains("@article")){
 				Publication article = new Publication(item, parents);
@@ -132,7 +137,7 @@ public class PublicationsList {
 					publications.add(citation);
 				}
 			} else {
-				System.out.println("WARNING - unknown entry in citation-strings-list.");
+				//System.out.println("WARNING - unknown entry in citation-strings-list.");
 			}
 		}
 		System.out.println("Publications created ... " + publications.size());

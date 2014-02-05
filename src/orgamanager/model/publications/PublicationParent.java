@@ -51,7 +51,7 @@ public class PublicationParent {
 					citationAttributes.put("year", yearString);
 				} else {
 					// abstract, address, number, publisher, editor
-					System.out.println("ACHTUNG - PublicationParent.parseBibtexString(): ungenutztes Wort - " + firstWord);
+					//System.out.println("ACHTUNG - PublicationParent.parseBibtexString(): ungenutztes Wort - " + firstWord);
 				}
 				continue;
 			}

@@ -103,7 +103,10 @@ public class Publication {
 		Scanner in = new Scanner(cleanedEntry);
 		while (in.hasNextLine()){
 			String line = in.nextLine(); 
-			if (line.contains("@article")){ 				// start of article entry
+			if (line.contains("@patent")){ 
+				citationAttributes.put("type", "patent");// not relevant
+				continue;
+			} else if (line.contains("@article")){ 				// start of article entry
 				citationAttributes.put("type", "article");
         		continue;// each line of bibtex string
 			} else if (line.contains("@book")){ 			// start of book entry
@@ -172,7 +175,7 @@ public class Publication {
 					String issnString = utils.pickChildString(line, leftDelimiter, rightDelimiter);
 					citationAttributes.put("issn", issnString);
 				} else { // abstract often has more than one line
-					System.out.println("WARNING: Publication.parseBibtexString(), unknown word - " + firstWord);
+					//System.out.println("WARNING: Publication.parseBibtexString(), unknown word - " + firstWord);
 				}
 				continue;
 			}
@@ -194,7 +197,7 @@ public class Publication {
 		}
 		String author = "";
 		if (citationAttributes.get("author") != null){ // books do not have authors just editors
-			createAuthor(citationAttributes.get("author"));
+			this.authors = createAuthor(citationAttributes.get("author"));
 			author = this.authors;
 		}
 		String title = "";
@@ -258,11 +261,12 @@ public class Publication {
 			connectToParent();
 		}
 		createReferences(author, title, editor, booktitle, location, publisher, year, pages, series, volume, number, journal, issn);
+		System.out.println("Publication created: " + author + ", " +  title + ", " + year + ", " + this.publicationType + ";");
 	}
 	
 	private void connectToParent(){
 		// look for corresponding isbn
-		System.out.println("Citation ... try connect to parent!");
+		//System.out.println("Citation ... try connect to parent!");
 		String isbn = this.isbn;
 		String booktitle = this.booktitle;
 		String year = this.year; // object attribute will be formatted like '2012'
@@ -271,12 +275,12 @@ public class Publication {
 			String procBooktitle = parent.getTitle();
 			String procYear = parent.getYear();
 			if (isbn.equals(procIsbn) && !isbn.equals("")){
-				System.out.println("MATCH! (isbn)");
+				//System.out.println("MATCH! (isbn)");
 				this.parent = parent;
 				break;
 			} else if (booktitle.equals(procBooktitle)){ // booktitle is ok, go for year
 				if (year.equals(procYear)){
-					System.out.println("MATCH! (title + year)");
+					//System.out.println("MATCH! (title + year)");
 					this.parent = parent;
 					break;
 				}
@@ -289,6 +293,7 @@ public class Publication {
 		String authors = "";
 		if (author.equals("") && publicationType == OmPublicationConstant.BOOK){ // empty author string means it is a book as a publication // TODO Unittest
 			author = new String(editor);
+			this.authors = createEditor(editor);
 		}
 		authors = new String(author);
 		StringTokenizer st = new StringTokenizer(authors, " ");
@@ -306,14 +311,26 @@ public class Publication {
 	        }
 	    }
 	    // exclude last semikolon and space
-	    ref = ref.substring(0, ref.length() - 2);
+	    if (ref.length() > 1){ // there are items without author ...
+	    	ref = ref.substring(0, ref.length() - 2);
+	    }
+	    // editor suffix 
+	    if (this.publicationType == OmPublicationConstant.BOOK){
+	    	ref += " (Hrsg.)";
+	    }
 	    ref += ": ";
 	    // add title
 	    ref += title;
 	    ref += ". ";
-	    // add in 
-	    ref += "In: ";
+	    if (this.publicationType == OmPublicationConstant.BOOK){
+	    	 ref += createLocation(location);
+			 ref += ": ";
+			 ref += publisher;
+			 ref += ", ";
+			 ref += year;
+	    }
 		if (this.publicationType == OmPublicationConstant.INPROCEEDING || this.publicationType == OmPublicationConstant.INCOLLECTION){ 
+			ref += "In: ";
 			if (editor != null && !editor.equals("")){
 		    	String editorFinal = createEditor(editor);
 		    	ref += editorFinal;
@@ -344,6 +361,7 @@ public class Publication {
 		    }
 		} else if (this.publicationType == OmPublicationConstant.MISC){
 			// add in 
+			ref += "In: ";
 			ref += series;
 			ref += ". ";
 			ref += location;
@@ -352,6 +370,7 @@ public class Publication {
 			// misc: series
 		} else if (this.publicationType == OmPublicationConstant.ARTICLE){
 			// add in 
+			ref += "In: ";
 			ref += journal;
 			ref += " ";
 			ref += volume;
@@ -404,7 +423,7 @@ public class Publication {
 		}
 	}
 	
-	private void createAuthor(String authorStringPara){
+	private String createAuthor(String authorStringPara){
 		ArrayList<String> authors = new ArrayList<String>();
 		String authorString = new String(authorStringPara);
 		StringTokenizer st = new StringTokenizer(authorString, " ");
@@ -419,15 +438,16 @@ public class Publication {
 	        	continue;
 	        }
 	    }
-	    this.authors = "";
+	    String authorsString = "";
 	    for (int i = 0; i < authors.size(); i++){
 	    	if (i == authors.size()){
-	    		this.authors += authors.get(i);
+	    		authorsString += authors.get(i);
 	    	} else {
-	    		this.authors += authors.get(i);
-	    		this.authors += "; ";
+	    		authorsString += authors.get(i);
+	    		authorsString += "; ";
 	    	}
 	    }
+	    return authorsString;
 	}
 	
 	private String createEditor(String editor){

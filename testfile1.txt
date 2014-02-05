@@ -1,3 +1,4 @@
+
 @inproceedings{Bauer.2014,
  abstract = {Mit dem Konzept des Ambient Assisted Living (AAL) sollen technische Hilfestellungen entwickelt werden, um den l{\"a}ngeren Verbleib {\"a}lterer Menschen im gewohnten Umfeld zu erm{\"o}glichen. Meist werden solche technischen Hilfestellungen jedoch stark technologiegetrieben entwickelt und entsprechen nicht dem tats{\"a}chlichen Bed{\"u}rfnis der Endanwender. Das im Projekt verwendete Vorgehen der menschzentrierten Gestaltung stellt hingegen den Benutzer in den Mittelpunkt: Auf diese Weise sollen Fehlentwicklungen von Anfang an vermieden werden und ein gebrauchstaugliches System entstehen. Durch Usability-Tests werden zielgruppenspezifische Probleme im Umgang mit AAL-Serviceplattformen erkannt und m{\"o}gliche L{\"o}sungsvorschl{\"a}ge durchdacht.},
  author = {Bauer, Jochen and Kettschau, Anna and Franke, J{\"o}rg},
@@ -9,4 +10,90 @@
  booktitle = {Wohnen - Pflege - Teilhabe {\dq}Besser leben durch Technik{\dq}},
  year = {2014},
  address = {Berlin}
-} 
+}
+ 
+@inproceedings{Franke.2013b,
+ abstract = {Deutschland wird {\"a}lter. Deutschland wird vielf{\"a}ltiger. Deutschland wird moderner. Deutschland muss aber auch Energie und Strom sparen. Vor diesem Hintergrund wurde im Mai 2012 das bayerische Technologiezentrum f{\"u}r privates Wohnen gegr{\"u}ndet. Die gr{\"o}{\ss}ten Erfolgschancen versprechen ganzheitlich ausgerichtete Forschungsans{\"a}tze im Bereich
+Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der Bewohner nachhaltig gesteigert werden. Ein interdisziplin{\"a}res Forscherteam, bestehend aus Ingenieuren, Informatikern und Sozialwissenschaftlern erarbeitet ein ganzheitliches Konzept, welches die Bed{\"u}rfnisse der Bewohner in den Mittelpunkt stellt. Zusammen mit Partnern aus Forschung und Wirtschaft sollen marktf{\"a}hige L{\"o}sungen entwickelt werden. So soll sichergestellt werden, dass die entwickelten L{\"o}sungen tats{\"a}chlich Anwendung finden und sich Smart Homes am Markt etablieren k{\"o}nnen.},
+ author = {Franke, J{\"o}rg and Zerth, J{\"u}rgen and Kleineidam, Gerhard and Kettschau, Anna},
+ title = {Mehr Lebensqualit{\"a}t durch Smart Homes? Die Notwendigkeit ganzheitlicher Forschung im Bereich Smart Living},
+ keywords = {AAL;Smart Home},
+ pages = {304--307},
+ publisher = {VDE~Verlag GmbH},
+ isbn = {978-3-8007-3484-9},
+ editor = {VDE and BMBF and {Sozialverband VdK} and Fraunhofer-AAL},
+ booktitle = {Lebensqualit{\"a}t im Wandel von Demografie und Technik},
+ year = {2013},
+ address = {Berlin}
+}
+
+@proceedings{VDE.2013,
+ abstract = {Neue Assistenzsysteme und Dienstleistungen werden f{\"u}r vielf{\"a}ltige Zielgruppen und Lebensumst{\"a}nde entwickelt, f{\"u}r die sie Unterst{\"u}tzung bieten k{\"o}nnen. Die L{\"o}sungsans{\"a}tze spiegeln das wider - und finden zunehmend ihren Weg in die praktische Erprobung und in den Alltag. Dieser Mannigfaltigkeit stellt sich der 6. Deutsche AAL-Kongress, wenn er seinen Fokus f{\"u}r 2013 auf Lebensqualit{\"a}t im Wandel von Demografie und Technik richtet.
+Mit der gro{\ss}en Bandbreite der Themen sollen viele Lebensbereiche einbezogen werden, in denen AAL-Systeme neue und zus{\"a}tzliche Lebensqualit{\"a}t bieten k{\"o}nnen. Hierzu werden wieder praktische Anwendungsbeispiele, Konzeptstudien von morgen und technische L{\"o}sungen von heute diskutiert. Neben Plenarbeitr{\"a}gen und Vortr{\"a}gen werden erstmals auch Workshops angeboten.
+Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in den vergangenen f{\"u}nf Jahren zum Leitkongress im Innovationsfeld AAL.},
+ year = {2013},
+ title = {Lebensqualit{\"a}t im Wandel von Demografie und Technik: 6. deutscher AAL-Kongress mit Ausstellung, 22-23. Januar 2013, Berlin, Tagungsbeitr{\"a}ge},
+ address = {Berlin},
+ number = {1},
+ publisher = {VDE~Verlag GmbH},
+ isbn = {978-3-8007-3484-9},
+ editor = {VDE and BMBF and {Sozialverband VdK} and Fraunhofer-AAL}
+}
+
+@book{Shen.2006,
+ year = {2006},
+ title = {Computer Supported Cooperative Work in Design},
+ address = {Berlin and Heidelberg},
+ volume = {2},
+ publisher = {Springer Verlag},
+ editor = {Shen, W. and Chao, K.-M and Lin, Z. and Barthes, Jean-Paul and James, A.}
+}
+
+@incollection{Ruckel.2006,
+ author = {R{\"u}ckel, Veit and Koch, Alexander and Feldmann, Klaus and Meerkamm, Harald},
+ title = {Process Data Management for the Shortening of the whole Product Creation Process},
+ pages = {616--625},
+ volume = {2},
+ publisher = {Springer Verlag},
+ editor = {Shen, W. and Chao, K.-M and Lin, Z. and Barthes, Jean-Paul and James, A.},
+ booktitle = {Computer Supported Cooperative Work in Design},
+ year = {2006},
+ address = {Berlin and Heidelberg}
+}
+
+@misc{Bauer.13.11.2013,
+ author = {Bauer, Jochen and Kettschau, Anna},
+ year = {13.11.2013},
+ title = {Alter, Wohnen und Technik: Mit technischen Innovationen gesellschaftliche Herausforderungen l{\"o}sen},
+ address = {N{\"u}rnberg},
+ series = {Energie und Forschung {\dq} Die Forschung von heute - die Energie von morgen{\dq}}
+}
+
+@inproceedings{Schuler.2005,
+ author = {Sch{\"u}{\ss}ler, Florian and Bigl, Thomas},
+ title = {Reel-to-Reel-System zur hocheffizienten Produktion von Folienschaltungen},
+ publisher = {Eigendruck},
+ editor = {{FAPS-TT GmbH}},
+ booktitle = {Folienschaltungen - Innovative Produktgestaltung und Prozesse},
+ year = {2005},
+ address = {Erlangen}
+}
+
+@proceedings{Franke.2013e,
+ year = {2013},
+ title = {Fachworkshop Elektromaschinenbau - Aktuelle Entwicklungen in der Wickeltechnik},
+ address = {N{\"u}rnberg},
+ edition = {130},
+ publisher = {FAPS-TT GmbH},
+ series = {FAPS-TT Seminare},
+ editor = {Franke, J{\"o}rg}
+}
+
+@book{Franke.2013f,
+ year = {2013},
+ title = {R{\"a}umliche elektronische Baugruppen (3D-MID): Werkstoffe, Herstellung, Montage und Anwendungen f{\"u}r spritzgegossene Schaltungstr{\"a}ger},
+ address = {M{\"u}nchen},
+ publisher = {Carl Hanser Verlag},
+ isbn = {978-3-446-43441-7},
+ editor = {Franke, J{\"o}rg}
+}

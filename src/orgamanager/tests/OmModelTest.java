@@ -238,7 +238,20 @@ public class OmModelTest {
 		String exp6 = "Rückel, V.; Koch, A.; Feldmann, K.; Meerkamm, H.: Process Data Management for the Shortening of the whole Product Creation Process. In: W. Shen; K.-M Chao; Z. Lin; Jean-Paul Barthes; A. James (Hrsg.): Computer Supported Cooperative Work in Design. Berlin; Heidelberg: Springer Verlag, 2006 (2), S. 616--625";
 		assertEquals("doCreatePublicationsTest-6", exp6, act6);
 		
-		
+		String publicationString7 = "";
+		publicationString7 += "@book{Franke.2013f,\n";
+		publicationString7 += " year = {2013},\n";
+		publicationString7 += " title = {R{\\\"a}umliche elektronische Baugruppen (3D-MID): Werkstoffe, Herstellung, Montage und Anwendungen f{\\\"u}r spritzgegossene Schaltungstr{\\\"a}ger},\n";
+		publicationString7 += " address = {M{\\\"u}nchen},\n";
+		publicationString7 += " publisher = {Carl Hanser Verlag},\n";
+		publicationString7 += " isbn = {978-3-446-43441-7},\n";
+		publicationString7 += " editor = {Franke, J{\\\"o}rg}\n";
+		publicationString7 += "}\n";
+		Publication publication7 = new Publication(publicationString7);
+		String act7 = publication7.getReference();
+		//String exp7 = "Franke, J. (Hrsg.): Räumliche elektronische Baugruppen (3D-MID): Werkstoffe, Herstellung, Montage und Anwendungen für spritzgegossene Schaltungsträger. München: Carl Hanser Verlag GmbH, 2013";
+		String exp7 = "Franke, J. (Hrsg.): Räumliche elektronische Baugruppen (3D-MID): Werkstoffe, Herstellung, Montage und Anwendungen für spritzgegossene Schaltungsträger. München: Carl Hanser Verlag, 2013";
+		assertEquals("doCreatePublicationsTest-7", exp7, act7);
 	}
 	
 }

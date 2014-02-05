@@ -75,12 +75,36 @@ public class OmUtilities {
 	
 	public String replaceBibtexChars(String str){
 		// Note: new instances are necessary due to replace-method;
-		// ae, oe, ue, dg(""), ss, ~ (-), Ae, Oe, Ue
+		// ae, oe, ue, dg(""), ss, ~ (-), Ae, Oe, Ue, &, c-gehakt, e-akzent
 		String newStringInstance = "";
+		String afterAnd = "";
+		CharSequence targetAnd = "{\\&}";
+		CharSequence replacementAnd = "&";
+		afterAnd = str.replace(targetAnd, replacementAnd);
+		String afterEaccent = "";
+		CharSequence targetEaccent = "{\\'e}";
+		CharSequence replacementEaccent = "e";
+		afterEaccent = afterAnd.replace(targetEaccent, replacementEaccent);
+		String afterSpecialC = "";
+		CharSequence targetSpecialC = "{\\'c}";
+		CharSequence replacementSpecialC = "c";
+		afterSpecialC = afterEaccent.replace(targetSpecialC, replacementSpecialC);
+		String afterOeuc = "";
+		CharSequence targetOeuc = "{\\\"O}";
+		CharSequence replacementOeuc = "Ö";
+		afterOeuc = afterSpecialC.replace(targetOeuc, replacementOeuc);
+		String afterUeuc = "";
+		CharSequence targetUeuc = "{\\\"U}";
+		CharSequence replacementUeuc = "Ü";
+		afterUeuc = afterOeuc.replace(targetUeuc, replacementUeuc);
+		String afterAeuc = "";
+		CharSequence targetAeuc = "{\\\"A}";
+		CharSequence replacementAeuc = "Ä";
+		afterAeuc = afterUeuc.replace(targetAeuc, replacementAeuc);
 		String afterOe = "";
 		CharSequence targetOe = "{\\\"o}";
 		CharSequence replacementOe = "ö";
-		afterOe = str.replace(targetOe, replacementOe);
+		afterOe = afterAeuc.replace(targetOe, replacementOe);
 		String afterUe = "";
 		CharSequence targetUe = "{\\\"u}";
 		CharSequence replacementUe = "ü";
@@ -89,16 +113,16 @@ public class OmUtilities {
 		CharSequence targetAe = "{\\\"a}";
 		CharSequence replacementAe = "ä";
 		afterAe = afterUe.replace(targetAe, replacementAe);
+		String afterSharps = "";
+		CharSequence targetSharps = "{\\ss}";
+		CharSequence replacementSharps = "ß";
+		afterSharps = afterAe.replace(targetSharps, replacementSharps);
 		String afterDg = "";
-//		CharSequence targetDg = "{\\dg}";
-//		CharSequence replacementDg = "\"";
-//		afterDg = afterAe.replace(targetDg, replacementDg);
-		afterDg = afterAe.replaceAll("\\{\\\\dq\\}", "\"");
+		afterDg = afterSharps.replaceAll("\\{\\\\dq\\}", "\"");
 		String afterTilde = "";
 		CharSequence targetTilde = "~";
 		CharSequence replacementTilde = "-";
 		afterTilde = afterDg.replace(targetTilde, replacementTilde);
-		
 		newStringInstance = afterTilde;
 		return newStringInstance;
 	}
