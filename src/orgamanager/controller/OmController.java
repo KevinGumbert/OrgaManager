@@ -17,6 +17,18 @@ import orgamanager.view.OmPublicationsPanel;
 import orgamanager.view.OmView;
 import orgamanager.view.OmWelcomePanel;
 
+/**
+ * OmController is the main controller.
+ * 
+ * Controller sets action listeners of corresponding view.
+ * Each view has a prepareForView() method which initialises 
+ * the view. A list of all views is available, because it is 
+ * possible to iterate through all items of OmViewConstant.
+ * Each view extends JPanel and only one panel is shown on 
+ * screen, see setCurrentView().
+ * A commandMethod(), i.e. invoked by a clicked button has 
+ * a corresponding method in the model OmModel.  
+ */
 public class OmController {
 
 	private OmModel model;
@@ -246,7 +258,7 @@ public class OmController {
 	
 	private void prepareForSignaturesView() {
 		setCurrentView(OmViewConstant.SIGNATURES);
-		
+		// TODO
 	}
 
 	private void prepareForPublicationsView() {

@@ -57,7 +57,7 @@ public class PublicationsList {
 			if (line.contains("Closed-loop control of patient handling robots")){
 				System.out.println("Read " + curLine + ": " + line);
 			}
-			if (line.equals("") || line.equals(" ") || line.contains("@patent")){ // leere Zeile, Patentschrift
+			if (line.equals("") || line.equals(" ") || (line.substring(0,1)).equals("%")){ // leere Zeile, Patentschrift, Latex-Kommentar
 				continue;
 			}
 			if (line.contains("@article")){ // start of entry
@@ -81,6 +81,11 @@ public class PublicationsList {
         		entry += line + "\n";
         		continue;
 			} else if (line.contains("@misc")){ 
+				activeEntry = true;
+        		entry = "";
+        		entry += line + "\n";
+        		continue;
+			} else if (line.contains("@patent")){ 
 				activeEntry = true;
         		entry = "";
         		entry += line + "\n";
@@ -113,7 +118,7 @@ public class PublicationsList {
 				parents.add(proceeding);
 			}
 		}
-		//System.out.println("PublicationsParents created ..." + parents.size());
+		System.out.println("PublicationsParents created ..." + parents.size());
 		for (String item : entries){
 			if (item.contains("@article")){
 				Publication article = new Publication(item, parents);
@@ -187,7 +192,6 @@ public class PublicationsList {
 	
 	public void saveAsCsv(String path){
 		String fileName = path;
-		//String fileName = "Gespeichert_als_CSV-Datei.csv";
 		String content = "";
 		for (Publication citation : this.publications){
 			content += citation.getCsvString();

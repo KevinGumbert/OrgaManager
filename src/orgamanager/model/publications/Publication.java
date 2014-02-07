@@ -48,6 +48,9 @@ public class Publication {
 		validate();
 	}
 	
+	public Publication(){ // just for unit tests
+	}
+	
 	public String getCsvString() {
 		String csv = "";
 		String type = ""; 				// db web
@@ -261,7 +264,13 @@ public class Publication {
 			connectToParent();
 		}
 		createReferences(author, title, editor, booktitle, location, publisher, year, pages, series, volume, number, journal, issn);
-		System.out.println("Publication created: " + author + ", " +  title + ", " + year + ", " + this.publicationType + ";");
+		String dstr = "Publication created: " + author + " " +  title + ", " + year + ", " + this.publicationType + "; ";
+		if (this.parent != null){
+			dstr += "+";
+		} else {
+			dstr += "-";
+		}
+		System.out.println(dstr);
 	}
 	
 	private void connectToParent(){
@@ -281,6 +290,12 @@ public class Publication {
 			} else if (booktitle.equals(procBooktitle)){ // booktitle is ok, go for year
 				if (year.equals(procYear)){
 					//System.out.println("MATCH! (title + year)");
+					this.parent = parent;
+					break;
+				}
+			} else if (procBooktitle.contains(booktitle)){
+				if (year.equals(procYear)){
+					//System.out.println("MATCH! (part of title + year)");
 					this.parent = parent;
 					break;
 				}
@@ -343,10 +358,15 @@ public class Publication {
 		    	ref += booktitle;
 		    }
 		    ref += ". ";
-		    ref += createLocation(location);
-		    ref += ": ";
-		    ref += publisher;
-		    ref += ", ";
+		    String parentLocation = createLocation(location);
+		    if (!parentLocation.equals("")){
+		    	ref += parentLocation;
+			    ref += ": ";
+		    }
+		    if (!publisher.equals("")){
+		    	ref += publisher;
+			    ref += ", ";
+		    }
 		    ref += year;
 		    if (volume != null && !volume.equals("")){
 		    	ref += " ";
@@ -450,7 +470,7 @@ public class Publication {
 	    return authorsString;
 	}
 	
-	private String createEditor(String editor){
+	public String createEditorWithBrackets(String editor){
 		String str = "";
 		ArrayList<String> editors = new ArrayList<String>();
 		StringTokenizer st = new StringTokenizer(editor, " ");
@@ -512,6 +532,72 @@ public class Publication {
 	    	}
 	    }
 		return str;
+	}
+	
+	public String createEditorDefault(String editor){
+		String str = "";
+		ArrayList<String> editorList = new ArrayList<String>();
+		String[] fullNamesArray = editor.split("and");
+		for (String fullName : fullNamesArray){
+			String[] tokens = fullName.split(", ");
+			String editorFullName = "";
+			if (tokens.length < 2){
+				editorFullName = fullName; // only one token like IEEE
+				editorList.add(editorFullName);
+				break;
+			}
+			// Leerzeichen vorne und hinten abschneiden
+			String firstName = tokens[0];
+			String lastName = tokens[1];
+			String firstNameCleanedStart = "";
+			String firstNameCleanedEnd = "";
+			if (firstName.charAt(0) == ' '){
+				firstNameCleanedStart = firstName.substring(1);
+			} else {
+				firstNameCleanedStart = firstName;
+			}
+			if (firstNameCleanedStart.charAt((firstNameCleanedStart.length() - 1)) == ' '){
+				firstNameCleanedEnd = firstNameCleanedStart.substring(0, firstNameCleanedStart.length() - 2);
+			} else {
+				firstNameCleanedEnd = firstNameCleanedStart;
+			}
+			String lastNameCleanedStart = "";
+			String lastNameCleanedEnd = "";
+			if (lastName.charAt(0) == ' '){
+				lastNameCleanedStart = lastName.substring(1);
+			} else {
+				lastNameCleanedStart = lastName;
+			}
+			if (lastNameCleanedStart.charAt((lastNameCleanedStart.length() - 1)) == ' '){
+				lastNameCleanedEnd = lastNameCleanedStart.substring(0, lastNameCleanedStart.length() - 1);
+			} else {
+				lastNameCleanedEnd = lastNameCleanedStart;
+			}
+			editorFullName = lastNameCleanedEnd + " " + firstNameCleanedEnd;
+			editorList.add(editorFullName);
+		}
+		for (int i = 0; i < editorList.size(); i++){
+	    	if (i == (editorList.size() - 1)){
+	    		str += editorList.get(i);
+	    	} else {
+	    		str += editorList.get(i);
+	    		str += "; ";
+	    	}
+	    }
+		return str;
+	}
+	
+	public String createEditor(String editor){
+		String str = "";
+		if (editor.contains("{")){ // hasBrackets
+			str = createEditorWithBrackets(editor);
+		} else {
+			str = createEditorDefault(editor);
+		}
+		return str;
+		// combine double names without brackets
+		//String[] words = editor.split("and");
+		//System.out.println("BP");
 	}
 	
 	private void validate(){

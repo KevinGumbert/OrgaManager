@@ -129,7 +129,7 @@ public class OmUtilities {
 	
 	public OmOperatingSystemConstant detectOperatingSystem(){
 		String osName = System.getProperty("os.name");
-		if (osName.equals("Windows")){
+		if (osName.contains("Windows")){
 			return OmOperatingSystemConstant.WINDOWS;
 		} else if (osName.equals("Linux")){
 			return OmOperatingSystemConstant.LINUX;

@@ -57,35 +57,12 @@ public class OmModelTest {
 	public void doCreatePublicationsTest() throws InterruptedException, FileNotFoundException{ //fail("Not yet implemented!");
 		
 		// Development area, trigger model without gui ...
-		OmModel model = new OmModel();
-		model.doCreatePublications();
-		String act0 = "Test";
-		String exp0 = "Test";
-		assertEquals("doCreatePublicationsTest-0", exp0, act0);
-		
-		// Vorgehen Validierung Eintrag: Publikation von Website holen - Buschhaus, A. ; Franke, J.: Industrial Robots Accuracy Optimization in the Area of Structuring and Metallization of Three Dimensional Molded Interconnect Devices. In: Pedro Neto; Antonio Paulo Moreira (Hrsg.): Robotics in Smart Manufacturing (FAIM). Heidelberg : Springer, 2013
-		// Publikation in citavi-db.txt suchen und Art ermitteln: inproceeding
-		// Bei inproceeding passendes proceeding entdecken, suche nach isbn, booktitle, year: 
-		// Bibtex-Inhalt hier als Test uebernehmen und durchlaufen lassen
-		// Eintrag in testfile0.txt einpflegen und kreierte testfile.txt scannen
-		// Inhalt der CSV-Datei in Gespeichert_als_CSV-Datei.csv kopieren
-		// faps.de Dateiverwaltung aktualisieren
-		// Skript buchen... anstossen;
-		// DB-Inhalte via showTable-Skript-Aufruf betrachten;
-		// Mitarbeiterprofilseite auf faps.de betrachten;
-		
-		// Datentypen
-		// article - Zeitschriftenaufsatz, nichts gehoert dazu;
-		// book - Buch (Monographie); Zusatzinfo geht verloren ist vom Sammelwerk nicht unterscheidbar;
-		// book - Buch (Sammelwerk); Beispiel 17. Workshop Mikrotechnische Produktion Feldmann;
-		// Konvention: OmConfig regelt Schluesselwoerter und anzuzeigende Typkennungen fuer Parser;
-		// incollection - Beitrag in ..., book gehoert dazu, vgl. inproceedings und proceedings; 
-		// inproceedings - Beitrag in ..., proceedings gehoeren dazu;
-		// misc - etwa Vortraege; oft ungelistet!
-		// Fazit: articles, books, incollection und inproceedings werden gelistet; 
-		
-		// Zhuo, Y. ; Alvarez, C. ; Feldmann, K.: 3D Gridless Routing for the Design of Molded Interconnect Devices (MID). In: Production Engineering - Annals of the German Academic Society for Production Engineering (WGP) 12 (2005), Nr. 2, S. 89–94
-		
+//		OmModel model = new OmModel();
+//		model.doCreatePublications();
+//		String act0 = "Test";
+//		String exp0 = "Test";
+//		assertEquals("doCreatePublicationsTest-0", exp0, act0);
+
 		String publicationString1 = "";
 		publicationString1 += "@inproceedings{Bauer.2014,\n";
 		publicationString1 += " abstract = {Mit dem Konzept des Ambient Assisted Living (AAL) sollen technische Hilfestellungen entwickelt werden, um den l{\\\"a}ngeren Verbleib {\\\"a}lterer Menschen im gewohnten Umfeld zu erm{\\\"o}glichen. Meist werden solche technischen Hilfestellungen jedoch stark technologiegetrieben entwickelt und entsprechen nicht dem tats{\\\"a}chlichen Bed{\\\"u}rfnis der Endanwender. Das im Projekt verwendete Vorgehen der menschzentrierten Gestaltung stellt hingegen den Benutzer in den Mittelpunkt: Auf diese Weise sollen Fehlentwicklungen von Anfang an vermieden werden und ein gebrauchstaugliches System entstehen. Durch Usability-Tests werden zielgruppenspezifische Probleme im Umgang mit AAL-Serviceplattformen erkannt und m{\\\"o}gliche L{\\\"o}sungsvorschl{\\\"a}ge durchdacht.},\n";
@@ -162,7 +139,7 @@ public class OmModelTest {
 		publicationString3 += "deviations can be compensated. For this way of proceeding a highly efficient methodology for image data\n";
 		publicationString3 += "processing and correction value determination has to be developed. First experiments already show good results\n";
 		publicationString3 += "with very high geometric accuracies and a very promising data-processing performance.},\n";
-		publicationString3 += " author = {Buschhaus, Arnd and Franke, J{\"o}rg},\n";
+		publicationString3 += " author = {Buschhaus, Arnd and Franke, J{\\\"o}rg},\n";
 		publicationString3 += " title = {Industrial Robots Accuracy Optimization in the Area of Structuring and Metallization of Three Dimensional Molded Interconnect Devices},\n";
 		publicationString3 += " keywords = {robotics;sensor systems;3D-MID;closed-loop-control},\n";
 		publicationString3 += " publisher = {Springer},\n";
@@ -252,6 +229,60 @@ public class OmModelTest {
 		//String exp7 = "Franke, J. (Hrsg.): Räumliche elektronische Baugruppen (3D-MID): Werkstoffe, Herstellung, Montage und Anwendungen für spritzgegossene Schaltungsträger. München: Carl Hanser Verlag GmbH, 2013";
 		String exp7 = "Franke, J. (Hrsg.): Räumliche elektronische Baugruppen (3D-MID): Werkstoffe, Herstellung, Montage und Anwendungen für spritzgegossene Schaltungsträger. München: Carl Hanser Verlag, 2013";
 		assertEquals("doCreatePublicationsTest-7", exp7, act7);
+		
+		String parentString8 = "";
+		parentString8 += "@proceedings{VDIWissensforumGmbH.2013,\n";
+		parentString8 += " year = {2013},\n";
+		parentString8 += " title = {Kongress Automation: Automation (in the) cloud},\n";
+		parentString8 += " editor = {{VDI Wissensforum GmbH}}\n";
+		parentString8 += "}\n";
+		String publicationString8 = "";
+		publicationString8 += "@inproceedings{Ramer.2013,\n";
+		publicationString8 += " author = {Ramer, Christina and Reitelsh{\\\"o}fer, Sebastian and Franke, J{\\\"o}rg},,\n";
+		publicationString8 += " title = {Automatisierte Pfadgenerierung und Kollisions{\\\"u}berwachung f{\\\"u}r Sechsachs-Industrieroboter durch 3D-kameragest{\\\"u}tzte Umgebungserfassung},\n";
+		publicationString8 += " editor = {{VDI Wissensforum GmbH}},\n";	
+		publicationString8 += " booktitle = {Kongress Automation},\n";
+		publicationString8 += " year = {2013},\n";
+		publicationString8 += "}\n";
+		PublicationParent parent8 = new PublicationParent(parentString8);
+		ArrayList<PublicationParent> parents8 = new ArrayList<PublicationParent>();
+		parents8.add(parent8);
+		Publication publication8 = new Publication(publicationString8, parents8);
+		String act8 = publication8.getReference();
+		String exp8 = "Ramer, C.; Reitelshöfer, S.; Franke, J.: Automatisierte Pfadgenerierung und Kollisionsüberwachung für Sechsachs-Industrieroboter durch 3D-kameragestützte Umgebungserfassung. In: VDI Wissensforum GmbH (Hrsg.): Kongress Automation: Automation (in the) cloud. 2013";
+		assertEquals("doCreatePublicationsTest-8", exp8, act8);
+		
+		String parentString9 = "";
+		parentString9 = "@book{SenGupta.2013,";
+		parentString9 += " year = {2013},\n";
+		parentString9 += " title = {Recent Advances in Robotics and Automation},\n";
+		parentString9 += " edition = {480},\n";
+		parentString9 += " publisher = {Springer},\n";
+		parentString9 += " isbn = {987-3-642-37386-2},\n";
+		parentString9 += " series = {Studies in Computational Intelligence},\n";
+		parentString9 += " editor = {Sen Gupta, Gourab and Bailey, Donald and Demidenko, Serge and Carnegie, Dale}\n";
+		parentString9 += "}\n";
+		PublicationParent parent9 = new PublicationParent(parentString9);
+		ArrayList<PublicationParent> parents9 = new ArrayList<PublicationParent>();
+		parents9.add(parent9);
+		String publicationString9 = "";
+		publicationString9 += "@incollection{Ziegler.2013,\n";
+		publicationString9 += " abstract = {Patient handling robots are increasingly employed to enable a flexible positioning of the patient for diagnostic and therapeutic purposes. Due to the greatly differing robot loads because of varying patient weights especially serial kinematics are no longer able to keep up with the constantly increasing medical demands for positioning accuracy. In this chapter a low-cost measuring system for a permanent integration into the workspace of a patient handling robot is introduced which can measure the pose of a patient couch with high accuracy. This enables closed-loop control of the patient couch. In tests on a robot system an average positioning error of 0.12 mm was achieved for a diversity of medically relevant poses.},\n";
+		publicationString9 += " author = {Ziegler, Christian and Franke, J{\\\"o}rg},\n";
+		publicationString9 += " title = {Closed-loop control of patient handling robots},\n";
+		publicationString9 += " pages = {231--241},\n";
+		publicationString9 += " publisher = {Springer},\n";
+		publicationString9 += " isbn = {987-3-642-37386-2},\n";
+		publicationString9 += " series = {Studies in Computational Intelligence},\n";
+		publicationString9 += " editor = {Sen Gupta, Gourab and Bailey, Donald and Demidenko, Serge and Carnegie, Dale},\n"; // PROBLEM Sen Gupta as two word editor
+		publicationString9 += " booktitle = {Recent Advances in Robotics and Automation},\n";
+		publicationString9 += " year = {2013}\n";
+		publicationString9 += "}\n";
+		Publication publication9 = new Publication(publicationString9, parents9);
+		String act9 = publication9.getReference();
+		String exp9 = "Ziegler, C.; Franke, J.: Closed-loop control of patient handling robots. In: Gourab Sen Gupta; Donald Bailey; Serge Demidenko; Dale Carnegie (Hrsg.): Recent Advances in Robotics and Automation. Springer, 2013, S. 231--241";
+		assertEquals("doCreatePublicationsTest-9", exp9, act9);
+		
 	}
 	
 }

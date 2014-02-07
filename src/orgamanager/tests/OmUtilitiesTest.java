@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import orgamanager.model.publications.Publication;
+import orgamanager.utilities.OmOperatingSystemConstant;
 import orgamanager.utilities.OmUtilities;
 
 public class OmUtilitiesTest {
@@ -35,6 +36,15 @@ public class OmUtilitiesTest {
 		OmUtilities utils = new OmUtilities();
 		String act = utils.cutStringAfterLastOccuranceOfDelimiter(str, '}');
 		assertEquals("cutStringAfterLastOccuranceOfDelimiterTest()", exp, act);
+	}
+	
+	@Test
+	public void detectOperatingSystemTest(){
+		//String str1 = System.getProperty("os.name");
+		OmOperatingSystemConstant exp1 = OmOperatingSystemConstant.WINDOWS;
+		OmUtilities utils = new OmUtilities();
+		OmOperatingSystemConstant act1 = utils.detectOperatingSystem();
+		assertEquals("detectOperatingSystemTest()", exp1, act1);
 	}
 	
 	@Test

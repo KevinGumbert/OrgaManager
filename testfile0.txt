@@ -3,36 +3,115 @@
 }
 
 
-@proceedings{IEEE.2011,
- year = {2011},
- title = {Proceedings: E|DPC 2011},
- keywords = {Technology},
- address = {Piscataway},
+@inproceedings{Gorywoda.2013,
+ author = {Gorywoda, Marek and Dohle, Rainer and H{\"a}rter, Stefan and Wirth, Andreas and Go{\ss}ler, J{\"o}rg and Franke, J{\"o}rg},
+ title = {Long-term Electromigration Study of Lead-Free Flip-Chips with Solder Bumps with 50 µm or 60 µm Diameter Employing ENIG Surface Finish on Both Chip and Substrate Side},
+ pages = {523--530},
  publisher = {IEEE},
- isbn = {1457713713},
+ editor = {IEEE},
+ booktitle = {Proceedings of the 46th International Symposium on Microelectronics (IMAPS)},
+ year = {2013}
+}
+
+
+@proceedings{Franke.2013h,
+ year = {2013},
+ title = {3rd International Electric Drives Production Conference: Proceedings},
+ address = {Piscataway and NJ},
+ publisher = {IEEE Service Center},
+ isbn = {978-1-4799-1102-8},
+ editor = {Franke, J{\"o}rg}
+}
+
+
+@proceedings{EMCW.2013,
+ year = {2013},
+ title = {EMCW Expo},
+ editor = {EMCW}
+}
+
+
+@proceedings{Deng.2013,
+ year = {2013},
+ title = {Applied Mechanics and Materials},
+ address = {Durnten-Zurich and Switzerland},
+ volume = {Vol. 421},
+ publisher = {Trans Tech Publications Ltd},
+ isbn = {1660-9336},
+ editor = {Deng, W. and Luo, Q.}
+}
+
+
+@inproceedings{Brela.2013b,
+ author = {Brela, Matthaeus and Kassim, Najdet and Franke, Joerg},
+ title = {Characterization of magnetic actuators by measuring of magnetic stray fields with GMR-sensors},
+ keywords = {E|DRIVE, electromagnetic actuators, magnetic stray fields, nondestructive measurement system, GMR-sensor},
+ pages = {1--7},
+ publisher = {IEEE},
+ isbn = {9781479911028},
+ editor = {IEEE},
+ booktitle = {Proceedings},
+ year = {2013},
+ address = {[Piscataway and N.J.]}
+}
+
+
+@proceedings{.2013d,
+ year = {2013},
+ title = {Proceedings of the 15th Electronics Packaging Technology Conference (EPTC)},
+ address = {Singapore},
+ isbn = {978-1-4799-2833-0}
+}
+
+
+@book{.2013e,
+ year = {2013},
+ title = {Proceedings of 2013 International Conference on Industrial Engineering and Management Science (ICIEMS 2013)},
+ address = {Lancaster and U.S.A.},
+ publisher = {DEStech Publications},
+ isbn = {978-1-60595-129-4}
+}
+
+
+@proceedings{IEEE.2013b,
+ year = {2013},
+ title = {Proceedings: E|DPC~2013},
+ address = {[Piscataway and N.J.]},
+ publisher = {IEEE},
+ isbn = {9781479911028},
  editor = {IEEE},
  institution = {IEEE}
 }
 
 
-@inproceedings{Lamprecht.2011,
- author = {Lamprecht, Erik and Graf, Rolf},
- title = {Fundamental investigations of eddy current losses in laminated stator cores created through the impact of manufacturing processes},
- pages = {29--35},
- publisher = {IEEE},
- isbn = {1457713713},
- editor = {IEEE},
- booktitle = {Proceedings},
- year = {2011},
- address = {Piscataway}
+@patent{Tremel.07.08.2012,
+ author = {Tremel, Jan and Risch, Florian},
+ year = {2013},
+ title = {Verfahren und Vorrichtung zum Herstellen von Flachspulen},
+ keywords = {E|DRIVE},
+ number = {WO002013026531A2}
 }
 
 
-@inproceedings{Albrecht.2012b,
- author = {Albrecht, Thomas and Gursel, Cuneyt and Lamprecht, Erik and Klier, Tobias},
- title = {Joining techniques of the rotor segmentation of PM-synchronous machines for Hybrid drives},
- keywords = {E|DRIVE},
+@inproceedings{Lamprecht.2012,
+ author = {Lamprecht, Erik and Homme, Martin and Albrecht, Thomas},
+ title = {Investigations of eddy current losses in laminated cores due to the impact of various stacking processes},
+ keywords = {E|DRIVE, Eddy current losses, stacking processes, laminated stator cores, manufacturing processes},
  pages = {1--8},
+ publisher = {IEEE Service Center},
+ isbn = {978-1-4673-3006-0},
+ series = {Faps-TT Seminar},
+ editor = {IEEE},
+ booktitle = {2nd International Conference Electric Drives Production},
+ year = {2012},
+ address = {Piscataway and NJ}
+}
+
+
+@inproceedings{Kuhl.2012,
+ author = {K{\"u}hl, Alexander and Franke, J{\"o}rg Prof. Dr.-Ing.},
+ title = {Robot-Based Assembly of Stators},
+ keywords = {E|DRIVE, Automated Winding Assembly, Stator, Robot- based, Cover},
  publisher = {IEEE Service Center},
  isbn = {978-1-4673-3006-0},
  series = {Faps-TT Seminar},
@@ -54,10 +133,23 @@
 }
 
 
-@inproceedings{Kuhl.2012,
- author = {K{\"u}hl, Alexander and Franke, J{\"o}rg Prof. Dr.-Ing.},
- title = {Robot-Based Assembly of Stators},
- keywords = {E|DRIVE, Automated Winding Assembly, Stator, Robot- based, Cover},
+@article{Franke.2012d,
+ author = {Franke, J{\"o}rg and Maier, Tobias and Sch{\"a}fer, Franziska and Z{\"a}h, Michael},
+ year = {2012},
+ title = {Experimental Evaluation of the Thermal Machine Tool Behavior for Model Updating},
+ url = {http://www.fujipress.jp/finder/xslt.php?mode=present\&inputfile=IJATE000600020002.xml\&xslparam=ref|jscript},
+ pages = {125--136},
+ volume = {6},
+ number = {2},
+ journal = {International Journal of Automation Technology}
+}
+
+
+@inproceedings{Albrecht.2012b,
+ author = {Albrecht, Thomas and Gursel, Cuneyt and Lamprecht, Erik and Klier, Tobias},
+ title = {Joining techniques of the rotor segmentation of PM-synchronous machines for Hybrid drives},
+ keywords = {E|DRIVE},
+ pages = {1--8},
  publisher = {IEEE Service Center},
  isbn = {978-1-4673-3006-0},
  series = {Faps-TT Seminar},
@@ -68,18 +160,28 @@
 }
 
 
-@inproceedings{Lamprecht.2012,
- author = {Lamprecht, Erik and Homme, Martin and Albrecht, Thomas},
- title = {Investigations of eddy current losses in laminated cores due to the impact of various stacking processes},
- keywords = {E|DRIVE, Eddy current losses, stacking processes, laminated stator cores, manufacturing processes},
- pages = {1--8},
- publisher = {IEEE Service Center},
- isbn = {978-1-4673-3006-0},
- series = {Faps-TT Seminar},
+@inproceedings{Lamprecht.2011,
+ author = {Lamprecht, Erik and Graf, Rolf},
+ title = {Fundamental investigations of eddy current losses in laminated stator cores created through the impact of manufacturing processes},
+ pages = {29--35},
+ publisher = {IEEE},
+ isbn = {1457713713},
  editor = {IEEE},
- booktitle = {2nd International Conference Electric Drives Production},
- year = {2012},
- address = {Piscataway and NJ}
+ booktitle = {Proceedings},
+ year = {2011},
+ address = {Piscataway}
+}
+
+
+@proceedings{IEEE.2011,
+ year = {2011},
+ title = {Proceedings: E|DPC 2011},
+ keywords = {Technology},
+ address = {Piscataway},
+ publisher = {IEEE},
+ isbn = {1457713713},
+ editor = {IEEE},
+ institution = {IEEE}
 }
 
 
@@ -95,76 +197,6 @@
  booktitle = {2nd International Conference Electric Drives Production},
  year = {2012},
  address = {Piscataway and NJ}
-}
-
-
-@patent{Tremel.07.08.2012,
- author = {Tremel, Jan and Risch, Florian},
- year = {2013},
- title = {Verfahren und Vorrichtung zum Herstellen von Flachspulen},
- keywords = {E|DRIVE},
- number = {WO002013026531A2}
-}
-
-
-@proceedings{.2013d,
- year = {2013},
- title = {Proceedings of the 15th Electronics Packaging Technology Conference (EPTC)},
- address = {Singapore},
- isbn = {978-1-4799-2833-0}
-}
-
-
-@inproceedings{Brela.2013b,
- author = {Brela, Matthaeus and Kassim, Najdet and Franke, Joerg},
- title = {Characterization of magnetic actuators by measuring of magnetic stray fields with GMR-sensors},
- keywords = {E|DRIVE, electromagnetic actuators, magnetic stray fields, nondestructive measurement system, GMR-sensor},
- pages = {1--7},
- publisher = {IEEE},
- isbn = {9781479911028},
- editor = {IEEE},
- booktitle = {Proceedings},
- year = {2013},
- address = {[Piscataway and N.J.]}
-}
-
-
-@proceedings{EMCW.2013,
- year = {2013},
- title = {EMCW Expo},
- editor = {EMCW}
-}
-
-
-@proceedings{Franke.2013h,
- year = {2013},
- title = {3rd International Electric Drives Production Conference: Proceedings},
- address = {Piscataway and NJ},
- publisher = {IEEE Service Center},
- isbn = {978-1-4799-1102-8},
- editor = {Franke, J{\"o}rg}
-}
-
-
-@inproceedings{Gorywoda.2013,
- author = {Gorywoda, Marek and Dohle, Rainer and H{\"a}rter, Stefan and Wirth, Andreas and Go{\ss}ler, J{\"o}rg and Franke, J{\"o}rg},
- title = {Long-term Electromigration Study of Lead-Free Flip-Chips with Solder Bumps with 50 µm or 60 µm Diameter Employing ENIG Surface Finish on Both Chip and Substrate Side},
- pages = {523--530},
- publisher = {IEEE},
- editor = {IEEE},
- booktitle = {Proceedings of the 46th International Symposium on Microelectronics (IMAPS)},
- year = {2013}
-}
-
-
-@proceedings{IEEE.2013b,
- year = {2013},
- title = {Proceedings: E|DPC~2013},
- address = {[Piscataway and N.J.]},
- publisher = {IEEE},
- isbn = {9781479911028},
- editor = {IEEE},
- institution = {IEEE}
 }
 
 
@@ -201,13 +233,198 @@
 }
 
 
-@inproceedings{Kuhl.2013b,
- author = {K{\"u}hl, Alexander and G{\"u}nther, Stefan and Franke, J{\"o}rg Prof. Dr.-Ing.},
- title = {Robot-Based Assembly of Stator-Windings},
- keywords = {E|DRIVE, Automated Winding Assembly, Stator, Key Words: Robot-based},
- editor = {EMCW},
- booktitle = {EMCW Expo},
+@incollection{Risch.2014,
+ abstract = {Die zunehmende Elektrifizierung des Antriebsstrangs f{\"u}hrt mittel- bis langfristig zu einer deutlichen Ver{\"a}nderung der Wertsch{\"o}pfungsstrukturen in der Automobilindust-rie, bei zun{\"a}chst noch unsicheren Absatzzahlen. Innovationen im Fabrikumfeld sind f{\"u}r eine nachhaltige Sicherung der Marktposition und lokalen Wertsch{\"o}pfungsstruk-turen unabdingbar. Dabei m{\"u}ssen die Kosten- und Qualit{\"a}tsziele f{\"u}r Komponenten innovativer elektrischer Antriebsstr{\"a}nge in einer engen Ma{\ss}nahmenkombination zwi-schen Funktions- und Prozessoptimierung erreicht werden. In den letzten Jahren werden zudem verst{\"a}rkt energie- und ressourcen-effiziente Produktionstechnologien in den Fokus ger{\"u}ckt. Die Anforderungen an die dazugeh{\"o}rigen Produktionsprozes-se steigen somit zus{\"a}tzlich. 
+In diesem Kontext wurde am Lehrstuhl f{\"u}r Fertigungsautomatisierung und Produkti-onssystematik (FAPS) der Friedrich-Alexander-Universit{\"a}t Erlangen-N{\"u}rnberg (FAU) mit dem Bayerischen Technologiezentrum f{\"u}r elektrische Antriebstechnik (E|Drive-Center) eine Forschungsgruppe gegr{\"u}ndet, welche Systeml{\"o}sungen f{\"u}r den Aufbau durchg{\"a}ngiger Prozessketten f{\"u}r die Produktion elektrischer Antriebstechnik entwi-ckelt, in prototypische Demonstratoranlagen {\"u}berf{\"u}hrt und in praktischen Versuchs-reihen optimiert. In der Forschungsfabrik des E|Drive-Centers werden somit Prozes-sinnovationen f{\"u}r den Elektromaschinenbau erforscht, um nachhaltig (ressourcen- und energie-effiziente Fertigungsprozesse, Recyclingprozesse f{\"u}r werthaltige hoch-koerzitive Magnetmaterialien) und flexibel (CAD-CAM-Ketten f{\"u}r roboterbasierte Wi-},
+ author = {Risch, Florian and Franke, J{\"o}rg Prof. Dr.-Ing.},
+ title = {Flexible Automatisierungstechnologien f{\"u}r die Produktion elektrischer Traktionsantriebe},
+ keywords = {E|DRIVE},
+ pages = {377--388},
+ volume = {Bd. 131},
+ publisher = {expert-Verl},
+ isbn = {9783816932390},
+ series = {Fachbuch / Haus der Technik},
+ editor = {Sch{\"a}fer, Heinz},
+ booktitle = {Elektrische Antriebstechnologie f{\"u}r Hybrid- und Elektrofahrzeuge},
+ year = {2014},
+ address = {Renningen}
+}
+
+
+@inproceedings{Bauer.2014,
+ abstract = {Mit dem Konzept des Ambient Assisted Living (AAL) sollen technische Hilfestellungen entwickelt werden, um den l{\"a}ngeren Verbleib {\"a}lterer Menschen im gewohnten Umfeld zu erm{\"o}glichen. Meist werden solche technischen Hilfestellungen jedoch stark technologiegetrieben entwickelt und entsprechen nicht dem tats{\"a}chlichen Bed{\"u}rfnis der Endanwender. Das im Projekt verwendete Vorgehen der menschzentrierten Gestaltung stellt hingegen den Benutzer in den Mittelpunkt: Auf diese Weise sollen Fehlentwicklungen von Anfang an vermieden werden und ein gebrauchstaugliches System entstehen. Durch Usability-Tests werden zielgruppenspezifische Probleme im Umgang mit AAL-Serviceplattformen erkannt und m{\"o}gliche L{\"o}sungsvorschl{\"a}ge durchdacht.},
+ author = {Bauer, Jochen and Kettschau, Anna and Franke, J{\"o}rg},
+ title = {Optimierung der Datenvisualisierung von AAL-Serviceplattformen durch Usability-Tests},
+ keywords = {E|Home;AAL;Smart Home;Mensch-Maschine-Interaktion},
+ publisher = {VDE Verlag Gmbh},
+ isbn = {978-3-8007-3574-7},
+ editor = {VDE and BMBF and {Sozialverband VdK} and Fraunhofer-AAL},
+ booktitle = {Wohnen - Pflege - Teilhabe {\dq}Besser leben durch Technik{\dq}},
+ year = {2014},
+ address = {Berlin}
+}
+
+
+@misc{Bauer.13.11.2013,
+ author = {Bauer, Jochen and Kettschau, Anna},
+ date = {13.11.2013},
+ title = {Alter, Wohnen und Technik: Mit technischen Innovationen gesellschaftliche Herausforderungen l{\"o}sen},
+ address = {N{\"u}rnberg},
+ series = {Energie und Forschung {\dq} Die Forschung von heute - die Energie von morgen{\dq}}
+}
+
+
+@proceedings{Lee.24.26.10.2013,
+ year = {24.-26.10.2013},
+ title = {The 44th International Symposium on Robotics~(ISR)},
+ editor = {Lee, Ju-Jang}
+}
+
+
+@inproceedings{Ziegler.2013b,
+ author = {Ziegler, Christian and Franke, J{\"o}rg},
+ title = {Neuartiges, hochflexibles und universell einsetzbares Strahlentherapieger{\"a}t},
+ editor = {Malberg, Hagen and {de Abreu, Marcelo Gama} and Zaunseder, Sebastian},
+ booktitle = {Automatisierungstechnische Verfahren f{\"u}r die Medizin},
  year = {2013}
+}
+
+
+@inproceedings{Ziegler.2013c,
+ abstract = {Ein bedeutendes Mittel zur Behandlung von Tumoren stellt ionisierende Strahlung dar. Neben der Verwendung einer geeigneten Strahlquelle kommt dabei vor allem der Bestrahlungsdosis zur Tumorbehandlung w{\"a}hrend der Therapieablaufs eine bedeutende Rolle zu. Ziel dieser Behandlungsmethoden ist es, die Belastung des umliegenden Gewebes zu reduzieren und die zeitliche Dauer m{\"o}glichst kurz zu gestalten. Moderne Therapieger{\"a}te erm{\"o}glichen hierzu eine Anpassung der Bestrahlungsrichtung bez{\"u}glich des Tumors. Der Strahlenaustritt am Ger{\"a}t wird dabei auf einer kreisf{\"o}rmigen Bahn um den Tumor bewegt, der sich im Isozentrum der Bestrahlung befindet. Zur flexiblen Behandlung von Tumoren besteht zunehmend die Forderung nach einer Erh{\"o}hung der kinematischen Freiheitsgrade des bestrahlenden Ger{\"a}tes.
+Einen wesentlichen Einfluss auf die Therapiedauer hat derzeit die notwendige geringe Geschwindigkeit der Kinematik, mit welcher diese zwischen den verschiedenen Bestrahlpositionen bewegt wird. Eine geringe Geschwindigkeit ist erforderlich, um Kollisionen des Patienten mit der Kinematik zu vermeiden und Verletzungen zu verhindern. Aus dieser Forderung ergibt sich ein ung{\"u}nstiges Verh{\"a}ltnis von den Positionierzeiten des Ger{\"a}tes zu den Bestrahlzeiten. Dies f{\"u}hrt durch die l{\"a}ngere Therapiedauer zu einer zus{\"a}tzlichen Belastung f{\"u}r den Patienten und zu einer schlechteren Auslastung der investitionsintensiven Therapieger{\"a}te.
+Durch eine zuverl{\"a}ssige Detektion und Positionsbestimmung des Patienten w{\"a}hrend der Behandlung und das Ableiten geeigneter Reaktionsstrategien ist es m{\"o}glich die zul{\"a}ssigen Geschwindigkeiten der Therapieger{\"a}tekinematik zu erh{\"o}hen und somit die Nebenzeiten signifikant zu reduzieren. Um dies zu erm{\"o}glichen ist jedoch eine robuste Erkennung des Patienten und potentieller Kollisionen notwendig.
+In der Medizintechnik und auch der Strahlentherapie werden mittlerweile zunehmend 3D-Kamerasysteme verwendet, die bei der hochgenauen Patientenpositionierung oder der Atemverfolgung eingesetzt werden. Diese Kamerasysteme qualifizieren sich ebenfalls zur behandlungsbegleitenden {\"U}berwachung des Patienten um Bewegungen zu erkennen. Hierzu ist jedoch eine robuste Verarbeitung der Kameradaten wesentlich.
+So m{\"u}ssen anfangs fehlerhafte Bildinformationen durch eine geeignete Filterung eliminiert werden. Eine sich anschlie{\ss}ende Erkennung des Patienten muss im Weiteren mehreren Anforderungen gen{\"u}gen: So sind Patienten unterschiedlicher Physiognomie zu erkennen, die Lage des Patienten zur Kamera ist per se nicht bekannt und die Position der Patientenliege ist variabel. Die Patientenerkennung wird {\"u}ber einen Algorithmus realisiert, der die r{\"a}umlichen Lageinformationen der 3D-Kamera verwendet und {\"u}ber den zusammenh{\"a}ngende Regionen bestimmt werden. Die dem Patienten zugewiesenen Bildpunkte werden im Anschluss bin{\"a}risiert und im Nachgang die Kanten des Bin{\"a}rbildes bereinigt sowie isolierte Bildbereiche beseitigt. Anschlie{\ss}end wird aus den Bildinformationen ein Skelett des Patienten extrahiert. Diese K{\"o}rperstruktur wird im Weiteren durch Gelenke erweitert, um z. B. eine Unterscheidung der Gliedma{\ss}en zu erm{\"o}glichen und deren Winkelstellungen zu ermitteln. Unter Zuhilfenahme dieser Informationen werden im Nachgang H{\"u}llk{\"o}rper zur Beschreibung des Patienten erzeugt. 
+Basierend auf einem Bestrahlungsplan werden bei der Behandlung die Stellungen des Therapieger{\"a}ts und der Kinematik sowie die optimalen Bahntrajektorien zwischen den Bestrahlpositionen generiert. W{\"a}hrend der Durchf{\"u}hrung der Bewegungsprogramme wird die aktuelle Stellung des Strahlentherapieger{\"a}ts  auf Kollisionen mit dem Patienten {\"u}berpr{\"u}ft. Diese erfolgt {\"u}ber eine Durchdringungsanalyse der H{\"u}llk{\"o}rperrepr{\"a}sentation des Patienten und einer geometrischen Repr{\"a}sentation der Kinematik und des Strahlentherapieger{\"a}ts.
+Die zuverl{\"a}ssige Erkennung des Patienten bei den {\"u}blichen K{\"o}rperhaltungen durch die dargestellten Bildverarbeitungsroutinen konnte im Rahmen der Arbeiten experimentell nachgewiesen werden. Potentielle Gefahrensituationen wurden zuverl{\"a}ssig vom Softwaresystem erkannt und resultieren in einem Stopp der Kinematik.},
+ author = {Ziegler, Christian and Buschhaus, Arnd and Reitelsh{\"o}fer, Sebastian and Franke, J. and R{\"o}ttenbacher, Maren},
+ title = {3D--Sensorsystem f{\"u}r den kollisionsfreien Betrieb flexibler Strahlentherapieger{\"a}te},
+ keywords = {3D-Kameras;- Robotik - 3D Bildverarbeitung - Strahlentherapie - Kollisionsanalyse - Regelung;Industrieroboter-Assistenzsystem;PMD-Kamera;Roboter},
+ isbn = {978-3-033-04189-9},
+ editor = {{ZHAW, Institut f{\"u}r Mechatronische Systeme}},
+ booktitle = {Internationales Forum Mechatronik 2013},
+ year = {2013},
+ address = {Winterthur}
+}
+
+
+@inproceedings{Tremel.2013,
+ abstract = {The manufacturing of large synchronous motors and generators with integrated permanent magnets currently contains a large amount of manual processes as well for handling as assembly. Magnets have to be separated and prepared for insertion manually, bearing a high risk for injuries. Due to increasing batch sizes in industrial as well as in traction drive applications, the efficiency of these processes has to be examined and developed towards an automated assembly. The paper presents an approach for partially automated manufacturing of a wide portfolio of rotors for drives on a single assembly machine.},
+ author = {Tremel, Jan and Hofmann, Benjamin and Meyer, Alexander and Franke, J{\"o}rg and Eschrich, Sebastian},
+ title = {Automated Magnet~Assembly for large PM~Synchronous Machines with Integrated Magnets},
+ keywords = {Assembly, Magnets},
+ publisher = {IEEE Service Center},
+ isbn = {978-1-4799-1102-8},
+ editor = {Franke, J{\"o}rg},
+ booktitle = {3rd International Electric Drives Production Conference},
+ year = {2013},
+ address = {Piscataway and NJ}
+}
+
+
+@article{Spreng.2013,
+ author = {Spreng, Simon and Kohl, Johannes and Franke, J{\"o}rg},
+ year = {2013},
+ title = {Automatisierte Erweiterung bestehender Materialflusssimulationen durch Energieaspekte},
+ keywords = {E|DRIVE},
+ pages = {647--651},
+ volume = {108},
+ number = {09},
+ issn = {0947-0085},
+ journal = {Zeitschrift f{\"u}r wirtschaftlichen Fabrikbetrieb}
+}
+
+
+@inproceedings{Schramm.2013f,
+ abstract = {Plasmadust{\circledR} is a new technology using cold active plasma for additive metallization of different substrate materials. For electronics production, especially Molded Interconnect Devices (MID), thermoplastic materials can also be structured with copper as power electronic conductor [1] [2]. The big advantages of Plasmadust{\circledR} are the controllable process temperature range between about 90°C and 180°C, the good adhesion of the metallization, the fast process speed of about 100 mm/s and the fast growing conductor tracks with about 15 microns thickness per cycle [3]. Plate specimens were made of PA6, a material commonly used in automotive applications, with different process parameters. Conductor tracks applied onto the substrates consist of one line with different electrical and mechanical characteristics according to the process temperature and process speed. Additionally the thickness and the width of the conductor track depend on the process parameters [4]. The setting of the process speed turns out to be an important influence on the thickness and roughness of the conductor track that can be achieved on thermoplastics substrates. The investigated materials show a constant bonding performance during thermal shock for 1000 cycles in the range of -40 °C and +125 °C. An exposure to humidity heat (85{\%} r.h / 85 °C) for 500 h has only marginal effects on the adhesion of the printed structures on the thermoplastic substrates. Nevertheless, the highly promising results provide the base for further investigations to achieve a sufficient ampacity related to standard chemical PCB metallization processes. Beyond that mentioned technical thermoplastic material PA6, especially low cost substrates like PC/ABS, and also three-dimensional structures can be processed with Plasmadust{\circledR}.},
+ author = {Schramm, Ren{\'e} and Franke, J{\"o}rg},
+ title = {Electrical Functionalization of Thermoplastic Materials by Cold Active Atmospheric Plasma Technology},
+ keywords = {Plasmadust;MID;ampacity},
+ isbn = {978-1-4799-2833-0},
+ booktitle = {Proceedings of the 15th Electronics Packaging Technology Conference (EPTC)},
+ year = {2013},
+ address = {Singapore}
+}
+
+
+@inproceedings{Risch.2013,
+ abstract = {The increasing electrification of the automotive power train leads to significant changes in automotive value chains, while sales potentials are still uncertain [1]. Due to their considerable advantages in regard to safety and convenience, contactless power transfer systems may be the basis for further increasing the customers' acceptance for electrified vehicle concepts [2]. Increasing market acceptance will require high volume production concepts for contactless power transfer systems. Thus, the importance of automated assembly and manufacturing technologies moves into the focus. Especially the winding process of the HF-litz wire coil structures shows
+potential for further rationalization. Therefore, it is the aim of this paper to present flexible automation concepts for this process.},
+ author = {Risch, Florian and G{\"u}nther, Stefan and Bickel, Benjamin and Franke, J{\"o}rg},
+ title = {Flexible Automation for the Production of Contactless Power Transfer Systems for Electric Vehicles},
+ keywords = {electric vehicles;contactless power transfer systems;flexible production concepts;winding of HF-litz wires},
+ publisher = {IEEE Service Center},
+ isbn = {978-1-4799-1102-8},
+ editor = {Franke, J{\"o}rg},
+ booktitle = {3rd International Electric Drives Production Conference},
+ year = {2013},
+ address = {Piscataway and NJ}
+}
+
+
+@inproceedings{Risch.2013b,
+ abstract = {The increasing electrification of the automotive power train leads to significant changes in automotive value chains, while sales potentials are still uncertain [1]. Due to their considerable advantages in regard to safety and convenience, contactless power transfer systems may be the basis for further increasing the customers' acceptance for electrified vehicle concepts [2]. Increasing market acceptance will require high volume production concepts for contactless power transfer systems. Thus, the importance of automated assembly and manufacturing technologies moves into the focus. Especially the winding process of the HF-litz wire coil structures shows
+potential for further rationalization. Therefore, it is the aim of this paper to present flexible automation concepts for this process.},
+ author = {Risch, Florian and G{\"u}nther, Stefan and Bickel, Benjamin and Franke, J{\"o}rg},
+ title = {Flexible Automation for the Production of Contactless Power Transfer Systems for Electric Vehicles},
+ keywords = {E|DRIVE;E|TEV;electric vehicles;contactless power transfer systems;flexible production concepts;winding of HF-litz wires},
+ publisher = {IEEE},
+ isbn = {9781479911028},
+ editor = {IEEE},
+ booktitle = {Proceedings},
+ year = {2013},
+ address = {[Piscataway and N.J.]}
+}
+
+
+@inproceedings{Ramer.2013c,
+ abstract = {Herk{\"o}mmliche Industrieroboter m{\"u}ssen auf Grund ihres Gef{\"a}hrdungspotentials strikt von Bereichen, in denen Menschen arbeiten, getrennt werden. Die Programmierung ist bei komplexen Umgebungen aufwendig, sodass sich der Einsatz nur bei ausreichend hohen St{\"u}ckzahlen lohnt. Auf Grund dessen werden Industrieroboter trotz der bekannten Vorteile gegen{\"u}ber manueller Ausf{\"u}hrung - wie Schnelligkeit, Ausdauer und Genauigkeit - in vielen Bereichen nicht eingesetzt, obwohl die Unterst{\"u}tzung von Produktionsmitarbeitern zur Vermeidung k{\"o}rperlich anstrengender und monotoner Aufgaben w{\"u}nschenswert w{\"a}re. Dieser Beitrag stellt einen Ansatz f{\"u}r ein Roboterassistenzsystem vor, bei dem {\"u}ber eine 3D-Kamera basierte Arbeitsraumerfassung sowie manuell definierte Hindernisse ein aktuelles Umgebungsmodell generiert und automatisch eine kollisionsfreie Bahn f{\"u}r einen Sechsachs-Knickarmroboter errechnet wird. Dadurch kann der Einsatz von Robotern bei nicht vorhandenem Fachpersonal zur Umprogrammierung sowie bei kleineren St{\"u}ckzahlen attraktiver werden. Es ergeben sich auch weitere Anwendungsgebiete f{\"u}r Industrieroboter, beispielsweise zur Unterst{\"u}tzung leistungsgewandelter oder geminderter Personen im Erwerbsleben. 
+Eingangsparameter der automatischen Pfadgenerierung sind die aktuelle Istposition des Roboters und eine kartesische oder achsbasierte Zielposition. Eine hierarchische Zellzerlegung des Roboterarbeitsraums berechnet hierauf kollisionsfreie Zellen sowie mittels eines angepassten A*-Algorithmus den k{\"u}rzesten Weg benachbarter, freier Zellen von der aktuellen Start- zur vorgegebenen Zielposition f{\"u}r den Werkzeug-arbeitspunkt (TCP, Tool-Center-Point) des Roboters. Es k{\"o}nnen sowohl synchrone Point-to-Point (PTP) als auch Linearbewegungen ber{\"u}cksichtigt werden. Die Orientierungs{\"a}nderung zwischen Start- und Zielposition wird an die Weg{\"a}nderung gekoppelt. F{\"u}r alle Pfadstrecken zwischen den ermittelten kartesischen St{\"u}tzpunkten wird in definierten Abst{\"a}nden eine hierarchische Kollisionspr{\"u}fung des Roboterarms mit der Umgebung durchgef{\"u}hrt. Hierf{\"u}r werden bei Verwendung des PTP-Modus zun{\"a}chst alle g{\"u}ltigen Konfigurationen der St{\"u}tzpunkte und die sich daraus ergebenden, realisierbaren Kombinationen bestimmt. Falls Linearbewegungen erforderlich sind oder bevorzugt werden sollen, erfolgt zudem die {\"U}berpr{\"u}fung der Pfadabschnitte auf singul{\"a}re Stellungen, die zu einem Verwerfen der Bahn f{\"u}hren. Falls ein St{\"u}tzpunkt oder ein Pfadabschnitt keine g{\"u}ltige Konfiguration liefert, wird ein k{\"u}nstliches Hindernis an der TCP-Position eingef{\"u}gt und auf Basis des aktualisierten Arbeitsraummodells eine erneute Zellzerlegung und TCP-Pfadsuche angesto{\ss}en. Um die notwendigen Kollisionsberechnungen zu beschleunigen, werden die Hindernisobjekte sowie der eingesetzte Roboter durch geometrisch einfache H{\"u}llk{\"o}rper umschlossen und {\"U}berschneidungen mit dem Roboter hierarchisch gepr{\"u}ft. 
+Neben der automatischen Bewegungsgenerierung wird im weiteren Verlauf dieses Beitrags als Erweiterung des beschriebenen Ansatzes auch die M{\"o}glichkeit einer Kollisions{\"u}berwachung w{\"a}hrend der Roboterbewegung bei einem Einsatz ohne trennende Schutzeinrichtungen vorgestellt, sodass die Gef{\"a}hrdung von Menschen durch ein Anhalten des Roboters vermieden werden kann. Dabei werden auf Basis des aktuellen Arbeitsraummodells und der bekannten Roboteristposition hierarchische Abstandspr{\"u}fungen zu dynamischen Objekten und Personen durchgef{\"u}hrt und auf die Einhaltung eines angepassten Mindestsicherheitsabstandes gepr{\"u}ft.},
+ author = {Ramer, Christina and Franke, J{\"o}rg},
+ title = {Kollisionsfreie Bewegungsgenerierung f{\"u}r ein Industrieroboter-Assistenzsystem auf Basis von 3D-Kameradaten},
+ keywords = {Assistenzsystem, Bahnplanung, ToF-Kamera, Arbeitsraum{\"u}berwachung},
+ isbn = {978-3-033-04189-9},
+ editor = {{ZHAW, Institut f{\"u}r Mechatronische Systeme}},
+ booktitle = {Internationales Forum Mechatronik 2013},
+ year = {2013},
+ address = {Winterthur}
+}
+
+
+@proceedings{Malberg.2013,
+ year = {2013},
+ title = {Automatisierungstechnische Verfahren f{\"u}r die Medizin},
+ editor = {Malberg, Hagen and {de Abreu, Marcelo Gama} and Zaunseder, Sebastian}
+}
+
+
+@incollection{Lusic.2013,
+ author = {Lusic, M. and Hornfeck, R. and Fischer, C. and Franke, L.},
+ title = {Illustrating a Way for the Creation of IT-Based Information Systems for Assembly Staff Simultaneous to the Product Engineering Process},
+ keywords = {Werkerinformationssystem},
+ pages = {241--247},
+ publisher = {DEStech Publications},
+ isbn = {978-1-60595-129-4},
+ booktitle = {Proceedings of 2013 International Conference on Industrial Engineering and Management Science (ICIEMS 2013)},
+ year = {2013},
+ address = {Lancaster and U.S.A.}
+}
+
+
+@inproceedings{Lusic.2013b,
+ author = {Lusic, M. and Hornfeck, R. and Fischer, C. and Franke, J.},
+ title = {Lean Information Management of Manual Assembly Processes: Creating IT-Based Information Systems for Assembly Staff Simultaneous to the Product Engineering Process},
+ keywords = {Werkerinformationssystem},
+ pages = {546--553},
+ volume = {Vol. 421},
+ publisher = {Trans Tech Publications Ltd},
+ isbn = {1660-9336},
+ editor = {Deng, W. and Luo, Q.},
+ booktitle = {Applied Mechanics and Materials},
+ year = {2013},
+ address = {Durnten-Zurich and Switzerland}
 }
 
 
@@ -258,123 +475,13 @@ actual state of the art of robotics.},
 }
 
 
-@proceedings{Malberg.2013,
- year = {2013},
- title = {Automatisierungstechnische Verfahren f{\"u}r die Medizin},
- editor = {Malberg, Hagen and {de Abreu, Marcelo Gama} and Zaunseder, Sebastian}
-}
-
-
-@inproceedings{Risch.2013,
- abstract = {The increasing electrification of the automotive power train leads to significant changes in automotive value chains, while sales potentials are still uncertain [1]. Due to their considerable advantages in regard to safety and convenience, contactless power transfer systems may be the basis for further increasing the customers' acceptance for electrified vehicle concepts [2]. Increasing market acceptance will require high volume production concepts for contactless power transfer systems. Thus, the importance of automated assembly and manufacturing technologies moves into the focus. Especially the winding process of the HF-litz wire coil structures shows
-potential for further rationalization. Therefore, it is the aim of this paper to present flexible automation concepts for this process.},
- author = {Risch, Florian and G{\"u}nther, Stefan and Bickel, Benjamin and Franke, J{\"o}rg},
- title = {Flexible Automation for the Production of Contactless Power Transfer Systems for Electric Vehicles},
- keywords = {electric vehicles;contactless power transfer systems;flexible production concepts;winding of HF-litz wires},
- publisher = {IEEE Service Center},
- isbn = {978-1-4799-1102-8},
- editor = {Franke, J{\"o}rg},
- booktitle = {3rd International Electric Drives Production Conference},
- year = {2013},
- address = {Piscataway and NJ}
-}
-
-
-@inproceedings{Risch.2013b,
- abstract = {The increasing electrification of the automotive power train leads to significant changes in automotive value chains, while sales potentials are still uncertain [1]. Due to their considerable advantages in regard to safety and convenience, contactless power transfer systems may be the basis for further increasing the customers' acceptance for electrified vehicle concepts [2]. Increasing market acceptance will require high volume production concepts for contactless power transfer systems. Thus, the importance of automated assembly and manufacturing technologies moves into the focus. Especially the winding process of the HF-litz wire coil structures shows
-potential for further rationalization. Therefore, it is the aim of this paper to present flexible automation concepts for this process.},
- author = {Risch, Florian and G{\"u}nther, Stefan and Bickel, Benjamin and Franke, J{\"o}rg},
- title = {Flexible Automation for the Production of Contactless Power Transfer Systems for Electric Vehicles},
- keywords = {E|DRIVE;E|TEV;electric vehicles;contactless power transfer systems;flexible production concepts;winding of HF-litz wires},
- publisher = {IEEE},
- isbn = {9781479911028},
- editor = {IEEE},
- booktitle = {Proceedings},
- year = {2013},
- address = {[Piscataway and N.J.]}
-}
-
-
-@inproceedings{Schramm.2013f,
- abstract = {Plasmadust{\circledR} is a new technology using cold active plasma for additive metallization of different substrate materials. For electronics production, especially Molded Interconnect Devices (MID), thermoplastic materials can also be structured with copper as power electronic conductor [1] [2]. The big advantages of Plasmadust{\circledR} are the controllable process temperature range between about 90°C and 180°C, the good adhesion of the metallization, the fast process speed of about 100 mm/s and the fast growing conductor tracks with about 15 microns thickness per cycle [3]. Plate specimens were made of PA6, a material commonly used in automotive applications, with different process parameters. Conductor tracks applied onto the substrates consist of one line with different electrical and mechanical characteristics according to the process temperature and process speed. Additionally the thickness and the width of the conductor track depend on the process parameters [4]. The setting of the process speed turns out to be an important influence on the thickness and roughness of the conductor track that can be achieved on thermoplastics substrates. The investigated materials show a constant bonding performance during thermal shock for 1000 cycles in the range of -40 °C and +125 °C. An exposure to humidity heat (85{\%} r.h / 85 °C) for 500 h has only marginal effects on the adhesion of the printed structures on the thermoplastic substrates. Nevertheless, the highly promising results provide the base for further investigations to achieve a sufficient ampacity related to standard chemical PCB metallization processes. Beyond that mentioned technical thermoplastic material PA6, especially low cost substrates like PC/ABS, and also three-dimensional structures can be processed with Plasmadust{\circledR}.},
- author = {Schramm, Ren{\'e} and Franke, J{\"o}rg},
- title = {Electrical Functionalization of Thermoplastic Materials by Cold Active Atmospheric Plasma Technology},
- keywords = {Plasmadust;MID;ampacity},
- isbn = {978-1-4799-2833-0},
- booktitle = {Proceedings of the 15th Electronics Packaging Technology Conference (EPTC)},
- year = {2013},
- address = {Singapore}
-}
-
-
-@inproceedings{Tremel.2013,
- abstract = {The manufacturing of large synchronous motors and generators with integrated permanent magnets currently contains a large amount of manual processes as well for handling as assembly. Magnets have to be separated and prepared for insertion manually, bearing a high risk for injuries. Due to increasing batch sizes in industrial as well as in traction drive applications, the efficiency of these processes has to be examined and developed towards an automated assembly. The paper presents an approach for partially automated manufacturing of a wide portfolio of rotors for drives on a single assembly machine.},
- author = {Tremel, Jan and Hofmann, Benjamin and Meyer, Alexander and Franke, J{\"o}rg and Eschrich, Sebastian},
- title = {Automated Magnet~Assembly for large PM~Synchronous Machines with Integrated Magnets},
- keywords = {Assembly, Magnets},
- publisher = {IEEE Service Center},
- isbn = {978-1-4799-1102-8},
- editor = {Franke, J{\"o}rg},
- booktitle = {3rd International Electric Drives Production Conference},
- year = {2013},
- address = {Piscataway and NJ}
-}
-
-
-@inproceedings{Ziegler.2013b,
- author = {Ziegler, Christian and Franke, J{\"o}rg},
- title = {Neuartiges, hochflexibles und universell einsetzbares Strahlentherapieger{\"a}t},
- editor = {Malberg, Hagen and {de Abreu, Marcelo Gama} and Zaunseder, Sebastian},
- booktitle = {Automatisierungstechnische Verfahren f{\"u}r die Medizin},
+@inproceedings{Kuhl.2013b,
+ author = {K{\"u}hl, Alexander and G{\"u}nther, Stefan and Franke, J{\"o}rg Prof. Dr.-Ing.},
+ title = {Robot-Based Assembly of Stator-Windings},
+ keywords = {E|DRIVE, Automated Winding Assembly, Stator, Key Words: Robot-based},
+ editor = {EMCW},
+ booktitle = {EMCW Expo},
  year = {2013}
-}
-
-
-@proceedings{Lee.24.26.10.2013,
- year = {24.-26.10.2013},
- title = {The 44th International Symposium on Robotics~(ISR)},
- editor = {Lee, Ju-Jang}
-}
-
-
-@misc{Bauer.13.11.2013,
- author = {Bauer, Jochen and Kettschau, Anna},
- year = {13.11.2013},
- title = {Alter, Wohnen und Technik: Mit technischen Innovationen gesellschaftliche Herausforderungen l{\"o}sen},
- address = {N{\"u}rnberg},
- series = {Energie und Forschung {\dq} Die Forschung von heute - die Energie von morgen{\dq}}
-}
-
-
-@inproceedings{Bauer.2014,
- abstract = {Mit dem Konzept des Ambient Assisted Living (AAL) sollen technische Hilfestellungen entwickelt werden, um den l{\"a}ngeren Verbleib {\"a}lterer Menschen im gewohnten Umfeld zu erm{\"o}glichen. Meist werden solche technischen Hilfestellungen jedoch stark technologiegetrieben entwickelt und entsprechen nicht dem tats{\"a}chlichen Bed{\"u}rfnis der Endanwender. Das im Projekt verwendete Vorgehen der menschzentrierten Gestaltung stellt hingegen den Benutzer in den Mittelpunkt: Auf diese Weise sollen Fehlentwicklungen von Anfang an vermieden werden und ein gebrauchstaugliches System entstehen. Durch Usability-Tests werden zielgruppenspezifische Probleme im Umgang mit AAL-Serviceplattformen erkannt und m{\"o}gliche L{\"o}sungsvorschl{\"a}ge durchdacht.},
- author = {Bauer, Jochen and Kettschau, Anna and Franke, J{\"o}rg},
- title = {Optimierung der Datenvisualisierung von AAL-Serviceplattformen durch Usability-Tests},
- keywords = {E|Home;AAL;Smart Home;Mensch-Maschine-Interaktion},
- publisher = {VDE Verlag Gmbh},
- isbn = {978-3-8007-3574-7},
- editor = {VDE and BMBF and {Sozialverband VdK} and Fraunhofer-AAL},
- booktitle = {Wohnen - Pflege - Teilhabe {\dq}Besser leben durch Technik{\dq}},
- year = {2014},
- address = {Berlin}
-}
-
-
-@incollection{Risch.2014,
- abstract = {Die zunehmende Elektrifizierung des Antriebsstrangs f{\"u}hrt mittel- bis langfristig zu einer deutlichen Ver{\"a}nderung der Wertsch{\"o}pfungsstrukturen in der Automobilindust-rie, bei zun{\"a}chst noch unsicheren Absatzzahlen. Innovationen im Fabrikumfeld sind f{\"u}r eine nachhaltige Sicherung der Marktposition und lokalen Wertsch{\"o}pfungsstruk-turen unabdingbar. Dabei m{\"u}ssen die Kosten- und Qualit{\"a}tsziele f{\"u}r Komponenten innovativer elektrischer Antriebsstr{\"a}nge in einer engen Ma{\ss}nahmenkombination zwi-schen Funktions- und Prozessoptimierung erreicht werden. In den letzten Jahren werden zudem verst{\"a}rkt energie- und ressourcen-effiziente Produktionstechnologien in den Fokus ger{\"u}ckt. Die Anforderungen an die dazugeh{\"o}rigen Produktionsprozes-se steigen somit zus{\"a}tzlich. 
-In diesem Kontext wurde am Lehrstuhl f{\"u}r Fertigungsautomatisierung und Produkti-onssystematik (FAPS) der Friedrich-Alexander-Universit{\"a}t Erlangen-N{\"u}rnberg (FAU) mit dem Bayerischen Technologiezentrum f{\"u}r elektrische Antriebstechnik (E|Drive-Center) eine Forschungsgruppe gegr{\"u}ndet, welche Systeml{\"o}sungen f{\"u}r den Aufbau durchg{\"a}ngiger Prozessketten f{\"u}r die Produktion elektrischer Antriebstechnik entwi-ckelt, in prototypische Demonstratoranlagen {\"u}berf{\"u}hrt und in praktischen Versuchs-reihen optimiert. In der Forschungsfabrik des E|Drive-Centers werden somit Prozes-sinnovationen f{\"u}r den Elektromaschinenbau erforscht, um nachhaltig (ressourcen- und energie-effiziente Fertigungsprozesse, Recyclingprozesse f{\"u}r werthaltige hoch-koerzitive Magnetmaterialien) und flexibel (CAD-CAM-Ketten f{\"u}r roboterbasierte Wi-},
- author = {Risch, Florian and Franke, J{\"o}rg Prof. Dr.-Ing.},
- title = {Flexible Automatisierungstechnologien f{\"u}r die Produktion elektrischer Traktionsantriebe},
- keywords = {E|DRIVE},
- pages = {377--388},
- volume = {Bd. 131},
- publisher = {expert-Verl},
- isbn = {9783816932390},
- series = {Fachbuch / Haus der Technik},
- editor = {Sch{\"a}fer, Heinz},
- booktitle = {Elektrische Antriebstechnologie f{\"u}r Hybrid- und Elektrofahrzeuge},
- year = {2014},
- address = {Renningen}
 }
 
 
@@ -415,44 +522,6 @@ In diesem Kontext wurde am Lehrstuhl f{\"u}r Fertigungsautomatisierung und Produ
 }
 
 
-@proceedings{.c,
- title = {2013 IEEE International Symposium on Assembly and Manufacturing (ISAM)}
-}
-
-
-@proceedings{.d,
- title = {IECON 2013 - 39th Annual Conference of the IEEE Industrial Electronics Society}
-}
-
-
-@inproceedings{Brela.,
- author = {Brela, Matthaeus and Michalski, Markus and Gebhardt, Hans-Joerg and Franke, Joerg},
- title = {Hall measurement method for the detection of material defects in plastic-embedded permanent magnets of rotors},
- keywords = {E|DRIVE, Sensors, Actuators and System Integration;Fault Detection, Diagnostic and Prognostic;Permanent Magnet Machines},
- pages = {3928--3934},
- booktitle = {IECON 2013 - 39th Annual Conference of the IEEE Industrial Electronics Society}
-}
-
-
-@inproceedings{Ziegler.,
- author = {Ziegler, Christian and Franke, J{\"o}rg},
- title = {The LinKin System: A new robotic and universally applicable radiation therapy device},
- editor = {Lee, Ju-Jang},
- booktitle = {The 44th International Symposium on Robotics~(ISR)},
- year = {24.-26.10.2013}
-}
-
-
-@misc{Ziegler.b,
- author = {Ziegler, Christian and Franke, J{\"o}rg},
- title = {Mechatronische Entwicklung eines hochflexiblen und universell einsetzbaren Strahlentherapieger{\"a}ts},
- address = {Augsburg},
- number = {Juni 2013},
- series = {mechatroniknews},
- editor = {{Cluster Mechatronik {\&} Automation e.V.}}
-}
-
-
 @inproceedings{Franke.b,
  author = {Franke, J. and Kreitlein, S. and Risch, F. and Guenther, S.},
  title = {Energy-efficient production strategies and technologies for electric drives},
@@ -471,9 +540,47 @@ In diesem Kontext wurde am Lehrstuhl f{\"u}r Fertigungsautomatisierung und Produ
 }
 
 
-//@book{.,
-// title = {International Conference on Inductive Systems}
-//}
+@misc{Ziegler.,
+ author = {Ziegler, Christian and Franke, J{\"o}rg},
+ title = {Mechatronische Entwicklung eines hochflexiblen und universell einsetzbaren Strahlentherapieger{\"a}ts},
+ address = {Augsburg},
+ number = {Juni 2013},
+ series = {mechatroniknews},
+ editor = {{Cluster Mechatronik {\&} Automation e.V.}}
+}
+
+
+@inproceedings{Brela.,
+ author = {Brela, Matthaeus and Michalski, Markus and Gebhardt, Hans-Joerg and Franke, Joerg},
+ title = {Hall measurement method for the detection of material defects in plastic-embedded permanent magnets of rotors},
+ keywords = {E|DRIVE, Sensors, Actuators and System Integration;Fault Detection, Diagnostic and Prognostic;Permanent Magnet Machines},
+ pages = {3928--3934},
+ booktitle = {IECON 2013 - 39th Annual Conference of the IEEE Industrial Electronics Society}
+}
+
+
+@proceedings{.c,
+ title = {2013 IEEE International Symposium on Assembly and Manufacturing (ISAM)}
+}
+
+
+@proceedings{.d,
+ title = {IECON 2013 - 39th Annual Conference of the IEEE Industrial Electronics Society}
+}
+
+
+@inproceedings{Ziegler.b,
+ author = {Ziegler, Christian and Franke, J{\"o}rg},
+ title = {The LinKin System: A new robotic and universally applicable radiation therapy device},
+ editor = {Lee, Ju-Jang},
+ booktitle = {The 44th International Symposium on Robotics~(ISR)},
+ year = {24.-26.10.2013}
+}
+
+
+@book{.,
+ title = {International Conference on Inductive Systems}
+}
 
 
 @proceedings{.1974,
@@ -2093,7 +2200,7 @@ In diesem Kontext wurde am Lehrstuhl f{\"u}r Fertigungsautomatisierung und Produ
 
 @misc{Abels.17.06.1993,
  author = {Abels, Stephanie and Zeugtr{\"a}ger, K. and Amann, W. and Wang, Y.},
- year = {17.06.1993},
+ date = {17.06.1993},
  title = {Simulation in der Montage},
  address = {Dortmund},
  institutions = {{Vorstellung des ASIM-Handbuchs {\dq}Simulationsanwendungen in Produktion und Logistik{\dq}}}
@@ -2670,7 +2777,7 @@ fertigen Rotorring entwickelt werden.},
 
 @misc{Beitinger.19.05.1998,
  author = {Beitinger, Gunter},
- year = {19.05.1998},
+ date = {19.05.1998},
  title = {Auswahl der geeigneten Schaltungstr{\"a}gertechnologie im ger{\"a}tetechnischen Umfeld},
  address = {Wiesloch},
  institutions = {ELROMA}
@@ -2728,7 +2835,7 @@ fertigen Rotorring entwickelt werden.},
 
 Genau dieser Aufgabe stellt sich das E|Drive-Center des Lehrstuhls FAPS, dessen Leistungsspektrum im Vortrag aufgezeigt wird. Neben einer allgemeinen Darstellung der abgedeckten Technologiefelder wird auf ausgew{\"a}hlte Beispiele von Forschungsarbeiten genauer eingegangen. Ein Schwerpunkt liegt auf der flexiblen und automatisierten Fertigung der Statorwicklungen durch den Einsatz von Industrierobotern. Die Vorteile werden beispielhaft an der Zahnspulenwicklung mit gleichzeitiger phasenrichtiger Schaltung der Einzelz{\"a}hne einer Synchronmaschine belegt.},
  author = {Bickel, Benjamin and Franke, J{\"o}rg},
- year = {13.09.2012},
+ date = {13.09.2012},
  title = {L{\"o}sungskonzepte zur effizienten Fertigung von elektrischen Traktionsantrieben},
  keywords = {Wertsch{\"o}pfungskette, Fertigungsprozesskette, roboterbasiertes Nadelwickeln, Tricept, Flexpicker},
  address = {Stuttgart},
@@ -2777,7 +2884,7 @@ At the conference, the developed manufacturing cell with its winding and assembl
 Die Umstellung von den komplex aufgebauten Verbrennungs- zu den relativ einfachen Elektromotoren bedeutet langfristig eine immense Verminderung der Wertsch{\"o}pfung beim Automobil-OEM und vielen Zulieferern, da viele Komponenten wegfallen und nur der unkomplizierte Elektromotor mit elektronischer Ansteuerung und ggf. einem einfachen Getriebe noch herzustellen ist. Dies stellt eine m{\"a}chtige Gefahr f{\"u}r die tausenden von Arbeitspl{\"a}tzen und auch die bisher noch generierten Deckungsbeitr{\"a}ge bei den Produzenten dar.
 Im Rahmen des Vortrags werden ausgehend von einer Diskussion der alternativen Motortopologien, die Bauform-spezifischen Prozessketten f{\"u}r elektrische Fahrantriebe vorgestellt und fertigungstechnische Entwicklungsfelder aufgezeigt. Anhand von ausgew{\"a}hlten Technologiebeispielen werden hierzu aktuelle Entwicklungsarbeiten des Lehrstuhls FAPS pr{\"a}sentiert, wie beispielsweise ein roboterbasiertes Nadelwickelsystem oder neue Ans{\"a}tze in der Pr{\"u}fung und Montage hochkoerzitiver Permanentmagnete.},
  author = {Bickel, Benjamin and Franke, J{\"o}rg},
- year = {23.05.2012},
+ date = {23.05.2012},
  title = {E-Mobility-Montage am Standort Deutschland: Herausforderungen mit modernen Robotik-Konzepten l{\"o}sen},
  keywords = {Wertsch{\"o}pfungskette, Fertigungsprozesskette, roboterbasiertes Nadelwickeln, Handhabung Permanentmagnete, Unterschied Verbrennungsmotor Elektromotor},
  address = {M{\"u}nchen},
@@ -2796,7 +2903,7 @@ Im Rahmen des Vortrags werden ausgehend von einer Diskussion der alternativen Mo
 
 @misc{Bigl.07.12.2004,
  author = {Bigl, Thomas and Boiger, Matthias and Zollei{\ss}, Bernd},
- year = {07.12.2004},
+ date = {07.12.2004},
  title = {Neue Fertigungskonzepte f{\"u}r Folien: Pastenauftrag, Best{\"u}cken, L{\"o}ten im Reel-To-Reel-Verbund},
  address = {N{\"u}rnberg},
  institutions = {{Fachseminar zur Elektronikproduktion Folienschaltungen - Innovative Produktgestaltung und Prozesse}}
@@ -2885,7 +2992,7 @@ Im Rahmen des Vortrags werden ausgehend von einer Diskussion der alternativen Mo
 
 @misc{Boiger.06.05.1999,
  author = {Boiger, Matthias and Krimi, Sami},
- year = {06.05.1999},
+ date = {06.05.1999},
  title = {Ans{\"a}tze f{\"u}r Rapid Prototyping in der Elektronikproduktion},
  address = {N{\"u}rnberg},
  institutions = {{SMT N{\"u}rnberg}}
@@ -3240,7 +3347,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Classe.03.05.05.1988,
  author = {Classe, Detlef},
- year = {03.- 05.05.1988},
+ date = {03.- 05.05.1988},
  title = {Ein Kraftsensor zur Programmierung von Robotern},
  address = {N{\"u}rnberg},
  institutions = {{Sensor '88}}
@@ -3249,7 +3356,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Classe.18.22.06.1988,
  author = {Classe, Detlef},
- year = {18.- 22.06.1988},
+ date = {18.- 22.06.1988},
  title = {Modelling of a Sensor Controlled Cartesian Robot for tracking a contour},
  address = {Paris},
  institutions = {{12th IMACS World Congress on Scientific Computation}}
@@ -3325,7 +3432,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Classe.28.30.09.1988,
  author = {Classe, Detlef},
- year = {28.- 30.09.1988},
+ date = {28.- 30.09.1988},
  title = {Simulation eines Sensorgef{\"u}hrten Roboters},
  address = {Aachen},
  institutions = {{ASIM '88, 5. Symposium Simulationstechnik}}
@@ -3360,7 +3467,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Craiovan.02.12.2010,
  author = {Craiovan, Daniel},
- year = {02.12.2010},
+ date = {02.12.2010},
  title = {Three Dimensional Electronic Substrates: Prospects and Challenges for the Manufacturer},
  address = {Mainz-Kastel}
 }
@@ -3389,7 +3496,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Craiovan.2009,
  author = {Craiovan, Daniel},
- year = {2009},
+ date = {2009},
  title = {Prozesse und Einsatzm{\"o}glichkeiten f{\"u}r leitf{\"a}hige Klebstoffe in der Elektronikproduktion},
  address = {Stuttgart}
 }
@@ -3563,7 +3670,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Dobroschke.16.03.2011,
  author = {Dobroschke, Andreas},
- year = {16.03.2011},
+ date = {16.03.2011},
  title = {Fahrantriebe f{\"u}r die Elektromobilit{\"a}t: Herausforderungen und Chancen},
  address = {Frankfurt},
  series = {VDMA - E-Motive}
@@ -3608,7 +3715,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Dohle.14.15.02.2012,
  author = {Dohle, Rainer and Friedrich, Thomas and Go{\ss}ler, J{\"o}rg and Sch{\"u}{\ss}ler, Florian and Georgiev, Georgi},
- year = {14.- 15.02.2012},
+ date = {14.- 15.02.2012},
  title = {Zuverl{\"a}ssigkeit hochminiaturisierter Flip-Chip-Baugruppen mit Leiterplatten in Subtraktivtechnologie},
  address = {Bad Fellbach}
 }
@@ -3759,7 +3866,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Eisenbarth.06.10.1999,
  author = {Eisenbarth, Michael},
- year = {06.10.1999},
+ date = {06.10.1999},
  title = {SFB 356 - Schwerpunkte zur MID-Technik},
  address = {Erlangen},
  institutions = {MID-Informationstag}
@@ -3768,7 +3875,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Eisenbarth.13.10.1998,
  author = {Eisenbarth, Michael and Reichenberger, Marcus},
- year = {13.10.1998},
+ date = {13.10.1998},
  title = {Qualit{\"a}tssteigerung durch {\"U}bergang von Infrarot- auf mediengebundene L{\"o}tverfahren},
  address = {Erlangen},
  institutions = {{Produktivit{\"a}tssteigerung in der Elektronikproduktion durch gesicherte Verbindungstechnik}}
@@ -4404,7 +4511,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Feldmann.01.05.1992,
  author = {Feldmann, Klaus and Grampp, Konrad},
- year = {01.05.1992},
+ date = {01.05.1992},
  title = {Improvement of Productivity by Computer Aided Process Planning, Control and Diagnosis},
  address = {W{\"u}rzburg},
  institutions = {{IEMT '92}}
@@ -4423,7 +4530,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Feldmann.01.08.1998,
  author = {Feldmann, Klaus and Krimi, Sami},
- year = {01.08.1998},
+ date = {01.08.1998},
  title = {Alternative Placement-Systems for Three Dimensional Circuit Boards},
  address = {Athen},
  institutions = {{Annals of the CIRP}}
@@ -4432,7 +4539,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Feldmann.01.09.2006,
  author = {Feldmann, Klaus and Zhuo, Yong and Alvarez, Christian},
- year = {01.09.2006},
+ date = {01.09.2006},
  title = {An Integrated Design system for molded interconnect Devices (3D-MID)},
  institutions = {{International Conference on Digital Enterprise Technology}}
 }
@@ -4440,7 +4547,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Feldmann.02.05.09.2007,
  author = {Feldmann, Klaus and Matzner, Christian and Schimpf, Claudius and Steineke, A.},
- year = {02.- 05.09.2007},
+ date = {02.- 05.09.2007},
  title = {Failure of Electronic Devices due to Condensation},
  address = {Berlin},
  institutions = {MicroNanoReliability}
@@ -4449,7 +4556,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Feldmann.03.04.1995,
  author = {Feldmann, Klaus and Meedt, Otto and Scheller, Herbert},
- year = {03.04.1995},
+ date = {03.04.1995},
  title = {Life Cycle Engineering and Recycling of Electronic Devices},
  address = {Haifa},
  institutions = {{Recycling of obsolet electromechanical products as an industrial challenge}}
@@ -4458,7 +4565,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Feldmann.03.07.1996,
  author = {Feldmann, Klaus and Solvie, Michael and St{\"o}ckel, Thomas},
- year = {03.07.1996},
+ date = {03.07.1996},
  title = {Innovative Anwendungen f{\"u}r Feldbussysteme},
  address = {Erlangen},
  institutions = {{Neue Steuerungs- und Sensorkonzepte - Schl{\"u}ssel zur Leistungssteigerung in der Fertigungsautomatisierung}}
@@ -4467,7 +4574,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Feldmann.04.06.10.2002,
  author = {Feldmann, Klaus and Sutanto, Agus},
- year = {04.- 06.10.2002},
+ date = {04.- 06.10.2002},
  title = {Planning and Simulation of Flexible Assembly Systems in a Virtual Manufacturing Environment},
  address = {Berlin},
  institutions = {{Tagung ISSM}}
@@ -4476,7 +4583,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Feldmann.05.10.1987,
  author = {Feldmann, Klaus and B{\"a}rnreuther, Brigitte and Geyer, Georg and Hemberger, Andreas},
- year = {05.10.1987},
+ date = {05.10.1987},
  title = {Moplan Entwurf eines Expertensystems f{\"u}r die Planung von Montagesystemen},
  address = {Karlsruhe}
 }
@@ -4484,7 +4591,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Feldmann.07.10.1997,
  author = {Feldmann, Klaus and Beitinger, Gunter},
- year = {07.10.1997},
+ date = {07.10.1997},
  title = {Neue Metallisierungsverfahren},
  address = {Erlangen},
  institutions = {MID-Seminar}
@@ -4493,7 +4600,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Feldmann.07.11.1978,
  author = {Feldmann, Klaus},
- year = {07.11.1978},
+ date = {07.11.1978},
  title = {Betrieb rund um die Uhr - Einsatz von Robotern in einem Dreischichtbetrieb},
  address = {Regensburg},
  series = {Die Computer-Revolution},
@@ -4503,7 +4610,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Feldmann.07.12.1995,
  author = {Feldmann, Klaus and Liedl, Georg and Stief, E.},
- year = {07.12.1995},
+ date = {07.12.1995},
  title = {Materialflu{\ss} in ver{\"a}nderten Fabrikstrukturen - L{\"o}sungsalternativen},
  address = {Erlangen},
  institutions = {{Materialflu{\ss} in ver{\"a}nderten Fabrikstrukturen}}
@@ -4512,7 +4619,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Feldmann.08.09.10.1987,
  author = {Feldmann, Klaus},
- year = {08.- 09.10.1987},
+ date = {08.- 09.10.1987},
  title = {Fabrik der Zukunft - M{\"o}glichkeiten und Risiken f{\"u}r den Mittelstand},
  address = {N{\"u}rnberg},
  institutions = {{Mitgliederversammlung Fachgemeinschaft Pr{\"a}zisionswerkzeuge}}
@@ -4521,7 +4628,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Feldmann.08.09.10.1997,
  author = {Feldmann, Klaus},
- year = {08.- 09.10.1997},
+ date = {08.- 09.10.1997},
  title = {Elektronikfertigung am Standort Deutschland},
  address = {Reutlingen},
  institutions = {{2. Robotersymposium {\dq}Standortsicherung durch Automation und Organisation{\dq}}}
@@ -4530,7 +4637,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Feldmann.09.03.1988,
  author = {Feldmann, Klaus},
- year = {09.03.1988},
+ date = {09.03.1988},
  title = {Technisch wirtschaftliche Bewertung von rechnergef{\"u}hrten Produktionsst{\"a}tten},
  address = {N{\"u}rnberg},
  institutions = {{20. Fachvortrag}}
@@ -4539,7 +4646,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Feldmann.09.03.1989,
  author = {Feldmann, Klaus},
- year = {09.03.1989},
+ date = {09.03.1989},
  title = {Einsatzm{\"o}glichkeiten f{\"u}r CAD/CAM-L{\"o}sungen in der Montageautomatisierung},
  address = {Darmstadt},
  institutions = {Montage}
@@ -4548,7 +4655,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Feldmann.09.06.1988,
  author = {Feldmann, Klaus},
- year = {09.06.1988},
+ date = {09.06.1988},
  title = {Anforderungen an die Ausbildung von Ingenieuren f{\"u}r zuk{\"u}nftige Produktionsysteme},
  address = {Stuttgart},
  institutions = {{Konrad Adenauer Stifung}}
@@ -4557,7 +4664,7 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Feldmann.09.07.1997,
  author = {Feldmann, Klaus and Beitinger, Gunter},
- year = {09.07.1997},
+ date = {09.07.1997},
  title = {Alternative Verfahren zur Metallisierung und Strukturierung},
  address = {Erlangen},
  institutions = {FOWEB-Seminar}
@@ -4566,14 +4673,14 @@ with very high geometric accuracies and a very promising data-processing perform
 
 @misc{Feldmann.09.12.1988,
  author = {Feldmann, Klaus},
- year = {09.12.1988},
+ date = {09.12.1988},
  title = {Rechnereinsatz und Simulation als Instrumente zur Steigerung der Verf{\"u}gbarkeit von Maschinen und Anlagen}
 }
 
 
 @misc{Feldmann.10.02.1994,
  author = {Feldmann, Klaus and Hopperdietzel, Robert},
- year = {10.02.1994},
+ date = {10.02.1994},
  title = {Rechnerintegrierte Produktion: Herausforderung und Chancen zur Standortsicherung},
  address = {Erlangen},
  institutions = {{Collegium Alexandrinum der Universit{\"a}t Erlangen-N{\"u}rnberg}}
@@ -4585,7 +4692,7 @@ with very high geometric accuracies and a very promising data-processing perform
 Im Bereich der MID-Technologie ergeben sich Forschungsfelder hinsichtlich an-forderungsgerechter und zuverl{\"a}ssiger Produkte sowie entlang der Prozesskette zur Herstellung dreidimensionaler Schaltungstr{\"a}ger. Hierzu werden im Beitrag zwei aktuelle Schwerpunkte aufgezeigt: Zum einen wird ein neues Konzept zur r{\"a}umlichen Best{\"u}ckung in Standardbest{\"u}ckautomaten beschrieben. Des Weiteren werden Ergebnisse der Qualifizierung von Hochtemperaturthermoplasten als Ba-sismaterial f{\"u}r hoch belastete elektronische Baugruppen vorgestellt. 
 Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen die technologischen Fortschritte im Bereich der Kunststoffe, der Strukturierung, der Metallisierung sowie der Aufbau- und Verbindungstechnik. In diesem Zu-sammenhang werden die spezifischen Vorteile spritzgegossener Schaltungstr{\"a}ger in Verbindung mit den Anforderungen der Sensortechnologie diskutiert.},
  author = {Feldmann, Klaus and Goth, Christian and Sch{\"u}{\ss}ler, Florian and Craiovan, Daniel},
- year = {10.05.2011},
+ date = {10.05.2011},
  title = {Innovative Impulse zur Herstellung und Optimierung r{\"a}umlicher elektronischer Schaltungstr{\"a}ger (MID)},
  address = {Paderborn}
 }
@@ -4593,7 +4700,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.10.11.12.1990,
  author = {Feldmann, Klaus and Geyer, Georg},
- year = {10.- 11.12.1990},
+ date = {10.- 11.12.1990},
  title = {Rechnerintegrierte Produktionssysteme - Aktuelle Probleme und neue M{\"o}glichkeiten f{\"u}r die Instandhaltung},
  address = {N{\"u}rnberg},
  institutions = {{Moderne Softwaresysteme und erfolgreiche Praxisl{\"o}sungen f{\"u}r die Instandhaltung}}
@@ -4602,7 +4709,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.11.1012.10.2004,
  author = {Feldmann, Klaus and Enser, Werner},
- year = {11.10- 12.10.2004},
+ date = {11.10- 12.10.2004},
  title = {Through Hole Solder Bumping - Potenziale einer neuen Verbindungstechnik zur Mikrokontaktierung feinster Anschlussstrukturen},
  address = {M{\"u}nchen},
  institutions = {{Deutsche IMAPS-Konferenz}}
@@ -4611,7 +4718,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.12.09.2001,
  author = {Feldmann, Klaus},
- year = {12.09.2001},
+ date = {12.09.2001},
  title = {Potential und Herausforderungen durch r{\"a}umliche Schaltungen (MID)},
  address = {Frankfurt},
  institutions = {{ZVEI- Forum}}
@@ -4620,7 +4727,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.12.10.1984,
  author = {Feldmann, Klaus},
- year = {12.10.1984},
+ date = {12.10.1984},
  title = {Tendenzen und Auswirkungen der Fertigungsrationalisierung},
  address = {N{\"u}rnberg},
  institutions = {{Gr{\"u}ndung der Fa. Autec}}
@@ -4629,7 +4736,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.13.03.1979,
  author = {Feldmann, Klaus},
- year = {13.03.1979},
+ date = {13.03.1979},
  title = {Einsatz von Industrierobotern},
  address = {Bad Neustadt and Saale}
 }
@@ -4637,7 +4744,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.13.05.2002,
  author = {Feldmann, Klaus and Bigl, Thomas},
- year = {13.05.2002},
+ date = {13.05.2002},
  title = {Entwicklungstrends und Rationalisierungspotentiale mechatronischer Systeml{\"o}sungen im Kfz},
  address = {Mannheim},
  institutions = {{IIR-Fachkonferenz: Mechatronik im Kfz - Funktionalit{\"a}ten erh{\"o}hen und Kosten sparen}}
@@ -4646,7 +4753,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.13.11.1978,
  author = {Feldmann, Klaus},
- year = {13.11.1978},
+ date = {13.11.1978},
  title = {Industrieroboter zum Beschicken von Werkzeugmaschinen},
  address = {Aachen},
  institutions = {{Werkzeugmaschinen, Fertigungstechnik und Produktionssysteme}}
@@ -4655,7 +4762,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.14.15.06.1988,
  author = {Feldmann, Klaus and Geyer, Georg and Eisele, Rainer},
- year = {14.- 15.06.1988},
+ date = {14.- 15.06.1988},
  title = {Wissensbasierte Ans{\"a}tze zur Montageplanung},
  address = {M{\"u}nchen},
  institutions = {{CIM-Komponenten zur Planung und Steuerung}}
@@ -4664,7 +4771,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.14.15.06.1988b,
  author = {Feldmann, Klaus and Geyer, Georg and Eisele, Rainer},
- year = {14.-15.06.1988},
+ date = {14.-15.06.1988},
  title = {Wissensbasierte Ans{\"a}tze zur Montageplanung},
  address = {M{\"u}nchen},
  institutions = {{CIM-Komponenten zur Planung und Steuerung}}
@@ -4673,7 +4780,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.14.15.10.1996,
  author = {Feldmann, Klaus and Feuerstein, Robert and G{\"o}tz, Knuth},
- year = {14.- 15.10.1996},
+ date = {14.- 15.10.1996},
  title = {Einflu{\ss} und Folgen der Lagerungsbedingungen auf die Qualit{\"a}t elektronischer Bauelemente},
  address = {M{\"u}nchen},
  institutions = {{Deutsche ISHM Konferenz 1996}}
@@ -4682,7 +4789,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.14.16.04.1989,
  author = {Feldmann, Klaus and Kleineidam, Gerhard},
- year = {14.- 16.04.1989},
+ date = {14.- 16.04.1989},
  title = {Planning Programmable Assembly Systems},
  address = {Athen},
  institutions = {{ESPRIT Conference}}
@@ -4691,7 +4798,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.14.17.05.1991,
  author = {Feldmann, Klaus and Sturm, J{\"u}rgen},
- year = {14.- 17.05.1991},
+ date = {14.- 17.05.1991},
  title = {Optische Qualit{\"a}tspr{\"u}fung in der rechnerintegrierten Elektronikbaugruppenproduktion - Stand der Technik und Perspektiven},
  address = {Stuttgart},
  institutions = {{Quality '92, 2. Internationale Fachmesse und Kongre{\ss} f{\"u}r Qualit{\"a}tssicherung}}
@@ -4700,7 +4807,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.15.03.1985,
  author = {Feldmann, Klaus and Classe, Detlef},
- year = {15.03.1985},
+ date = {15.03.1985},
  title = {Sensoren in der Fertigungstechnik},
  address = {Coburg},
  institutions = {Mikroperipherik}
@@ -4709,7 +4816,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.15.06.1988,
  author = {Feldmann, Klaus},
- year = {15.06.1988},
+ date = {15.06.1988},
  title = {Produktionsautomatisierung - eine genutzte Chance des Ger{\"a}tewerkes Amberg},
  institutions = {{40-j{\"a}hriges Jubil{\"a}um GWA}}
 }
@@ -4717,7 +4824,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.15.07.1997,
  author = {Feldmann, Klaus and Beitinger, Gunter},
- year = {15.07.1997},
+ date = {15.07.1997},
  title = {Substratmaterialien und Strukturierungsverfahren},
  address = {Erlangen},
  institutions = {FOWEB-Seminar}
@@ -4726,7 +4833,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.15.10.1984,
  author = {Feldmann, Klaus},
- year = {15.10.1984},
+ date = {15.10.1984},
  title = {Neue Entwicklungen in der Fertigungsautomatisierung},
  address = {Hof}
 }
@@ -4734,7 +4841,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.15.11.2007,
  author = {Feldmann, Klaus and Sch{\"u}{\ss}ler, Florian and Goth, Christian},
- year = {15.11.2007},
+ date = {15.11.2007},
  title = {Enhanced flexibility for Electronic devices by MID and Flexible Printed Circuits},
  address = {M{\"u}nchen},
  institutions = {{ZVEI- Forum}}
@@ -4743,7 +4850,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.15.12.1982,
  author = {Feldmann, Klaus},
- year = {15.12.1982},
+ date = {15.12.1982},
  title = {Einsatzplanung und Wirtschaftlichkeitsbetrachtungen},
  address = {D{\"u}sseldorf}
 }
@@ -4751,7 +4858,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.16.17.11.1999,
  author = {Feldmann, Klaus and Selinger, G. and Trautner, Stefan and Perlewitz, H.},
- year = {16.- 17.11.1999},
+ date = {16.- 17.11.1999},
  title = {Product Design for Ease of Disassembly and Recycling},
  address = {Shanghai (China)},
  institutions = {{International Symposium on Sustainable Manufacturing}}
@@ -4760,7 +4867,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.17.18.05.1995,
  author = {Feldmann, Klaus},
- year = {17.- 18.05.1995},
+ date = {17.- 18.05.1995},
  title = {Neue Technologien in der Elektronik und ihre Auswirkungen auf die Produktion},
  address = {Reutlingen},
  institutions = {{Roboter-Symposium {\dq}Expansion durch Innovation{\dq}}}
@@ -4769,7 +4876,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.18.01.05.04.2001,
  author = {Feldmann, Klaus},
- year = {18.01.- 05.04.2001},
+ date = {18.01.- 05.04.2001},
  title = {MID - M{\"a}rkte durch Produkte Technologien erschlie{\ss}en},
  address = {Erlangen},
  institutions = {{FAPS-TT-Seminar: Innovative Produktgestaltung mit MID}}
@@ -4778,7 +4885,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.18.10.1995,
  author = {Feldmann, Klaus and Preisinger, O. and Steinwasser, Peter},
- year = {18.10.1995},
+ date = {18.10.1995},
  title = {Optimierung von Montagesystemen durch rechnerintegrierte Simulation und Diagnose},
  address = {M{\"u}nchen},
  institutions = {{3. Kolloquium des Bayerischen Forschungsverbundes Systemtechnik}}
@@ -4787,7 +4894,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.19.02.2008,
  author = {Feldmann, Klaus and Junker, Stefan and Tremel, Jan},
- year = {19.02.2008},
+ date = {19.02.2008},
  title = {Automatisierte Handhabung und Montage von vormagnetisierten Permanentmagneten in der PM-Rotorproduktion},
  address = {Stuttgart},
  institutions = {{ASB {\dq}Antreiben, Steuern, Bewegen{\dq}}}
@@ -4796,7 +4903,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.19.09.2000,
  author = {Feldmann, Klaus and Slama, Stefan},
- year = {19.09.2000},
+ date = {19.09.2000},
  title = {Rationalisierungspotentiale in der Montage},
  address = {Sinsheim},
  institutions = {{Flexible Montagekonzepte hoher Produktivit{\"a}t - Motek2000}}
@@ -4805,7 +4912,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.19.11.2004,
  author = {Feldmann, Klaus and Bigl, Thomas},
- year = {19.11.2004},
+ date = {19.11.2004},
  title = {Eine Entwicklungsumgebung f{\"u}r r{\"a}umliche elektronische Baugruppen},
  address = {Paderborn},
  institutions = {{15. Workshop Mikrotechnische Produktion Integrative Entwicklung r{\"a}umlicher elektronischer Baugruppen - Abschlusspr{\"a}sentation des Verbundprojektes INERELA}}
@@ -4814,7 +4921,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.19.23.06.1990,
  author = {Feldmann, Klaus and Schr{\"o}del, Olaf},
- year = {19.- 23.06.1990},
+ date = {19.- 23.06.1990},
  title = {M{\"o}glichkeiten und Chancen der rechnergest{\"u}tzten Produktion f{\"u}r den Mittelstand},
  address = {N{\"u}rnberg},
  institutions = {{Fameta Messe}}
@@ -5785,7 +5892,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.1989h,
  author = {Feldmann, Klaus},
- year = {1989},
+ date = {1989},
  title = {Rechnerintegrierte Produktionssysteme, Modellbeispiel f{\"u}r zuk{\"u}nftige Fabrikstrukturen},
  address = {Erlangen},
  institutions = {CIM-College}
@@ -6127,7 +6234,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.1991d,
  author = {Feldmann, Klaus},
- year = {1991},
+ date = {1991},
  title = {Entwicklung automatisierter Montagezellen f{\"u}r neue Strukturen elektronischer Ger{\"a}te (Development of automated assembly cells for new 3D structure of electronic products)},
  institutions = {{CIRP Assembly}}
 }
@@ -8867,7 +8974,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.20.03.1997,
  author = {Feldmann, Klaus},
- year = {20.03.1997},
+ date = {20.03.1997},
  title = {{\"U}bersicht {\"u}ber den Sonderforschungsbereich 356},
  address = {Erlangen},
  institutions = {{{\"O}ffentliches Berichtskolloquium des Sonderforschungsbereiches 356}}
@@ -8876,7 +8983,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.20.05.1999,
  author = {Feldmann, Klaus and Pitter, Frank and Thomas, Jens and Ryssel, Heiner},
- year = {20.05.1999},
+ date = {20.05.1999},
  title = {A Micro System for Automated Tool Monitoring in an Lathe by Supervising Vibration, Force and Temperature},
  address = {N{\"u}rnberg},
  institutions = {Sensor99}
@@ -8885,7 +8992,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.20.09.2000,
  author = {Feldmann, Klaus and Slama, Stefan},
- year = {20.09.2000},
+ date = {20.09.2000},
  title = {Entwicklungen in der Ger{\"a}temontage},
  address = {Sinsheim},
  institutions = {{Flexible Montagekonzepte hoher Produktivit{\"a}t - Motek2000}}
@@ -8894,7 +9001,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.20.10.1988,
  author = {Feldmann, Klaus},
- year = {20.10.1988},
+ date = {20.10.1988},
  title = {Die rechnerintegrierte Produktion elektronischer Baugruppen},
  address = {Stuttgart},
  series = {Auswirkung der Abl{\"o}sung mechanischer Baugruppen in Erzeugnissen auf die Fertigung}
@@ -8903,7 +9010,7 @@ Der Beitrag verdeutlicht dar{\"u}ber hinaus anhand innovativer Serienanwendungen
 
 @misc{Feldmann.20.21.10.1998,
  author = {Feldmann, Klaus and G{\"o}hringer, J{\"u}rgen},
- year = {20.- 21.10.1998},
+ date = {20.- 21.10.1998},
  title = {Produktionssicherung durch h{\"o}here Verf{\"u}gbarkeiten und neue Organisationsformen},
  address = {Erlangen},
  institutions = {{Auslegung und Betrieb flexibler Montagesysteme}}
@@ -11129,7 +11236,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.21.03.1977,
  author = {Feldmann, Klaus},
- year = {21.03.1977},
+ date = {21.03.1977},
  title = {Die Nutzwertanalyse - ein Hilfsmittel beim Konzipieren technischer Systeme},
  address = {Stuttgart}
 }
@@ -11137,7 +11244,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.22.02.1989,
  author = {Feldmann, Klaus},
- year = {22.02.1989},
+ date = {22.02.1989},
  title = {Entwicklung und Einsatz rechnerintegrierter Produktionssysteme},
  address = {Regensburg}
 }
@@ -11145,7 +11252,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.22.10.1998,
  author = {Feldmann, Klaus},
- year = {22.10.1998},
+ date = {22.10.1998},
  title = {Verf{\"u}gbarkeitssicherung von Produktionssystemen durch Simulation und Diagnose},
  address = {M{\"u}nchen},
  institutions = {{Kolloqium des Bayerischen Forschungsverbundes Systemtechnik}}
@@ -11154,7 +11261,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.22.23.02.1988,
  author = {Feldmann, Klaus and Eisele, Rainer},
- year = {22.- 23.02.1988},
+ date = {22.- 23.02.1988},
  title = {Optimierung von Montagezellen mit rechnergest{\"u}tzten Methoden},
  address = {Hannover},
  institutions = {{Nutzungsverbesserung flexibel automatisierter Montageanlagen}}
@@ -11163,7 +11270,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.23.09.1999,
  author = {Feldmann, Klaus and Rottbauer, Harald and Slama, Stefan},
- year = {23.09.1999},
+ date = {23.09.1999},
  title = {Entwicklungen in der Ger{\"a}temontage},
  address = {Sinsheim},
  institutions = {{Flexible Montagekonzepte hoher Produktivit{\"a}t - Motek1999}}
@@ -11172,7 +11279,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.24.10.1985,
  author = {Feldmann, Klaus and Schl{\"u}ter, Karsten},
- year = {24.10.1985},
+ date = {24.10.1985},
  title = {CAD/CAM-Systeme f{\"u}r die Montage},
  address = {M{\"u}nchen},
  institutions = {{MIC-Tagung, 6. Deutscher Montagekongre{\ss}}}
@@ -11181,7 +11288,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.24.26.09.2002,
  author = {Feldmann, Klaus and Slama, Stefan},
- year = {24.- 26.09.2002},
+ date = {24.- 26.09.2002},
  title = {Marktorientierte Montagestrukturen durch innovative, wandlungsf{\"a}hige Produktionssysteme und erweiterte Mitarbeiterkompetenz},
  address = {Sinsheim},
  institutions = {{Flexible Montagekonzepte hoher Produktivit{\"a}t- Motek}}
@@ -11190,7 +11297,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.24.26.09.2002b,
  author = {Feldmann, Klaus and Slama, Stefan},
- year = {24.- 26.09.2002},
+ date = {24.- 26.09.2002},
  title = {Produktivit{\"a}tssicherung in der Montage durch rationelle Strukturen und angepasste Automatisierung},
  address = {Sinsheim},
  institutions = {{Flexible Montagekonzepte hoher Produktivit{\"a}t- Motek}}
@@ -11199,7 +11306,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.26.02.1988,
  author = {Feldmann, Klaus},
- year = {26.02.1988},
+ date = {26.02.1988},
  title = {Die Rechnerintegrierte Fabrik - Modell und Realit{\"a}t},
  address = {Regensburg},
  institutions = {{2. CIM-Symposium}}
@@ -11208,7 +11315,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.26.02.1988b,
  author = {Feldmann, Klaus},
- year = {26.02.1988},
+ date = {26.02.1988},
  title = {Entwicklung und Einsatz rechnerintegrierter Produktionssysteme},
  address = {Regensburg},
  institutions = {{2. CIM-Symposium}}
@@ -11217,7 +11324,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.26.02.1997,
  author = {Feldmann, Klaus and Beitinger, Gunter},
- year = {26.02.1997},
+ date = {26.02.1997},
  title = {Innovative Materialien und Verfahren zur Verk{\"u}rzung der Proze{\ss}ketten bei der Metallisierung und Strukturierung},
  address = {Erlangen},
  institutions = {{Veranstaltung des MID e.V.}}
@@ -11226,7 +11333,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.26.05.1993,
  author = {Feldmann, Klaus},
- year = {26.05.1993},
+ date = {26.05.1993},
  title = {Maschinenbau und Elektronikinnovation},
  address = {Chemnitz},
  institutions = {{Innovationspotential Maschinenbau/Elektronik}}
@@ -11235,7 +11342,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.26.27.04.1995,
  author = {Feldmann, Klaus and Hopperdietzel, Robert},
- year = {26.- 27.04.1995},
+ date = {26.- 27.04.1995},
  title = {Konzentration auf Montage in Produktionsnetzwerken},
  address = {M{\"u}nchen},
  institutions = {{M{\"u}nchner Management Kolloquium}}
@@ -11244,7 +11351,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.26.27.06.2002,
  author = {Feldmann, Klaus and Licha, Andreas},
- year = {26.- 27.06.2002},
+ date = {26.- 27.06.2002},
  title = {Rationelle Montagestrukturen mit angepasster Automatisierung},
  address = {F{\"u}rth},
  institutions = {{Auslegung und Betrieb modularer Montagesysteme}}
@@ -11253,7 +11360,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.26.27.06.2002b,
  author = {Feldmann, Klaus and Licha, Andreas and Wunderlich, J{\"u}rgen},
- year = {26.- 27.06.2002},
+ date = {26.- 27.06.2002},
  title = {Planung und Simulation modularer Montagesysteme},
  address = {F{\"u}rth},
  institutions = {{Auslegung und Betrieb modularer Montagesysteme}}
@@ -11262,7 +11369,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.26.27.06.2002c,
  author = {Feldmann, Klaus and Slama, Stefan},
- year = {26.- 27.06.2002},
+ date = {26.- 27.06.2002},
  title = {Effizienzsteigerung in der Montage durch innovative, wandlungsf{\"a}hige Produktionsysteme und erweiterte Mitarbeiterkompetenz},
  address = {F{\"u}rth},
  institutions = {{Auslegung und Betrieb flexibler Montagesysteme}}
@@ -11271,7 +11378,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.27.02.1991,
  author = {Feldmann, Klaus},
- year = {27.02.1991},
+ date = {27.02.1991},
  title = {Integrierte Datenverarbeitung in der Produktion; Chance und Herausforderung f{\"u}r den Mittelstand},
  institutions = {{Integrierte Datenverarbeitung in der Produktion} and {Chance und Herausforderung f{\"u}r den Mittelstand}}
 }
@@ -11279,7 +11386,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.27.04.1990,
  author = {Feldmann, Klaus},
- year = {27.04.1990},
+ date = {27.04.1990},
  title = {Wirtschaftliche Montagel{\"o}sungen durch systematische Planung und Rechnereinsatz},
  institutions = {{Montagekongre{\ss} mic}}
 }
@@ -11287,7 +11394,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.27.05.2008,
  author = {Feldmann, Klaus and Ziegler, Christian},
- year = {27.05.2008},
+ date = {27.05.2008},
  title = {Einsatz von Robotern in der Medizintechnik},
  address = {N{\"u}rnberg},
  institutions = {{{\dq}Visionen-Innovationen-M{\"a}rkte{\dq} Technik hilft heilen-Pr{\"a}vention, Diagnose, Therapie}}
@@ -11296,7 +11403,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.27.28.06.2001,
  author = {Feldmann, Klaus and Rottbauer, Harald and G{\"o}hringer, J{\"u}rgen},
- year = {27.- 28.06.2001},
+ date = {27.- 28.06.2001},
  title = {Rationelle Montagestrukturen mit angepa{\ss}ter Automatisierung im Produktionsverbund},
  address = {F{\"u}rth},
  institutions = {{Auslegung und Betrieb modularer Montagesysteme}}
@@ -11305,7 +11412,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.27.28.09.1998,
  author = {Feldmann, Klaus and Schl{\"o}gl, Wolfgang},
- year = {27.- 28.09.1998},
+ date = {27.- 28.09.1998},
  title = {Effiziente Planung von Produktionsystemen und Prozessen durch Simulation},
  address = {M{\"u}nchen},
  institutions = {abayfor-Symposium}
@@ -11314,7 +11421,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.27.29.09.1977,
  author = {Feldmann, Klaus},
- year = {27.- 29.09.1977},
+ date = {27.- 29.09.1977},
  title = {Assembly Systems with Varying Degrees of Flexiblity},
  address = {Cambridge and Mass. (USA)},
  institutions = {{5th NSF Grantees' Conference on Production Research and Technology, (Thema {\dq}Programmable Assembly: Is the Technology Base Here?{\dq})}}
@@ -11323,7 +11430,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.28.02.1997,
  author = {Feldmann, Klaus and Beitinger, Gunter},
- year = {28.02.1997},
+ date = {28.02.1997},
  title = {Alternative Leiterplattenkonzepte, deren Materialien und Verfahren zur Metallisierung und Strukturierung},
  address = {Stuttgart},
  institutions = {{VDL Hauptversammlung}}
@@ -11332,7 +11439,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.29.30.11.1990,
  author = {Feldmann, Klaus},
- year = {29.- 30.11.1990},
+ date = {29.- 30.11.1990},
  title = {Flexible Montageanlagen erfordern qualifizierte Mitarbeiter},
  address = {N{\"u}rnberg},
  institutions = {{Praxis der Montageautomatisierung '90}}
@@ -11341,7 +11448,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.29.30.11.1990b,
  author = {Feldmann, Klaus},
- year = {29.- 30.11.1990},
+ date = {29.- 30.11.1990},
  title = {Materialflu{\ss} und Informationsverarbeitung - Basis rationeller Montageautomatisierung},
  address = {N{\"u}rnberg},
  institutions = {{Praxis der Montageautomatisierung '90}}
@@ -11350,7 +11457,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.30.01.1990,
  author = {Feldmann, Klaus},
- year = {30.01.1990},
+ date = {30.01.1990},
  title = {Verf{\"u}gbarkeitssteigerung von Montageanlagen durch rechnergest{\"u}tzte Diagnose und Simulation},
  address = {Z{\"u}rich},
  institutions = {{Fachtagung IH '90}}
@@ -11359,7 +11466,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.30.01.1996,
  author = {Feldmann, Klaus and Krug, Stefan},
- year = {30.01.1996},
+ date = {30.01.1996},
  title = {Innovative Systeml{\"o}sungen in der Ger{\"a}temontage - Mit angepa{\ss}ter Automatisierung und ver{\"a}nderten Strukturen zur robusten Gestaltung flexibler Montagesysteme},
  address = {Erlangen},
  institutions = {{Rationelle Ger{\"a}temontage durch innovative Systeml{\"o}sungen}}
@@ -11368,7 +11475,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.30.03.1995,
  author = {Feldmann, Klaus and Scheller, Herbert and Meedt, Otto},
- year = {30.03.1995},
+ date = {30.03.1995},
  title = {Ausblick und weitere internationale Aktivit{\"a}ten im Bereich des Life Cycle Engineerings},
  address = {Erlangen},
  institutions = {{Kreislaufwirtschaftsgesetz: Entwicklung und Demontage recyclingf{\"a}higer Elektronikger{\"a}te und Bauteile - Technik und Werkzeuge}}
@@ -11377,7 +11484,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.30.11.1988,
  author = {Feldmann, Klaus},
- year = {30.11.1988},
+ date = {30.11.1988},
  title = {Komponenten und Werkzeuge integrierter Systeme - Stand der Entwicklung},
  address = {Berlin},
  institutions = {Spectrum}
@@ -11386,7 +11493,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.30.31.03.1995,
  author = {Feldmann, Klaus and Meedt, Otto and Scheller, Herbert},
- year = {30.- 31.03.1995},
+ date = {30.- 31.03.1995},
  title = {Recycling derzeitiger Elektronikger{\"a}te Entwicklungsbasis f{\"u}r neue L{\"o}sungen im Produktkreislauf},
  address = {Erlangen},
  institutions = {{Kreislaufwirtschaftsgesetz - Entwicklung und Demontage recyclingf{\"a}higer Elektronikger{\"a}te und Bauteile - Technik und Werkzeuge}}
@@ -11395,7 +11502,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.30.31.03.1995b,
  author = {Feldmann, Klaus and Scheller, Herbert and Meedt, Otto},
- year = {30.- 31.03.1995},
+ date = {30.- 31.03.1995},
  title = {Automatisierte Demontage elektronischer Flachbaugruppen},
  address = {Erlangen},
  institutions = {{Kreislaufwirtschaftsgesetz: Entwicklung und Demontage recyclingf{\"a}higer Elektronikger{\"a}te und Bauteile - Technik und Werkzeuge}}
@@ -11404,7 +11511,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.31.12.1984,
  author = {Feldmann, Klaus},
- year = {31.12.1984},
+ date = {31.12.1984},
  title = {Rechnereinsatz  beim Entwurf, Steuern und {\"U}berwachen von Montagerobotern},
  address = {M{\"u}nchen},
  institutions = {{Techno Congress}}
@@ -11413,7 +11520,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.31.12.1988,
  author = {Feldmann, Klaus},
- year = {31.12.1988},
+ date = {31.12.1988},
  title = {Application Laboratory for Manufacturing Automation and Industrial Robots},
  address = {Erlangen}
 }
@@ -11421,7 +11528,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.31.12.1989,
  author = {Feldmann, Klaus},
- year = {31.12.1989},
+ date = {31.12.1989},
  title = {CIM im Fertigungsmittelbau},
  address = {Amberg},
  institutions = {{Fachtagung der Fa. Siemens AG}}
@@ -11430,7 +11537,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Feldmann.31.12.1989b,
  author = {Feldmann, Klaus},
- year = {31.12.1989},
+ date = {31.12.1989},
  title = {CIM in der Elektronikproduktion},
  address = {N{\"u}rnberg},
  institutions = {{Seminar Fa. DEC}}
@@ -11473,7 +11580,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Fischer.04.03.1988,
  author = {Fischer, Herbert},
- year = {04.03.1988},
+ date = {04.03.1988},
  title = {Ein hierarchisch organisiertes zellenstruktuiertes Steuerungssystem f{\"u}r Flexible Fertigungssysteme},
  address = {Stuttgart},
  institutions = {{Proze{\ss}rechnersysteme '88}}
@@ -11482,7 +11589,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Fischer.12.04.1989,
  author = {Fischer, Herbert},
- year = {12.04.1989},
+ date = {12.04.1989},
  title = {Schnittstellen zur rechnerunterst{\"u}tzten Arbeitsplanung (CAP)},
  address = {Erlangen - Tennenlohe},
  institutions = {{CIM-TT-Seminar {\dq}Produktionsplanungssysteme PPS{\dq}}}
@@ -11491,7 +11598,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Fischer.14.10.1986,
  author = {Fischer, Herbert},
- year = {14.10.1986},
+ date = {14.10.1986},
  title = {CIM-Gesamtkonzept: Modellfabrik am Lehrstuhl f{\"u}r Fertigungsautomatisierung und Produktionssystematik},
  address = {N{\"u}rnberg},
  institutions = {{Fameta Messe}}
@@ -11530,7 +11637,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Fischer.31.05.1989,
  author = {Fischer, Herbert},
- year = {31.05.1989},
+ date = {31.05.1989},
  title = {Rechnergest{\"u}tzte Fertigung},
  address = {Erlangen - Tennenlohe},
  institutions = {{CIM-TT-Seminar {\dq}CAD/CAM-Verfahrensketten{\dq}}}
@@ -11595,7 +11702,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Flohr.21.06.1989,
  author = {Flohr, Rainer},
- year = {21.06.1989},
+ date = {21.06.1989},
  title = {Aufbau und Einsatz von Best{\"u}ckungsautomaten},
  address = {Erlangen - Tennenlohe},
  institutions = {{CIM-TT-Seminar {\dq}Rechnergest{\"u}tzte Produktion in der Elektronik{\dq}}}
@@ -11604,7 +11711,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Flohr.21.06.1989b,
  author = {Flohr, Rainer},
- year = {21.06.1989},
+ date = {21.06.1989},
  title = {Surface Mount Technology (SMT): Leiterplatten , Bauelemente, Verbindungstechnik},
  address = {Erlangen - Tennenlohe},
  institutions = {{CIM-TT-Seminar {\dq}Rechnergest{\"u}tzte Produktion in der Elektronik{\dq}}}
@@ -11637,7 +11744,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Franke.02.10.2007,
  author = {Franke, J{\"o}rg},
- year = {02.10.2007},
+ date = {02.10.2007},
  title = {Mechatronische Produkte intelligent entwickeln und effizient in Deutschland produzieren},
  address = {Erlangen},
  series = {Fest-Kolloquium zur 25-Jahr-Feier des Lehrstuhls f{\"u}r Fertigungsautomatisierung und Produktionssystematik}
@@ -11654,7 +11761,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Franke.12.12.1991,
  author = {Franke, J{\"o}rg},
- year = {12.12.1991},
+ date = {12.12.1991},
  title = {Optimierungsverfahren zur Best{\"u}ckung},
  address = {Stuttgart}
 }
@@ -11662,7 +11769,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Franke.14.07.2009,
  author = {Franke, J{\"o}rg and Merhof, Jochen and Fischer, Christian},
- year = {14.07.2009},
+ date = {14.07.2009},
  title = {Wandlungsf{\"a}hige Fertigungssysteme f{\"u}r mechatronische Produkte},
  address = {F{\"u}rth}
 }
@@ -11670,7 +11777,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Franke.15.06.1993,
  author = {Franke, J{\"o}rg},
- year = {15.06.1993},
+ date = {15.06.1993},
  title = {Aufbau und Einsatz von CAD/CAM - Verfahrensketten in der industriellen Praxis},
  address = {N{\"u}rnberg}
 }
@@ -11678,7 +11785,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Franke.17.19.09.1993,
  author = {Franke, J{\"o}rg},
- year = {17.- 19.09.1993},
+ date = {17.- 19.09.1993},
  title = {Technische Innovation und Qualifizierung: Neue Ans{\"a}tze durch Kooperation von Hochschule und Praxis},
  address = {Berlin}
 }
@@ -12181,7 +12288,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 
 @misc{Franke.1998,
  author = {Franke, J{\"o}rg},
- year = {1998},
+ date = {1998},
  title = {Langfristiges Robert Bosch Wachstumskonzept},
  address = {Gerlingen},
  series = {Kaufm{\"a}nnischer Erfahrungsaustausch der Robert Bosch GmbH}
@@ -12199,7 +12306,7 @@ manuellen Arbeitspl{\"a}tzen leisten.},
 @misc{Franke.20.03.2013,
  abstract = {Das Engineering industrieller Anlagen ist aufgrund dessen Einfluss auf Zeit,~Qualit{\"a}t und Kosten eines Projekts ein wesentlicher Erfolgsfaktor. Gleichzeitig stellt die starke Aufgabenteilung und Einbindung zahlreicher Akteure alle Beteiligte vor gro{\ss}e Herausforderungen. Aufgrund der zentralen Rolle des impliziten Erfahrungswissens zur Verbesserung des Engineerings m{\"u}ssen die Erfahrungstr{\"a}ger eng mit einbezogen werden. Dazu stellt der Aufbau einer Engineering Community mit den~Zieldimensionen Kommunikation {\&}~Netzwerkarbeit, Wissensaustausch und Zusammenarbeit einen geeigneten Ansatz dar.},
  author = {Franke, J{\"o}rg and G{\"o}tz, Johannes},
- year = {20.03.2013},
+ date = {20.03.2013},
  title = {Engineering Community -- Vernetzung f{\"u}r effizientes Engineering},
  keywords = {Engineering;Community;Vernetzung},
  address = {N{\"u}rnberg},
@@ -12821,17 +12928,6 @@ concept in applications with varying environmental conditions.},
 }
 
 
-@article{Franke.2012d,
- author = {Franke, J{\"o}rg and Maier, Tobias and Sch{\"a}fer, Franziska and Zaeh, Michael F.},
- year = {2012},
- title = {Experimental Evaluation of the Thermal Machine Tool Behavior for Model Updating},
- pages = {125--136},
- volume = {6},
- number = {2},
- journal = {International Journal of Automation Technology}
-}
-
-
 @article{Franke.2012e,
  abstract = {Die Fertigung elektrischer Antriebe steht auf dem Pr{\"u}fstand. Bekannte Prozessketten werden auf Grund des Einstiegs der Automobilindustrie grunds{\"a}tzlich hinterfragt, optimiert, und teils v{\"o}llig neue Werkstoffe im Stator und Rotor fordern traditionelle Prozesse, wie z. B. das Stanzpaketieren, zunehmend heraus. Obwohl das Laserschneiden von Elektroblechen in vielen flexiblen Produktionen bereits seit Jahren zum Einsatz kommt, liegt die Produktivit{\"a}t im direkten Vergleich noch um einige Gr{\"o}{\ss}enordnung unter den verf{\"u}gbaren Stanzverfahren. In der Forschungsgruppe des Bayerischen Technologiezentrums f{\"u}r elektrische Antriebstechnik (E|Drive-Center) am Lehrstuhl f{\"u}r Fertigungsautomatisierung und Produktionssystematik der Friedrich-Alexander-Universit{\"a}t Erlangen-N{\"u}rnberg werden daher Rationalisierungseffekte beim Laserschneiden durch neuartige Ans{\"a}tze erforscht und der Automatisierungsgrad gezielt erh{\"o}ht.},
  author = {Franke, J{\"o}rg and Schmidt, Michael and Hubert, Markus and Risch, Florian and Tremel, Jan and Hofmann, Benjamin},
@@ -12896,18 +12992,6 @@ concept in applications with varying environmental conditions.},
  editor = {{FAPS-TT GmbH}},
  booktitle = {Fachseminar Rechnergest{\"u}tzte Entwicklung mechatronischer Produkte},
  year = {2012}
-}
-
-
-@article{Franke.2012k,
- author = {Franke, J{\"o}rg and Maier, Tobias and Sch{\"a}fer, Franziska and Z{\"a}h, Michael},
- year = {2012},
- title = {Experimental Evaluation of the Thermal Machine Tool Behavior for Model Updating},
- url = {http://www.fujipress.jp/finder/xslt.php?mode=present\&inputfile=IJATE000600020002.xml\&xslparam=ref|jscript},
- pages = {125--136},
- volume = {6},
- number = {2},
- journal = {International Journal of Automation Technology}
 }
 
 
@@ -13003,7 +13087,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Franke.21.01.2010,
  author = {Franke, J{\"o}rg and Dobroschke, Andreas},
- year = {21.01.2010},
+ date = {21.01.2010},
  title = {Automated Winding of Perfect-Layer-Coils With a Laser-Sensor Based Closed-Loop-Process},
  address = {Paris},
  series = {CIRP-Meeting}
@@ -13012,7 +13096,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Franke.24.01.2013,
  author = {Franke, J{\"o}rg and B{\"o}nig, Jochen},
- year = {24.01.2013},
+ date = {24.01.2013},
  title = {Virtual Manual Assembly Validation: CIRP-2013-A-1  STC A: LIFE CYCLE ENGINEERING {\&} ASSEMBLY},
  address = {Paris},
  institutions = {CIRP}
@@ -13021,7 +13105,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Franke.25.09.2007,
  author = {Franke, J{\"o}rg},
- year = {25.09.2007},
+ date = {25.09.2007},
  title = {Reorganisation variantenreicher Kleinserienmontage f{\"u}r mechatronische Antriebssysteme},
  address = {Stuttgart},
  series = {MOTEK-Fachseminar {\glqq}Flexible Montagekonzepte hoher Produktivit{\"a}t{\grqq}}
@@ -13030,7 +13114,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Franke.27.01.2011,
  author = {Franke, J{\"o}rg},
- year = {27.01.2011},
+ date = {27.01.2011},
  title = {Extending Kinematic Capabilities of Standard SMT Production Equipment by Active Workpiece Carrier},
  address = {Paris},
  series = {CIRP STC A meeting}
@@ -13039,7 +13123,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Franke.28.09.2011,
  author = {Franke, J{\"o}rg},
- year = {28.09.2011},
+ date = {28.09.2011},
  title = {The All-Electric Society Based on Electric Drives: Welcome Address E|DPC 2011},
  address = {N{\"u}rnberg},
  series = {Electric Drives Production Conference}
@@ -13276,7 +13360,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Gohringer.09.10.06.1999,
  author = {G{\"o}hringer, J{\"u}rgen},
- year = {09.- 10.06.1999},
+ date = {09.- 10.06.1999},
  title = {Nutzen und Realisierung von Telediagnosesystemen zur Anlagenbetreuung},
  address = {Erlangen},
  institutions = {{Auslegung und Betrieb flexibler Montagesysteme}}
@@ -13357,7 +13441,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Gohringer.26.06.1997,
  author = {G{\"o}hringer, J{\"u}rgen and G{\"o}tz, Knuth},
- year = {26.06.1997},
+ date = {26.06.1997},
  title = {Beitrag der Diagnose zur Optimierung des Qualit{\"a}tsstandards},
  address = {Erlangen},
  institutions = {{Produktivit{\"a}tssteigerung in der Elektronik - Rechnergest{\"u}tzte Planungs- und Diagnosewerkzeuge}}
@@ -13375,7 +13459,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Goth.14.09.2007,
  author = {Goth, Christian},
- year = {14.09.2007},
+ date = {14.09.2007},
  title = {R{\"a}umliche Elektronische Baugruppen},
  address = {Reinach},
  institutions = {{Fachtagung IG exact Excellence in Applied Electronics and Technologies}}
@@ -13459,7 +13543,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Gotz.10.10.1996,
  author = {G{\"o}tz, Knuth},
- year = {10.10.1996},
+ date = {10.10.1996},
  title = {Proze{\ss}begleitende Qualit{\"a}tssicherung - Vom Informationssystem zur Proze{\ss}beherrschung},
  address = {Erlangen},
  institutions = {{Qualit{\"a}tssicherung in der Eletronikproduktion - Strategien und Inspektionssysteme}}
@@ -13468,7 +13552,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Gotz.13.14.02.1996,
  author = {G{\"o}tz, Knuth},
- year = {13.- 14.02.1996},
+ date = {13.- 14.02.1996},
  title = {Ans{\"a}tze zur proze{\ss}begleitenden Qualit{\"a}tssicherung in der Elektronik},
  address = {Erlangen},
  institutions = {{{\dq}SMT - Rationelle Produktion in der Elektronik - Integration neuer Technologien{\dq}}}
@@ -13477,7 +13561,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Gotz.13.14.02.1996b,
  author = {G{\"o}tz, Knuth},
- year = {13.-14.02.1996},
+ date = {13.-14.02.1996},
  title = {Ans{\"a}tze zur proze{\ss}begleitenden Qualit{\"a}tssicherung in der Elektronik},
  address = {Erlangen},
  institutions = {{{\dq}SMT - Rationelle Produktion in der Elektronik - Integration neuer Technologien{\dq}}}
@@ -13486,7 +13570,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Gotz.16.07.1997,
  author = {G{\"o}tz, Knuth},
- year = {16.07.1997},
+ date = {16.07.1997},
  title = {Ganzheitliche Vorgehensweise zur Qualit{\"a}tssicherung mit Maschinendiagnose und Regelungsstrategien},
  address = {Erlangen},
  institutions = {{Neue Technologien bei Aufbau und Produktion elektronischer Baugruppen}}
@@ -13533,7 +13617,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Gotz.23.06.1995,
  author = {G{\"o}tz, Knuth},
- year = {23.06.1995},
+ date = {23.06.1995},
  title = {Proze{\ss}begleitende Qualit{\"a}tssicherung in der Elektronik},
  address = {Erlangen},
  institutions = {{Elektronikproduktion - aktuelle Entwicklungen zur Verbindungstechnik}}
@@ -13542,7 +13626,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Gotz.26.06.1996,
  author = {G{\"o}tz, Knuth},
- year = {26.06.1996},
+ date = {26.06.1996},
  title = {Proze{\ss}begleitende Qualit{\"a}tssicherung  - Vom Informationssystem zur Proze{\ss}beherrschung},
  address = {Erlangen},
  institutions = {{Qualit{\"a}tssicherung in der Elektronikproduktion - Strategien und Inspektionssysteme}}
@@ -13551,7 +13635,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Gotz.26.30.06.1995,
  author = {G{\"o}tz, Knuth},
- year = {26.- 30.06.1995},
+ date = {26.- 30.06.1995},
  title = {Proze{\ss}begleitende Qualit{\"a}tssicherung in der Elektronik},
  address = {Oberpfaffenhofen},
  institutions = {{Qualit{\"a}tssicherung in der Baugruppenfertigung}}
@@ -13600,7 +13684,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Grampp.27.30.09.1993,
  author = {Grampp, Konrad and Krug, Stefan and Walter, S.},
- year = {27.- 30.09.1993},
+ date = {27.- 30.09.1993},
  title = {Einsatz von Simulationssystemen zur Schulung an DV-Systemen im Fertigungsbereich},
  address = {Berlin},
  institutions = {{ASIM 1993 - 8. Symposium der Simulationstechnik}}
@@ -13670,7 +13754,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Harter.05.05.2011,
  author = {H{\"a}rter, Stefan},
- year = {05.05.2011},
+ date = {05.05.2011},
  title = {Verbindungstechnik f{\"u}r hochminiaturisierte elektronische Baugruppen},
  address = {N{\"u}rnberg},
  series = {SMT/HYBRID/PACKAGING 2011}
@@ -13690,7 +13774,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Harter.24.07.2012,
  author = {H{\"a}rter, Stefan},
- year = {13.03.2013},
+ date = {13.03.2013},
  title = {Strategien zur Optimierung der Prozesskette f{\"u}r die gesicherte Verarbeitung hochminiaturisierter Bauelemente},
  address = {Hannover},
  series = {Viscom Technologie-Forum 2013}
@@ -13699,7 +13783,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Harter.24.07.2012b,
  author = {H{\"a}rter, Stefan},
- year = {24.07.2012},
+ date = {24.07.2012},
  title = {Zuverl{\"a}ssigkeitsuntersuchungen hochminiaturisierter Flip-Chip Verbindungen},
  address = {Ebermannstadt},
  series = {3. Electronic Engineering and Manufacturing Day (EED)}
@@ -13708,7 +13792,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Harter.29.04.2011,
  author = {H{\"a}rter, Stefan},
- year = {29.04.2011},
+ date = {29.04.2011},
  title = {Einfluss der Miniaturisierung auf die Prozessgestaltung elektrischer Baugruppen},
  address = {Reinach},
  series = {Entwickler-Treffen der Endress und Hauser Consult AG}
@@ -13892,7 +13976,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Holzmann.04.12.2002,
  author = {Holzmann, R{\"u}diger},
- year = {04.12.2002},
+ date = {04.12.2002},
  title = {Optimierungspotentiale im Pastenauftrag durch Modifikation der Schablonengeometrie},
  address = {N{\"u}rnberg},
  institutions = {{2. Forum Innovative Elektronikproduktion}}
@@ -13901,7 +13985,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Holzmann.16.04.2002,
  author = {Holzmann, R{\"u}diger},
- year = {16.04.2002},
+ date = {16.04.2002},
  title = {Elektrisch leitf{\"a}higes Kleben von SMT Bauelementen},
  address = {Kreuzwertheim},
  institutions = {{Technologieseminar - Prof. Rahn}}
@@ -13989,7 +14073,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Horber.06.12.2012,
  author = {H{\"o}rber, Johannes},
- year = {06.12.2012},
+ date = {06.12.2012},
  title = {Potentials of Aerosoljet Printing for Manufacturing 3-D MID},
  keywords = {Aerosoljet;gedruckte Elektronik;MID;Metallization, Structuring, Robot Control, Process Planning},
  address = {Bellignat and Frankreich},
@@ -14047,7 +14131,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Horber.22.10.2013,
  author = {H{\"o}rber, Johannes},
- year = {22.10.2013},
+ date = {22.10.2013},
  title = {Verfahren zur Herstellung r{\"a}umlicher Schaltungstr{\"a}ger},
  keywords = {3D-MID;Elektronikproduktion;Metallization, Structuring, Robot Control, Process Planning},
  address = {M{\"u}nchen},
@@ -14421,7 +14505,7 @@ Smart Living, da nur so Innovationen akzeptiert und die Lebensqualit{\"a}t der B
 
 @misc{Junker.26.07.2005,
  author = {Junker, Stefan},
- year = {26.07.2005},
+ date = {26.07.2005},
  title = {Automation in der Produktion - Potentiale und Trends},
  address = {M{\"u}nchen},
  institutions = {Automatisierungsforum}
@@ -14489,7 +14573,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Kleineidam.18.09.2013,
  author = {Kleineidam, Gerhard},
- year = {18.09.2013},
+ date = {18.09.2013},
  title = {Markt- und Entwicklungstrends f{\"u}r das Wohnen von morgen: Intelligentes und ressourcenschonendes Wohnen},
  address = {N{\"u}rnberg},
  series = {FAPS-TT Fachseminar {\dq}L{\"o}sungen f{\"u}r das energieeffiziente und intelligente Wohnen{\dq}},
@@ -14499,7 +14583,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Kleineidam.19.09.2012,
  author = {Kleineidam, Gerhard},
- year = {19.09.2012},
+ date = {19.09.2012},
  title = {Energieeffizienz in Geb{\"a}uden: Technische Machbarkeit und wirtschaftliche Sinnhaftigkeit},
  address = {Mistelgau}
 }
@@ -14507,7 +14591,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Kleineidam.19.09.2012b,
  author = {Kleineidam, Gerhard},
- year = {19.09.2012},
+ date = {19.09.2012},
  title = {Konzept und Roadmap: Energieeffizienz in Geb{\"a}uden? Technische Machbarkeit und wirtschaftliche Sinnhaftigkeit!},
  address = {Mistelgau},
  series = {Energieeffiziente Geb{\"a}udeautomation},
@@ -14517,7 +14601,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Kleineidam.26.06.2013,
  author = {Kleineidam, Gerhard},
- year = {26.06.2013},
+ date = {26.06.2013},
  title = {SmartHome Innovationen: Forschung und Entwicklung am E|Home-Center},
  address = {M{\"u}nchen},
  series = {Smart Home/ Smart Living},
@@ -14537,7 +14621,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Koch.01.06.1992,
  author = {Koch, M.},
- year = {01.06.1992},
+ date = {01.06.1992},
  title = {Kostenreduktion durch optimale R{\"u}ststrategien},
  address = {F{\"u}rth},
  institutions = {{Seminar des VDI-Bildungswerk SMT {\dq}Best{\"u}cksysteme{\dq}}}
@@ -14546,7 +14630,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Koch.09.04.1992,
  author = {Koch, M.},
- year = {09.04.1992},
+ date = {09.04.1992},
  title = {Wirtschaftlichkeitssteigerung durch rechnergest{\"u}tzte Optimierung},
  address = {Erlangen},
  institutions = {{CIM-TT-Seminar {\dq}Automatisierte Montagesysteme in der Elektronikproduktion{\dq}}}
@@ -14577,7 +14661,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Kohl.14.06.2012,
  author = {Kohl, Johannes},
- year = {14.06.2012},
+ date = {14.06.2012},
  title = {Mechatronische Produktentwicklung am Lehrstuhl FAPS},
  address = {N{\"u}rnberg}
 }
@@ -14597,7 +14681,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Kooperationsseminar.09.11.1983,
  author = {Kooperationsseminar},
- year = {09.11.1983},
+ date = {09.11.1983},
  title = {Industrieroboter, technischer Aufbau und Einsatzfelder},
  address = {Berchtesgaden},
  institutions = {Kooperationsseminar}
@@ -14637,7 +14721,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Krug.19.11.1992,
  author = {Krug, Stefan},
- year = {19.11.1992},
+ date = {19.11.1992},
  title = {Pr{\"a}ventive Methoden der Qualit{\"a}tssicherung},
  address = {Erlangen},
  institutions = {{CIM-TT-Seminar {\dq}Methoden und Werkzeuge zur proze{\ss}begleitenden Qualit{\"a}tssicherung{\dq}}}
@@ -14663,7 +14747,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Krug.23.24.06.1993,
  author = {Krug, Stefan},
- year = {23.- 24.06.1993},
+ date = {23.- 24.06.1993},
  title = {Pr{\"a}ventive Qualit{\"a}tssicherung in der flexiblen Montage},
  address = {F{\"u}rth},
  institutions = {{Auslegung und Betrieb modularer Montagesysteme}}
@@ -14672,7 +14756,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Krug.26.01.1993,
  author = {Krug, Stefan and Steber, Michael},
- year = {26.01.1993},
+ date = {26.01.1993},
  title = {Robotertechnik},
  address = {N{\"u}rnberg},
  institutions = {{{\dq}Neue Techniken f{\"u}r das Handwerk{\dq}}}
@@ -14699,7 +14783,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Kunze.10.05.2006,
  author = {Kunze, Andreas},
- year = {10.05.2006},
+ date = {10.05.2006},
  title = {Automatisierte Verlegung von Flachleiter f{\"u}r Automobilanwendungen},
  address = {D{\"u}sseldorf},
  institutions = {{Seminar 4. Technisches Symposium Molding {\&} Casting}}
@@ -14708,7 +14792,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Kunze.11.03.2004,
  author = {Kunze, Andreas},
- year = {11.03.2004},
+ date = {11.03.2004},
  title = {Einsatz der Technologie MID im Kfz-Bordnetz},
  address = {Heiligenhaus},
  institutions = {{Kiekert AG}}
@@ -14745,7 +14829,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Kunze.26.04.2005,
  author = {Kunze, Andreas},
- year = {26.04.2005},
+ date = {26.04.2005},
  title = {Klebstoffauftrag zur automatisierten Verlegung von Flachleitern im Pkw},
  address = {L{\"u}neburg},
  institutions = {{Nordson Open House 2005}}
@@ -14754,7 +14838,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Kunze.27.10.2005,
  author = {Kunze, Andreas},
- year = {27.10.2005},
+ date = {27.10.2005},
  title = {Automatisierte Flachleiterverlegung f{\"u}r Automobilanwendungen},
  address = {Heidelberg},
  institutions = {{4. Technisches Symposium Molding {\&} Casting}}
@@ -14931,7 +15015,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Licha.18.11.1999,
  author = {Licha, Andreas},
- year = {18.11.1999},
+ date = {18.11.1999},
  title = {Auftragsspezifische Kommisionierung zur Unterst{\"u}tzung der Komplettmontage},
  address = {Erlangen},
  series = {Planung und Betrieb rationeller Systeme f{\"u}r die Ger{\"a}temontage}
@@ -14960,7 +15044,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Licha.26.27.06.2002,
  author = {Licha, Andreas and Feldmann, Klaus},
- year = {26.- 27.06.2002},
+ date = {26.- 27.06.2002},
  title = {Komplettmontage fl{\"a}chiger Leichtbauteile},
  institutions = {{Auslegung und Betrieb modularer Montagesysteme}}
 }
@@ -14968,7 +15052,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Licha.27.28.06.2001,
  author = {Licha, Andreas},
- year = {27.- 28.06.2001},
+ date = {27.- 28.06.2001},
  title = {Komplettmontage fl{\"a}chiger Bauteile},
  address = {F{\"u}rth},
  institutions = {{Auslegung und Betrieb modularer Montagesysteme}}
@@ -14977,7 +15061,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Liedl.07.12.1995,
  author = {Liedl, Georg},
- year = {07.12.1995},
+ date = {07.12.1995},
  title = {Mobile Handhabungseinheit im Materialflu{\ss} der Elektronikproduktion},
  address = {Erlangen},
  institutions = {{Materialflu{\ss} in ver{\"a}nderten Fabrikstrukturen}}
@@ -14986,7 +15070,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Liedl.16.10.1993,
  author = {Liedl, Georg},
- year = {16.10.1993},
+ date = {16.10.1993},
  title = {Logistische Aspekte des Recyclings},
  address = {Erlangen},
  institutions = {{CIM-TT-Seminar {\dq}Recycling elektronischer Ger{\"a}te{\dq}}}
@@ -15165,7 +15249,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Luchs.22.23.02.1996,
  author = {Luchs, Ralf},
- year = {22.- 23.02.1996},
+ date = {22.- 23.02.1996},
  title = {MID - Technologie: Rationalisierung durch Integration},
  address = {Leinfelden},
  institutions = {{Rationalisierung und Kostensenkung in der Leiterplattenfertigung}}
@@ -15174,7 +15258,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Lusic.19.06.2013,
  author = {Lusic, Mario and Hornfeck, R{\"u}diger and Franke, J{\"o}rg},
- year = {19.06.2013},
+ date = {19.06.2013},
  title = {Simultaneous Engineering im Erstellungsprozess visualisierter Montageanweisungen - Ergebnisse eines BMBF gef{\"o}rderten Forschungsvorhabens},
  address = {Magdeburg},
  series = {WORKSHOP MODELLBASIERTE ASSISTENZ UND PR{\"U}FUNG IN DER MONTAGE}
@@ -15251,7 +15335,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Meedt.06.11.1997,
  author = {Meedt, Otto},
- year = {06.11.1997},
+ date = {06.11.1997},
  title = {Rechnergest{\"u}tzte Bewertung und Optimierung der Recyclinggerechtheit von Produkten},
  address = {Erlangen},
  institutions = {{Kreislaufwirtschaft bei elektronischen Ger{\"a}ten}}
@@ -15298,7 +15382,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Meier.06.12.2001,
  author = {Meier, Roland},
- year = {06.12.2001},
+ date = {06.12.2001},
  title = {Entwicklungsstategien und zuk{\"u}nftige Einsatzpotentiale f{\"u}r MID},
  address = {Erlangen},
  institutions = {{FAPS-TT-Seminar: Innovative Produktgestaltung mit MID}}
@@ -15307,7 +15391,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Meier.07.03.2001,
  author = {Meier, Roland},
- year = {07.03.2001},
+ date = {07.03.2001},
  title = {Entscheidungsgrundlagen und Gebrauchsanforderungen zum Einsatz von 3D-MID},
  address = {Stuttgart},
  institutions = {{VDI-Seminar: 3-D-MID Molded Interconnect Devices}}
@@ -15316,7 +15400,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Meier.14.01.2001;05.04.2001,
  author = {Meier, Roland},
- year = {14.01.2001; 05.04.2001},
+ date = {14.01.2001; 05.04.2001},
  title = {Beispielhafte Projekte industrieller Gemeinschaftsforschung im Bereich MID},
  address = {Erlangen},
  institutions = {{FAPS-TT-Seminar: Innovative Produktgestaltung mit MID}}
@@ -15325,7 +15409,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Meier.16.05.2001,
  author = {Meier, Roland},
- year = {16.05.2001},
+ date = {16.05.2001},
  title = {Federnde, leitende Verbindungstechnik f{\"u}r MID},
  address = {Frankfurt},
  institutions = {{Forschungstag der Forschungsvereinigung 3-D MID e.V.}}
@@ -15334,7 +15418,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Meier.17.05.2000,
  author = {Meier, Roland},
- year = {17.05.2000},
+ date = {17.05.2000},
  title = {Innovation mit 3-D-MID: Technologien und Applikationen},
  address = {Bad Oeynhausen},
  institutions = {{Hausmesse der Kendrion Consumer Products}}
@@ -15366,7 +15450,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Meier.20.09.2001,
  author = {Meier, Roland},
- year = {20.09.2001},
+ date = {20.09.2001},
  title = {Zunehmende Marktdurchdringung von MID mit innovativen Technologien und Gemeinschaftsprojekten},
  address = {Ernigerode},
  institutions = {MID-Forum}
@@ -15418,7 +15502,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Meier.21.06.2001,
  author = {Meier, Roland},
- year = {21.06.2001},
+ date = {21.06.2001},
  title = {Entwicklung dreidimensionaler Mechatronik-Baugruppen unter Einsatz der MID-Technologie},
  address = {L{\"o}rrach},
  institutions = {{MIMOT-Hausmesse 2001}}
@@ -15427,7 +15511,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Meier.26.02.2001,
  author = {Meier, Roland},
- year = {26.02.2001},
+ date = {26.02.2001},
  title = {Research Association 3-D MID},
  address = {Palm Springs (USA)},
  institutions = {{MIDIA Annual Meeting}}
@@ -15436,7 +15520,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Meier.28.06.2001,
  author = {Meier, Roland},
- year = {28.06.2001},
+ date = {28.06.2001},
  title = {Advance of MID by joint research projects - perspectives for MID in Europe},
  address = {Singapur},
  institutions = {{Applications {\&} Trends in Molded Interconnect Device (MID) Technology}}
@@ -15445,7 +15529,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Melzer.16.10.2003,
  author = {Melzer, Katrin},
- year = {16.10.2003},
+ date = {16.10.2003},
  title = {Herausforderungen Integrierter Produktpolitik},
  address = {Stuttgart},
  institutions = {Industrieforum: Produktrecycling-Erfolgreich nachhaltig wirtschaften, Fraunhofer IAO}
@@ -15454,7 +15538,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Melzer.18.11.2003,
  author = {Melzer, Katrin},
- year = {18.11.2003},
+ date = {18.11.2003},
  title = {Chancen und M{\"o}glichkeiten Integrierter Produktpolitik (IPP)},
  address = {Dortmund},
  institutions = {16. Netzwerktreffen innovative Kreislauftechnologien: Integrierte Produktpolitik, Strategien f{\"u}r die Industrie}
@@ -15476,7 +15560,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Melzer.26.06.2003,
  author = {Melzer, Katrin},
- year = {26.06.2003},
+ date = {26.06.2003},
  title = {Mechatronik an der FAU},
  address = {Erlangen},
  institutions = {{Infoveranstaltung: Studieninfotag}}
@@ -15485,7 +15569,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Merhof.11.14.12.2011,
  author = {Merhof, Jochen and Michl, Markus},
- year = {11.- 14.12.2011},
+ date = {11.- 14.12.2011},
  title = {Implementing Virtual Metrology into semiconductor production processes -- an investment assessment},
  address = {Phoenix and AZ (USA)}
 }
@@ -15542,7 +15626,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 @misc{Merhof.27.04.2012,
  abstract = {Produzierende Unternehmen sehen sich durch die zunehmende Globalisierung einem immer st{\"a}rker werdenden Konkurrenz- und Kostendruck ausgesetzt und m{\"u}ssen sich einer Vielzahl von Herausforderungen stellen. So haben ihre Kunden sehr hohe Qualit{\"a}tsanspr{\"u}che und verlangen aufgrund der immer k{\"u}rzer werdenden Produktentwicklungszyklen eine schnelle, flexible sowie termingerechte Auftragsbearbeitung bei bedarfsgerechten, kleinen Losgr{\"o}{\ss}en. Deshalb sind stetige Anpassungen und Optimierungen w{\"a}hrend der Produktion erforderlich. Dies setzt eine enge, echtzeitf{\"a}hige Verkn{\"u}pfung zwischen den Planungs- und Steuerungsebenen mit der realen Produktionsanlage voraus. So wird verst{\"a}rkt Sensorik mit unterschiedlichsten Messaufgaben eingesetzt, um den Anlagenzustand permanent zu {\"u}berwachen. Die damit verbundene Informationsflut wird auf Steuerungsebene verarbeitet, was zu einer zunehmenden Komplexit{\"a}t der Steuerungsprogramme f{\"u}hrt. Diesem Trend sollen geeignete Konzepte aus dem Embedded-Bereich entgegenwirken.},
  author = {Merhof, Jochen},
- year = {27.04.2012},
+ date = {27.04.2012},
  title = {Adaptive echtzeitf{\"a}hige und vernetzte Produktion},
  address = {Konferenzzentrum M{\"u}nchen},
  series = {Innovation Forum Embedded Systems 2012}
@@ -15609,7 +15693,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Michos.23.24.04.2002,
  author = {Michos, Gordana},
- year = {23.- 24.04.2002},
+ date = {23.- 24.04.2002},
  title = {Verf{\"u}gbarkeitssteigerung von Werkzeugmaschinen durch den Einsatz von intelligenten Maschinenkomponenten},
  address = {N{\"u}rnberg},
  institutions = {{Fameta Messe}}
@@ -15618,7 +15702,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Michos.23.24.04.2002b,
  author = {Michos, Gordana},
- year = {23.-24.04.2002},
+ date = {23.-24.04.2002},
  title = {Verf{\"u}gbarkeitssteigerung von Werkzeugmaschinen durch den Einsatz von intelligenten Maschinenkomponenten},
  address = {N{\"u}rnberg},
  institutions = {{Fameta Messe}}
@@ -15758,7 +15842,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Neuhoff.23.04.2002,
  author = {Neuhoff, Holger},
- year = {23.04.2002},
+ date = {23.04.2002},
  title = {Internetbasierte Telediagnose zur Optimierung von Instandhaltungsstrategien},
  address = {N{\"u}rnberg},
  institutions = {{Fameta Messe}}
@@ -15767,7 +15851,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Nolting.15.03.1988,
  author = {Nolting, Friedrich-Wilhelm},
- year = {15.03.1988},
+ date = {15.03.1988},
  title = {Handhabungs- und Magaziniereinrichtungen: Teil 1: Maschinenbeschickung und Transporteinheiten}
 }
 
@@ -15951,7 +16035,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Pfeffer.20.21.06.2012,
  author = {Pfeffer, Michael},
- year = {20.- 21.06.2012},
+ date = {20.- 21.06.2012},
  title = {Automatisierte Montage von dreidimensionalen Schaltungstr{\"a}gern},
  address = {Dresden},
  series = {Seminar f{\"u}r aktuelle Trends in der Aufbau- und Verbindungstechnologie}
@@ -16005,7 +16089,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Pfeffer.24.03.2009,
  author = {Pfeffer, Michael},
- year = {24.03.2009},
+ date = {24.03.2009},
  title = {Innovative Konzepte f{\"u}r die Montage elektronischer Systeme},
  address = {Erlangen},
  institutions = {{Automation Valley}}
@@ -16135,7 +16219,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Pitter.25.29.06.1996,
  author = {Pitter, Frank},
- year = {25.- 29.06.1996},
+ date = {25.- 29.06.1996},
  title = {Leistungssteigerung an CNC-Drehmaschinen},
  address = {N{\"u}rnberg},
  institutions = {{Fameta Messe}}
@@ -16178,14 +16262,6 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 }
 
 
-@incollection{Ramer.,
- abstract = {This paper describes an autonomous robot motion planner for 6-DOF industrial robots based on the approximate cell decomposition of the workspace. Known obstacles lead to a hierarchical decomposition up to a predefined degree of the start cell which contains the whole robot workspace. A connectivity tree is searched for the shortest path from the start to the goal position for the Tool Center Point (TCP) of the robot. Center points and points between adjacent cells are used as interpolation points for the robot's path. All possible configurations are calculated for these points and checked for absence of collisions and compliance with kinematic constraints. Subsequently paths between possible configurations of interpolation points are checked for feasibility. If points cannot be reached artificial obstacles are constructed and the work space model is updated.},
- author = {Ramer, Christina and Reitelsh{\"o}fer, Sebastian and Franke, J{\"o}rg},
- title = {A robot motion planner for 6-DOF industrial robots based on the cell decomposition of the workspace},
- keywords = {6-DOF industrial robot, cell decomposition method, robot motion planner, operational space planner}
-}
-
-
 @inproceedings{Ramer.03.11.2011,
  author = {Ramer, Christina},
  title = {Arbeitsraum{\"u}berwachung f{\"u}r Assistenzroboter mittels PMD-Kamera},
@@ -16198,7 +16274,7 @@ F{\"u}r den Oberseitenkontakt wurden in randomisierten, zentral zusammengesetzte
 
 @misc{Ramer.07.03.2013,
  author = {Ramer, Christina},
- year = {07.03.2013},
+ date = {07.03.2013},
  title = {Automatische Generierung kollisionsfreier Bewegungen f{\"u}r ein Roboter-Assistenzsystem},
  address = {Neutraubling},
  series = {Clusterforum Mensch-Maschine-Interaktion in der automatisierten Produktion},
@@ -16299,7 +16375,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Rauh.21.11.1996,
  author = {Rauh, Elke and Steinwasser, Peter and Collisi, Thomas},
- year = {21.11.1996},
+ date = {21.11.1996},
  title = {Einbindung der Simulation in das betriebliche Informationsmanagement zur Unterst{\"u}tzung konkreter Entscheidungsprozesse},
  address = {Erlangen},
  institutions = {{Rationelle Nutzung der Simulationstechnik}}
@@ -16308,7 +16384,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Reichel.08.06.1989;26.10.1989,
  author = {Reichel, Herbert},
- year = {08.06.1989; 26.10.1989},
+ date = {08.06.1989; 26.10.1989},
  title = {NC-Programmierung als CAM-Komponente},
  address = {Regensburg},
  institutions = {CAD/CAM-Kopplung}
@@ -16317,7 +16393,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Reichel.13.14.10.1988,
  author = {Reichel, Herbert},
- year = {13.- 14.10.1988},
+ date = {13.- 14.10.1988},
  title = {Flexible Fertigung mit hochautomatisierten Drehzellen},
  address = {N{\"u}rnberg},
  institutions = {{Fortschrittliche Methoden zur Drehbearbeitung}}
@@ -16326,7 +16402,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Reichel.13.14.10.1988b,
  author = {Reichel, Herbert},
- year = {13.- 14.10.1988},
+ date = {13.- 14.10.1988},
  title = {Rechnergest{\"u}tzte Werkstattsteuerung},
  address = {N{\"u}rnberg},
  institutions = {{Realisierbare Bausteine zur rechnerintegrierten Fertigung}}
@@ -16396,7 +16472,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Reichel.24.04.1989,
  author = {Reichel, Herbert},
- year = {24.04.1989},
+ date = {24.04.1989},
  title = {Realisierung einer rechnerintegrierten Drehzelle},
  address = {Stuttgart},
  institutions = {NCG}
@@ -16405,7 +16481,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Reichenberger.16.07.1997,
  author = {Reichenberger, Marcus},
- year = {16.07.1997},
+ date = {16.07.1997},
  title = {Neue Ans{\"a}tze in der Verbindungstechnik durch alternative L{\"o}tverfahren und verbesserte Proze{\ss}f{\"u}hrung, Teil 2: Selektive L{\"o}tverfahren},
  address = {Erlangen},
  institutions = {{Neue Technologien bei Aufbau und Produktion elektronischer Baugruppen}}
@@ -16467,7 +16543,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Reichenberger.20.21.11.1997,
  author = {Reichenberger, Marcus},
- year = {20.- 21.11.1997},
+ date = {20.- 21.11.1997},
  title = {Alternative Verbindungstechniken f{\"u}r thermoplastische Schaltungstr{\"a}ger},
  address = {Speyer and Oostkamp},
  institutions = {MID-Seminar}
@@ -16510,7 +16586,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Reichenberger.23.01.1997,
  author = {Reichenberger, Marcus},
- year = {23.01.1997},
+ date = {23.01.1997},
  title = {L{\"o}ten mit Licht - ein alternatives Selektivl{\"o}tverfahren},
  address = {Erlangen},
  institutions = {{Verbindungstechniken in der Elektronik}}
@@ -16770,7 +16846,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Risch.2012,
  author = {Risch, Florian and Franke, J{\"o}rg},
- year = {2012},
+ date = {2012},
  title = {Fertigungskonzepte f{\"u}r kontaktlose Energie{\"u}bertragungssysteme f{\"u}r Elektrofahrzeuge},
  address = {N{\"u}rnberg},
  series = {Elektromobilit{\"a}tsausstellung und Fachtagung EMA-N{\"u}rnberg 2012}
@@ -16779,7 +16855,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Risch.2012b,
  author = {Risch, Florian and Franke, J{\"o}rg},
- year = {2012},
+ date = {2012},
  title = {Ganzheitliche Fertigung von elektrischen Antrieben und innovative Ladeinfrastruktur f{\"u}r E-Fahrzeuge},
  address = {N{\"u}rtingen},
  series = {4. VDI-Fachkongress Elektromobilit{\"a}t 2012}
@@ -16788,7 +16864,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Risch.2012c,
  author = {Risch, Florian and Franke, J{\"o}rg},
- year = {2012},
+ date = {2012},
  title = {Production Processes for Electrified Roads (E|ROAD) on Their Way to the Market},
  address = {Park City and UT},
  series = {Conference on Electric Roads {\&} Vehicles (CERV)}
@@ -16838,7 +16914,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Rosch.12.11.2009,
  author = {R{\"o}sch, Michael},
- year = {12.11.2009},
+ date = {12.11.2009},
  title = {Impact of Stencil and Solder Paste Characteristics on the Transfer Efficiency in the Stencil Printing Process},
  address = {M{\"u}nchen},
  institutions = {{Productronica Forum}}
@@ -16847,7 +16923,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Rosch.15.10.2010,
  author = {R{\"o}sch, Michael},
- year = {15.10.2010},
+ date = {15.10.2010},
  title = {Designrichtlinien und Prozessempfehlungen f{\"u}r den Einsatz von PatchWork-Schablonen - Schablonen und Praxis},
  address = {F{\"u}rstenfeldbruck}
 }
@@ -16897,7 +16973,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Rothhaupt.02.06.1992,
  author = {Rothhaupt, Armin},
- year = {02.06.1992},
+ date = {02.06.1992},
  title = {Durchlaufzeitverk{\"u}rzung in der SMD-Best{\"u}ckung durch optimale R{\"u}st- und Umr{\"u}ststrategien},
  address = {N{\"u}rnberg},
  institutions = {{SMT/ASIC/HYBRID Tutorial}}
@@ -16906,7 +16982,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Rothhaupt.16.17.06.1993,
  author = {Rothhaupt, Armin and Sturm, J{\"u}rgen},
- year = {16.- 17.06.1993},
+ date = {16.- 17.06.1993},
  title = {Systematische Untersuchungen zum Lotpastenauftrag mittels Dispensentechnologie f{\"u}r unterschiedliche Rasterma{\ss}e},
  address = {N{\"u}rnberg}
 }
@@ -17278,7 +17354,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Scheller.21.06.1989,
  author = {Scheller, Josef},
- year = {21.06.1989},
+ date = {21.06.1989},
  title = {Steuerungskonzepte: CIM Elektronik},
  address = {Erlangen - Tennenlohe},
  institutions = {{CIM-TT-Seminar {\dq}Rechnergest{\"u}tzte Produktion in der Elektronik{\dq}}}
@@ -17287,7 +17363,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Scheller.22.09.1993,
  author = {Scheller, Herbert},
- year = {22.09.1993},
+ date = {22.09.1993},
  title = {Aktivit{\"a}ten des Lehrstuhls FAPS im Umweltschutz},
  address = {Erlangen},
  institutions = {{Workshop {\dq}Verwertung von Elektronikschrott - Integration der best{\"u}ckten Leiterplatte in den Verarbeitungsproze{\ss}{\dq}}}
@@ -17296,7 +17372,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Scheller.22.09.1993b,
  author = {Scheller, Herbert and Meedt, D.},
- year = {22.09.1993},
+ date = {22.09.1993},
  title = {Konzepte zur Klassifizierung von elektronischen Bauelementen},
  address = {Erlangen},
  institutions = {{Workshop {\dq}Verwertung von Elektronikschrott - Integration der best{\"u}ckten Leiterplatte in den Verarbeitungsproze{\ss}{\dq}}}
@@ -17305,7 +17381,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Scheller.22.09.1993c,
  author = {Scheller, Herbert and Sch{\"o}nberger, O.},
- year = {22.09.1993},
+ date = {22.09.1993},
  title = {Marktorientierte Produktplanung einer Demontageanlage f{\"u}r elektronische Flachbaugruppen},
  address = {Erlangen},
  institutions = {{Workshop {\dq}Verwertung von Elektronikschrott - Integration der best{\"u}ckten Leiterplatte in den Verarbeitungsproze{\ss}{\dq}}}
@@ -17314,7 +17390,7 @@ Eine automatisierte Bahnplanung erm{\"o}glicht den Einsatz auch bei ver{\"a}nder
 
 @misc{Scheller.28.06.1989,
  author = {Scheller, Josef},
- year = {28.06.1989},
+ date = {28.06.1989},
  title = {Steuerungskonzepte in flexiblen Montagezellen},
  address = {Erlangen - Tennenlohe},
  institutions = {{CIM-TT-Seminar {\dq}Rechnergef{\"u}hrte flexible Montagezellen{\dq},}}
@@ -17393,7 +17469,7 @@ consist of both combs with different spaces and chip capacities with variable si
 
 @misc{Schimpf.22.09.2006,
  author = {Schimpf, Claudius},
- year = {22.09.2006},
+ date = {22.09.2006},
  title = {Untersuchungen zur bleifreien Nacharbeit von BGA-Bauelementen},
  address = {Kassel},
  institutions = {{14. FED-Konferenz {\dq}Elektronik-Design-Leiterplatten-Baugruppen {\dq}}}
@@ -17411,7 +17487,7 @@ consist of both combs with different spaces and chip capacities with variable si
 
 @misc{Schlogl.01.07.1998,
  author = {Schl{\"o}gl, Wolfgang},
- year = {01.07.1998},
+ date = {01.07.1998},
  title = {Sicherung der Produktivit{\"a}t durch begleitende rechnergest{\"u}tzte Planung},
  address = {Erlangen},
  institutions = {{Produktivit{\"a}tssteigerung beim Best{\"u}cken komplexer Baugruppen}}
@@ -17442,7 +17518,7 @@ consist of both combs with different spaces and chip capacities with variable si
 
 @misc{Schluter.15.11.1987,
  author = {Schl{\"u}ter, Karsten},
- year = {15.11.1987},
+ date = {15.11.1987},
  title = {Sicherung der Verf{\"u}gbarkeit beim Best{\"u}cken},
  address = {M{\"u}nchen},
  institutions = {Leiterplattentechnik}
@@ -17570,7 +17646,7 @@ consist of both combs with different spaces and chip capacities with variable si
 
 @misc{Schluter.24.26.06.1987,
  author = {Schl{\"u}ter, Karsten},
- year = {24.- 26.06.1987},
+ date = {24.- 26.06.1987},
  title = {Verf{\"u}gbarkeits- und Nutzungsgradanalyse  von SMD-Best{\"u}ckungsautomaten  und -anlagen zur Optimierung ihres Betriebsverhaltens},
  address = {Berlin},
  institutions = {{SMT 1987}}
@@ -17579,7 +17655,7 @@ consist of both combs with different spaces and chip capacities with variable si
 
 @misc{Schmid.16.12.1987,
  author = {Schmid, Joachim},
- year = {16.12.1987},
+ date = {16.12.1987},
  title = {Technische Tendenzen in der Automatisierungstechnik},
  address = {Erlangen},
  institutions = {{Flexible Fertigungsautomatisierung}}
@@ -17784,7 +17860,7 @@ consist of both combs with different spaces and chip capacities with variable si
 
 @misc{Schnepf.19.11.1992,
  author = {Schnepf, Peter},
- year = {19.11.1992},
+ date = {19.11.1992},
  title = {Qualit{\"a}tsverst{\"a}ndnis und Kostendenken},
  address = {Erlangen},
  institutions = {{CIM-TT-Seminar {\dq}Methoden und Werkzeuge zur proze{\ss}begleitenden Qualit{\"a}tssicherung{\dq}}}
@@ -17847,7 +17923,7 @@ consist of both combs with different spaces and chip capacities with variable si
 
 @misc{Schonherr.17.18.03.1994,
  author = {Sch{\"o}nherr, Uwe},
- year = {17.- 18.03.1994},
+ date = {17.- 18.03.1994},
  title = {Sensorregelung f{\"u}r Industrieroboter - basierend auf einem verteilten System},
  address = {Pommersfelden},
  institutions = {{Fr{\"u}hjahrstagung des SFB 182}}
@@ -17927,7 +18003,7 @@ consist of both combs with different spaces and chip capacities with variable si
 
 @misc{Schramm.19.12.2012,
  author = {Schramm, Ren{\'e}},
- year = {19.12.2012},
+ date = {19.12.2012},
  title = {Plasma in Electronics Production - Today and tomorrow},
  address = {Bielefeld},
  series = {Plasmatreat International Sales Meeting}
@@ -17958,7 +18034,7 @@ consist of both combs with different spaces and chip capacities with variable si
 
 @misc{Schramm.2013,
  author = {Schramm, Ren{\'e}},
- year = {16.04.13},
+ date = {16.04.13},
  title = {Die Potenziale der MID-Technik - der MIDster},
  keywords = {MID, LDS, MIDster},
  address = {N{\"u}rnberg},
@@ -18222,7 +18298,7 @@ F{\"u}r eine {\"U}bertragung gr{\"o}{\ss}erer Str{\"o}me kann das Plasmadust{\ci
 
 @misc{Slama.13.06.2002,
  author = {Slama, Stefan},
- year = {13.06.2002},
+ date = {13.06.2002},
  title = {Konzeption und prototypische Umsetzung eines multimedialen Informationssystems zur Steigerung von Mitarbeiterkompetenz und Selbstorganisation in der Kleinserien-Montage},
  address = {Aachen},
  institutions = {{Informations-und Kommunikationssystem F{\"o}rderung Produktivit{\"a}t, Flexibilit{\"a}t und Qualit{\"a}t Montage in der von}}
@@ -18231,7 +18307,7 @@ F{\"u}r eine {\"U}bertragung gr{\"o}{\ss}erer Str{\"o}me kann das Plasmadust{\ci
 
 @misc{Slama.16.03.1999,
  author = {Slama, Stefan},
- year = {16.03.1999},
+ date = {16.03.1999},
  title = {Aktuelle Marktuntersuchung von Montagesystemen mit Analyse und Bewertung},
  address = {Erlangen},
  institutions = {{Planung und Betrieb rationeller Montagesysteme}}
@@ -18240,7 +18316,7 @@ F{\"u}r eine {\"U}bertragung gr{\"o}{\ss}erer Str{\"o}me kann das Plasmadust{\ci
 
 @misc{Slama.20.09.2000,
  author = {Slama, Stefan},
- year = {20.09.2000},
+ date = {20.09.2000},
  title = {Modulare, reaktionsf{\"a}hige Montagekonzepte f{\"u}r die variantenreiche Montage},
  address = {Sinsheim},
  institutions = {{Flexible Montagekonzepte hoher Produktivit{\"a}t- Motek2000}}
@@ -18261,7 +18337,7 @@ F{\"u}r eine {\"U}bertragung gr{\"o}{\ss}erer Str{\"o}me kann das Plasmadust{\ci
 
 @misc{Slama.23.09.1999,
  author = {Slama, Stefan},
- year = {23.09.1999},
+ date = {23.09.1999},
  title = {Der Trend zu modularen Montagesystemen - Konzepte und Ergebnisse einer Marktuntersuchung},
  address = {Sinsheim},
  institutions = {{Flexible Montagekonzepte hoher Produktivit{\"a}t - Motek1999}}
@@ -18270,7 +18346,7 @@ F{\"u}r eine {\"U}bertragung gr{\"o}{\ss}erer Str{\"o}me kann das Plasmadust{\ci
 
 @misc{Slama.27.08.2002,
  author = {Slama, Stefan},
- year = {27.08.2002},
+ date = {27.08.2002},
  title = {New Concept for Integrating Electronics and Mechanics in Mechatronic Products-Potential of 3-D MID Technology},
  address = {Helsinki},
  institutions = {{TOMI - Towards Mini- and Micro-Assembly Factories}}
@@ -18279,7 +18355,7 @@ F{\"u}r eine {\"U}bertragung gr{\"o}{\ss}erer Str{\"o}me kann das Plasmadust{\ci
 
 @misc{Slama.29.10.2002,
  author = {Slama, Stefan},
- year = {29.10.2002},
+ date = {29.10.2002},
  title = {The importance of modularity - Batch-size flexible assembly systems},
  address = {Turnhout (Belgien)},
  institutions = {{Product Life Cycle Management {\&} Easier}}
@@ -18341,7 +18417,7 @@ F{\"u}r eine {\"U}bertragung gr{\"o}{\ss}erer Str{\"o}me kann das Plasmadust{\ci
 
 @misc{Solvie.12.07.1993,
  author = {Solvie, Michael},
- year = {12.07.1993},
+ date = {12.07.1993},
  title = {Feldbusse in der industriellen Fertigung: Echtzeit und MMS - Konzepte und Perspektiven},
  address = {Erlangen},
  institutions = {{Informatik Kolloquium der FAU}}
@@ -18350,7 +18426,7 @@ F{\"u}r eine {\"U}bertragung gr{\"o}{\ss}erer Str{\"o}me kann das Plasmadust{\ci
 
 @misc{Solvie.17.18.03.1994,
  author = {Solvie, Michael},
- year = {17.- 18.03.1994},
+ date = {17.- 18.03.1994},
  title = {Integration von Audio-Datentransfer in Feldbussysteme},
  address = {Pommersfelden},
  institutions = {{Fr{\"u}hjahrstagung des SFB 182}}
@@ -18490,7 +18566,7 @@ F{\"u}r eine {\"U}bertragung gr{\"o}{\ss}erer Str{\"o}me kann das Plasmadust{\ci
 
 @misc{Solvie.27.09.1994,
  author = {Solvie, Michael},
- year = {27.09.1994},
+ date = {27.09.1994},
  title = {Anforderungen an den Ingenieur in Europa: Qualifikation, Sprache, Ausbildung},
  institutions = {{Normung in der Europ{\"a}ischen Union: Chancen f{\"u}r einen freien Wettbewerb}}
 }
@@ -18645,7 +18721,7 @@ F{\"u}r eine {\"U}bertragung gr{\"o}{\ss}erer Str{\"o}me kann das Plasmadust{\ci
 
 @misc{Spur.31.12.1973,
  author = {Spur, G{\"u}nter and u. Mitwirk. Busselt, J.-M von and Feldmann, Klaus and Wentz, W.},
- year = {31.12.1973},
+ date = {31.12.1973},
  title = {Stand und Perspektiven des  wirtschaftlichen Einsatzes rechnergesteuerter  Fertigungssysteme},
  address = {Berlin},
  institutions = {{C.I.R.P. - Seminar {\"u}ber Fertigungssysteme}}
@@ -18654,7 +18730,7 @@ F{\"u}r eine {\"U}bertragung gr{\"o}{\ss}erer Str{\"o}me kann das Plasmadust{\ci
 
 @misc{Spur.31.12.1974,
  author = {Spur, G{\"u}nter and Feldmann, Klaus},
- year = {31.12.1974},
+ date = {31.12.1974},
  title = {CAD im Werkzeugmaschinenbau: Beitrag zur Konstruktionssoptimierung von numerisch gesteuerten Mehrspindel-Drehmaschinen},
  address = {Kyoto},
  institutions = {C.I.R.P.-Generalversammlung}
@@ -18814,7 +18890,7 @@ F{\"u}r eine {\"U}bertragung gr{\"o}{\ss}erer Str{\"o}me kann das Plasmadust{\ci
 
 @misc{Steber.30.01.1996,
  author = {Steber, Michael},
- year = {30.01.1996},
+ date = {30.01.1996},
  title = {Robuste, angepa{\ss}te Proze{\ss}gestaltung bei der automatisierten Schraubmontage durch intelligente Steuerungstechnik},
  address = {Erlangen},
  institutions = {{Rationelle Ger{\"a}temontage durch innovative Systeml{\"o}sungen}}
@@ -18823,7 +18899,7 @@ F{\"u}r eine {\"U}bertragung gr{\"o}{\ss}erer Str{\"o}me kann das Plasmadust{\ci
 
 @misc{Stief.07.12.1995,
  author = {Stief, E.},
- year = {07.12.1995},
+ date = {07.12.1995},
  title = {Investitionssicherung durch interdisziplin{\"a}res Planungsteam und rechnergest{\"u}tzte Methoden},
  address = {Erlangen},
  institutions = {{Materialflu{\ss} in ver{\"a}nderten Fabrikstrukturen}}
@@ -18890,7 +18966,7 @@ F{\"u}r eine {\"U}bertragung gr{\"o}{\ss}erer Str{\"o}me kann das Plasmadust{\ci
 
 @misc{Sturm.02.06.1992,
  author = {Sturm, J{\"u}rgen},
- year = {02.06.1992},
+ date = {02.06.1992},
  title = {Einsatz automatisierter proze{\ss}begleitender Qualit{\"a}tspr{\"u}fung in der Elektronikbaugruppenproduktion},
  address = {N{\"u}rnberg},
  institutions = {{SMT/ASIC/HYBRID Tutorial}}
@@ -18899,7 +18975,7 @@ F{\"u}r eine {\"U}bertragung gr{\"o}{\ss}erer Str{\"o}me kann das Plasmadust{\ci
 
 @misc{Sturm.09.04.1992,
  author = {Sturm, J{\"u}rgen},
- year = {09.04.1992},
+ date = {09.04.1992},
  title = {Proze{\ss}sicherung in der Elektronikbaugruppenmontage durch automatisierte optische Inspektion},
  address = {Erlangen},
  institutions = {{CIM-TT-Seminar {\dq}Automatisierte Montagesysteme in der Elektronikproduktion{\dq}}}
@@ -18908,7 +18984,7 @@ F{\"u}r eine {\"U}bertragung gr{\"o}{\ss}erer Str{\"o}me kann das Plasmadust{\ci
 
 @misc{Sturm.13.06.1990,
  author = {Sturm, J{\"u}rgen},
- year = {13.06.1990},
+ date = {13.06.1990},
  title = {Automated Solder Joint Inspection by 3D-Vision},
  address = {Noisy-le-Grand},
  institutions = {{ISHM-Meeting, International Society for Hybrids and Microelectronics}}
@@ -19868,7 +19944,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Vegelahn.18.11.2010,
  author = {Vegelahn, Torsten and Nolting, Friedrich-Wilhelm and Michl, Markus},
- year = {18.11.2010},
+ date = {18.11.2010},
  title = {Effizienter Closed Loop Regelkreis zur Druckoptimierung},
  address = {Dornstadt}
 }
@@ -19925,7 +20001,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Weber.28.11.2007,
  author = {Weber, Matthias and Wolf, Wolfgang and Junker, Stefan},
- year = {28.11.2007},
+ date = {28.11.2007},
  title = {Flexible und skalierbare Plug{\&}Produce-Produktionsliniensteuerung},
  address = {Erlangen},
  institutions = {{BMBF - Abschlu{\ss}veranstaltung Pro FaM}}
@@ -20020,7 +20096,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Wenk.03.07.1996,
  author = {Wenk, Matthias},
- year = {03.07.1996},
+ date = {03.07.1996},
  title = {Sensorintegration zur Bewegungsadaption f{\"u}r moderne Industrieroboter},
  address = {Erlangen},
  institutions = {{Neue Steuerungs- und Sensorkonzepte - Schl{\"u}ssel zur Leistungssteigerung in der Fertigungsautomatisierung}}
@@ -20029,7 +20105,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Wenk.04.11.1999,
  author = {Wenk, Matthias},
- year = {04.11.1999},
+ date = {04.11.1999},
  title = {PC-basierte Steuerungstechnik - Systematische {\"U}bersicht zu Aufbau und Einsatzkriterien},
  address = {Erlangen},
  series = {Neue Rationalisierungspotentiale mit PC-basierten Automatisierungsl{\"o}sungen}
@@ -20038,7 +20114,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Wenk.10.11.1998,
  author = {Wenk, Matthias},
- year = {10.11.1998},
+ date = {10.11.1998},
  title = {PC-basierte Steuerungstechnik - {\"U}bersicht zu Aufbau und Einsatzkriterien},
  address = {Erlangen},
  institutions = {{PC-basierte Steuerungen - Aktuelle Potentiale zur Leistungssteigerung in der Fertigungsautomatisierung}}
@@ -20092,7 +20168,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Wenk.20.21.10.1998,
  author = {Wenk, Matthias},
- year = {20.- 21.10.1998},
+ date = {20.- 21.10.1998},
  title = {Rationalisierungspotentiale in der Montage durch PC-basierte Steuerungskonzepte},
  address = {Erlangen},
  institutions = {{Auslegung und Betrieb flexibler Montagesysteme}}
@@ -20113,7 +20189,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Wenk.25.06.1998,
  author = {Wenk, Matthias},
- year = {25.06.1998},
+ date = {25.06.1998},
  title = {PC-basierte Steuerungstechnik - {\"U}bersicht zu Aufbau und Einsatzkriterien},
  address = {Erlangen},
  institutions = {{PC-basierte Steuerungen - Aktuelle Potentiale zur Leistungssteigerung in der Fertigungsautomatisierung}}
@@ -20223,7 +20299,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Wolf.10.10.2006,
  author = {Wolf, Wolfgang},
- year = {10.10.2006},
+ date = {10.10.2006},
  title = {Effiziente Agentenmechanismen f{\"u}r Plug{\&}Produce-f{\"a}hige Produktionssysteme},
  address = {N{\"u}rnberg},
  institutions = {{Symposium Visionen Innovationen M{\"a}rkte}}
@@ -20232,7 +20308,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Wolf.17.11.2005,
  author = {Wolf, Wolfgang},
- year = {17.11.2005},
+ date = {17.11.2005},
  title = {Automatisierungsstrategien modularer Plug {\&} Produce-Systeme},
  address = {Garching},
  institutions = {{VBM Symposium}}
@@ -20262,7 +20338,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Wolf.26.07.2006,
  author = {Wolf, Wolfgang},
- year = {26.07.2006},
+ date = {26.07.2006},
  title = {Effiziente Agentensysteme am Beispiel autonom navigierender Transportzeuge},
  address = {N{\"u}rnberg},
  institutions = {{Neue Potenziale der Inhouse-Logistik durch Einsatz intelligenter Systeme organisiert Center for Transportation {\&} Logistics Neuer Adler e.v. (CNA)}}
@@ -20271,7 +20347,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Wolflick.19.02.2004,
  author = {W{\"o}lflick, Peter and Boiger, Matthias},
- year = {19.02.2004},
+ date = {19.02.2004},
  title = {Aufbau- und Verbindungstechnik f{\"u}r elektronische Baugruppen (MID Folie)},
  address = {Erlangen},
  series = {Kunststoffe in der Elektronik},
@@ -20323,7 +20399,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Wolflick.29.06.2004,
  author = {W{\"o}lflick, Peter},
- year = {29.06.2004},
+ date = {29.06.2004},
  title = {C3 Stabile Reflow-L{\"o}tprozesse bei alternativen Schaltungstr{\"a}gern und feineren Strukturen},
  address = {Erlangen - Tennenlohe},
  institutions = {{SFB 356 Abschlusskolloquium}}
@@ -20332,7 +20408,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Wunderlich.18.11.1999,
  author = {Wunderlich, J{\"u}rgen},
- year = {18.11.1999},
+ date = {18.11.1999},
  title = {Potentiale der Kostensimulation am Beispiel des Pilotprojektes {\dq}VBM-KostSim{\dq}},
  address = {M{\"u}nchen},
  series = {Simulation in Produktion und Logistik}
@@ -20341,7 +20417,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Wunderlich.19.04.2000,
  author = {Wunderlich, J{\"u}rgen},
- year = {19.04.2000},
+ date = {19.04.2000},
  title = {Ableitung eines praxisorientierten Vorgehensmodells f{\"u}r den Einsatz von {\dq}VBM-KostSim{\dq}},
  address = {M{\"u}nchen},
  institutions = {{Simulationsbasierte Kostenrechnung {\dq}KostSim{\dq}: Werkzeug des VBM f{\"u}r unternehmerisches Handeln im Dynamischen Umfeld der KMU}}
@@ -20350,7 +20426,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Wunderlich.19.04.2000b,
  author = {Wunderlich, J{\"u}rgen and Kloke, R.},
- year = {19.04.2000},
+ date = {19.04.2000},
  title = {Integration von Kostendaten in die Simulation der Kegelradsatzfertigung eines Automobilzuliefers},
  address = {M{\"u}nchen},
  institutions = {{Simulationsbasierte Kostenrechnung {\dq}KostSim{\dq} Ein innovatives Werkzeug des VBM f{\"u}r unternehmerisches Handeln im dynamischen Umfeld der KMU}}
@@ -20359,7 +20435,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Wunderlich.19.04.2000c,
  author = {Wunderlich, J{\"u}rgen and Wawrzyniak, P.},
- year = {19.04.2000},
+ date = {19.04.2000},
  title = {Kostenorientierte Optimierung des Fertigungsablaufs in einem Gie{\ss}ereibetrieb},
  address = {M{\"u}nchen},
  institutions = {{Simulationsbasierte Kostenrechnung {\dq}KostSim{\dq} Ein innovatives Werkzeug des VBM f{\"u}r unternehmerisches Handeln im dynamischen Umfeld der KMU}}
@@ -20414,7 +20490,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Wunderlich.26.09.2000,
  author = {Wunderlich, J{\"u}rgen},
- year = {26.09.2000},
+ date = {26.09.2000},
  title = {Simulationsbasierte Kostenbetrachtung im Produktionsmanagement},
  address = {M{\"u}nchen},
  institutions = {{MultimediUM - Multimedia-basiertes Unternehmensmanagement}}
@@ -20650,7 +20726,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Zollner.02.06.1992,
  author = {Z{\"o}llner, Bernd},
- year = {02.06.1992},
+ date = {02.06.1992},
  title = {Proze{\ss}- und Maschinendiagnose zur Optimierung der Auslastung},
  address = {N{\"u}rnberg},
  institutions = {{SMT/ASIC/HYBRID Tutorial}}
@@ -20668,7 +20744,7 @@ Der Deutsche AAL-Kongress wird zum sechsten Mal ausgerichtet. Er avancierte in d
 
 @misc{Zollner.24.09.1991,
  author = {Z{\"o}llner, Bernd},
- year = {24.09.1991},
+ date = {24.09.1991},
  title = {Diagnose an SMD-Best{\"u}ckungslinien zur Optimierung der Auslastung},
  address = {Dresden},
  institutions = {SMD-Hybrid}
