@@ -7,6 +7,9 @@ import javax.swing.JOptionPane;
 import orgamanager.utilities.OmOperatingSystemConstant;
 import orgamanager.utilities.OmUtilities;
 
+/**
+ * Invoice
+ */
 public class Invoice {
 	private String firstName;
 	private String lastName;
@@ -51,8 +54,8 @@ public class Invoice {
 	public Invoice(){
 		// computer related data
 		utils = new OmUtilities();
-		targetBase = "/home/jay/curdir/";
-		targetFileBaseName = "rechnung";
+		targetBase = "/home/jay/curdir/"; // TODO save-as dialog
+		targetFileBaseName = "rechnung"; // relative from save-as
 		targetFile = targetFileBaseName + ".tex";
 		targetDir = "rechnung";
 		targetPath = targetBase + targetDir + "/"+ targetFile;

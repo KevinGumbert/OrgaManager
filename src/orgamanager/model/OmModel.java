@@ -56,6 +56,11 @@ public class OmModel {
 		if (!isAuthorized){
 			return false;
 		}
+		// TODO:
+		
+		// configuration:
+		// latex compiler; 
+		
 		Invoice invoice = new Invoice();
 		invoice.printAsPdf();
 		return true;
