@@ -133,10 +133,11 @@ public class OmUtilities {
 			return OmOperatingSystemConstant.WINDOWS;
 		} else if (osName.equals("Linux")){
 			return OmOperatingSystemConstant.LINUX;
+		} else if (osName.contains("Mac")){
+			return OmOperatingSystemConstant.MACOS;
 		} else {
 			return OmOperatingSystemConstant.UNKNOWN;
 		}
-		// TODO Mac
 	}
 	
 	public boolean createDir(String path){

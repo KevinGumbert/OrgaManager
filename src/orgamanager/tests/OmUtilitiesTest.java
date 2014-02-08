@@ -40,8 +40,9 @@ public class OmUtilitiesTest {
 	
 	@Test
 	public void detectOperatingSystemTest(){
-		//String str1 = System.getProperty("os.name");
-		OmOperatingSystemConstant exp1 = OmOperatingSystemConstant.WINDOWS;
+		//OmOperatingSystemConstant exp1 = OmOperatingSystemConstant.WINDOWS;
+		//OmOperatingSystemConstant exp1 = OmOperatingSystemConstant.MACOS;
+		OmOperatingSystemConstant exp1 = OmOperatingSystemConstant.LINUX;
 		OmUtilities utils = new OmUtilities();
 		OmOperatingSystemConstant act1 = utils.detectOperatingSystem();
 		assertEquals("detectOperatingSystemTest()", exp1, act1);
