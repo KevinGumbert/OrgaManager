@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-import orgamanager.utilities.OmConfig;
+import orgamanager.config.OmConfig;
 import orgamanager.utilities.OmPublicationConstant;
 import orgamanager.utilities.OmUtilities;
 

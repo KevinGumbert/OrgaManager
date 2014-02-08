@@ -6,7 +6,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import orgamanager.utilities.OmConfig;
+import orgamanager.config.OmConfig;
 
 public class OmView {
 

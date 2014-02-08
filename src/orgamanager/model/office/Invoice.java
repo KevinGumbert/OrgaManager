@@ -1,9 +1,10 @@
-package orgamanager.model;
+package orgamanager.model.office;
 
 import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
+import orgamanager.config.OmConfig;
 import orgamanager.utilities.OmOperatingSystemConstant;
 import orgamanager.utilities.OmUtilities;
 
@@ -50,6 +51,62 @@ public class Invoice {
 	private String targetPathPdf;
 	private String compilerCommand;
 	private String viewerCommand;
+	private OmConfig config;
+	
+	public Invoice(String targetBase){
+		// computer related data
+		utils = new OmUtilities();
+		config = new OmConfig();
+		this.targetBase = targetBase;
+		targetFileBaseName = "rechnung"; // relative from save-as
+		targetFile = targetFileBaseName + ".tex";
+		targetDir = "rechnung";
+		targetPath = targetBase + targetDir + "/"+ targetFile;
+		targetPathPdf = targetBase + targetDir + "/"+ targetFileBaseName + ".pdf";
+		compilerCommand = "pdflatex";
+		viewerCommand = "evince";
+		// invoicing party
+		firstName = "Jochen"; // aus config
+		lastName = "Bauer"; // aus config
+		street = "Hugo-Geiger-Str."; // aus config
+		streetNumber = "39"; // aus config
+		postalCode = "92237"; // aus config
+		city = "Sulzbach-Rosenberg"; // aus config
+		job = "Ernährungsberater"; // aus dropdown, Konstante
+		jobOptions = new ArrayList<String>();
+		jobOptions.add("Ernährungsberater");
+		jobOptions.add("Tennistrainer");
+		jobOptions.add("Softwareentwickler");
+		phone = "01733928709"; // aus config
+		email = "info@jochen-bauer.net"; // aus config
+		url = "www.jochen-bauer.net"; // aus config
+		bankName = "EthikBank"; // aus config
+		bankAccountNumber = "314 78 27"; // aus config
+		bankCodeNumber = "830 944 95"; // aus config
+		bankBic = "GENO DE F1 ETK"; // aus config
+		bankIban = "DE82 8309 4495 0003 1478 27"; // aus config
+		taxNumber = "201/202/91417"; // aus configS
+		// invoice recipient
+		clientFirstName = "Max"; 
+		clientLastName = "Mustermann";
+		clientMnemonic = "mamustermann";
+		clientCompany = "Musterfirma GmbH";
+		clientStreet = "Musterweg";
+		clientStreetNumber = "2";
+		clientCity = "Musterstadt";
+		clientPostalCode = "12345";
+		// invoice data
+		invoiceOption = "Ernährungsberater";
+		invoiceOptions = new ArrayList<String>();
+		invoiceOptions.add("Ernährungsberatung");
+		invoiceOptions.add("Ernährungstherapie");
+		invoiceOptions.add("Softwareentwicklung");
+		invoiceOptions.add("Webentwicklung");
+		invoiceOptions.add("Tennistraining");
+		invoiceTitle = "Rechnung";
+		invoiceNumber = "2014-001";
+		invoiceDate = "01.01.2014";
+	}
 	
 	public Invoice(){
 		// computer related data
@@ -63,28 +120,28 @@ public class Invoice {
 		compilerCommand = "pdflatex";
 		viewerCommand = "evince";
 		// invoicing party
-		firstName = "Jochen";
-		lastName = "Bauer";
-		street = "Hugo-Geiger-Str.";
-		streetNumber = "39";
-		postalCode = "92237";
-		city = "Sulzbach-Rosenberg";
-		job = "Ernährungsberater";
+		firstName = "Jochen"; // aus config
+		lastName = "Bauer"; // aus config
+		street = "Hugo-Geiger-Str."; // aus config
+		streetNumber = "39"; // aus config
+		postalCode = "92237"; // aus config
+		city = "Sulzbach-Rosenberg"; // aus config
+		job = "Ernährungsberater"; // aus dropdown, Konstante
 		jobOptions = new ArrayList<String>();
 		jobOptions.add("Ernährungsberater");
 		jobOptions.add("Tennistrainer");
 		jobOptions.add("Softwareentwickler");
-		phone = "01733928709";
-		email = "info@jochen-bauer.net";
-		url = "www.jochen-bauer.net";
-		bankName = "EthikBank";
-		bankAccountNumber = "314 78 27";
-		bankCodeNumber = "830 944 95";
-		bankBic = "GENO DE F1 ETK";
-		bankIban = "DE82 8309 4495 0003 1478 27";
-		taxNumber = "201/202/91417";
+		phone = "01733928709"; // aus config
+		email = "info@jochen-bauer.net"; // aus config
+		url = "www.jochen-bauer.net"; // aus config
+		bankName = "EthikBank"; // aus config
+		bankAccountNumber = "314 78 27"; // aus config
+		bankCodeNumber = "830 944 95"; // aus config
+		bankBic = "GENO DE F1 ETK"; // aus config
+		bankIban = "DE82 8309 4495 0003 1478 27"; // aus config
+		taxNumber = "201/202/91417"; // aus configS
 		// invoice recipient
-		clientFirstName = "Max";
+		clientFirstName = "Max"; 
 		clientLastName = "Mustermann";
 		clientMnemonic = "mamustermann";
 		clientCompany = "Musterfirma GmbH";

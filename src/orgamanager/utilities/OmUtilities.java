@@ -21,6 +21,8 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
+import orgamanager.config.OmConfig;
+
 public class OmUtilities {
 
 	public boolean printStringToFile(String content, String path){

@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
 
 import javax.swing.JOptionPane;
 
-import orgamanager.utilities.OmConfig;
+import orgamanager.config.OmConfig;
 import orgamanager.utilities.OmPublicationConstant;
 import orgamanager.utilities.OmUtilities;
 
@@ -20,7 +20,7 @@ public class PublicationsList {
 	public ArrayList<PublicationParent> parents;
 	
 	public PublicationsList(String path) throws FileNotFoundException{
-		config = new OmConfig(); // maybe: use dependancy injection
+		config = new OmConfig(); // TODO boy scout rule: think about dependancy injection
 		publications = new ArrayList<Publication>();
 		parents = new ArrayList<PublicationParent>();
 		parseBibtexFile(path);
@@ -149,7 +149,7 @@ public class PublicationsList {
 	}
 	
 	private boolean shouldBePublished(String item, OmPublicationConstant type, OmConfig config) {
-		ArrayList<OmPublicationConstant> typesToShow = config.getPublicationsTypesToShow();
+		List<OmPublicationConstant> typesToShow = config.getPublicationsTypesToShow();
 		boolean typeMatch = false;
 		for (OmPublicationConstant typeToCompare : typesToShow) { // check type
 			if (type == typeToCompare) {
@@ -161,7 +161,7 @@ public class PublicationsList {
 			return false; // no publishable type, quit
 		}
 		boolean stopPublishKeyMatch = false; // check for keywords like Faps-TT which stops publishing
-		ArrayList<String> stopPubWords = config.getPublicationsBookConstraints();
+		List<String> stopPubWords = config.getPublicationsBookConstraints();
 		for (String key : stopPubWords){
 			if (item.contains(key)){
 				stopPublishKeyMatch = true;
@@ -173,7 +173,7 @@ public class PublicationsList {
 		}
 		if (type == OmPublicationConstant.BOOK){ // special case book as publication
 			boolean authorMatch = false;
-			ArrayList<String> authors = config.getPublicationsBookAuthorsToShow();
+			List<String> authors = config.getPublicationsBookAuthorsToShow();
 			for (String author : authors){
 				StringTokenizer st = new StringTokenizer(author, " ");
 				String firstName = st.nextToken();

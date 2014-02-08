@@ -13,7 +13,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 
-import orgamanager.utilities.OmConfig;
+import orgamanager.config.OmConfig;
 
 public class OmOfficePanel extends JPanel {
 	

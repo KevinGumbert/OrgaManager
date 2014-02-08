@@ -9,7 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import orgamanager.utilities.OmConfig;
+import orgamanager.config.OmConfig;
 
 public class OmWelcomePanel extends JPanel {
 	

@@ -9,11 +9,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import orgamanager.config.OmConfig;
 import orgamanager.model.OmModel;
 import orgamanager.model.publications.Publication;
 import orgamanager.model.publications.PublicationParent;
 import orgamanager.model.publications.PublicationsList;
-import orgamanager.utilities.OmConfig;
 import orgamanager.utilities.OmUtilities;
 
 /**
@@ -38,8 +38,8 @@ public class OmModelTest {
 	public void doLoginTest(){
 		OmModel omModel = new OmModel();
 		OmConfig config = new OmConfig();
-		String username = config.username;
-		String password = config.password;
+		String username = config.getUsername();
+		String password = config.getPassword();
 		boolean act = omModel.doLogin(username, password);
 		assertTrue("doLoginTest", act);
 	}

@@ -12,12 +12,13 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runners.JUnit4;
 
+import orgamanager.config.OmConfig;
+import orgamanager.model.office.Invoice;
 import orgamanager.model.publications.PublicationsList;
 import orgamanager.selenium.ehc.EhcTests;
 import orgamanager.selenium.joba.JobaTests;
 import orgamanager.selenium.skp.SkpTests;
 import orgamanager.tests.OmModelTest;
-import orgamanager.utilities.OmConfig;
 import orgamanager.utilities.OmOperatingSystemConstant;
 import orgamanager.utilities.OmUtilities;
 
@@ -59,7 +60,13 @@ public class OmModel {
 		// TODO:
 		
 		// configuration:
-		// latex compiler; 
+		// targetBase verzeichnis;
+		// latex compiler, here pdflatex;
+		// pdfviewer, here evince;
+		// jobvariante via dropdown, ebenso die zugehoerigen optionen
+		// recipient angaben
+		// rechnungsnummer aus speicher letzte lesen und um eins erhoehen
+		// TODO vorlage auswahl erlauben bzw. beim erstellen als vorlage speichern ...
 		
 		Invoice invoice = new Invoice();
 		invoice.printAsPdf();
