@@ -6,16 +6,6 @@ import orgamanager.view.OmView;
 
 /**
  * Main is the entry point of this application, you can read the core documentation here as well.
- * 
- * <h2>Table of contents</h2>
- * <ul>
- * <li>package publications</li>
- * </ul>
- * 
- * <h2>Package publications [TODO translate ...]</h2>
- * <p>
- * Eine Publikation kann ein article, ein book, eine incollection, ein inproceeding, ein misc sein.
- * </p>
  */
 public class Main {
 	
