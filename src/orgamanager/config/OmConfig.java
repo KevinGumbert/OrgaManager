@@ -7,7 +7,7 @@ import orgamanager.utilities.OmPublicationConstant;
 
 public class OmConfig { // principle: favour composition over inheritance (FCOI), relations to other config classes are created by properties;
 	
-	private GuiConfig guiConfig;
+	private GuiConfig guiConfig; 
 	private MainConfig mainConfig;
 	private OfficeConfig officeConfig;
 	private PublicationsConfig publicationsConfig;
@@ -73,12 +73,88 @@ public class OmConfig { // principle: favour composition over inheritance (FCOI)
 		return publicationsConfig.getPublicationsBookConstraints();
 	}
 	
-	public String getMessage(String message){
+	public String getMessage(String message) {
 		return guiConfig.getMessage(message);
 	}
 	
 	public Dimension getMainPanelDimension(){
 		return guiConfig.getMainPanelDimension();
+	}
+	
+	public String getCommandPdfLatex(){
+		return officeConfig.getCommandPdfLatex();
+	}
+	
+	public String getCommandPdfViewer(){
+		return officeConfig.getCommandPdfViewer();
+	}
+	
+	public String getFirstName(){ // principle: law of demeter
+		return officeConfig.getFirstName();
+	}
+	
+	public String getLastName(){
+		return officeConfig.getLastName();
+	}
+	
+	public String getStreet(){
+		return officeConfig.getStreet();
+	}
+	
+	public String getStreetNumber(){
+		return officeConfig.getStreetNumber();
+	}
+	
+	public String getPostalCode(){
+		return officeConfig.getPostalCode();
+	}
+	
+	public String getCity(){
+		return officeConfig.getCity();
+	}
+	
+	public String getJob(){
+		return officeConfig.getJob();
+	}
+	
+	public List<String> getJobOptions(){
+		return officeConfig.getJobOptions();
+	}
+	
+	public String getPhone(){
+		return officeConfig.getPhone();
+	}
+	
+	public String getEmail(){
+		return officeConfig.getEmail();
+	}
+	
+	public String getUrl(){
+		return officeConfig.getUrl();
+	}
+	
+	public String getBankName(){
+		return officeConfig.getBankName();
+	}
+
+	public String getBankAccountNumber() {
+		return officeConfig.getBankAccountNumber();
+	}
+
+	public String getBankCodeNumber() {
+		return officeConfig.getBankCodeNumber();
+	}
+
+	public String getBankBic() {
+		return officeConfig.getBankBic();
+	}
+
+	public String getBankIban() {
+		return officeConfig.getBankIban();
+	}
+
+	public String getTaxNumber() {
+		return officeConfig.getTaxNumber();
 	}
 
 }

@@ -53,6 +53,18 @@ public class OmModelTest {
 		assertFalse("doLoginFailedTest", act);
 	}
 	
+	
+	@Test
+	public void doCreateInvoiceTest(){
+		// Development area, trigger model without gui ...
+		OmModel model = new OmModel();
+		model.doCreateInvoice();
+		String act0 = "Test";
+		String exp0 = "Test";
+		assertEquals("doCreatePublicationsTest-0", exp0, act0);
+	}
+
+	
 	@Test
 	public void doCreatePublicationsTest() throws InterruptedException, FileNotFoundException{ //fail("Not yet implemented!");
 		

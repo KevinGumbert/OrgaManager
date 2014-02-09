@@ -12,90 +12,34 @@ import orgamanager.utilities.OmUtilities;
  * Invoice
  */
 public class Invoice {
-	private String firstName;
-	private String lastName;
-	private String street;
-	private String streetNumber;
-	private String postalCode;
-	private String city;
-	private String job;
-	private ArrayList<String> jobOptions;
-	private String phone;
-	private String email;
-	private String url;
-	private String bankName;
-	private String bankAccountNumber;
-	private String bankCodeNumber;
-	private String bankBic;
-	private String bankIban;
-	private String taxNumber;
-	private String clientFirstName;
-	private String clientLastName;
-	private String clientMnemonic;
-	private String clientCompany;
-	private String clientStreet;
-	private String clientStreetNumber;
-	private String clientCity;
-	private String clientPostalCode;
+	InvoicingParty party; // principle: separation of concerns
+	InvoiceRecipient recipient;
+	private OmConfig config;
+	private OmUtilities utils;
 	private String invoiceOption;
 	private ArrayList<String> invoiceOptions;
 	private String invoiceNumber;
 	private String invoiceDate;
 	private String invoiceTitle;
-	private OmUtilities utils;
 	private String targetDir;
 	private String targetFile;
 	private String targetFileBaseName;
 	private String targetBase;
 	private String targetPath;
 	private String targetPathPdf;
-	private String compilerCommand;
-	private String viewerCommand;
-	private OmConfig config;
 	
-	public Invoice(String targetBase){
-		// computer related data
+	
+	public Invoice(String pathToCreatedPdf, InvoicingParty party, InvoiceRecipient recipient){
 		utils = new OmUtilities();
 		config = new OmConfig();
-		this.targetBase = targetBase;
-		targetFileBaseName = "rechnung"; // relative from save-as
+		this.recipient = recipient;
+		this.party = party;
+		this.targetBase = createTargetBase(pathToCreatedPdf);
+		targetFileBaseName = "rechnung";
 		targetFile = targetFileBaseName + ".tex";
 		targetDir = "rechnung";
 		targetPath = targetBase + targetDir + "/"+ targetFile;
 		targetPathPdf = targetBase + targetDir + "/"+ targetFileBaseName + ".pdf";
-		compilerCommand = "pdflatex";
-		viewerCommand = "evince";
-		// invoicing party
-		firstName = "Jochen"; // aus config
-		lastName = "Bauer"; // aus config
-		street = "Hugo-Geiger-Str."; // aus config
-		streetNumber = "39"; // aus config
-		postalCode = "92237"; // aus config
-		city = "Sulzbach-Rosenberg"; // aus config
-		job = "Ernährungsberater"; // aus dropdown, Konstante
-		jobOptions = new ArrayList<String>();
-		jobOptions.add("Ernährungsberater");
-		jobOptions.add("Tennistrainer");
-		jobOptions.add("Softwareentwickler");
-		phone = "01733928709"; // aus config
-		email = "info@jochen-bauer.net"; // aus config
-		url = "www.jochen-bauer.net"; // aus config
-		bankName = "EthikBank"; // aus config
-		bankAccountNumber = "314 78 27"; // aus config
-		bankCodeNumber = "830 944 95"; // aus config
-		bankBic = "GENO DE F1 ETK"; // aus config
-		bankIban = "DE82 8309 4495 0003 1478 27"; // aus config
-		taxNumber = "201/202/91417"; // aus configS
-		// invoice recipient
-		clientFirstName = "Max"; 
-		clientLastName = "Mustermann";
-		clientMnemonic = "mamustermann";
-		clientCompany = "Musterfirma GmbH";
-		clientStreet = "Musterweg";
-		clientStreetNumber = "2";
-		clientCity = "Musterstadt";
-		clientPostalCode = "12345";
-		// invoice data
 		invoiceOption = "Ernährungsberater";
 		invoiceOptions = new ArrayList<String>();
 		invoiceOptions.add("Ernährungsberatung");
@@ -108,58 +52,8 @@ public class Invoice {
 		invoiceDate = "01.01.2014";
 	}
 	
-	public Invoice(){
-		// computer related data
-		utils = new OmUtilities();
-		targetBase = "/home/jay/curdir/"; // TODO save-as dialog
-		targetFileBaseName = "rechnung"; // relative from save-as
-		targetFile = targetFileBaseName + ".tex";
-		targetDir = "rechnung";
-		targetPath = targetBase + targetDir + "/"+ targetFile;
-		targetPathPdf = targetBase + targetDir + "/"+ targetFileBaseName + ".pdf";
-		compilerCommand = "pdflatex";
-		viewerCommand = "evince";
-		// invoicing party
-		firstName = "Jochen"; // aus config
-		lastName = "Bauer"; // aus config
-		street = "Hugo-Geiger-Str."; // aus config
-		streetNumber = "39"; // aus config
-		postalCode = "92237"; // aus config
-		city = "Sulzbach-Rosenberg"; // aus config
-		job = "Ernährungsberater"; // aus dropdown, Konstante
-		jobOptions = new ArrayList<String>();
-		jobOptions.add("Ernährungsberater");
-		jobOptions.add("Tennistrainer");
-		jobOptions.add("Softwareentwickler");
-		phone = "01733928709"; // aus config
-		email = "info@jochen-bauer.net"; // aus config
-		url = "www.jochen-bauer.net"; // aus config
-		bankName = "EthikBank"; // aus config
-		bankAccountNumber = "314 78 27"; // aus config
-		bankCodeNumber = "830 944 95"; // aus config
-		bankBic = "GENO DE F1 ETK"; // aus config
-		bankIban = "DE82 8309 4495 0003 1478 27"; // aus config
-		taxNumber = "201/202/91417"; // aus configS
-		// invoice recipient
-		clientFirstName = "Max"; 
-		clientLastName = "Mustermann";
-		clientMnemonic = "mamustermann";
-		clientCompany = "Musterfirma GmbH";
-		clientStreet = "Musterweg";
-		clientStreetNumber = "2";
-		clientCity = "Musterstadt";
-		clientPostalCode = "12345";
-		// invoice data
-		invoiceOption = "Ernährungsberater";
-		invoiceOptions = new ArrayList<String>();
-		invoiceOptions.add("Ernährungsberatung");
-		invoiceOptions.add("Ernährungstherapie");
-		invoiceOptions.add("Softwareentwicklung");
-		invoiceOptions.add("Webentwicklung");
-		invoiceOptions.add("Tennistraining");
-		invoiceTitle = "Rechnung";
-		invoiceNumber = "2014-001";
-		invoiceDate = "01.01.2014";
+	private String createTargetBase(String pathToCreatedPdf) {
+		return "/home/jay/curdir/"; // TODO 
 	}
 	
 	public boolean printAsPdf(){
@@ -170,12 +64,14 @@ public class Invoice {
 			utils.createFile(targetPath);
 			boolean res = utils.printStringToFile(content, targetPath);
 			if (res){ 
-				compileInvoice();
+				String compilerCommand = config.getCommandPdfLatex();
+				compileInvoice(compilerCommand);
 				try {
 					Thread.sleep(2000); // 2 sec
 					moveInvoice();
 					Thread.sleep(2000);
-					showInvoice();
+					String viewerCommand = config.getCommandPdfViewer();
+					showInvoice(viewerCommand);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				} 
@@ -193,7 +89,21 @@ public class Invoice {
 		String latexDoc = "";
 		String docClass = getLatexDocumentClass();
 		String usePackage = getLatexUsePackage();
-		String komaVars = getLatexKomaVars();
+		String firstName = party.getFirstName();
+		String lastName = party.getLastName();
+		String job = party.getJob();
+		String street = party.getStreet();
+		String streetNumber = party.getStreetNumber();
+		String postalCode = party.getPostalCode();
+		String city = party.getCity();
+		String phone = party.getPhone();
+		String email = party.getEmail();
+		String url = party.getUrl();
+		String clientMnemonic = recipient.getMnemonic();
+		String bankName = party.getBankName();
+		String bankAccountNumber = party.getBankAccountNumber();
+		String bankCodeNumber = party.getBankCodeNumber();
+		String komaVars = getLatexKomaVars(firstName, lastName, job, street, streetNumber, postalCode, city, phone, email, url, clientMnemonic, bankName, bankAccountNumber, bankCodeNumber);
 		String firstFoot = getLatexFirstFoot();
 		String beginDoc = getLatexBeginDocument();
 		String beginLetter = getLatexBeginLetter();
@@ -308,7 +218,8 @@ public class Invoice {
 		return usePackage;
 	}
 	
-	private String getLatexKomaVars() {
+	private String getLatexKomaVars(String firstName, String lastName, String job, String street, String streetNumber, String postalCode, String city, String phone, String email, String url, String clientMnemonic, String bankName, String bankAccountNumber, String bankCodeNumber) {
+		// principle: single level of abstraction (sla); prefer local vars over properties, choose one strategy per method, i.e. all information via parameter, all information via properties, etc.; improved readability, improved testability, minimization of side effects;
 		String komaVars = "";
 		komaVars += "\\setkomavar{fromname}{";
 		komaVars += firstName + " " + lastName + "\\\\";
@@ -341,7 +252,7 @@ public class Invoice {
 		return komaVars;
 	}
 
-	private void compileInvoice(){
+	private void compileInvoice(String compilerCommand){
 		boolean res = utils.exec(compilerCommand, targetPath);
 		if (res){
 			System.out.println("... compile Invoice erfolgreich.");
@@ -360,7 +271,7 @@ public class Invoice {
 		}
 	}
 	
-	private void showInvoice(){
+	private void showInvoice(String viewerCommand){
 		boolean res = utils.exec(viewerCommand, targetPathPdf);
 		if (res){
 			System.out.println("... show Invoice erfolgreich.");
