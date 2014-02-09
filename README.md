@@ -51,3 +51,43 @@ dazu die Problemursachen analysieren, statt sich den Symptomen zu widmen. Des
 weiteren sollte man ein Versionskontrollsystem einsetzen, Refactorings anwenden
 und jede Session um einen kurzen Review bereichen, etwa den Daily-Review.
 
+Der orange Grad setzt auf die Konzepte des Single Level of Abstraction (SLA), 
+Separation of Concerns (SOC), Source Code Conventions (SCC). Als Praxisanregung
+sollte man auf Issue Tracking setzen und automatisierte Integrationstests 
+fahren. Des Weiteren wird auf das notwendige Lesen von Literatur und auf die 
+Code Reviews verwiesen.
+
+Der gelbe Grad ...
+Interface Segregation Principle (ISP)
+Dependency Inversion Principle (DIP)
+Liskov Substitution Principle (LSP)
+Principle of least astonishment
+Information hiding principle
+Auto-Unit-Tests
+Mockups
+CodeCoverageAnalyse
+Fachevents-Besuche
+Komplexe Refactorings
+
+Der gruene Grad ...
+Open-Closed principle (OCP)
+Tell, don't ask
+Law of demeter
+Continous integration
+Metriken
+Inversion of control container
+Erfahrung weitergeben
+Messen von Fehlern
+
+Der blaue Grad ...
+Entwurf und Implementierungsinkonsistenzen vermeiden;
+Implementation spiegelt den Entwurf;
+You ain't gonna need it;
+Continous delivery;
+Iterative Entwicklung;
+Komponentenorientierung;
+Test first;
+
+Der weisse Grad ...
+Starte wieder beim roten Grad;
+
