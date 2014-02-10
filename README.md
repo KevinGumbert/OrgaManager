@@ -18,10 +18,14 @@ MacOS, Linux und Windows lauffaehig. Fuer die Entwicklung hat sich die Eclipse
 Entwicklungsumgebung bewaehrt. Die Entwickler-Dokumentation befindet sich im 
 Quelltext, in der Datei README.md stehen weitere Hinweise.
 
+Persistenz passiert mittels properties.xml-Datei und SQLite-Datenbank im Ordner
+des Projektes. OmModel.doCreateInvoice() fasst wichtige Schritte zu EclipseLink
+und JPA.
+
 Abhaengigkeiten bestehen zu folgenden Bibliotheken/Projekten: 
 * EclipseLink (JPA 2.1)
 * Selenium 2.39
-* SQLite 
+* SQLite und SQLite-JDBC
 
 Pakete controller, model und view
 ---------------------------------

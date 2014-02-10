@@ -28,7 +28,6 @@ public class Invoice {
 	private String targetPath;
 	private String targetPathPdf;
 	
-	
 	public Invoice(String pathToCreatedPdf, InvoicingParty party, InvoiceRecipient recipient){
 		utils = new OmUtilities();
 		config = new OmConfig();

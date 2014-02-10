@@ -1,36 +1,63 @@
 package orgamanager.model.office;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
+
+import orgamanager.utilities.OmSex;
 
 @Entity
+@Table(name = "InvoiceRecipient")
 public class InvoiceRecipient {
-	
-	// JPA with EclipseLink
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)  
+	@Column(name = "id")
 	private Long id;
+	@Column(name = "firstName")
 	private String firstName;
+	@Column(name = "lastName")
 	private String lastName;
+	@Column(name = "mnemonic")
 	private String mnemonic;
+	@Column(name = "company")
 	private String company;
+	@Column(name = "street")
 	private String street;
+	@Column(name = "streetNumber")
 	private String streetNumber;
+	@Column(name = "city")
 	private String city;
+	@Column(name = "postalCode")
 	private String postalCode;
+	@Column(name = "sex")
+	private OmSex sex;
 	
 	public InvoiceRecipient(){
-		firstName = "Max"; 
-		lastName = "Mustermann";
-		mnemonic = "mamustermann";
+		firstName = "Anton"; 
+		lastName = "Aal";
+		mnemonic = "antaal";
 		company = "Musterfirma GmbH";
 		street = "Musterweg";
 		streetNumber = "2";
 		city = "Musterstadt";
 		postalCode = "12345";
+		sex = OmSex.MALE;
+	}
+	
+	public InvoiceRecipient(String firstName, String lastName, String mnemonic, String company, String street, String streetNumber, String city, String postalCode, OmSex sex){
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.mnemonic = mnemonic;
+		this.company = company;
+		this.street = street;
+		this.streetNumber = streetNumber;
+		this.city = city;
+		this.postalCode = postalCode;
+		this.sex = sex;
 	}
 	
 	public Long getId() {
@@ -103,6 +130,14 @@ public class InvoiceRecipient {
 
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
+	}
+	
+	public OmSex getSex() {
+		return sex;
+	}
+
+	public void setSex(OmSex sex) {
+		this.sex = sex;
 	}
 	
 	@Override

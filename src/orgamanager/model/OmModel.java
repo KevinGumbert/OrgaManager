@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.StringTokenizer;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -18,6 +20,7 @@ import org.junit.runner.Result;
 
 import orgamanager.config.OmConfig;
 import orgamanager.model.office.InvoiceRecipient;
+import orgamanager.model.office.InvoicingParty;
 import orgamanager.model.publications.PublicationsList;
 import orgamanager.selenium.ehc.EhcTests;
 import orgamanager.selenium.joba.JobaTests;
@@ -58,31 +61,17 @@ public class OmModel {
 	}
 	
 	public boolean doCreateInvoice(){
-//		if (!isAuthorized){
+//		if (!isAuthorized){ // TODO uncomment!
 //			return false;
 //		}
-		
-		// db: sqlite, create and manage via firefox addon and copy to workspace
-		// tutorial see tutorialspoint.com/sqlite/sqlite_java.htm
-//		Connection c = null;
-//		try {
-//			Class.forName("org.sqlite.JDBC");
-//			c = DriverManager.getConnection("jdbc:sqlite:orgamanager.sqlite");
-//			//JOptionPane.showMessageDialog(null, "BP0", "DEBUG", JOptionPane.WARNING_MESSAGE);
-//		} catch (Exception e) {
-//			JOptionPane.showMessageDialog(null, "BP1", "DEBUG", JOptionPane.WARNING_MESSAGE);
-//			System.err.println(e.getClass().getName() + ": " + e.getMessage());
-//			System.exit(0);
-//		}
-		
-		// JPA EclipseLink
-		
-		// Ablauf: 
+		// Ablauf:
 		// Rechnung soll erzeugt werden, ich will eine PDF-Datei;
 		// Komponente SaveAs wird im Dialog als FileChooser gebraucht;
-		// Komponente Job und Jobvariante sollte vorab klar sein, damit die passenden Vorbelegungen gesetzt werden;
-		// Absendebutton 
-		// Konfigurationsbildschirm erlaubt Angabe aller Empfaengerdetails, Absendervarianten und Textbloecke;
+		// Komponente Job und Jobvariante sollte vorab klar sein, damit die
+		// passenden Vorbelegungen gesetzt werden;
+		// Absendebutton
+		// Konfigurationsbildschirm erlaubt Angabe aller Empfaengerdetails,
+		// Absendervarianten und Textbloecke;
 		// Verzeichnis mit allen Dateien erzeugen wird, wieder geloescht;
 		
 		// configuration:
@@ -95,7 +84,110 @@ public class OmModel {
 		// TODO vorlage auswahl erlauben bzw. beim erstellen als vorlage speichern ...
 		
 		
-		// Dialog zur Auswahl des Jobs und der Subrechnung
+		// JPA EclipseLink, create emf, em and close afterwards!
+		String PERSISTENCE_UNIT_NAME = "OrgaManager"; // see META-INF persistence.xml
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME); // see JPA book p 57
+		EntityManager em = emf.createEntityManager();
+		String qs = "select r from InvoiceRecipient r";
+		Query q = em.createQuery(qs); // find all entries
+		List<InvoiceRecipient> recipientsList = q.getResultList();
+		int size = recipientsList.size();
+		//System.out.println("Size: " + size + ";");
+		InvoiceRecipient defaultRecipient = null;
+		if (size == 0){ // no entries
+			defaultRecipient = new InvoiceRecipient();
+			recipientsList.add(defaultRecipient);
+		} else {
+			String searchCriteriaLastName = "Aal";
+			Long recId;
+			for (InvoiceRecipient rec : recipientsList){
+				String lastName = rec.getLastName();
+				if (lastName.equals(searchCriteriaLastName)){
+					recId = rec.getId();
+					defaultRecipient = em.find(InvoiceRecipient.class, recId);
+					break;
+				}
+			}
+		}
+		em.persist(defaultRecipient); 	// set object to state managed
+		em.getTransaction().begin(); 	// start synchronizing
+		em.getTransaction().commit(); 	// start to work
+		em.close(); 	// close 1
+		emf.close(); 	// close 2
+		InvoicingParty party = new InvoicingParty();
+		String job = party.getJob();
+		ArrayList<String> jobs = new ArrayList<>(party.getJobOptions());
+		Object[] jobPossibilities = new Object[jobs.size()];
+		jobPossibilities = jobs.toArray();
+		String jobInput = (String) JOptionPane.showInputDialog(
+				null, 				// parent frame 
+				"Beruf:\n",			// content 
+				"OrgaManager", 		// title  
+				JOptionPane.PLAIN_MESSAGE, 
+				null, 				// icon
+				jobPossibilities, 	// dropdown
+				job 				// default value
+		);
+		if ((jobInput != null) && (jobInput.length() > 0)) {
+			if (jobInput.equals(jobPossibilities[0])){
+				// first job, sub options: ...
+				Object[] subjobPossibilities = {"xx xx", "xx xx xx" }; // TODO get invoice options related to job
+				String subJobInput = (String) JOptionPane.showInputDialog(
+						null, 				// parent frame 
+						"Rechnungsart:\n",	// content 
+						"OrgaManager", 		// title  
+						JOptionPane.PLAIN_MESSAGE, 
+						null, 				// icon
+						subjobPossibilities, 	// dropdown
+						job 				// default value
+				);
+				if ((subJobInput != null) && (subJobInput.length() > 0)) {
+					// ask for client template
+					Object[] clientPossibilities = new Object[recipientsList.size()];
+					int i = 0;
+					for (InvoiceRecipient rec : recipientsList){
+						clientPossibilities[i] = rec.getLastName() + " " + rec.getFirstName() + " " + rec.getId();
+						i++;
+					}
+					String clientInput = (String) JOptionPane.showInputDialog(
+							null, 					// parent frame 
+							"Vorlage:\n",			// content 
+							"OrgaManager", 			// title  
+							JOptionPane.PLAIN_MESSAGE, 
+							null, 					// icon
+							clientPossibilities,	// dropdown
+							clientPossibilities[0] 	// default value
+					);
+					//JOptionPane.showMessageDialog(null, ("BP0 " + clientInput + ";"), "DEBUG", JOptionPane.WARNING_MESSAGE);
+					String fullName = new String(clientInput.toString());
+					StringTokenizer st = new StringTokenizer(fullName, " ");
+					String lastName = st.nextToken();
+					String firstName = st.nextToken();
+					String idString = st.nextToken();
+					InvoiceRecipient curRec = null;
+					for (InvoiceRecipient rec : recipientsList){
+						Long idInput = new Long(idString);
+						Long idRec = new Long(rec.getId());
+						if (idInput.equals(idRec)){
+							curRec = rec;
+							break;
+						}
+					}
+					// todo get file
+					// todo create new invoice and print it 
+				} else {
+					// TODO throw
+				}
+			} else if (job.equals(jobPossibilities[1])){
+				
+			} else if (job.equals(jobPossibilities[2])){
+				
+			} else {
+				// TODO throw 
+			}
+		} else {
+			// TODO throw
+		}
 		
 		// Dialog zum Speichern der Datei
 		
@@ -110,27 +202,27 @@ public class OmModel {
 		
 		// JPA usage START
 		// Create entity manager, this step will connect to database, please check JDBC driver on classpath, jdbc URL, jdbc driver name on persistence.xml
-		String PERSISTENCE_UNIT_NAME = "InvoiceRecipient";
-		EntityManagerFactory factory;
-		factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
-		EntityManager em = factory.createEntityManager();
-		Query q = em.createQuery("select r from InvoiceRecipient r"); // Query to existing data
-		List<InvoiceRecipient> recipientsList = q.getResultList();
-		for (InvoiceRecipient recipient : recipientsList) { // loping trough riderList and print out rider
-			System.out.println(recipient);
-		}
-		System.out.println("Size befor insert: " + recipientsList.size()); // Print number of rider
-		em.getTransaction().begin(); // start transaction with method begin()
-		for (int i = 0; i < 10; i++) { // create around 10 rider with dummy data
-			InvoiceRecipient recipient = new InvoiceRecipient();
-			recipient.setFirstName("Recipient-" + i);
-			em.persist(recipient); // insert into database
-		}
-		em.getTransaction().commit(); // commit transaction commit();
-		//List<InvoiceRecipient> recipientsList = q.getResultList();
-		recipientsList = q.getResultList();
-		System.out.println("Size after insert: " + recipientsList.size());
-		em.close();
+		//String PERSISTENCE_UNIT_NAME = "OrgaManager"; // see META-INF persistence.xml
+//		EntityManagerFactory factory;
+//		factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+//		EntityManager em = factory.createEntityManager();
+//		Query q = em.createQuery("select r from InvoiceRecipient r"); // Query to existing data
+//		List<InvoiceRecipient> recipientsList = q.getResultList();
+//		for (InvoiceRecipient recipient : recipientsList) { // loping trough riderList and print out rider
+//			System.out.println(recipient);
+//		}
+//		System.out.println("Size befor insert: " + recipientsList.size()); // Print number of rider
+//		em.getTransaction().begin(); // start transaction with method begin()
+//		for (int i = 0; i < 10; i++) { // create around 10 rider with dummy data
+//			InvoiceRecipient recipient = new InvoiceRecipient();
+//			recipient.setFirstName("Recipient-" + i);
+//			em.persist(recipient); // insert into database
+//		}
+//		em.getTransaction().commit(); // commit transaction commit();
+//		//List<InvoiceRecipient> recipientsList = q.getResultList();
+//		recipientsList = q.getResultList();
+//		System.out.println("Size after insert: " + recipientsList.size());
+//		em.close();
 		// end of JPA usage
 		return true;
 	}
