@@ -18,6 +18,11 @@ MacOS, Linux und Windows lauffaehig. Fuer die Entwicklung hat sich die Eclipse
 Entwicklungsumgebung bewaehrt. Die Entwickler-Dokumentation befindet sich im 
 Quelltext, in der Datei README.md stehen weitere Hinweise.
 
+Abhaengigkeiten bestehen zu folgenden Bibliotheken/Projekten: 
+* EclipseLink (JPA 2.1)
+* Selenium 2.39
+* SQLite 
+
 Pakete controller, model und view
 ---------------------------------
 

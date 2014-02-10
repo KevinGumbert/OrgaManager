@@ -81,7 +81,7 @@ public class EhcTests {
 	public void testLogout(){ // TODO
 		fail("Not yet implemented!");
 	}
-
+	
 	@Test
 	public void testEhomeJson(){
 		//fail("Not yet implemented!");
