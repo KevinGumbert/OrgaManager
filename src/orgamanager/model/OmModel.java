@@ -219,7 +219,24 @@ public class OmModel {
 	}
 
 	public void doCreateAssignment(){
-		JOptionPane.showMessageDialog(null, "BP1","Debug", JOptionPane.WARNING_MESSAGE);
+		JOptionPane.showMessageDialog(null, "BP0","Debug", JOptionPane.WARNING_MESSAGE);
+		
+		// Idee:
+		// Abschlussarbeiten stehen auf website, im studon (Mail an Markus), eine Mail geht an Joerg, Ausdrucke sollten am FAPS sein und auch in der Mensa / Hoersaal 
+		
+		// Bausteine Abschlussarbeitsausschreibung:
+		// Titel
+		// Ausgangssituation
+		// Aufgabenstellung
+		// Inhaltliche Schwerpunkte
+		// Abschlussfuss 
+		
+		// Prozess beim Laufen der Arbeit
+		// Bearbeiter 
+		// Startzeit, Endzeit
+		
+		// Prozess beim Hochladen auf ehome-website
+		
 	}
 
 }

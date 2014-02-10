@@ -19,5 +19,6 @@ public class Main {
 		OmView view = new OmView();
 		OmController controller = new OmController(model, view);
 		controller.prepareForView();
+		// neuer Code 
 	}
 }

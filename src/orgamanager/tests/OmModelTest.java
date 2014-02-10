@@ -296,5 +296,15 @@ public class OmModelTest {
 		assertEquals("doCreatePublicationsTest-9", exp9, act9);
 		
 	}
-	
+
+	@Test
+	public void doCreateAssignmentTest(){
+		// Development area, trigger model without gui ...
+		OmModel model = new OmModel();
+		model.doCreateAssignment();
+		String act0 = "Test";
+		String exp0 = "Test";
+		assertEquals("doCreateAssignmentsTest-0", exp0, act0);
+		
+	}
 }
