@@ -305,6 +305,5 @@ public class OmModelTest {
 		String act0 = "Test";
 		String exp0 = "Test";
 		assertEquals("doCreateAssignmentsTest-0", exp0, act0);
-		
 	}
 }

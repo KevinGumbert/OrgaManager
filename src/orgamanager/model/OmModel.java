@@ -236,7 +236,143 @@ public class OmModel {
 		// Startzeit, Endzeit
 		
 		// Prozess beim Hochladen auf ehome-website
-		
 	}
+	/*		
+	Themen
+
+	Analyse bestehender Kombinations-Algorithmen und Prozesse im AAL- und SmartHome-Bereich
+	Version 2; Status: offen;
+	Ausgangssituation
+	Das E|Home-Center ist eine interdisziplinäre Forschungsgruppe an der FAU Erlangen-Nürnberg. Ressourcenschonendes, 
+	nachhaltiges und intelligentes Wohnen stehen im Vordergrund. Mit dem Älterwerden entstehen bestimmte Anforderungen an 
+	das Wohnumfeld, damit ein selbstbestimmter Alltag möglichst lange aufrecht erhalten werden kann. Im Forschungsfeld 
+	Ambient Assisted Living (AAL) werden technische Assistenzsysteme für diese Anforderungen entwickelt. Es besteht 
+	Potential Prozeduren und Algorithmen aus dem AAL- und SmartHome-Bereich zu kombinieren und so für zusätzliche 
+	Funktionalität zu sorgen.
+	Aufgabenstellung
+	Es existieren etwa Algorithmen, die die Beschleunigung und den Puls des Bewohners beobachten und darauf aufbauend 
+	eine Aussage zu den Vitaldaten treffen. Am E|Home-Center besitzt das Herz der intelligenten Wohnung eine Schnittstelle 
+	ins Internet. Aus diesem Grund sind Dienste, wie ifttt.com interessant, die es erlauben, verschiedene Webanwendungen, 
+	wie etwa facebook, ´Weather und Dropbox automatisiert zu steuern. Hieraus ergibt sich durch Kombination eine schier 
+	unendlich große Vielfalt an Funktionalität. Erste Geschäftsmodelle auf Basis ausschließlicher Algorithmik entstehen, 
+	etwa die Firma YETU. Bestehende UseCases für den AAL- und SmartHome-Bereich sind zu detektieren und neue Ideen zu 
+	kreieren. 
+	Inhaltliche Schwerpunkte
+	Ermittlung bestehender domänenübergreifenden Prozeduren im AAL- und SmartHome-Bereich; 
+	Analyse des Service-Dienstes ifttt und YETU;
+	Kreation neuer Anwendungsfälle;
+
+	Analyse der Forschungslandschaft Ambient Assisted Living anhand bisheriger AAL-Kongresse
+	Version 2; Status: offen;
+	Ausgangssituation
+	Das E|Home-Center ist eine interdisziplinäre Forschungsgruppe an der FAU Erlangen-Nürnberg. Ressourcenschonendes,
+	nachhaltiges und intelligentes Wohnen stehen im Vordergrund. Mit dem Älterwerden entstehen bestimmte Anforderungen 
+	an das Wohnumfeld, damit ein selbstbestimmter Alltag möglichst lange aufrecht erhalten werden kann. Im Forschungsfeld 
+	Ambient Assisted Living (AAL) werden technische Assistenzsysteme für diese Anforderungen entwickelt. Beim jährlichen 
+	AAL-Kongress begegnen sich Forscher dieser Domäne und stellen ihre Arbeiten vor.   
+	Aufgabenstellung
+	Im Rahmen der Arbeit gilt es die Arbeiten der vergangenen sieben AAL-Kongresse zu sichten und zu gruppieren. Aus dieser 
+	Gruppierung sollte ein Bild aller für die Domäne relevnten Fragestellungen erkennbar sein. Des Weiteren sollte aus der 
+	Analyse hervorgehen, inwieweit sich die Relevanz der Themen über die Zeitachse entwickelt hat, also welche 
+	Fragestellungen gelöst werden konnten, welche weiterhin ungelöst blieben und vor allem, welche Fragen in Zukunft 
+	vermutlich eine hohe Relevanz einnehmen. Darüber hinaus soll die Relevanz des AAL-Kongresses bewertet werden und 
+	thematisch angrenzende Kongresse und Journals ermittelt werden.
+	Inhaltliche Schwerpunkte
+	Ermittlung der Relevanz und thematisch angrenzender Fachzeitschriften und -Kongresse; 
+	Analyse der bisherigen Tagungsbände der AAL-Kongresse;
+	Stellungnahme für die zukünftig relevanten Fragestellungen für die Domäne;
+
+	Entwurf eines Algorithmus zur Unterstützung von Wissenschaftlern beim Publizieren auf Basis einer Literaturdatenbank
+	Version 5; Status: offen;
+	Ausgangssituation
+	Beim Erstellen einer Publikation ist die Literaturrecherche und -organisation von großer Bedeutung. Der Einsatz für 
+	diesen Zweck entwickelter Software, etwa von Citavi ist insbesondere für interdisziplinär arbeitende Forschergruppen 
+	hilfreich. Es existieren Kennzahlen, um die wissenschaftliche Leistung eines Forschers zu bewerten, etwa der 
+	Hirschfaktor. Solche Kennzahlen werden von Literaturverwaltungsprogrammen aktuell nicht berücksichtigt. Für eine 
+	Forschergruppe ist es hilfreich, wenn ein Autor einen Vorschlag bei der Anfertigung einer Arbeit erhält, welche anderen
+	Arbeiten aus der Literaturdatenbank unter Berücksichtigung des Hirschfaktors für eine Referenzierung geeignet sind. 
+	Ebenso soll ein Vorschlag erfolgen, welche Kongresse, Fachzeitschriften und Communities für die Publikation relevant 
+	sind.
+	Aufgabenstellung
+	Es ist ein Algorithmus zu erstellen, der aus einer Literaturdatenbank, die Einträge findet, die als Referenz geeignet
+	sind, damit der Hirschfaktor für vorher angegebene Autoren positiv beeinflusst wird. Der Algorithmus ist zu 
+	implementieren und mit einer grafischen Oberfläche zu versehen. Beim Bau der Anwendung kann unterstützt werden, es 
+	existiert ein Architekturgerüst auf Basis von Java-Swing. Der Datenbestand liegt in Form eines Citavi-Projektes bzw. 
+	einer Bibtex-Datenbank vor. Angrenzende Optimierungsmöglichkeiten sind zu ermitteln, etwa in welchen Webkatalogen und
+	Verzeichnisse auf die Publikation aufmerksam gemacht werden sollte. Inwieweit angrenzende Optimierungsmöglichkeiten 
+	umzusetzen sind, muss im Einzelfall abgesprochen werden.
+	Inhaltliche Schwerpunkte
+	Ermittlung und Bewertung relevanter wissenschaftlicher Kennzahlen;
+	Ermittlung relevanter wissenschaftlicher Kongresse, Fachzeitschriften und Communities;
+	Entwurf eines Algorithmus, der für den Hirschfaktor hilfreiche zu referenzierende Quellen vorschlägt; 
+	Implementierung des Algorithmus;
+	Analyse und etwaige Umsetzung weiterer Optimierungspotentiale; 
+
+	Desease Management Systeme Ernährungsberatung
+	Version: 2; Status: offen;
+	Ausgangssituation
+	Das E|Home-Center ist eine interdisziplinäre Forschungsgruppe an der FAU Erlangen-Nürnberg. Ressourcenschonendes, 
+	nachhaltiges und intelligentes Wohnen stehen im Vordergrund. Mit dem Älterwerden entstehen bestimmte Anforderungen an
+	das Wohnumfeld. Im Forschungsfeld Ambient Assisted Living (AAL) werden technische Assistenzsysteme für diese 
+	Anforderungen entwickelt und damit dem Bewohner ermöglicht, dass dieser länger in seiner gewohntem Umgebung verbleiben 
+	kann. 
+	Aufgabenstellung
+	Für diverse Krankheitsbilder existieren Software-Werkzeuge oder Webawendungen, die versuchen den Alltag für den 
+	Betroffenen zu erleichtern, etwa Gewichtsreduktionsprogramme für Adipöse oder Blutzucker-Monitoring-Programme für 
+	Diabetiker. Es herrscht keine Verbindung zwischen Wohnung, Patient und Arzt. Smartphone-Apps sind personenzentriert, 
+	es herrscht hingegen keine Verbindung in der Wohnung verfügbarer Sensorik. Die Wohnung als solche verfügt über die 
+	Daten, kann diese aber wiederum nicht exportieren. Die Beobachtung der Nährstoffe und Energieaufnahme ist für diverse 
+	Krankheitsbilder relevant. Der aktuelle Stand der Forschung soll erhoben werden, inwieweit eine Anbindung an einer 
+	Lebensmitteldatenbank als Quelle für eine Serviceplattform dienen kann.   
+	Inhaltliche Schwerpunkte
+	Ermittlung relevanter softwaregestützter Gewichtsreduktionsprogramme;
+	Ermittlung und Bewertung unterschiedlicher Strategien der Bereitstellung von Nahrungsmittelinhaltsstoffen dieser Programme; 
+	Konzeption der Bereitstellung von Nahrungsmittelbestandteilen auf einer AAL-Serviceplattform;
+	Realisierung des Konzepts in Form eines Demonstrators 
+
+	Desease Management Systeme Ernährungsberatung
+	Version: 2; Status: offen;
+	Ausgangssituation
+	Das E|Home-Center ist eine interdisziplinäre Forschungsgruppe an der FAU Erlangen-Nürnberg. Ressourcenschonendes, 
+	nachhaltiges und intelligentes Wohnen stehen im Vordergrund. Mit dem Älterwerden entstehen bestimmte Anforderungen an
+	das Wohnumfeld. Im Forschungsfeld Ambient Assisted Living (AAL) werden technische Assistenzsysteme für diese 
+	Anforderungen entwickelt und damit dem Bewohner ermöglicht, dass dieser länger in seiner gewohntem Umgebung verbleiben 
+	kann. 
+	Aufgabenstellung
+	Für diverse Krankheitsbilder existieren Software-Werkzeuge oder Webawendungen, die versuchen den Alltag für den 
+	Betroffenen zu erleichtern, etwa Gewichtsreduktionsprogramme für Adipöse oder Blutzucker-Monitoring-Programme für 
+	Diabetiker. Es herrscht keine Verbindung zwischen Wohnung, Patient und Arzt. Smartphone-Apps sind personenzentriert, 
+	es herrscht hingegen keine Verbindung in der Wohnung verfügbarer Sensorik. Die Wohnung als solche verfügt über die 
+	Daten, kann diese aber wiederum nicht exportieren. Die Beobachtung der Nährstoffe und Energieaufnahme ist für diverse 
+	Krankheitsbilder relevant. Der aktuelle Stand der Forschung soll erhoben werden, inwieweit eine Anbindung an einer 
+	Lebensmitteldatenbank als Quelle für eine Serviceplattform dienen kann.   
+	Inhaltliche Schwerpunkte
+	Ermittlung relevanter softwaregestützter Gewichtsreduktionsprogramme;
+	Ermittlung und Bewertung unterschiedlicher Strategien der Bereitstellung von Nahrungsmittelinhaltsstoffen dieser Programme; 
+	Konzeption der Bereitstellung von Nahrungsmittelbestandteilen auf einer AAL-Serviceplattform;
+	Realisierung des Konzepts in Form eines Demonstrators 
+
+	OPC-UA und OSGI OpenHAB
+	Version: 2; Status: offen;
+	Ausgangssituation
+	Das E|Home-Center ist eine interdisziplinäre Forschungsgruppe an der FAU Erlangen-Nürnberg. Ressourcenschonendes, 
+	nachhaltiges und intelligentes Wohnen stehen im Vordergrund. Mit dem Älterwerden entstehen bestimmte Anforderungen an
+	das Wohnumfeld. Im Forschungsfeld Ambient Assisted Living (AAL) werden technische Assistenzsysteme für diese 
+	Anforderungen entwickelt und damit dem Bewohner ermöglicht, dass dieser länger in seiner gewohntem Umgebung verbleiben 
+	kann. 
+	Aufgabenstellung
+	Für diverse Krankheitsbilder existieren Software-Werkzeuge oder Webawendungen, die versuchen den Alltag für den 
+	Betroffenen zu erleichtern, etwa Gewichtsreduktionsprogramme für Adipöse oder Blutzucker-Monitoring-Programme für 
+	Diabetiker. Es herrscht keine Verbindung zwischen Wohnung, Patient und Arzt. Smartphone-Apps sind personenzentriert, 
+	es herrscht hingegen keine Verbindung in der Wohnung verfügbarer Sensorik. Die Wohnung als solche verfügt über die 
+	Daten, kann diese aber wiederum nicht exportieren. Die Beobachtung der Nährstoffe und Energieaufnahme ist für diverse 
+	Krankheitsbilder relevant. Der aktuelle Stand der Forschung soll erhoben werden, inwieweit eine Anbindung an einer 
+	Lebensmitteldatenbank als Quelle für eine Serviceplattform dienen kann.   
+	Inhaltliche Schwerpunkte
+	Ermittlung relevanter softwaregestützter Gewichtsreduktionsprogramme;
+	Ermittlung und Bewertung unterschiedlicher Strategien der Bereitstellung von Nahrungsmittelinhaltsstoffen dieser Programme; 
+	Konzeption der Bereitstellung von Nahrungsmittelbestandteilen auf einer AAL-Serviceplattform;
+	Realisierung des Konzepts in Form eines Demonstrators 
+	*/
 
 }
