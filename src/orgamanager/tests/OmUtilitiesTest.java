@@ -124,25 +124,5 @@ public class OmUtilitiesTest {
 		OmUtilities utils10 = new OmUtilities();
 		String act10 = utils10.replaceBibtexChars(str10);
 		assertEquals("replaceBibtexMutatedVowelsTest()- 10", exp10, act10);
-		
-		// TODO uppercasevowels
-		
-//		String inproceedingsCitation1 = "";
-//		inproceedingsCitation1 += "@inproceedings{Bauer.2014,\n";
-//		inproceedingsCitation1 += " abstract = {Mit dem Konzept des Ambient Assisted Living (AAL) sollen technische Hilfestellungen entwickelt werden, um den l{\\\"a}ngeren Verbleib {\\\"a}lterer Menschen im gewohnten Umfeld zu erm{\\\"o}glichen. Meist werden solche technischen Hilfestellungen jedoch stark technologiegetrieben entwickelt und entsprechen nicht dem tats{\\\"a}chlichen Bed{\\\"u}rfnis der Endanwender. Das im Projekt verwendete Vorgehen der menschzentrierten Gestaltung stellt hingegen den Benutzer in den Mittelpunkt: Auf diese Weise sollen Fehlentwicklungen von Anfang an vermieden werden und ein gebrauchstaugliches System entstehen. Durch Usability-Tests werden zielgruppenspezifische Probleme im Umgang mit AAL-Serviceplattformen erkannt und m{\\\"o}gliche L{\\\"o}sungsvorschl{\\\"a}ge durchdacht.},\n";
-//		inproceedingsCitation1 += " author = {Bauer, Jochen and Kettschau, Anna and Franke, J{\\\"o}rg},\n";
-//		inproceedingsCitation1 += " title = {Optimierung der Datenvisualisierung von AAL-Serviceplattformen durch Usability-Tests},\n";
-//		inproceedingsCitation1 += " keywords = {E|Home;AAL;Smart Home;Mensch-Maschine-Interaktion},\n";
-//		inproceedingsCitation1 += " publisher = {VDE Verlag Gmbh},\n";
-//		inproceedingsCitation1 += " isbn = {978-3-8007-3574-7},\n";
-//		inproceedingsCitation1 += " editor = {VDE and BMBF and {Sozialverband VdK} and Fraunhofer-AAL},\n";
-//		inproceedingsCitation1 += " booktitle = {Wohnen - Pflege - Teilhabe {\\dq}Besser leben durch Technik{\\dq}},\n";
-//		inproceedingsCitation1 += " year = {2014},\n";
-//		inproceedingsCitation1 += " address = {Berlin}\n";
-//		inproceedingsCitation1 += "}\n";
-//		Citation citation1 = new Citation(inproceedingsCitation1);
-//		String exp1 = "Bauer J.; Kettschau A.; Franke J.: Optimierung der Datenvisualisierung von AAL-Serviceplattformen durch Usability-Tests. In: VDE; BMBF; Sozialverband VdK; Fraunhofer-AAL: Wohnen - Pflege - Teilhabe {\\dq}Besser leben durch Technik{\\dq}. Berlin: VDE Verlag Gmbh, 2014";
-//		String act1 = citation1.getReference();
-//		assertEquals("doCreatePublicationsTest-1", exp1, act1);	
 	}
 }
