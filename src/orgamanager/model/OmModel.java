@@ -340,30 +340,31 @@ public class OmModel {
 	/*		
 	Themen
 	
-	Analyse bestehender Kombinations-Algorithmen und Prozesse im AAL- und SmartHome-Bereich
-	Version 2; Status: offen;
-	Ausgangssituation
-	Das E|Home-Center ist eine interdisziplinäre Forschungsgruppe an der FAU Erlangen-Nürnberg. Ressourcenschonendes, 
-	nachhaltiges und intelligentes Wohnen stehen im Vordergrund. Mit dem Älterwerden entstehen bestimmte Anforderungen an 
-	das Wohnumfeld, damit ein selbstbestimmter Alltag möglichst lange aufrecht erhalten werden kann. Im Forschungsfeld 
-	Ambient Assisted Living (AAL) werden technische Assistenzsysteme für diese Anforderungen entwickelt. Es besteht 
-	Potential Prozeduren und Algorithmen aus dem AAL- und SmartHome-Bereich zu kombinieren und so für zusätzliche 
-	Funktionalität zu sorgen.
-	Aufgabenstellung
-	Es existieren etwa Algorithmen, die die Beschleunigung und den Puls des Bewohners beobachten und darauf aufbauend 
-	eine Aussage zu den Vitaldaten treffen. Am E|Home-Center besitzt das Herz der intelligenten Wohnung eine Schnittstelle 
-	ins Internet. Aus diesem Grund sind Dienste, wie ifttt.com interessant, die es erlauben, verschiedene Webanwendungen, 
-	wie etwa facebook, ´Weather und Dropbox automatisiert zu steuern. Hieraus ergibt sich durch Kombination eine schier 
-	unendlich große Vielfalt an Funktionalität. Erste Geschäftsmodelle auf Basis ausschließlicher Algorithmik entstehen, 
-	etwa die Firma YETU. Bestehende UseCases für den AAL- und SmartHome-Bereich sind zu detektieren und neue Ideen zu 
-	kreieren. 
-	Inhaltliche Schwerpunkte
-	Ermittlung bestehender domänenübergreifenden Prozeduren im AAL- und SmartHome-Bereich; 
-	Analyse des Service-Dienstes ifttt und YETU;
-	Kreation neuer Anwendungsfälle;
+Analyse bestehender Kombinations-Algorithmen und Prozesse im AAL- und SmartHome-Bereich
+Version 2; Status: offen;
+Ausgangssituation
+Das E|Home-Center ist eine interdisziplinäre Forschungsgruppe an der FAU Erlangen-Nürnberg. Ressourcenschonendes, 
+nachhaltiges und intelligentes Wohnen stehen im Vordergrund. Mit dem Älterwerden entstehen bestimmte Anforderungen an 
+das Wohnumfeld, damit ein selbstbestimmter Alltag möglichst lange aufrecht erhalten werden kann. Im Forschungsfeld 
+Ambient Assisted Living (AAL) werden technische Assistenzsysteme für diese Anforderungen entwickelt. Es besteht 
+Potential Prozeduren und Algorithmen aus dem AAL- und SmartHome-Bereich zu kombinieren und so für zusätzliche 
+Funktionalität zu sorgen.
+Aufgabenstellung
+Es existieren etwa Algorithmen, die die Beschleunigung und den Puls des Bewohners beobachten und darauf aufbauend 
+eine Aussage zu den Vitaldaten treffen. Am E|Home-Center besitzt das Herz der intelligenten Wohnung eine Schnittstelle 
+ins Internet. Aus diesem Grund sind Dienste, wie ifttt.com interessant, die es erlauben, verschiedene Webanwendungen, 
+wie etwa facebook, ´Weather und Dropbox automatisiert zu steuern. Hieraus ergibt sich durch Kombination eine schier 
+unendlich große Vielfalt an Funktionalität. Erste Geschäftsmodelle auf Basis ausschließlicher Algorithmik entstehen, 
+etwa die Firma YETU. Bestehende UseCases für den AAL- und SmartHome-Bereich sind zu detektieren und neue Ideen zu 
+kreieren. 
+Inhaltliche Schwerpunkte
+Ermittlung bestehender domänenübergreifenden Prozeduren im AAL- und SmartHome-Bereich; 
+Analyse des Service-Dienstes ifttt und YETU;
+Kreation neuer Anwendungsfälle;
 
 Desease Management Systeme Ernährungsberatung
-Version: 3; Status: offen;
+Nahrungsmittelinformationen im Smarthome-Bereich
+Version: 4; Status: offen;
 Ausgangssituation
 Das E|Home-Center ist eine interdisziplinäre Forschungsgruppe an der FAU Erlangen-Nürnberg. Ressourcenschonendes, 
 nachhaltiges und intelligentes Wohnen stehen im Vordergrund. Mit dem Älterwerden entstehen bestimmte Anforderungen an
@@ -373,39 +374,33 @@ kann.
 Aufgabenstellung
 Für diverse Krankheitsbilder existieren Software-Werkzeuge oder Webawendungen, die versuchen den Alltag für den 
 Betroffenen zu erleichtern, etwa Gewichtsreduktionsprogramme für Adipöse oder Blutzucker-Monitoring-Programme für 
-Diabetiker. Es herrscht hingegen keine Verbindung zwischen Wohnung, Patient und Arzt. Smartphone-Anwendungen sind 
-personenzentriert, 
-es herrscht hingegen keine Verbindung in der Wohnung verfügbarer Sensorik. Die Wohnung als solche verfügt über die 
-Daten, kann diese aber wiederum nicht exportieren. Die Beobachtung der Nährstoffe und Energieaufnahme ist für diverse 
-Krankheitsbilder relevant. Der aktuelle Stand der Forschung soll erhoben werden, inwieweit eine Anbindung an einer 
-Lebensmitteldatenbank als Quelle für eine Serviceplattform dienen kann.   
+Diabetiker. Des Weiteren scheint die Ernährung für die Prävention ein relevanter Faktor zu sein. Aktuell existieren 
+bereits diverse Lebensmitteldatenbanken und diverse Ernährungsapps. Es herrscht hingegen keine Verbindung zwischen 
+der Sensorik in der Wohnung und der Smartphone-App. Im Rahmen der Arbeit gilt es den aktuellen Stand der Forschung 
+zum Thema Ernährungsinformation im Smarthome zu erheben und ein Konzept für eine Service-Plattform zu erstellen.
 Inhaltliche Schwerpunkte
-Ermittlung relevanter softwaregestützter Gewichtsreduktionsprogramme;
-Ermittlung und Bewertung unterschiedlicher Strategien der Bereitstellung von Nahrungsmittelinhaltsstoffen dieser Programme; 
-Konzeption der Bereitstellung von Nahrungsmittelbestandteilen auf einer AAL-Serviceplattform;
-Realisierung des Konzepts in Form eines Demonstrators 
+Ermittlung relevanter Apps und Softwareanwendungen im Bereich Ernährung;
+Ermittlung und Bewertung der Bereitstellungsstrategien von Nahrungsmittelinhaltsstoffen; 
+Analyse der Potentiale von Ernährungsinformation im Smarthome-Bereich;
+Konzeption der Bereitstellung von Nahrungsmittelbestandteilen für eine AAL-Serviceplattform;
+Realisierung des Konzepts in Form eines Demonstrators;
 
 Dezentrale Ansätze Systeme zur Hausautomatisierung
+Version 2; Status: offen;
 Ausgangssituation
 Das E|Home-Center ist eine interdisziplinäre Forschungsgruppe an der FAU Erlangen-Nürnberg. Ressourcenschonendes, 
-nachhaltiges und intelligentes Wohnen stehen im Vordergrund. Mit dem Älterwerden entstehen bestimmte Anforderungen an
-das Wohnumfeld. Im Forschungsfeld Ambient Assisted Living (AAL) werden technische Assistenzsysteme für diese 
-Anforderungen entwickelt und damit dem Bewohner ermöglicht, dass dieser länger in seiner gewohntem Umgebung verbleiben 
-kann. 
+nachhaltiges und intelligentes Wohnen stehen im Vordergrund. Angelehnt an aktuell stark diskutierte Themen, etwa 
+Industrie 4.0, Smart Grid und das Internet der Dinge, betrachten wir das Wohnen in der Zukunft als dezentral 
+organisierten Verbund einzelner eingebetteter Systeme. Es stellt sich die Frage, welche Konsequenz an die Softwarearchitektur
+zu stellen sind, damit diese Vision Realität werden kann.  
 Aufgabenstellung
-Für diverse Krankheitsbilder existieren Software-Werkzeuge oder Webawendungen, die versuchen den Alltag für den 
-Betroffenen zu erleichtern, etwa Gewichtsreduktionsprogramme für Adipöse oder Blutzucker-Monitoring-Programme für 
-Diabetiker. Es herrscht hingegen keine Verbindung zwischen Wohnung, Patient und Arzt. Smartphone-Anwendungen sind 
-personenzentriert, 
-es herrscht hingegen keine Verbindung in der Wohnung verfügbarer Sensorik. Die Wohnung als solche verfügt über die 
-Daten, kann diese aber wiederum nicht exportieren. Die Beobachtung der Nährstoffe und Energieaufnahme ist für diverse 
-Krankheitsbilder relevant. Der aktuelle Stand der Forschung soll erhoben werden, inwieweit eine Anbindung an einer 
-Lebensmitteldatenbank als Quelle für eine Serviceplattform dienen kann.   
+Im intelligenten Haus ist es wünschenswert, dass sich einzele Systemkomponenten selbst zu einem Verbund zusammenschließen, sich 
+selbst beschreiben, konfigurieren und managen. Es gilt sich im Rahmen dieser Arbeit einen Überblick über die softwaretechnischen
+Möglichkeiten zur Umsetzung dieser Anforderung zu verschaffen und darauf aufbauen einen Demonstrator zu konzeptionieren und diesen
+umzusetzen.  
 Inhaltliche Schwerpunkte
-Ermittlung relevanter softwaregestützter Gewichtsreduktionsprogramme;
-Ermittlung und Bewertung unterschiedlicher Strategien der Bereitstellung von Nahrungsmittelinhaltsstoffen dieser Programme; 
-Konzeption der Bereitstellung von Nahrungsmittelbestandteilen auf einer AAL-Serviceplattform;
-Realisierung des Konzepts in Form eines Demonstrators
+Ermittlung geeigneter IT-Architekturen zur Umsetzung dezentraler Systeme;
+Umsetzung eines dezentral organisierten Verbund aus Systemkomponenten in Form eines Demonstrators; 
  
 OPC-UA und OSGI OpenHAB
 Version: 2; Status: offen;
@@ -413,14 +408,12 @@ Ausgangssituation
 Das E|Home-Center ist eine interdisziplinäre Forschungsgruppe an der FAU Erlangen-Nürnberg. Ressourcenschonendes, 
 nachhaltiges und intelligentes Wohnen stehen im Vordergrund. In einer intelligenten Wohnung existieren oft Lösungen 
 zum Monitoring von Energie- und Vitaldaten. Derartige Insellösungen sind zu vernetzen oder eine passende Middleware
-zu finden. Für eine solche Middleware ist ein geschickter 
-Ansatz zu wählen, der förderlich für die Interoperabilität und die dynamische Systemerweiterung ist. 
+zu finden. Für eine solche Middleware ist ein geschickter Ansatz zu wählen, der förderlich für die Interoperabilität und die dynamische Systemerweiterung ist. 
 Aufgabenstellung
 Das OSGi-Framework ist ein Rahmenwerk, um zur Laufzeit ein System um Komponenten zu erweitern. Als Referenzimplementierung
 für die Gebäudeautomation dient openHAB.  
 Die OPC Unified Architecture (OPC-UA) ist ein Kommunikationsstandard, der sich im Bereich der industriellen Maschine-Maschine-Kommunikation
 bewährt hat. Es gilt im Rahmen der Arbeit das Potential von OPC-UA für den SmartHome-Bereich zu ermitteln. 
-  
 Inhaltliche Schwerpunkte
 Analyse theoretischer Grundlagen von OSGI, openHAB und OPC-UA; 
 Bau eines Demonstrators auf OSGI-Basis (openHAB);
@@ -428,10 +421,5 @@ Bau eines Demonstrators auf OPC-UA-Basis;
 Ermittlung der Potentiale der beiden Ansätze für die Gebäudeautomation; 
 	
 */
-
-// OSGI openHab
-// Webanwendung (PHP-MySQL-Basis/ZendFramework Abstraktionsschicht fuer Energie- und Gesundheitsdaten 
-// SOA
-// OPC-UA
 	
 }
