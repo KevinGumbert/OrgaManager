@@ -54,7 +54,7 @@ public class Main {
 		        }
 		    }
 		} catch (Exception e) {
-		    // If Nimbus is not available, you can set the GUI to another look and feel.
+		    // If Metal is not available, you can set the GUI to another look and feel.
 		}
 	}
 	
