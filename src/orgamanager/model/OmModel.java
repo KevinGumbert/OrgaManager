@@ -340,27 +340,28 @@ public class OmModel {
 	/*		
 	Themen
 	
-Analyse bestehender Kombinations-Algorithmen und Prozesse im AAL- und SmartHome-Bereich
-Version 2; Status: offen;
+Analyse von Kombinationsmöglichkeiten bestehender Algorithmen im AAL- und SmartHome-Bereich
+Version 3; Status: offen;
 Ausgangssituation
 Das E|Home-Center ist eine interdisziplinäre Forschungsgruppe an der FAU Erlangen-Nürnberg. Ressourcenschonendes, 
 nachhaltiges und intelligentes Wohnen stehen im Vordergrund. Mit dem Älterwerden entstehen bestimmte Anforderungen an 
 das Wohnumfeld, damit ein selbstbestimmter Alltag möglichst lange aufrecht erhalten werden kann. Im Forschungsfeld 
-Ambient Assisted Living (AAL) werden technische Assistenzsysteme für diese Anforderungen entwickelt. Es besteht 
-Potential Prozeduren und Algorithmen aus dem AAL- und SmartHome-Bereich zu kombinieren und so für zusätzliche 
-Funktionalität zu sorgen.
+Ambient Assisted Living (AAL) werden technische Assistenzsysteme für diese Anforderungen entwickelt. Durch die Kombination
+bestehender Prozeduren und Algorithmen aus dem AAL- und SmartHome-Bereich entstehen vermutlich positive Effekte für den 
+Bewohner und damit einhergehend ein merklicher Mehrwert.
 Aufgabenstellung
-Es existieren etwa Algorithmen, die die Beschleunigung und den Puls des Bewohners beobachten und darauf aufbauend 
-eine Aussage zu den Vitaldaten treffen. Am E|Home-Center besitzt das Herz der intelligenten Wohnung eine Schnittstelle 
-ins Internet. Aus diesem Grund sind Dienste, wie ifttt.com interessant, die es erlauben, verschiedene Webanwendungen, 
-wie etwa facebook, ´Weather und Dropbox automatisiert zu steuern. Hieraus ergibt sich durch Kombination eine schier 
-unendlich große Vielfalt an Funktionalität. Erste Geschäftsmodelle auf Basis ausschließlicher Algorithmik entstehen, 
-etwa die Firma YETU. Bestehende UseCases für den AAL- und SmartHome-Bereich sind zu detektieren und neue Ideen zu 
-kreieren. 
+Durch das Monitoring von Beschleunigung und Puls eines Bewohners kann eine Aussage zu dessen Vitaldaten getroffen werden.
+Des Weiteren sind Webdienste für eine schlaue Wohnung konsumierbar, sofern eine Wohnung über das Internet angesteuert werden kann.
+Dienste, etwa ifttt.com werden interessant, da diese erlauben, verschiedene Webanwendungen, 
+etwa facebook oder Dropbox automatisiert zu steuern. Hieraus ergeben sich zahlreiche Kombinationsmöglichkeiten.
+Erste Geschäftsmodelle entstehen, die weniger auf Sensorik und mehr auf Algorithmen setzen, etwa das Modell der Firma YETU. 
+Bestehende für Algorithmen relevante Anwendungsfälle für den AAL- und SmartHome-Bereich sind zu ermitteln und darauf aufbauend
+neue Anwendungsfälle durch Kombination zu kreieren.
 Inhaltliche Schwerpunkte
-Ermittlung bestehender domänenübergreifenden Prozeduren im AAL- und SmartHome-Bereich; 
-Analyse des Service-Dienstes ifttt und YETU;
-Kreation neuer Anwendungsfälle;
+Ermittlung bestehender relevanter Prozeduren bzw. Algorithmen im AAL- und SmartHome-Bereich; 
+Analyse des Potentials von Web-Diensten wie ifttt;
+Konzeption neuer Anwendungsfälle;
+Implementierung der Anwendungsfälle;
 
 Desease Management Systeme Ernährungsberatung
 Nahrungsmittelinformationen im Smarthome-Bereich
@@ -403,20 +404,23 @@ Ermittlung geeigneter IT-Architekturen zur Umsetzung dezentraler Systeme;
 Umsetzung eines dezentral organisierten Verbund aus Systemkomponenten in Form eines Demonstrators; 
  
 OPC-UA und OSGI OpenHAB
-Version: 2; Status: offen;
+Version: 3; Status: offen;
 Ausgangssituation
 Das E|Home-Center ist eine interdisziplinäre Forschungsgruppe an der FAU Erlangen-Nürnberg. Ressourcenschonendes, 
-nachhaltiges und intelligentes Wohnen stehen im Vordergrund. In einer intelligenten Wohnung existieren oft Lösungen 
-zum Monitoring von Energie- und Vitaldaten. Derartige Insellösungen sind zu vernetzen oder eine passende Middleware
-zu finden. Für eine solche Middleware ist ein geschickter Ansatz zu wählen, der förderlich für die Interoperabilität und die dynamische Systemerweiterung ist. 
+nachhaltiges und intelligentes Wohnen stehen im Vordergrund. In einer intelligenten Wohnung existieren oft Bausteine
+unterschiedlicher Domänen, etwa aus der Energie- und Gesundheitsdomäne. Des Weiteren gibt es zahlreiche Hersteller, die
+diverse Kommunikationsstandards einsetzen. Zukünftig soll es für den Bewohner möglich sein, dass er alle Geräte von einer
+Oberfläche hersteller- und domänenübergreifend ansteuern kann. Des Weiteren muss eine intelligente Wohnung leicht um neue
+Komponenten erweiterbar sein. Es gilt folglich eine passende Architektur zu wählen, die diese Anforderungen an ein System
+beherrschen kann. 
 Aufgabenstellung
 Das OSGi-Framework ist ein Rahmenwerk, um zur Laufzeit ein System um Komponenten zu erweitern. Als Referenzimplementierung
-für die Gebäudeautomation dient openHAB.  
-Die OPC Unified Architecture (OPC-UA) ist ein Kommunikationsstandard, der sich im Bereich der industriellen Maschine-Maschine-Kommunikation
-bewährt hat. Es gilt im Rahmen der Arbeit das Potential von OPC-UA für den SmartHome-Bereich zu ermitteln. 
+für die Gebäudeautomation dient openHAB. Die OPC Unified Architecture (OPC-UA) ist ein Kommunikationsstandard, der sich im 
+Bereich der industriellen Maschine-Maschine-Kommunikation bewährt hat. Es gilt im Rahmen der Arbeit das Potential von OPC-UA 
+und OSGI bzw. openHAB für den SmartHome-Bereich zu ermitteln. 
 Inhaltliche Schwerpunkte
 Analyse theoretischer Grundlagen von OSGI, openHAB und OPC-UA; 
-Bau eines Demonstrators auf OSGI-Basis (openHAB);
+Bau eines Demonstrators auf OSGI-Basis unter Zuhilfenahme von openHAB;
 Bau eines Demonstrators auf OPC-UA-Basis;
 Ermittlung der Potentiale der beiden Ansätze für die Gebäudeautomation; 
 	
