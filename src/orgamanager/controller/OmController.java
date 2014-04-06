@@ -15,6 +15,7 @@ import orgamanager.view.OmLoginPanel;
 import orgamanager.view.OmOfficePanel;
 import orgamanager.view.OmPublicationsPanel;
 import orgamanager.view.OmView;
+import orgamanager.view.OmWebAttachmentPanel;
 import orgamanager.view.OmWelcomePanel;
 
 /**
@@ -39,6 +40,7 @@ public class OmController {
 	private OmOfficePanel officePanel;
 	private OmDevelopmentPanel developmentPanel;
 	private OmPublicationsPanel publicationsPanel;
+	private OmWebAttachmentPanel webAttachmentPanel;
 	private OmViewConstant currentView;
 	private boolean isAuthorized;
 	private String formUsername;
@@ -70,6 +72,9 @@ public class OmController {
 				break;
 			case SIGNATURES:
 				prepareForSignaturesView();
+				break;
+			case WEBATTACHMENT:
+				prepareForWebAttachmentView();
 				break;
 			case WELCOME:
 				prepareForWelcomeView();
@@ -167,6 +172,15 @@ public class OmController {
 			}
 		};
 		publicationsButton.addActionListener(publicationsAction);
+		JButton webAttachmentButton = welcomePanel.getwebAttachmenButton();
+		ActionListener webAttachmentAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				//SwingFileUploadFTP();
+				prepareForWebAttachmentView();
+			}
+		};
+		webAttachmentButton.addActionListener(webAttachmentAction);
 		JButton logoutButton = welcomePanel.getLogoutButton();
 		ActionListener logoutAction = new ActionListener() {
 			@Override
@@ -282,6 +296,29 @@ public class OmController {
 		createInvoiceButton.addActionListener(createInvoiceAction);
 		view.setMainPanel(publicationsPanel);
 	}
+	
+	private void prepareForWebAttachmentView() {
+		setCurrentView(OmViewConstant.WEBATTACHMENT);
+		webAttachmentPanel =  new OmWebAttachmentPanel();
+		JButton backButton = webAttachmentPanel.getBackButton();
+		ActionListener backAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) { //go back action
+				prepareForWelcomeView();
+				
+			}
+		};
+		backButton.addActionListener(backAction);
+		JButton webAttachmentButton = webAttachmentPanel.getCreateWebAttachmentButton();
+		ActionListener webAttachmentAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doCreateWebAttachments();
+			}
+		};
+		webAttachmentButton.addActionListener(webAttachmentAction);
+		view.setMainPanel(webAttachmentPanel);
+	}
 
 	private void prepareForOfficeView() {
 		setCurrentView(OmViewConstant.OFFICE);
@@ -345,6 +382,10 @@ public class OmController {
 	
 	public void doCreatePublications(){
 		model.doCreatePublications();
+	}
+	
+	public void doCreateWebAttachments(){
+		model.doWebAttachment();
 	}
 	
 	public void doRunTestsOrgaManager(){

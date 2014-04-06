@@ -310,4 +310,14 @@ public class OmModelTest {
 		String exp0 = "Test";
 		assertEquals("doCreateAssignmentsTest-0", exp0, act0);
 	}
+	
+	@Test
+	public void doWebAttachmentTest(){
+		// Development area, trigger model without gui ...
+		OmModel model = new OmModel();
+		model.doWebAttachment();
+		String act0 = "Test";
+		String exp0 = "Test";
+		assertEquals("doWebAttachmentTest-0", exp0, act0);
+	}
 }

@@ -25,6 +25,7 @@ import orgamanager.model.development.selenium.skp.SkpTests;
 import orgamanager.model.office.InvoiceRecipient;
 import orgamanager.model.office.InvoicingParty;
 import orgamanager.model.publications.PublicationsList;
+import orgamanager.model.webAttachment.UploadTask;
 import orgamanager.tests.OmModelTest;
 import orgamanager.utilities.OmOperatingSystemConstant;
 import orgamanager.utilities.OmUtilities;
@@ -337,5 +338,75 @@ public class OmModel {
 		// letzte eigene Arbeit 'Artikel duplizieren'
 		// Artikel Eigenschaften
 	}
+	
+	public void doWebAttachment() {
+		JOptionPane.showMessageDialog(null,
+				"Wählen Sie die Datei für den Anhang aus.",
+				"Anhangauswahl", JOptionPane.WARNING_MESSAGE); 
+		String workingDir = System.getProperty("user.dir");
+		JFileChooser fc = new JFileChooser(workingDir);
+		int state = fc.showOpenDialog(null);
+		if (state == JFileChooser.APPROVE_OPTION) {
+			File file = fc.getSelectedFile();
+			String path = file.getPath();
+//			AttachmentsList attachments;
+//			try {
+//				
+//				attachments = new AttachmentsList(path);
+				// TODO translate
+//				JOptionPane.showMessageDialog(null,
+//						"Wählen Sie die Datei für den Anhang aus. ",
+//						"OrgaManager | Attachments", JOptionPane.PLAIN_MESSAGE);
+				
+//				JFileChooser fcSave = new JFileChooser(workingDir);
+//				OmUtilities utils = new OmUtilities();
+				
+//				OmOperatingSystemConstant os = utils.detectOperatingSystem();
+//				String proposedFileName = "";
+//				if (os == OmOperatingSystemConstant.WINDOWS) {
+//					proposedFileName = workingDir + "\\"
+//							+ "Gespeichert_als_CSV-Datei.csv";
+//				} else {
+//					proposedFileName = workingDir + "/"
+//							+ "Gespeichert_als_CSV-Datei.csv";
+//				}
+
+				//fcSave.setSelectedFile(new File(proposedFileName));
+				
+				// hier geht der Upload los mit file
+//				 UploadFile uploadFile = new UploadFile();
+//				 uploadFile.doUpload(path, "/cloud");
+				
+//				UploadTask task = new UploadTask(webAttachmentConfig.getHost(),
+//						21, webAttachmentConfig.getUsername(),
+//						webAttachmentConfig.getPassword(), "/cloud/test", file);
+//
+//				task.execute();
+//				
+//				int stateSaveFileChooser = fcSave.showSaveDialog(null);
+//				if (stateSaveFileChooser == JFileChooser.APPROVE_OPTION) { // 0
+//					String saveFileName = fcSave.getSelectedFile().getPath();
+//					attachments.saveAsCsv(saveFileName);
+//					JOptionPane.showMessageDialog(null, "Datei erzeugt.",
+//							"OrgaManager | Attachments",
+//							JOptionPane.PLAIN_MESSAGE); // TODO translate
+//				} else {
+//					JOptionPane.showMessageDialog(null,
+//							"Dateiname zum Speichern nicht erkannt!",
+//							"OrgaManager | Publikationen",
+//							JOptionPane.WARNING_MESSAGE); // TODO translate
+//				}
+//
+//			} catch (FileNotFoundException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//		} else {
+//			JOptionPane.showMessageDialog(null,
+//					"Sie haben keinen Anhang ausgewählt. Klicken Sie auf X falls Sie das Programm beenden möchten. ",
+//					"Anhangauswahl", JOptionPane.WARNING_MESSAGE); 
+		}
+	}
+
 	
 }
