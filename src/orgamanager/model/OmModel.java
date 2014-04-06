@@ -19,10 +19,10 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 
 import orgamanager.config.OmConfig;
+import orgamanager.model.development.selenium.ehc.EhcTests;
 import orgamanager.model.office.InvoiceRecipient;
 import orgamanager.model.office.InvoicingParty;
 import orgamanager.model.publications.PublicationsList;
-import orgamanager.selenium.ehc.EhcTests;
 import orgamanager.selenium.joba.JobaTests;
 import orgamanager.selenium.skp.SkpTests;
 import orgamanager.tests.OmModelTest;

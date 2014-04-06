@@ -1,4 +1,4 @@
-package orgamanager.selenium.ehc;
+package orgamanager.model.development.selenium.ehc;
 
 import static org.junit.Assert.*;
 

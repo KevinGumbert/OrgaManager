@@ -1,4 +1,4 @@
-package orgamanager.selenium.ehc;
+package orgamanager.model.development.selenium.ehc;
 
 public class EhcTestsConfig {
 	public String username = "xxx";
