@@ -270,7 +270,7 @@ public class Publication {
 		} else {
 			dstr += "-";
 		}
-		System.out.println(dstr);
+		//System.out.println(dstr);
 	}
 	
 	private void connectToParent(){

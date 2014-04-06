@@ -69,11 +69,11 @@ public class OmModelTest {
 	public void doCreatePublicationsTest() throws InterruptedException, FileNotFoundException{ //fail("Not yet implemented!");
 		
 		// Development area, trigger model without gui ...
-//		OmModel model = new OmModel();
-//		model.doCreatePublications();
-//		String act0 = "Test";
-//		String exp0 = "Test";
-//		assertEquals("doCreatePublicationsTest-0", exp0, act0);
+		OmModel model = new OmModel();
+		model.doCreatePublications();
+		String act0 = "Test";
+		String exp0 = "Test";
+		assertEquals("doCreatePublicationsTest-0", exp0, act0);
 
 		String publicationString1 = "";
 		publicationString1 += "@inproceedings{Bauer.2014,\n";
@@ -294,6 +294,10 @@ public class OmModelTest {
 		String act9 = publication9.getReference();
 		String exp9 = "Ziegler, C.; Franke, J.: Closed-loop control of patient handling robots. In: Gourab Sen Gupta; Donald Bailey; Serge Demidenko; Dale Carnegie (Hrsg.): Recent Advances in Robotics and Automation. Springer, 2013, S. 231--241";
 		assertEquals("doCreatePublicationsTest-9", exp9, act9);
+		
+		// TODO Test Alireza Probleme 
+		
+		// TODO Haerter Pub
 		
 	}
 
