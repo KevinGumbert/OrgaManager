@@ -21,6 +21,7 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		// NOTE: see README.md for all dependancies!
 		showSplashScreen();
 		//setNimbusLookAndFeel();
 		setMetalLookAndFeel();
