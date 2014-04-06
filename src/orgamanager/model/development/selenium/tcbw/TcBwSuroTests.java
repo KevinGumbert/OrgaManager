@@ -1,4 +1,4 @@
-package orgamanager.selenium.tcbw;
+package orgamanager.model.development.selenium.tcbw;
 
 import static org.junit.Assert.assertEquals;
 

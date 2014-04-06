@@ -24,7 +24,11 @@ und JPA.
 
 Abhaengigkeiten bestehen zu folgenden Bibliotheken/Projekten: 
 * EclipseLink (JPA 2.1)
+[eclipselink: eclipselink.jar; jars aus jlib-Verzeichnis]
+* JUnit 4
+[Fix project Setup ... accept 'add junit4 to build path'] 
 * Selenium 2.39
+[selenium: selenium.jar; jars aus lib-Verzeichnis]
 * SQLite und SQLite-JDBC
 
 Pakete controller, model und view
