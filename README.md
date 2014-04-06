@@ -22,14 +22,16 @@ Persistenz passiert mittels properties.xml-Datei und SQLite-Datenbank im Ordner
 des Projektes. OmModel.doCreateInvoice() fasst wichtige Schritte zu EclipseLink
 und JPA.
 
-Abhaengigkeiten bestehen zu folgenden Bibliotheken/Projekten: 
-* EclipseLink (JPA 2.1)
+Abhaengigkeiten bestehen zu folgenden Bibliotheken/Projekten [Properties - Add External Jar]:
+* Apache Commons Net (commons 3.3) - FTP-Bibliothek
+[apache-commons-ftp: commons-3.3.jar;]
+* EclipseLink (JPA 2.1) - Datenbanklayer
 [eclipselink: eclipselink.jar; jars aus jlib-Verzeichnis]
-* JUnit 4
+* JUnit 4 - Selenium- und Modultests
 [Fix project Setup ... accept 'add junit4 to build path'] 
-* Selenium 2.39
+* Selenium 2.39 - Browserautomatisierung
 [selenium: selenium.jar; jars aus lib-Verzeichnis]
-* SQLite und SQLite-JDBC
+* SQLite und SQLite-JDBC - Datenbankdriver
 
 Pakete controller, model und view
 ---------------------------------
