@@ -347,7 +347,7 @@ public class OmModel {
 	
 	public void doWebAttachment() {
 		JOptionPane.showMessageDialog(null,
-				"Wählen Sie die Datei für den Anhang aus.",
+				"Wï¿½hlen Sie die Datei fï¿½r den Anhang aus.",
 				"Anhangauswahl", JOptionPane.WARNING_MESSAGE); 
 		String workingDir = System.getProperty("user.dir");
 		JFileChooser fc = new JFileChooser(workingDir);
@@ -361,7 +361,7 @@ public class OmModel {
 //				attachments = new AttachmentsList(path);
 				// TODO translate
 //				JOptionPane.showMessageDialog(null,
-//						"Wählen Sie die Datei für den Anhang aus. ",
+//						"Wï¿½hlen Sie die Datei fï¿½r den Anhang aus. ",
 //						"OrgaManager | Attachments", JOptionPane.PLAIN_MESSAGE);
 				
 //				JFileChooser fcSave = new JFileChooser(workingDir);
@@ -409,7 +409,7 @@ public class OmModel {
 //			}
 //		} else {
 //			JOptionPane.showMessageDialog(null,
-//					"Sie haben keinen Anhang ausgewählt. Klicken Sie auf X falls Sie das Programm beenden möchten. ",
+//					"Sie haben keinen Anhang ausgewï¿½hlt. Klicken Sie auf X falls Sie das Programm beenden mï¿½chten. ",
 //					"Anhangauswahl", JOptionPane.WARNING_MESSAGE); 
 		}
 	}
@@ -417,8 +417,14 @@ public class OmModel {
 	public void doEhcWebAppTurnLightOn(){
 		JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
 		OmUtilities utils = new OmUtilities();
-		String targetURL = "http://www.jochen-bauer.net";
-		String urlParameters = "";
+		//String targetURL = "http://www.jochen-bauer.net";
+		//String urlParameters = "";
+		// http://10.20.66.71:8083/fhem?cmd.steckdose=set steckdose on&room=Buero
+		// http://10.20.66.71:8083/fhem?cmd.steckdose=set steckdose on&room=Buero
+		// String data = URLEncoder.encode("key1", "UTF-8") + "=" + URLEncoder.encode("value1", "UTF-8");
+		// data += "&" + URLEncoder.encode("key2", "UTF-8") + "=" + URLEncoder.encode("value2", "UTF-8");
+		String targetURL = "http://10.20.66.71:8083/fhem";
+		String urlParameters = "cmd.steckdose=set steckdose on&room=Buero";
 		String res = utils.executeHttpPost(targetURL, urlParameters);
 		System.out.println("HTTP-Response: " + res);
 		JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);

@@ -23,8 +23,8 @@ public class Main {
 	public static void main(String[] args) {
 		// NOTE: see README.md for all dependancies!
 		showSplashScreen();
-		//setNimbusLookAndFeel();
-		setMetalLookAndFeel();
+		setNimbusLookAndFeel();
+		//setMetalLookAndFeel();
 		OmModel model = new OmModel();
 		OmView view = new OmView();
 		OmController controller = new OmController(model, view);
