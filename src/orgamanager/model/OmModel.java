@@ -347,7 +347,7 @@ public class OmModel {
 	
 	public void doWebAttachment() {
 		JOptionPane.showMessageDialog(null,
-				"W�hlen Sie die Datei f�r den Anhang aus.",
+				"Waehlen Sie die Datei fuerr den Anhang aus.",
 				"Anhangauswahl", JOptionPane.WARNING_MESSAGE); 
 		String workingDir = System.getProperty("user.dir");
 		JFileChooser fc = new JFileChooser(workingDir);
@@ -415,6 +415,7 @@ public class OmModel {
 	}
 
 	public void doEhcWebAppTurnLightOn(){
+		// TODO Check warum geht das, wenn ich auf dem Uni-Netz-Rechner arbeite via Netzwerkkabel und mein Notebook via FAU-Staff via WLan verbunden ist?
 		JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
 		OmUtilities utils = new OmUtilities();
 		// TODO use URL-Encoder instead of strings
@@ -468,6 +469,12 @@ public class OmModel {
 		// contact components
 		// run test procedure component A i.e. fhem
 		// create report
+		JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);
+	}
+	
+	public void doEhcWebAppJsonApiAccess(){
+		JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
+		// TODO
 		JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);
 	}
 
