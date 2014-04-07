@@ -22,6 +22,8 @@ public class OmWelcomePanel extends JPanel {
 	private JButton officeButton;
 	private JButton webAttachmentButton;
 	private JButton logoutButton;
+	private double buttonDimWidth;
+	private double buttonDimHeight;
 	private OmConfig config;
 
 	public OmWelcomePanel() {
@@ -30,8 +32,8 @@ public class OmWelcomePanel extends JPanel {
 		this.setBorder(BorderFactory.createTitledBorder(config.getMessage("welcomePanelTitleText")));
 		this.setPreferredSize(config.getMainPanelDimension());
 		logoutButton = new JButton(config.getMessage("logoutButtonText"));
-		double buttonDimWidth = config.getMainPanelDimension().getWidth() - 20;
-		double buttonDimHeight = config.getMainPanelDimension().getHeight() * 0.1;
+		buttonDimWidth = config.getMainPanelDimension().getWidth() - 20; // 20
+		buttonDimHeight = config.getMainPanelDimension().getHeight() * 0.075; // 0.1
 		Dimension buttonDim = new Dimension((int) buttonDimWidth, (int) buttonDimHeight);
 		logoutButton.setPreferredSize(buttonDim);
 		logoutButton.setMinimumSize(buttonDim);
@@ -54,7 +56,7 @@ public class OmWelcomePanel extends JPanel {
 		webAttachmentButton.setPreferredSize(buttonDim);
 		webAttachmentButton.setMinimumSize(buttonDim);
 		innerPanel = new JPanel();
-		double panelWidth = config.getMainPanelDimension().getWidth() - 15;
+		double panelWidth = config.getMainPanelDimension().getWidth() - 15; // embed navigation box
 		double panelHeightInner = config.getMainPanelDimension().getHeight() * 0.7;
 		double panelHeightOuter = config.getMainPanelDimension().getHeight() * 0.25;
 		innerPanel.setPreferredSize(new Dimension((int) panelWidth, (int) panelHeightInner));

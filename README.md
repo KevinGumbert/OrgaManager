@@ -36,6 +36,21 @@ Abhaengigkeiten bestehen zu folgenden Bibliotheken/Projekten [Properties - Add E
 Pakete controller, model und view
 ---------------------------------
 
+Die Klasse Main beinhaltet die main-Methode fuer den Start aus Eclipse heraus.
+Es wird ein Model, ein View und ein Controller erzeugt, View und Model dem 
+Controller uebergeben und prepareForView() gerufen.
+
+Ein Anwendungsfallbuendel ist durch einen Button auf dem WelcomePanel 
+dargestellt. Konfigurationen sind in der Klasse oder wenn angebracht im Paket 
+config unterzubringen.
+
+Ein neuer Anwendungsfall startet mit dem Platzieren eines Buttons auf dem 
+passenden Panel. Es wird ein getter geschrieben, der dann vom OmController
+gerufen wird. Anschliessend wird dort dem Button der ActionListener erzeugt
+und angebunden. Der Controller wird um eine Methode bereichert, die dann eine
+gleich lautende Methode im Model ruft. Bei Bedarf werden weitere Klassen im 
+Model in einem passenden Paket angelegt.
+
 Paket Publikationen
 -------------------
 

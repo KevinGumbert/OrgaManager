@@ -258,6 +258,14 @@ public class OmController {
 		};
 		runTestsOrgaManagerButton.addActionListener(runTestsOrgaManagerAction);
 		
+		JButton ehcWebAppTurnLightOnButton = developmentPanel.getEhcWebAppTurnLightOnButton();
+		ActionListener ehcWebAppTurnLightOnAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doEhcWebAppTurnLightOn();
+			}
+		};
+		ehcWebAppTurnLightOnButton.addActionListener(ehcWebAppTurnLightOnAction);
 		JButton createGalleryButton = developmentPanel.getCreateGalleryButton();
 		ActionListener createGalleryAction = new ActionListener() {
 			@Override
@@ -406,6 +414,10 @@ public class OmController {
 	
 	public void doRunTestsSeleniumTcBwSuro(){
 		model.doRunTestsSeleniumTcBwSuro();
+	}
+	
+	public void doEhcWebAppTurnLightOn(){
+		model.doEhcWebAppTurnLightOn();
 	}
 	
 	private void setCurrentView(OmViewConstant currentViewConstant){

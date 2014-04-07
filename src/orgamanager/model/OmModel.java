@@ -408,5 +408,8 @@ public class OmModel {
 		}
 	}
 
+	public void doEhcWebAppTurnLightOn(){
+		JOptionPane.showMessageDialog(null, "BP0","Debug", JOptionPane.WARNING_MESSAGE);
+	}
 	
 }

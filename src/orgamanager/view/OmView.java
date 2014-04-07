@@ -10,8 +10,6 @@ import orgamanager.config.OmConfig;
 
 public class OmView {
 
-	
-	
 	private JPanel mainPanel;
 	OmConfig config;
 

@@ -17,6 +17,7 @@ public class OmDevelopmentPanel extends JPanel {
 	JPanel clientsPanel;
 	JButton createGalleryButton;
 	JButton createClientReportButton;
+	JButton ehcWebAppTurnLightOnButton;
 	JButton runTestsOrgaManagerButton;
 	JButton runTestsSeleniumEhcButton;
 	JButton runTestsSeleniumJobaButton;
@@ -45,8 +46,10 @@ public class OmDevelopmentPanel extends JPanel {
 		customActionsPanel.setBorder(BorderFactory.createTitledBorder(config.getMessage("developmentPanelCustomActionsPanelTitleText")));
 		createGalleryButton = new JButton(config.getMessage("developmentCustomActionsCreateGalleryButtonText"));
 		runTestsOrgaManagerButton = new JButton(config.getMessage("developmentCustomActionsRunTestsButtonText"));
+		ehcWebAppTurnLightOnButton = new JButton("EhcWebApp Licht An");
 		customActionsPanel.add(createGalleryButton);
-		customActionsPanel.add(runTestsOrgaManagerButton );
+		customActionsPanel.add(runTestsOrgaManagerButton);
+		customActionsPanel.add(ehcWebAppTurnLightOnButton);
 		backButton = new JButton(config.getMessage("backButtonText"));
 		this.add(Box.createRigidArea(new Dimension(10,10)));
 		this.add(clientsPanel);
@@ -82,6 +85,10 @@ public class OmDevelopmentPanel extends JPanel {
 
 	public JButton getRunTestsSeleniumSkpButton() {
 		return runTestsSeleniumSkpButton;
+	}
+	
+	public JButton getEhcWebAppTurnLightOnButton() {
+		return ehcWebAppTurnLightOnButton;
 	}
 	
 	public JButton getBackButton(){

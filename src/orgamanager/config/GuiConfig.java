@@ -11,7 +11,7 @@ public class GuiConfig {
 	public Locale locale;
 	
 	public GuiConfig(){
-		this.mainPanelDimension = new Dimension(600, 400);
+		this.mainPanelDimension = new Dimension(800, 600);
 		this.locale = new Locale("de", "DE"); 
 		this.messages = ResourceBundle.getBundle("Messages");
 	}
