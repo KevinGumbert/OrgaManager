@@ -417,6 +417,7 @@ public class OmModel {
 	public void doEhcWebAppTurnLightOn(){
 		JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
 		OmUtilities utils = new OmUtilities();
+		// TODO use URL-Encoder instead of strings
 		//String targetURL = "http://www.jochen-bauer.net";
 		//String urlParameters = "";
 		// http://10.20.66.71:8083/fhem?cmd.steckdose=set steckdose on&room=Buero
@@ -427,6 +428,46 @@ public class OmModel {
 		String urlParameters = "cmd.steckdose=set steckdose on&room=Buero";
 		String res = utils.executeHttpPost(targetURL, urlParameters);
 		System.out.println("HTTP-Response: " + res);
+		JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);
+	}
+	
+	public void doEhcWebAppTurnLightOff(){
+		JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
+		OmUtilities utils = new OmUtilities();
+		String targetURL = "http://10.20.66.71:8083/fhem";
+		String urlParameters = "cmd.steckdose=set steckdose off&room=Buero";
+		String res = utils.executeHttpPost(targetURL, urlParameters);
+		System.out.println("HTTP-Response: " + res);
+		JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);
+	}
+	
+	public void doEhcWebAppSelfInstall(){
+		JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
+		// download all files
+		// create all relations between components
+		JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);
+	}
+	
+	public void doEhcWebAppSelfDescribe(){
+		JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
+		// collect all services
+		// describe all services
+		JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);
+	}
+	
+	public void doEhcWebAppSelfConfigure(){
+		JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
+		// grab all information
+		// configure components related to current situation
+		JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);
+	}
+	
+	public void doEhcWebAppSelfCheck(){
+		JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
+		// run tests
+		// contact components
+		// run test procedure component A i.e. fhem
+		// create report
 		JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);
 	}
 

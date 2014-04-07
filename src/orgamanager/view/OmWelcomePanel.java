@@ -32,7 +32,7 @@ public class OmWelcomePanel extends JPanel {
 		this.setBorder(BorderFactory.createTitledBorder(config.getMessage("welcomePanelTitleText")));
 		this.setPreferredSize(config.getMainPanelDimension());
 		logoutButton = new JButton(config.getMessage("logoutButtonText"));
-		buttonDimWidth = config.getMainPanelDimension().getWidth() - 20; // 20
+		buttonDimWidth = config.getMainPanelDimension().getWidth() - 40; // 20
 		buttonDimHeight = config.getMainPanelDimension().getHeight() * 0.075; // 0.1
 		Dimension buttonDim = new Dimension((int) buttonDimWidth, (int) buttonDimHeight);
 		logoutButton.setPreferredSize(buttonDim);

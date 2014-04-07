@@ -18,6 +18,11 @@ public class OmDevelopmentPanel extends JPanel {
 	JButton createGalleryButton;
 	JButton createClientReportButton;
 	JButton ehcWebAppTurnLightOnButton;
+	JButton ehcWebAppTurnLightOffButton;
+	JButton ehcWebAppSelfInstallButton;
+	JButton ehcWebAppSelfDescribeButton;
+	JButton ehcWebAppSelfConfigureButton;
+	JButton ehcWebAppSelfCheckButton;
 	JButton runTestsOrgaManagerButton;
 	JButton runTestsSeleniumEhcButton;
 	JButton runTestsSeleniumJobaButton;
@@ -47,9 +52,19 @@ public class OmDevelopmentPanel extends JPanel {
 		createGalleryButton = new JButton(config.getMessage("developmentCustomActionsCreateGalleryButtonText"));
 		runTestsOrgaManagerButton = new JButton(config.getMessage("developmentCustomActionsRunTestsButtonText"));
 		ehcWebAppTurnLightOnButton = new JButton("EhcWebApp Licht An");
+		ehcWebAppTurnLightOffButton = new JButton("EhcWebApp Licht Aus");
+		ehcWebAppSelfInstallButton = new JButton("EhcWebApp Selbstinstallation");
+		ehcWebAppSelfDescribeButton = new JButton("EhcWebApp Selbstbeschreibung");
+		ehcWebAppSelfConfigureButton = new JButton("EhcWebApp Selbstkonfiguration");
+		ehcWebAppSelfCheckButton = new JButton("EhcWebApp Selbstcheck");
 		customActionsPanel.add(createGalleryButton);
 		customActionsPanel.add(runTestsOrgaManagerButton);
 		customActionsPanel.add(ehcWebAppTurnLightOnButton);
+		customActionsPanel.add(ehcWebAppTurnLightOffButton);
+		customActionsPanel.add(ehcWebAppSelfInstallButton);
+		customActionsPanel.add(ehcWebAppSelfDescribeButton);
+		customActionsPanel.add(ehcWebAppSelfConfigureButton);
+		customActionsPanel.add(ehcWebAppSelfCheckButton);
 		backButton = new JButton(config.getMessage("backButtonText"));
 		this.add(Box.createRigidArea(new Dimension(10,10)));
 		this.add(clientsPanel);
@@ -89,6 +104,26 @@ public class OmDevelopmentPanel extends JPanel {
 	
 	public JButton getEhcWebAppTurnLightOnButton() {
 		return ehcWebAppTurnLightOnButton;
+	}
+	
+	public JButton getEhcWebAppTurnLightOffButton() {
+		return ehcWebAppTurnLightOffButton;
+	}
+	
+	public JButton getEhcWebAppSelfInstallButton() {
+		return ehcWebAppSelfInstallButton;
+	}
+	
+	public JButton getEhcWebAppSelfCheckButton() {
+		return ehcWebAppSelfCheckButton;
+	}
+	
+	public JButton getEhcWebAppSelfConfigureButton() {
+		return ehcWebAppSelfConfigureButton;
+	}
+	
+	public JButton getEhcWebAppSelfDescribeButton() {
+		return ehcWebAppSelfDescribeButton;
 	}
 	
 	public JButton getBackButton(){

@@ -266,6 +266,52 @@ public class OmController {
 			}
 		};
 		ehcWebAppTurnLightOnButton.addActionListener(ehcWebAppTurnLightOnAction);
+		
+		JButton ehcWebAppTurnLightOffButton = developmentPanel.getEhcWebAppTurnLightOffButton();
+		ActionListener ehcWebAppTurnLightOffAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doEhcWebAppTurnLightOff();
+			}
+		};
+		ehcWebAppTurnLightOffButton.addActionListener(ehcWebAppTurnLightOffAction);
+		
+		JButton ehcWebAppSelfInstallButton = developmentPanel.getEhcWebAppSelfInstallButton();
+		ActionListener ehcWebAppSelfInstallAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doEhcWebAppSelfInstall();
+			}
+		};
+		ehcWebAppSelfInstallButton.addActionListener(ehcWebAppSelfInstallAction);
+		
+		JButton ehcWebAppSelfCheckButton = developmentPanel.getEhcWebAppSelfCheckButton();
+		ActionListener ehcWebAppSelfCheckAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doEhcWebAppSelfCheck();
+			}
+		};
+		ehcWebAppSelfCheckButton.addActionListener(ehcWebAppSelfCheckAction);
+		
+		JButton ehcWebAppSelfDescribeButton = developmentPanel.getEhcWebAppSelfDescribeButton();
+		ActionListener ehcWebAppSelfDescribeAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doEhcWebAppSelfDescribe();
+			}
+		};
+		ehcWebAppSelfDescribeButton.addActionListener(ehcWebAppSelfDescribeAction);
+		
+		JButton ehcWebAppSelfConfigureButton = developmentPanel.getEhcWebAppSelfConfigureButton();
+		ActionListener ehcWebAppSelfConfigureAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doEhcWebAppSelfConfigure();
+			}
+		};
+		ehcWebAppSelfConfigureButton.addActionListener(ehcWebAppSelfConfigureAction);
+		
 		JButton createGalleryButton = developmentPanel.getCreateGalleryButton();
 		ActionListener createGalleryAction = new ActionListener() {
 			@Override
@@ -418,6 +464,26 @@ public class OmController {
 	
 	public void doEhcWebAppTurnLightOn(){
 		model.doEhcWebAppTurnLightOn();
+	}
+	
+	public void doEhcWebAppTurnLightOff(){
+		model.doEhcWebAppTurnLightOff();
+	}
+	
+	public void doEhcWebAppSelfInstall(){
+		model.doEhcWebAppSelfInstall();
+	}
+	
+	public void doEhcWebAppSelfDescribe(){
+		model.doEhcWebAppSelfDescribe();
+	}
+	
+	public void doEhcWebAppSelfConfigure(){
+		model.doEhcWebAppSelfConfigure();
+	}
+	
+	public void doEhcWebAppSelfCheck(){
+		model.doEhcWebAppSelfCheck();
 	}
 	
 	private void setCurrentView(OmViewConstant currentViewConstant){
