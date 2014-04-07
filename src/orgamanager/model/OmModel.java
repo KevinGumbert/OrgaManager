@@ -1,7 +1,13 @@
 package orgamanager.model;
 
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.ArrayList;
@@ -409,7 +415,13 @@ public class OmModel {
 	}
 
 	public void doEhcWebAppTurnLightOn(){
-		JOptionPane.showMessageDialog(null, "BP0","Debug", JOptionPane.WARNING_MESSAGE);
+		JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
+		OmUtilities utils = new OmUtilities();
+		String targetURL = "http://www.jochen-bauer.net";
+		String urlParameters = "";
+		String res = utils.executeHttpPost(targetURL, urlParameters);
+		System.out.println("HTTP-Response: " + res);
+		JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);
 	}
-	
+
 }

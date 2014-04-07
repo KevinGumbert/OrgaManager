@@ -1,16 +1,20 @@
 package orgamanager.utilities;
 
 import java.io.BufferedReader;
+import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.Reader;
 import java.io.UnsupportedEncodingException;
 import java.io.Writer;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -216,6 +220,56 @@ public class OmUtilities {
 		  e.printStackTrace();
 		} finally {
 		  try { writer.close(); } catch ( Exception e ) {e.printStackTrace();}
+		}
+	}
+	
+	public String executeHttpPost(String targetURL, String urlParameters){
+		// see xyzws.com/Javafaq/how-to-use-httpurlconnection-post-data-to-web-server/139
+		// String urlParameters =
+		//        "fName=" + URLEncoder.encode("???", "UTF-8") +
+		//        "&lName=" + URLEncoder.encode("???", "UTF-8")
+		// TODO create unit tests
+		URL url;
+		String httpResponse;
+		HttpURLConnection connection = null;
+		try {
+			// Create connection
+			url = new URL(targetURL);
+			connection = (HttpURLConnection) url.openConnection();
+			connection.setRequestMethod("POST");
+			connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+			connection.setRequestProperty("Content-Length", "" + Integer.toString(urlParameters.getBytes().length));
+			connection.setRequestProperty("Content-Language", "en-US");
+			connection.setUseCaches(false);
+			connection.setDoInput(true);
+			connection.setDoOutput(true);
+			// Send request
+			DataOutputStream wr = new DataOutputStream(connection.getOutputStream());
+			wr.writeBytes(urlParameters);
+			wr.flush();
+			wr.close();
+			// Get Response
+			InputStream is = connection.getInputStream();
+			BufferedReader rd = new BufferedReader(new InputStreamReader(is));
+			String line;
+			StringBuffer response = new StringBuffer();
+			while ((line = rd.readLine()) != null) {
+				response.append(line);
+				response.append('\r');
+			}
+			rd.close();
+			httpResponse = response.toString();
+			//System.out.println("HTTP-Resonse: " + httpResponse);
+			return httpResponse;
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			return null;
+		} finally {
+			if (connection != null) {
+				connection.disconnect();
+			}
 		}
 	}
 }
