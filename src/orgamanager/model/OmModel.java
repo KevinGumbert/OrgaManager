@@ -472,10 +472,29 @@ public class OmModel {
 		JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);
 	}
 	
-	public void doEhcWebAppJsonApiAccess(){
-		JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
-		// TODO
-		JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);
+	public String doEhcWebAppJsonApiAccess(int... optionalUseCaseParam){
+		OmUtilities utils = new OmUtilities();
+		String targetURL = "";
+		String urlParameters = "";
+		if (optionalUseCaseParam[0] == 1){ // check connection
+			targetURL = "http://ehcserver.local/ehomejson/";
+			String response = utils.executeHttpPost(targetURL, urlParameters);
+			return response;
+		} else if (optionalUseCaseParam[0] == 2){
+			targetURL = "http://ehcserver.local/ehomejson/togglelightone/1";
+			String response = utils.executeHttpPost(targetURL, urlParameters);
+			return response;
+		} else if (optionalUseCaseParam[0] == 3){
+			// call fhem directly "http://10.20.66.247:8083/fhem?cmd.steckdose=set steckdose on&room=Buero";
+			String ip = "10.20.66.247";
+			targetURL = "http://" + ip + ":8083/fhem?cmd.steckdose=set steckdose on&room=Buero";
+			String response = utils.executeHttpPost(targetURL, urlParameters);
+			return response;
+		} else { // default: show modal use case picker
+			
+		}
+		return null;
+		
 	}
 
 }
