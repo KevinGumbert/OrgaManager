@@ -272,4 +272,49 @@ public class OmUtilities {
 			}
 		}
 	}
+	
+	public String executeHttpGet(String targetURL, String urlParameters){
+		URL url;
+		String httpResponse;
+		HttpURLConnection connection = null;
+		try {
+			// Create connection
+			url = new URL(targetURL);
+			connection = (HttpURLConnection) url.openConnection();
+			connection.setRequestMethod("GET");
+			connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+			connection.setRequestProperty("Content-Length", "" + Integer.toString(urlParameters.getBytes().length));
+			connection.setRequestProperty("Content-Language", "en-US");
+			connection.setUseCaches(false);
+			connection.setDoInput(true);
+			connection.setDoOutput(true);
+			// Send request
+			DataOutputStream wr = new DataOutputStream(connection.getOutputStream());
+			wr.writeBytes(urlParameters);
+			wr.flush();
+			wr.close();
+			// Get Response
+			InputStream is = connection.getInputStream();
+			BufferedReader rd = new BufferedReader(new InputStreamReader(is));
+			String line;
+			StringBuffer response = new StringBuffer();
+			while ((line = rd.readLine()) != null) {
+				response.append(line);
+				response.append('\r');
+			}
+			rd.close();
+			httpResponse = response.toString();
+			//System.out.println("HTTP-Resonse: " + httpResponse);
+			return httpResponse;
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			return null;
+		} finally {
+			if (connection != null) {
+				connection.disconnect();
+			}
+		}
+	}
 }

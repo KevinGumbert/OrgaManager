@@ -485,10 +485,11 @@ public class OmModel {
 			String response = utils.executeHttpPost(targetURL, urlParameters);
 			return response;
 		} else if (optionalUseCaseParam[0] == 3){
-			// call fhem directly "http://10.20.66.247:8083/fhem?cmd.steckdose=set steckdose on&room=Buero";
-			String ip = "10.20.66.247";
-			targetURL = "http://" + ip + ":8083/fhem?cmd.steckdose=set steckdose on&room=Buero";
-			String response = utils.executeHttpPost(targetURL, urlParameters);
+			// call fhem directly "http://10.20.65.108:8083/fhem?cmd.steckdose=set steckdose on&room=Buero";
+			// TODO Check Java FHEM API Erweiterung siehe openAAL-Projekt
+			String ip = "10.20.65.108"; 
+			targetURL = "http://" + ip + ":8083/fhem?cmd.steckdose=set steckdose off&room=Buero";
+			String response = utils.executeHttpGet(targetURL, urlParameters);
 			return response;
 		} else { // default: show modal use case picker
 			

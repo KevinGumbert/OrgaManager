@@ -15,7 +15,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class EhcTests {
 
 	private WebDriver driver;
-	private String baseUrl = "http://ehcserver.jochen-bauer.net/";
+	//private String baseUrl = "http://ehcserver.jochen-bauer.net/";
+	private String baseUrl = "http://ehcserver.local/";
 	private EhcTestsConfig config; 
 
 	@Before
@@ -77,10 +78,10 @@ public class EhcTests {
 		assertEquals("EhcTests.testTest()", exp, act);
 	}
 	
-	@Test
-	public void testLogout(){ // TODO
-		fail("Not yet implemented!");
-	}
+//	@Test
+//	public void testLogout(){ // TODO
+//		fail("Not yet implemented!");
+//	}
 	
 	@Test
 	public void testEhomeJson(){

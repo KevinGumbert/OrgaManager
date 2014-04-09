@@ -325,9 +325,9 @@ public class OmModelTest {
 	public void doEhcWebAppJsonApiAccessTest(){
 		OmModel model = new OmModel();
 		// Test 0: check connection
-		String act0 = model.doEhcWebAppJsonApiAccess(1).trim();
-		String exp0 = "{\"connection\":\"ok\"}"; // {"connection":"ok"}
-		assertEquals("doEhcWebAppJsonApiAccessTest-0", exp0, act0);
+//		String act0 = model.doEhcWebAppJsonApiAccess(1).trim();
+//		String exp0 = "{\"connection\":\"ok\"}"; // {"connection":"ok"}
+//		assertEquals("doEhcWebAppJsonApiAccessTest-0", exp0, act0);
 		
 		// Test 1: trigger event through webapp, ehcserver.local/ehomejson/togglelightone/1
 //		String act1 = model.doEhcWebAppJsonApiAccess(2).trim();
