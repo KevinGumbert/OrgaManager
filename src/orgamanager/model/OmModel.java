@@ -498,8 +498,28 @@ public class OmModel {
 		
 	}
 	
+	public boolean doOrgaManagerDeployment(){
+		// TODO include in gui
+		
+		// export as runnable jar from eclipse and save on desktop 
+		// mark as executable and open with openjdk java 7 runtime
+		// jar contains referenced libs, size is 44mb
+		
+		// start orga manager: java -jar orgamanager-version-xx.jar
+		return false;
+	}
+	
 	public boolean doRbPiInstall(){
 		// TODO include in gui
+		
+		// setup: rbpi board; rbpi power supply; sd-card with rbpi-linux; active hub; hdmi screen; mouse; keyboard; wlan-dongle to connect to net; 
+		// internet connection; speedport router (http://192.168.2.1/); 
+		
+		// installation rbpi: 
+		// prepare sd card ... raspbian herunterladen, zip datei auf linux mit dd vorbereiten siehe tutorial jan karres;
+		
+		
+		
 		return false;
 	}
 	

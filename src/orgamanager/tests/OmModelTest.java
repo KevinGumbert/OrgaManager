@@ -342,6 +342,14 @@ public class OmModelTest {
 	}
 	
 	@Test
+	public void doOrgaManagerDeploymentTest(){
+		OmModel model = new OmModel();
+		boolean act1 = model.doOrgaManagerDeployment();
+		boolean exp1 = true;
+		assertEquals("doOrgaManagerDeploymentTest-0", exp1, act1);
+	}
+	
+	@Test
 	public void doRbPiInstallTest(){
 		OmModel model = new OmModel();
 		boolean act1 = model.doRbPiInstall();
