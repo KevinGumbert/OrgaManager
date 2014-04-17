@@ -340,4 +340,20 @@ public class OmModelTest {
 		String exp1 = "Test";
 		assertEquals("doEhcWebAppJsonApiAccessTest-2", exp1, act1);
 	}
+	
+	@Test
+	public void doRbPiInstallTest(){
+		OmModel model = new OmModel();
+		boolean act1 = model.doRbPiInstall();
+		boolean exp1 = true;
+		assertEquals("doRbPiInstallTest-0", exp1, act1);
+	}
+	
+	@Test
+	public void doOxidInstallTest(){
+		OmModel model = new OmModel();
+		boolean act1 = model.doOxidInstall();
+		boolean exp1 = true;
+		assertEquals("doOxidInstallTest-0", exp1, act1);
+	}
 }

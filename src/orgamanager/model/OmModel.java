@@ -497,5 +497,15 @@ public class OmModel {
 		return null;
 		
 	}
+	
+	public boolean doRbPiInstall(){
+		// TODO include in gui
+		return false;
+	}
+	
+	public boolean doOxidInstall(){
+		// TODO include in gui
+		return false;
+	}
 
 }
