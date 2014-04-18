@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<project name="OrgaManager" default="main" basedir=".">
+	<!-- Sets variables which can later be used. -->
+	<!-- The value of a property is accessed via ${} -->
+	<property name="src.dir" location="src" />
+	<property name="build.dir" location="bin" />
+	<property name="dist.dir" location="dist" />
+	<property name="docs.dir" location="doc" />
+	<property name="libs.dir" location="/home/jay/software" />
+	<property name="target" value="1.7" />
+	<property name="source" value="1.7" />
+	<path id="OrgaManager.classpath">
+		<fileset dir="${libs.dir}/apache_commons_net_lib/commons-net-3.3/" includes="*.jar" />
+		<fileset dir="${libs.dir}/selenium/" includes="*.jar" />
+		<fileset dir="${libs.dir}/eclipselink/eclipselink/jlib/" includes="*.jar" />
+		<fileset dir="${libs.dir}/eclipselink/eclipselink/jlib/jpa/" includes="*.jar" />
+	</path>
+
+	<!-- Deletes the existing build, docs and dist directory-->
+	<target name="clean">
+		<delete dir="${build.dir}" />
+		<delete dir="${docs.dir}" />
+		<delete dir="${dist.dir}" />
+	</target>
+
+	<!-- Creates the  build, docs and dist directory-->
+	<target name="makedir">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${docs.dir}" />
+		<mkdir dir="${dist.dir}" />
+	</target>
+
+	<!-- Special procedures before compiling -->
+	<target name="extra" depends="clean, makedir">
+		<copy todir="${build.dir}">
+			<fileset dir="src" includes="**/*.properties" />
+		</copy>
+		<copy todir="${build.dir}/orgamanager/files">
+			<fileset dir="src/orgamanager/files" includes="**/*.jpg" />
+		</copy>
+		<copy todir="${build.dir}/META-INF">
+			<fileset dir="src/META-INF" includes="**/*.xml" />
+		</copy>
+	</target>
+
+	<!-- Compiles the java code (including the usage of library for JUnit -->
+	<target name="compile" depends="extra">
+		<javac srcdir="${src.dir}" destdir="${build.dir}" classpathref="OrgaManager.classpath">
+		</javac>
+	</target>
+
+	<!-- Creates Javadoc -->
+	<target name="docs" depends="compile">
+		<javadoc packagenames="src" sourcepath="${src.dir}" destdir="${docs.dir}">
+			<!-- Define which files / directory should get included, we include all -->
+			<fileset dir="${src.dir}">
+				<include name="**" />
+			</fileset>
+		</javadoc>
+	</target>
+
+	<!--Creates the deployable jar file  -->
+	<target name="jar" depends="compile">
+		<!-- <jar destfile="${dist.dir}\de.vogella.build.test.ant.jar" basedir="${build.dir}"> -->
+		<jar destfile="${dist.dir}\orga-manager.jar" basedir="${build.dir}">
+			<manifest>
+				<!-- <attribute name="Main-Class" value="test.Main" /> -->
+				<attribute name="Main-Class" value="orgamanager.Main" />
+			</manifest>
+		</jar>
+	</target>
+
+	<!-- <target name="main" depends="compile, jar, docs"> -->
+	<target name="main" depends="compile, jar, docs">
+		<description>Main target</description>
+	</target>
+</project>
+

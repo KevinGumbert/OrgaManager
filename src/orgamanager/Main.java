@@ -22,7 +22,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		// NOTE: see README.md for all dependancies!
-		showSplashScreen();
+		showSplashScreen(); // TODO check how to handle image files in ant script
 		setNimbusLookAndFeel();
 		//setMetalLookAndFeel();
 		OmModel model = new OmModel();

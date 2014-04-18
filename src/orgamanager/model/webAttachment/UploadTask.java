@@ -1,10 +1,3 @@
-/*
- * By extending the javax.swing.SwingWorker class, the UploadTask executes the file upload in a background thread 
- * (code in doInBackground() method) in order to prevent the GUI from freezing (so the GUI can update the progress bar’s state). 
- * It notifies listeners about the upload progress by calling the setProgress() method each time a byte array has been transferred. 
- * Finally the done() method is invoked when the upload is done, to display a message to the user.
- * 
- */
 
 package orgamanager.model.webAttachment;
 

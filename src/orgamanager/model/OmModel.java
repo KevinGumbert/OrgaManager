@@ -513,18 +513,26 @@ public class OmModel {
 		// TODO include in gui
 		
 		// setup: rbpi board; rbpi power supply; sd-card with rbpi-linux; active hub; hdmi screen; mouse; keyboard; wlan-dongle to connect to net; 
-		// internet connection; speedport router (http://192.168.2.1/); 
+		// raspian installation on sd-card - use windows way!
+		// remember that keyboard is configured to english - type z for y and use numpad for special chars;
+		// sudo apt-get update laufen lassen
+		// install ssh server as daemon on rbpi 
+		// connect to router via ethernet, use ifconfig to get the ip
+		// connect as ssh pi@my.ip.address 
 		
-		// installation rbpi: 
-		// prepare sd card ... raspbian herunterladen, zip datei auf linux mit dd vorbereiten siehe tutorial jan karres;
-		
-		
+		// install useful software
+		// java ...
 		
 		return false;
 	}
 	
 	public boolean doOxidInstall(){
 		// TODO include in gui
+		
+		// virtuellen host anlegen lacshop.local
+		
+		// 
+		
 		return false;
 	}
 
