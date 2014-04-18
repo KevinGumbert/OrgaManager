@@ -1,6 +1,7 @@
 package orgamanager;
 
 import java.awt.Frame;
+import java.util.Scanner;
 
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
@@ -21,14 +22,25 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// NOTE: see README.md for all dependancies!
-		showSplashScreen(); 
-		setNimbusLookAndFeel();
-		//setMetalLookAndFeel();
-		OmModel model = new OmModel();
-		OmView view = new OmView();
-		OmController controller = new OmController(model, view);
-		controller.prepareForView();
+		// NOTE: use ant to build the tool - folder OrgaManager 'ant';
+		// run by cd in dist and call java -jar orga-manager.jar (Swing-UI);
+		// run with param java -jar orga-manager.jar -tui for terminal UI, i.e. for ssh access on the raspberry pi;
+		String params = "";
+		boolean isTui = false;
+		for(int i=0; i<args.length; i++){
+			if(args[i].equals("-tui")){isTui = true;}
+        }
+		if (isTui){ 
+			showTextUserInterface();
+		} else {
+			showSplashScreen(); 
+			setNimbusLookAndFeel();
+			//setMetalLookAndFeel();
+			OmModel model = new OmModel();
+			OmView view = new OmView();
+			OmController controller = new OmController(model, view);
+			controller.prepareForView();
+		}
 	}
 	
 	public static void setNimbusLookAndFeel(){
@@ -63,5 +75,25 @@ public class Main {
 		// SplashScreen
 		Frame frame = new Frame();
 		new OmSplashScreen(frame);
+	}
+	
+	public static void showTextUserInterface(){
+		System.out.println("=====================================================\n");
+		System.out.println("*** OrgaManager ***\n");
+		System.out.println("Anwendungsfaelle:");
+		System.out.println("0 - Beenden");
+		System.out.println("1 - UseCase1");
+		boolean quit = false;
+		while (!quit){
+			   Scanner scanner = new Scanner(System.in);
+			   System.out.print("Eingabe: ");
+			   String eingabe = scanner.nextLine();
+			   if (eingabe.equals("0")){
+				   quit = true;
+			   } else if (eingabe.equals("1")){
+				   System.out.println("UseCase1");
+			   } else {}
+		}
+		System.out.println("=== OrgaManager - ENDE ===\n");
 	}
 }
