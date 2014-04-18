@@ -123,7 +123,7 @@ public class OmModel {
 		emf.close(); 	// close 2
 		InvoicingParty party = new InvoicingParty();
 		String job = party.getJob();
-		ArrayList<String> jobs = new ArrayList<>(party.getJobOptions());
+		ArrayList<String> jobs = new ArrayList<String>(party.getJobOptions());
 		Object[] jobPossibilities = new Object[jobs.size()];
 		jobPossibilities = jobs.toArray();
 		String jobInput = (String) JOptionPane.showInputDialog(

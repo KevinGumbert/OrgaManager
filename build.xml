@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <project name="OrgaManager" default="main" basedir=".">
-	<!-- Sets variables which can later be used. -->
-	<!-- The value of a property is accessed via ${} -->
+	<!-- <property name="home.dir" location="/home/pi" /> -->
+	<property name="home.dir" location="/home/jay" />
 	<property name="src.dir" location="src" />
 	<property name="build.dir" location="bin" />
 	<property name="dist.dir" location="dist" />
 	<property name="docs.dir" location="doc" />
-	<property name="libs.dir" location="/home/jay/software" />
+	<property name="libs.dir" location="${home.dir}/software" />
 	<property name="target" value="1.7" />
 	<property name="source" value="1.7" />
 	<path id="OrgaManager.classpath">
@@ -61,10 +61,8 @@
 
 	<!--Creates the deployable jar file  -->
 	<target name="jar" depends="compile">
-		<!-- <jar destfile="${dist.dir}\de.vogella.build.test.ant.jar" basedir="${build.dir}"> -->
 		<jar destfile="${dist.dir}\orga-manager.jar" basedir="${build.dir}">
 			<manifest>
-				<!-- <attribute name="Main-Class" value="test.Main" /> -->
 				<attribute name="Main-Class" value="orgamanager.Main" />
 			</manifest>
 		</jar>

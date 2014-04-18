@@ -20,7 +20,7 @@ public class FtpUpdateEhcServer { // TODO did not work yet!!!
 //		echo "* Angemeldet als $this->ftpUser@$this->ftpHost\n";
 //		echo "* Aktuelles Verzeichnis: " . ftp_pwd($conn_id) . "\n";
 //	} else {
-//		echo "* Anmeldung als $this->ftpUser nicht möglich\n";
+//		echo "* Anmeldung als $this->ftpUser nicht moeglich\n";
 //	}
 //	ftp_close($conn_id);
 //}
@@ -31,7 +31,7 @@ public class FtpUpdateEhcServer { // TODO did not work yet!!!
 //		echo "* Kopiere Projekt auf den Server ... \n";
 //		$this->copyFilesToServer($conn_id);
 //	} else {
-//		die("* Kopieren des Projekts auf den Server nicht möglich.\n");
+//		die("* Kopieren des Projekts auf den Server nicht moeglich.\n");
 //	}
 //	ftp_close($conn_id);
 //}
