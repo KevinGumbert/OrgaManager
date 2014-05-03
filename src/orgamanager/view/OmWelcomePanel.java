@@ -19,7 +19,6 @@ public class OmWelcomePanel extends JPanel {
 	private JButton signaturesButton;
 	private JButton publicationsButton;
 	private JButton developmentButton;
-	private JButton officeButton;
 	private JButton webAttachmentButton;
 	private JButton logoutButton;
 	private double buttonDimWidth;
@@ -49,9 +48,6 @@ public class OmWelcomePanel extends JPanel {
 		developmentButton = new JButton(config.getMessage("developmentButtonText"));
 		developmentButton.setPreferredSize(buttonDim);
 		developmentButton.setMinimumSize(buttonDim);
-		officeButton = new JButton(config.getMessage("officeButtonText"));
-		officeButton.setPreferredSize(buttonDim);
-		officeButton.setMinimumSize(buttonDim);
 		webAttachmentButton = new JButton(config.getMessage("webAttachmentButtonText"));
 		webAttachmentButton.setPreferredSize(buttonDim);
 		webAttachmentButton.setMinimumSize(buttonDim);
@@ -66,8 +62,6 @@ public class OmWelcomePanel extends JPanel {
 		innerPanel.add(publicationsButton);
 		innerPanel.add(Box.createRigidArea(new Dimension(2, 2)));
 		innerPanel.add(signaturesButton);
-		innerPanel.add(Box.createRigidArea(new Dimension(2, 2)));
-		innerPanel.add(officeButton);
 		innerPanel.add(Box.createRigidArea(new Dimension(2, 2)));
 		innerPanel.add(developmentButton);
 		innerPanel.add(Box.createRigidArea(new Dimension(2, 2)));
@@ -112,14 +106,6 @@ public class OmWelcomePanel extends JPanel {
 
 	public void setDevelopmentButton(JButton developmentButton) {
 		this.developmentButton = developmentButton;
-	}
-
-	public JButton getOfficeButton() {
-		return officeButton;
-	}
-
-	public void setOfficeButton(JButton officeButton) {
-		this.officeButton = officeButton;
 	}
 
 	public JButton getwebAttachmenButton() {

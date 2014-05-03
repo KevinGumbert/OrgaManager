@@ -12,7 +12,6 @@ import orgamanager.utilities.OmViewConstant;
 import orgamanager.view.OmAssignmentPanel;
 import orgamanager.view.OmDevelopmentPanel;
 import orgamanager.view.OmLoginPanel;
-import orgamanager.view.OmOfficePanel;
 import orgamanager.view.OmPublicationsPanel;
 import orgamanager.view.OmView;
 import orgamanager.view.OmWebAttachmentPanel;
@@ -37,7 +36,6 @@ public class OmController {
 	private OmAssignmentPanel assignmentPanel;
 	private OmLoginPanel loginPanel;
 	private OmWelcomePanel welcomePanel;
-	private OmOfficePanel officePanel;
 	private OmDevelopmentPanel developmentPanel;
 	private OmPublicationsPanel publicationsPanel;
 	private OmWebAttachmentPanel webAttachmentPanel;
@@ -63,9 +61,6 @@ public class OmController {
 				break;
 			case LOGIN:
 				prepareForLoginView();
-				break;
-			case OFFICE:
-				prepareForOfficeView();
 				break;
 			case PUBLICATIONS:
 				prepareForPublicationsView();
@@ -140,14 +135,6 @@ public class OmController {
 			}
 		};
 		assignmentButton.addActionListener(assignmentAction);
-		JButton officeButton = welcomePanel.getOfficeButton();
-		ActionListener officeAction = new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				prepareForOfficeView();
-			}
-		};
-		officeButton.addActionListener(officeAction);
 		JButton developmentButton = welcomePanel.getDevelopmentButton();
 		ActionListener developmentAction = new ActionListener() {
 			@Override
@@ -373,28 +360,6 @@ public class OmController {
 		webAttachmentButton.addActionListener(webAttachmentAction);
 		view.setMainPanel(webAttachmentPanel);
 	}
-
-	private void prepareForOfficeView() {
-		setCurrentView(OmViewConstant.OFFICE);
-		officePanel = new OmOfficePanel();
-		JButton backButton = officePanel.getBackButton();
-		ActionListener backAction = new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				prepareForWelcomeView();
-			}
-		};
-		backButton.addActionListener(backAction);
-		JButton createInvoiceButton = officePanel.getCreateInvoiceButton();
-		ActionListener createInvoiceAction = new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				doCreateInvoice();
-			}
-		};
-		createInvoiceButton.addActionListener(createInvoiceAction);
-		view.setMainPanel(officePanel);
-	}
 	
 	@SuppressWarnings("deprecation")
 	public void doLogin() {
@@ -428,10 +393,6 @@ public class OmController {
 	
 	public void doCreateGallery(){
 		model.doCreateGallery();
-	}
-	
-	public void doCreateInvoice(){
-		model.doCreateInvoice();
 	}
 	
 	public void doCreatePublications(){

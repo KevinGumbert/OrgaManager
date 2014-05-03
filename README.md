@@ -32,6 +32,7 @@ Abhaengigkeiten bestehen zu folgenden Bibliotheken/Projekten [Properties - Add E
 * Selenium 2.39 - Browserautomatisierung
 [selenium: selenium.jar; jars aus lib-Verzeichnis]
 * SQLite und SQLite-JDBC - Datenbankdriver
+[sqlite-java, Version 3.7.2]
 
 Pakete controller, model und view
 ---------------------------------

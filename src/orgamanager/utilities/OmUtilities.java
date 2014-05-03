@@ -20,12 +20,15 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 import java.util.Properties;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 import javax.swing.JOptionPane;
 
 import orgamanager.config.OmConfig;
+import orgamanager.services.office.OfficeService;
 
 public class OmUtilities {
 
@@ -317,4 +320,22 @@ public class OmUtilities {
 			}
 		}
 	}
+	
+	// TODO delete when other dialog wizards are existing
+//	public String askForInvoiceJob(InvoicingParty party) {
+//		List<String> jobs = party.getJobOptions();
+//		Object[] jobPossibilities = new Object[jobs.size()];
+//		jobPossibilities = jobs.toArray();
+//		String job = party.getJob();
+//		String jobInput = (String) JOptionPane.showInputDialog(
+//				null, // parent frame
+//				"Beruf:\n", // content
+//				"OrgaManager", // title
+//				JOptionPane.PLAIN_MESSAGE, 
+//				null, // icon
+//				jobPossibilities, // dropdown
+//				job // default value
+//				);
+//		return jobInput;
+//	}
 }
