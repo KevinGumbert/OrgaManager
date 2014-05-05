@@ -1,23 +1,8 @@
 package orgamanager.model;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
@@ -25,12 +10,12 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 
 import orgamanager.config.OmConfig;
+import orgamanager.config.WebAttachmentConfig;
 import orgamanager.model.development.selenium.ehc.EhcTests;
 import orgamanager.model.development.selenium.joba.JobaTests;
 import orgamanager.model.development.selenium.skp.SkpTests;
 import orgamanager.model.publications.PublicationsList;
 import orgamanager.model.webAttachment.UploadTask;
-import orgamanager.services.office.OfficeService;
 import orgamanager.tests.OmModelTest;
 import orgamanager.utilities.OmOperatingSystemConstant;
 import orgamanager.utilities.OmUtilities;
@@ -186,63 +171,18 @@ public class OmModel {
 		int state = fc.showOpenDialog(null);
 		if (state == JFileChooser.APPROVE_OPTION) {
 			File file = fc.getSelectedFile();
-			String path = file.getPath();
-//			AttachmentsList attachments;
-//			try {
-//				
-//				attachments = new AttachmentsList(path);
-				// TODO translate
-//				JOptionPane.showMessageDialog(null,
-//						"W�hlen Sie die Datei f�r den Anhang aus. ",
-//						"OrgaManager | Attachments", JOptionPane.PLAIN_MESSAGE);
-				
-//				JFileChooser fcSave = new JFileChooser(workingDir);
-//				OmUtilities utils = new OmUtilities();
-				
-//				OmOperatingSystemConstant os = utils.detectOperatingSystem();
-//				String proposedFileName = "";
-//				if (os == OmOperatingSystemConstant.WINDOWS) {
-//					proposedFileName = workingDir + "\\"
-//							+ "Gespeichert_als_CSV-Datei.csv";
-//				} else {
-//					proposedFileName = workingDir + "/"
-//							+ "Gespeichert_als_CSV-Datei.csv";
-//				}
-
-				//fcSave.setSelectedFile(new File(proposedFileName));
-				
-				// hier geht der Upload los mit file
-//				 UploadFile uploadFile = new UploadFile();
-//				 uploadFile.doUpload(path, "/cloud");
-				
-//				UploadTask task = new UploadTask(webAttachmentConfig.getHost(),
-//						21, webAttachmentConfig.getUsername(),
-//						webAttachmentConfig.getPassword(), "/cloud/test", file);
-//
-//				task.execute();
-//				
-//				int stateSaveFileChooser = fcSave.showSaveDialog(null);
-//				if (stateSaveFileChooser == JFileChooser.APPROVE_OPTION) { // 0
-//					String saveFileName = fcSave.getSelectedFile().getPath();
-//					attachments.saveAsCsv(saveFileName);
-//					JOptionPane.showMessageDialog(null, "Datei erzeugt.",
-//							"OrgaManager | Attachments",
-//							JOptionPane.PLAIN_MESSAGE); // TODO translate
-//				} else {
-//					JOptionPane.showMessageDialog(null,
-//							"Dateiname zum Speichern nicht erkannt!",
-//							"OrgaManager | Publikationen",
-//							JOptionPane.WARNING_MESSAGE); // TODO translate
-//				}
-//
-//			} catch (FileNotFoundException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//		} else {
-//			JOptionPane.showMessageDialog(null,
-//					"Sie haben keinen Anhang ausgew�hlt. Klicken Sie auf X falls Sie das Programm beenden m�chten. ",
-//					"Anhangauswahl", JOptionPane.WARNING_MESSAGE); 
+			try {
+				// start upload
+				WebAttachmentConfig webAttachmentConfig = config.getWebAttachmentConfig();
+				UploadTask task = new UploadTask(webAttachmentConfig.getHost(), webAttachmentConfig.getPort(), webAttachmentConfig.getUsername(), webAttachmentConfig.getPassword(), "/cloud/test", file);
+				task.execute();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else {
+			JOptionPane.showMessageDialog(null,
+					"Sie haben keinen Anhang ausgewaehlt. Klicken Sie auf X falls Sie das Programm beenden moechten. ",
+					"Anhangauswahl", JOptionPane.WARNING_MESSAGE); 
 		}
 	}
 

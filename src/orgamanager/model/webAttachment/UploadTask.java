@@ -15,17 +15,14 @@ import javax.swing.SwingWorker;
  */
 public class UploadTask extends SwingWorker<Void, Void> {
     private static final int BUFFER_SIZE = 4096;
-     
     private String host;
     private int port;
     private String username;
     private String password;
-     
     private String destDir;
     private File uploadFile;
      
-    public UploadTask(String host, int port, String username, String password,
-            String destDir, File uploadFile) {
+    public UploadTask(String host, int port, String username, String password, String destDir, File uploadFile) {
         this.host = host;
         this.port = port;
         this.username = username;

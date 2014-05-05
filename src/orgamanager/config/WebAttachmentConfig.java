@@ -4,9 +4,10 @@ public class WebAttachmentConfig {
 	private String username;
 	private String password;
 	private String host;
-	private String port;
+	private int port;
 		
 	public WebAttachmentConfig() {
+		this.port = 21;
 		this.username = "xxx"; 
 		this.password = "xxx";
 		this.host = "xxx";
@@ -39,5 +40,9 @@ public class WebAttachmentConfig {
 	
 	public void setHost(String host) {
 		this.host = host;
+	}
+
+	public int getPort() {
+		return this.port;
 	}
 }

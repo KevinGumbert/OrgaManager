@@ -10,11 +10,13 @@ public class OmConfig { // principle: favour composition over inheritance (FCOI)
 	private GuiConfig guiConfig; 
 	private MainConfig mainConfig;
 	private PublicationsConfig publicationsConfig;
+	private WebAttachmentConfig webAttachmentConfig;
 	
 	public OmConfig(){
-		this.guiConfig			= new GuiConfig();
-		this.mainConfig 		= new MainConfig();
-		this.publicationsConfig = new PublicationsConfig();
+		this.guiConfig				= new GuiConfig();
+		this.mainConfig 			= new MainConfig();
+		this.publicationsConfig 	= new PublicationsConfig();
+		this.webAttachmentConfig 	= new WebAttachmentConfig();
 	}
 	
 	public GuiConfig getGuiConfig() {
@@ -39,6 +41,14 @@ public class OmConfig { // principle: favour composition over inheritance (FCOI)
 
 	public void setPublicationsConfig(PublicationsConfig publicationsConfig) {
 		this.publicationsConfig = publicationsConfig;
+	}
+	
+	public WebAttachmentConfig getWebAttachmentConfig() {
+		return webAttachmentConfig;
+	}
+
+	public void setWebAttachmentsConfig(WebAttachmentConfig webAttachmentsConfig) {
+		this.webAttachmentConfig = webAttachmentsConfig;
 	}
 	
 	public String getUsername(){
