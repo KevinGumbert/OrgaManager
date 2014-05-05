@@ -39,6 +39,20 @@ public class OmModel {
 		// Hinweise zum Aufbau.
 		// php-Skript mit Prozedur um Platzhalter zu fuellen
 		// HTML-Vorlagen-Verzeichnis mit Mitarbeiterdatei, Bildern, Vorlagen
+		
+		// Idee zum Sequenzdiagramm:
+		// SignatureList erwartet, den Pfad zum Ressourcenverzeichnis;
+		// SignatureList-Konstruktur liest Mitarbeiterdatei;
+		// Liste von SignatureOwner entsteht;
+		// Liste von SignatureOwnern wird abgearbeitet:
+		// je SignatureOwner werden alle Signature-Objekte erzeugt;
+		
+		// Idee zum Klassendiagramm:
+		// es wird eine Klasse Signature und SignatureOwnder gebildet;
+		// die Klasse SignatureOwner
+		// Signature und SignatureOwner sind miteinander verbunden;
+		// alle Signaturen sind in einer Liste gespeichert SignaturesList gespeichert;
+		// diese Liste besitzt eine Methode getListAsArchive() fuer das Archiv;
 		// ... Ende Hinweise
 		
 		// Aufgabe:
