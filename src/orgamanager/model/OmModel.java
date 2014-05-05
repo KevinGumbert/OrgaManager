@@ -33,9 +33,32 @@ public class OmModel {
 		isAuthorized = false;
 	}
 
-	public int doSignatures() {
+	public boolean doSignatures() {
 		System.out.println("doSignatures");
-		return 0;
+		
+		// Hinweise zum Aufbau.
+		// php-Skript mit Prozedur um Platzhalter zu fuellen
+		// HTML-Vorlagen-Verzeichnis mit Mitarbeiterdatei, Bildern, Vorlagen
+		// ... Ende Hinweise
+		
+		// Aufgabe:
+		// Vereinfachung der HTML-Signatur (weg mit Tabellen, hin zu Absaetzen
+		// Testen der Signaturen auf Druckern
+		// ... Ende der Aufgabenliste
+		
+		// Ressourcen-Verzeichnis (Mitarbeiterdatei, Bilder, Vorlagen)
+		
+		// Schleife ...
+			// HTML-Vorlage waehlen		
+			// HTML-Signatur erzeugen
+		// ... end 
+		
+		// Archivdatei bilden
+		
+		// Archivdatei speichern
+		
+		System.out.println("doSignatures - end");
+		return true;
 	}
 
 	public boolean doLogin(String username, String password) {

@@ -353,4 +353,12 @@ public class OmModelTest {
 		boolean exp1 = true;
 		assertEquals("doOxidInstallTest-0", exp1, act1);
 	}
+	
+	@Test
+	public void doSignaturesTest(){
+		OmModel model = new OmModel();
+		boolean act1 = model.doSignatures();
+		boolean exp1 = true;
+		assertEquals("doOxidInstallTest-0", exp1, act1);
+	}
 }
