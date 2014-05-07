@@ -223,29 +223,28 @@ public class OmModel {
 		}
 	}
 
-	public void doEhcWebAppTurnLightOn(){
+	public void doEhcWebAppTurnSwitchOn(){
 		// TODO Check warum geht das, wenn ich auf dem Uni-Netz-Rechner arbeite via Netzwerkkabel und mein Notebook via FAU-Staff via WLan verbunden ist?
 		JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
 		OmUtilities utils = new OmUtilities();
 		// TODO use URL-Encoder instead of strings
-		//String targetURL = "http://www.jochen-bauer.net";
-		//String urlParameters = "";
-		// http://10.20.66.71:8083/fhem?cmd.steckdose=set steckdose on&room=Buero
-		// http://10.20.66.71:8083/fhem?cmd.steckdose=set steckdose on&room=Buero
 		// String data = URLEncoder.encode("key1", "UTF-8") + "=" + URLEncoder.encode("value1", "UTF-8");
 		// data += "&" + URLEncoder.encode("key2", "UTF-8") + "=" + URLEncoder.encode("value2", "UTF-8");
-		String targetURL = "http://10.20.66.71:8083/fhem";
-		String urlParameters = "cmd.steckdose=set steckdose on&room=Buero";
+		// TODO offer all room names 
+		String fhemServerIp = config.getDevelopmentFhemServerIp();
+		String targetURL = "http://" + fhemServerIp + ":8083/fhem";
+		String urlParameters = "cmd.steckdose=set Ventilator on&room=Infotainment";
 		String res = utils.executeHttpPost(targetURL, urlParameters);
 		System.out.println("HTTP-Response: " + res);
 		JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);
 	}
 	
-	public void doEhcWebAppTurnLightOff(){
+	public void doEhcWebAppTurnSwitchOff(){
 		JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
 		OmUtilities utils = new OmUtilities();
-		String targetURL = "http://10.20.66.71:8083/fhem";
-		String urlParameters = "cmd.steckdose=set steckdose off&room=Buero";
+		String fhemServerIp = config.getDevelopmentFhemServerIp();
+		String targetURL = "http://" + fhemServerIp + ":8083/fhem";
+		String urlParameters = "cmd.steckdose=set Ventilator off&room=Infotainment";
 		String res = utils.executeHttpPost(targetURL, urlParameters);
 		System.out.println("HTTP-Response: " + res);
 		JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);

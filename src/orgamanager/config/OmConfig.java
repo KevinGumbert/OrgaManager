@@ -9,12 +9,14 @@ public class OmConfig { // principle: favour composition over inheritance (FCOI)
 	
 	private GuiConfig guiConfig; 
 	private MainConfig mainConfig;
+	private DevelopmentConfig developmentConfig;
 	private PublicationsConfig publicationsConfig;
 	private WebAttachmentConfig webAttachmentConfig;
 	
 	public OmConfig(){
 		this.guiConfig				= new GuiConfig();
 		this.mainConfig 			= new MainConfig();
+		this.developmentConfig 		= new DevelopmentConfig();
 		this.publicationsConfig 	= new PublicationsConfig();
 		this.webAttachmentConfig 	= new WebAttachmentConfig();
 	}
@@ -75,6 +77,10 @@ public class OmConfig { // principle: favour composition over inheritance (FCOI)
 	
 	public String getMessage(String message) {
 		return guiConfig.getMessage(message);
+	}
+	
+	public String getDevelopmentFhemServerIp() {
+		return developmentConfig.getFhemServerIp();
 	}
 	
 	public Dimension getMainPanelDimension(){

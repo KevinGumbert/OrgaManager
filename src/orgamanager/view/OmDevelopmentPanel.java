@@ -17,8 +17,8 @@ public class OmDevelopmentPanel extends JPanel {
 	JPanel clientsPanel;
 	JButton createGalleryButton;
 	JButton createClientReportButton;
-	JButton ehcWebAppTurnLightOnButton;
-	JButton ehcWebAppTurnLightOffButton;
+	JButton ehcWebAppTurnSwitchOnButton;
+	JButton ehcWebAppTurnSwitchOffButton;
 	JButton ehcWebAppSelfInstallButton;
 	JButton ehcWebAppSelfDescribeButton;
 	JButton ehcWebAppSelfConfigureButton;
@@ -51,16 +51,16 @@ public class OmDevelopmentPanel extends JPanel {
 		customActionsPanel.setBorder(BorderFactory.createTitledBorder(config.getMessage("developmentPanelCustomActionsPanelTitleText")));
 		createGalleryButton = new JButton(config.getMessage("developmentCustomActionsCreateGalleryButtonText"));
 		runTestsOrgaManagerButton = new JButton(config.getMessage("developmentCustomActionsRunTestsButtonText"));
-		ehcWebAppTurnLightOnButton = new JButton("EhcWebApp Licht An");
-		ehcWebAppTurnLightOffButton = new JButton("EhcWebApp Licht Aus");
+		ehcWebAppTurnSwitchOnButton = new JButton("EhcWebApp Switch An");
+		ehcWebAppTurnSwitchOffButton = new JButton("EhcWebApp Switch Aus");
 		ehcWebAppSelfInstallButton = new JButton("EhcWebApp Selbstinstallation");
 		ehcWebAppSelfDescribeButton = new JButton("EhcWebApp Selbstbeschreibung");
 		ehcWebAppSelfConfigureButton = new JButton("EhcWebApp Selbstkonfiguration");
 		ehcWebAppSelfCheckButton = new JButton("EhcWebApp Selbstcheck");
 		customActionsPanel.add(createGalleryButton);
 		customActionsPanel.add(runTestsOrgaManagerButton);
-		customActionsPanel.add(ehcWebAppTurnLightOnButton);
-		customActionsPanel.add(ehcWebAppTurnLightOffButton);
+		customActionsPanel.add(ehcWebAppTurnSwitchOnButton);
+		customActionsPanel.add(ehcWebAppTurnSwitchOffButton);
 		customActionsPanel.add(ehcWebAppSelfInstallButton);
 		customActionsPanel.add(ehcWebAppSelfDescribeButton);
 		customActionsPanel.add(ehcWebAppSelfConfigureButton);
@@ -102,12 +102,12 @@ public class OmDevelopmentPanel extends JPanel {
 		return runTestsSeleniumSkpButton;
 	}
 	
-	public JButton getEhcWebAppTurnLightOnButton() {
-		return ehcWebAppTurnLightOnButton;
+	public JButton getEhcWebAppTurnSwitchOnButton() {
+		return ehcWebAppTurnSwitchOnButton;
 	}
 	
-	public JButton getEhcWebAppTurnLightOffButton() {
-		return ehcWebAppTurnLightOffButton;
+	public JButton getEhcWebAppTurnSwitchOffButton() {
+		return ehcWebAppTurnSwitchOffButton;
 	}
 	
 	public JButton getEhcWebAppSelfInstallButton() {

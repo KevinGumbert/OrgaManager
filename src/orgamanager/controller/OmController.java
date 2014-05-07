@@ -245,23 +245,23 @@ public class OmController {
 		};
 		runTestsOrgaManagerButton.addActionListener(runTestsOrgaManagerAction);
 		
-		JButton ehcWebAppTurnLightOnButton = developmentPanel.getEhcWebAppTurnLightOnButton();
-		ActionListener ehcWebAppTurnLightOnAction = new ActionListener() {
+		JButton ehcWebAppTurnSwitchOnButton = developmentPanel.getEhcWebAppTurnSwitchOnButton();
+		ActionListener ehcWebAppTurnSwitchOnAction = new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				doEhcWebAppTurnLightOn();
+				doEhcWebAppTurnSwitchOn();
 			}
 		};
-		ehcWebAppTurnLightOnButton.addActionListener(ehcWebAppTurnLightOnAction);
+		ehcWebAppTurnSwitchOnButton.addActionListener(ehcWebAppTurnSwitchOnAction);
 		
-		JButton ehcWebAppTurnLightOffButton = developmentPanel.getEhcWebAppTurnLightOffButton();
-		ActionListener ehcWebAppTurnLightOffAction = new ActionListener() {
+		JButton ehcWebAppTurnSwitchOffButton = developmentPanel.getEhcWebAppTurnSwitchOffButton();
+		ActionListener ehcWebAppTurnSwitchOffAction = new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				doEhcWebAppTurnLightOff();
+				doEhcWebAppTurnSwitchOff();
 			}
 		};
-		ehcWebAppTurnLightOffButton.addActionListener(ehcWebAppTurnLightOffAction);
+		ehcWebAppTurnSwitchOffButton.addActionListener(ehcWebAppTurnSwitchOffAction);
 		
 		JButton ehcWebAppSelfInstallButton = developmentPanel.getEhcWebAppSelfInstallButton();
 		ActionListener ehcWebAppSelfInstallAction = new ActionListener() {
@@ -423,12 +423,12 @@ public class OmController {
 		model.doRunTestsSeleniumTcBwSuro();
 	}
 	
-	public void doEhcWebAppTurnLightOn(){
-		model.doEhcWebAppTurnLightOn();
+	public void doEhcWebAppTurnSwitchOn(){
+		model.doEhcWebAppTurnSwitchOn();
 	}
 	
-	public void doEhcWebAppTurnLightOff(){
-		model.doEhcWebAppTurnLightOff();
+	public void doEhcWebAppTurnSwitchOff(){
+		model.doEhcWebAppTurnSwitchOff();
 	}
 	
 	public void doEhcWebAppSelfInstall(){
