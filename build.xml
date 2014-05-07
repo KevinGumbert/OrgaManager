@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <project name="OrgaManager" default="main" basedir=".">
 	<!-- <property name="home.dir" location="/home/pi" /> -->
-	<property name="home.dir" location="/home/jay" />
+	<property name="home.dir" location="/home/ehome" />
+	<!-- <property name="home.dir" location="/home/jay" /> -->
 	<property name="src.dir" location="src" />
 	<property name="build.dir" location="bin" />
 	<property name="dist.dir" location="dist" />
@@ -12,8 +13,10 @@
 	<path id="OrgaManager.classpath">
 		<fileset dir="${libs.dir}/apache_commons_net_lib/commons-net-3.3/" includes="*.jar" />
 		<fileset dir="${libs.dir}/selenium/" includes="*.jar" />
+		<fileset dir="${libs.dir}/selenium/libs/" includes="*.jar" />
 		<fileset dir="${libs.dir}/eclipselink/eclipselink/jlib/" includes="*.jar" />
 		<fileset dir="${libs.dir}/eclipselink/eclipselink/jlib/jpa/" includes="*.jar" />
+		<fileset dir="${libs.dir}/junit/" includes="*.jar" />
 		<fileset dir="${libs.dir}/sqlite-java/" includes="*.jar" />
 	</path>
 

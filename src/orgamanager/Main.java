@@ -33,9 +33,9 @@ public class Main {
 		if (isTui){ 
 			showTextUserInterface();
 		} else {
-			showSplashScreen(); 
-			setNimbusLookAndFeel();
-			//setMetalLookAndFeel();
+			showSplashScreen(); // TODO JPEG seems corrupted
+			//setNimbusLookAndFeel();
+			setMetalLookAndFeel();
 			OmModel model = new OmModel();
 			OmView view = new OmView();
 			OmController controller = new OmController(model, view);
