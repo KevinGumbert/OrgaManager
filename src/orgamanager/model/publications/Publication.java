@@ -273,7 +273,7 @@ public class Publication {
 		//System.out.println(dstr);
 	}
 	
-	private void connectToParent(){
+	private void connectToParent(){ // TODO unit test see problem boenig
 		// look for corresponding isbn
 		//System.out.println("Citation ... try connect to parent!");
 		String isbn = this.isbn;

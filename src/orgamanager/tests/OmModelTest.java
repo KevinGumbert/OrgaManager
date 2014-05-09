@@ -284,10 +284,39 @@ public class OmModelTest {
 		String exp9 = "Ziegler, C.; Franke, J.: Closed-loop control of patient handling robots. In: Gourab Sen Gupta; Donald Bailey; Serge Demidenko; Dale Carnegie (Hrsg.): Recent Advances in Robotics and Automation. Springer, 2013, S. 231--241";
 		assertEquals("doCreatePublicationsTest-9", exp9, act9);
 		
-		// TODO Test Alireza Probleme 
+		// Test Bauer 2014
 		
-		// TODO Haerter Pub
-		
+		// TODO Problem Boenig
+//		String parentString10 = "";
+//		parentString10 = "@book{SenGupta.2013,";
+//		parentString10 += " year = {2013},\n";
+//		parentString10 += " title = {Recent Advances in Robotics and Automation},\n";
+//		parentString10 += " edition = {480},\n";
+//		parentString10 += " publisher = {Springer},\n";
+//		parentString10 += " isbn = {987-3-642-37386-2},\n";
+//		parentString10 += " series = {Studies in Computational Intelligence},\n";
+//		parentString10 += " editor = {Sen Gupta, Gourab and Bailey, Donald and Demidenko, Serge and Carnegie, Dale}\n";
+//		parentString10 += "}\n";
+//		PublicationParent parent10 = new PublicationParent(parentString10);
+//		ArrayList<PublicationParent> parents10 = new ArrayList<PublicationParent>();
+//		parents10.add(parent10);
+//		String publicationString10 = "";
+//		publicationString10 += "@incollection{Ziegler.2013,\n";
+//		publicationString10 += " abstract = {Patient handling robots are increasingly employed to enable a flexible positioning of the patient for diagnostic and therapeutic purposes. Due to the greatly differing robot loads because of varying patient weights especially serial kinematics are no longer able to keep up with the constantly increasing medical demands for positioning accuracy. In this chapter a low-cost measuring system for a permanent integration into the workspace of a patient handling robot is introduced which can measure the pose of a patient couch with high accuracy. This enables closed-loop control of the patient couch. In tests on a robot system an average positioning error of 0.12 mm was achieved for a diversity of medically relevant poses.},\n";
+//		publicationString10 += " author = {Ziegler, Christian and Franke, J{\\\"o}rg},\n";
+//		publicationString10 += " title = {Closed-loop control of patient handling robots},\n";
+//		publicationString10 += " pages = {231--241},\n";
+//		publicationString10 += " publisher = {Springer},\n";
+//		publicationString10 += " isbn = {987-3-642-37386-2},\n";
+//		publicationString10 += " series = {Studies in Computational Intelligence},\n";
+//		publicationString10 += " editor = {Sen Gupta, Gourab and Bailey, Donald and Demidenko, Serge and Carnegie, Dale},\n"; // PROBLEM Sen Gupta as two word editor
+//		publicationString10 += " booktitle = {Recent Advances in Robotics and Automation},\n";
+//		publicationString10 += " year = {2013}\n";
+//		publicationString10 += "}\n";
+//		Publication publication10 = new Publication(publicationString10, parents10);
+//		String act10 = publication10.getReference();
+//		String exp10 = "Ziegler, C.; Franke, J.: Closed-loop control of patient handling robots. In: Gourab Sen Gupta; Donald Bailey; Serge Demidenko; Dale Carnegie (Hrsg.): Recent Advances in Robotics and Automation. Springer, 2013, S. 231--241";
+//		assertEquals("doCreatePublicationsTest-10", exp10, act10);
 	}
 
 	@Test
