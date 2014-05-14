@@ -2,6 +2,8 @@ package orgamanager.model;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
@@ -223,39 +225,79 @@ public class OmModel {
 		}
 	}
 
-	public void doEhcWebAppTurnSwitchOn(){
-		// TODO Check warum geht das, wenn ich auf dem Uni-Netz-Rechner arbeite via Netzwerkkabel und mein Notebook via FAU-Staff via WLan verbunden ist?
-		JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
-		OmUtilities utils = new OmUtilities();
-		// TODO use URL-Encoder instead of strings
-		// String data = URLEncoder.encode("key1", "UTF-8") + "=" + URLEncoder.encode("value1", "UTF-8");
-		// data += "&" + URLEncoder.encode("key2", "UTF-8") + "=" + URLEncoder.encode("value2", "UTF-8");
-		// TODO offer all room names 
-		String fhemServerIp = config.getDevelopmentFhemServerIp();
-		String targetURL = "http://" + fhemServerIp + ":8083/fhem";
-		String urlParameters = "cmd.steckdose=set Ventilator on&room=Infotainment";
-		String res = utils.executeHttpPost(targetURL, urlParameters);
-		System.out.println("HTTP-Response: " + res);
-		JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);
-	}
-	
-	public void doEhcWebAppTurnSwitchOff(){
-		JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
-		OmUtilities utils = new OmUtilities();
-		String fhemServerIp = config.getDevelopmentFhemServerIp();
-		String targetURL = "http://" + fhemServerIp + ":8083/fhem";
-		String urlParameters = "cmd.steckdose=set Ventilator off&room=Infotainment";
-		String res = utils.executeHttpPost(targetURL, urlParameters);
-		System.out.println("HTTP-Response: " + res);
-		JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);
-	}
-	
-	public void doEhcWebAppSelfInstall(){
-		JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
-		// download all files
-		// create all relations between components
-		JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);
-	}
+	public boolean doEhcWebAppTurnSwitchOn(){
+        OmUtilities utils = new OmUtilities();
+        String fhemServerIp = config.getDevelopmentFhemServerIp();
+        String targetURL = "http://" + fhemServerIp + ":8083/fhem";
+        String urlParameters = "cmd.steckdose=set Ventilator on&room=Infotainment";
+        String res = utils.executeHttpPost(targetURL, urlParameters);
+        System.out.println("HTTP-Response: " + res);
+        return true;
+    }
+    
+    public boolean doEhcWebAppTurnSwitchOff(){
+        OmUtilities utils = new OmUtilities();
+        String fhemServerIp = config.getDevelopmentFhemServerIp();
+        String targetURL = "http://" + fhemServerIp + ":8083/fhem";
+        String urlParameters = "cmd.steckdose=set Ventilator off&room=Infotainment";
+        String res = utils.executeHttpPost(targetURL, urlParameters);
+        System.out.println("HTTP-Response: " + res);
+        return true;
+    }
+    
+    public boolean doEhcWebAppSelfInstall(){
+        JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
+        // configuration access data
+        String email = "";
+        String pass = "";
+        String emailJawboneUp = "";
+        String passwordJawboneUp = "";
+        String pathToSqlFile = "";
+        String pathToSqlFileBackup = "";
+        String dbhost = "";
+        String dbname = "";
+        String dbuser = "";
+        String dbpass = "";
+        String haEngine = "fhem"; // zwave
+        String ipAddresse = "";
+        String pathToWebserverRoot = "";
+        // Floorplan: 
+        String pathToFloorPlan = "";
+        // configuration names
+        ArrayList<String> roomNames = new ArrayList<String>();
+        roomNames.add("Besprechungsraum");
+        roomNames.add("Energie");
+        roomNames.add("Geschäftsführung");
+        roomNames.add("Hiwiraum");
+        roomNames.add("Infotainment");
+        roomNames.add("LivingLab");
+        // configuration use cases
+        HashMap<String, String> roomsUseCases = new HashMap<String, String>();
+        roomsUseCases.put("Infotainment", "Ventilator");
+        roomsUseCases.put("Hiwiraum", "Licht");
+        roomsUseCases.put("Besprechungsraum","Bewegung");
+        roomsUseCases.put("Infotainment", "TemperaturUndLuftfeuchtigkeit");
+        HashMap<String, String> healthUseCases = new HashMap<String, String>();
+        healthUseCases.put("guest@jochen-bauer.net", "Activity"); // Daily Maps
+        // configuration dash board
+        HashMap<String, String>  dashBoard = new HashMap<String, String>();
+        dashBoard.put("Infotainment", "Ventilator");
+        dashBoard.put("Infotainment", "Temperatur");
+        dashBoard.put("Infotainment", "Luftfeuchtigkeit");
+        dashBoard.put("Hiwiraum", "Licht");
+        // Import und Export via Ubuntu-Konsole
+        String exportDb = "mysqldump -u " + dbuser + " -p " + dbpass + " " + dbname + " > " + pathToSqlFileBackup;
+        String importDb = "mysql -u " + dbuser + " -p " + dbpass + " " + dbname + " < " + pathToSqlFile;
+        String sqlCreateDb = "";
+        String sqlExportDb = "";
+        String sqlImportDb = "";
+        
+        
+        // download all files
+        // create all relations between components
+        JOptionPane.showMessageDialog(null, "BP1", "Debug", JOptionPane.WARNING_MESSAGE);
+        return true;
+    }
 	
 	public void doEhcWebAppSelfDescribe(){
 		JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
