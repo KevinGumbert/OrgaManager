@@ -13,6 +13,7 @@ import orgamanager.view.OmAssignmentPanel;
 import orgamanager.view.OmDevelopmentPanel;
 import orgamanager.view.OmLoginPanel;
 import orgamanager.view.OmPublicationsPanel;
+import orgamanager.view.OmSignaturePanel;
 import orgamanager.view.OmView;
 import orgamanager.view.OmWebAttachmentPanel;
 import orgamanager.view.OmWelcomePanel;
@@ -38,6 +39,7 @@ public class OmController {
 	private OmWelcomePanel welcomePanel;
 	private OmDevelopmentPanel developmentPanel;
 	private OmPublicationsPanel publicationsPanel;
+	private OmSignaturePanel signaturePanel; 
 	private OmWebAttachmentPanel webAttachmentPanel;
 	private OmViewConstant currentView;
 	private boolean isAuthorized;
@@ -310,11 +312,6 @@ public class OmController {
 		
 		view.setMainPanel(developmentPanel);
 	}
-	
-	private void prepareForSignaturesView() {
-		setCurrentView(OmViewConstant.SIGNATURES);
-		// TODO
-	}
 
 	private void prepareForPublicationsView() {
 		setCurrentView(OmViewConstant.PUBLICATIONS);
@@ -337,6 +334,31 @@ public class OmController {
 		createInvoiceButton.addActionListener(createInvoiceAction);
 		view.setMainPanel(publicationsPanel);
 	}
+	
+	private void prepareForSignaturesView() {
+		
+			setCurrentView(OmViewConstant.SIGNATURES);
+			signaturePanel =  new OmSignaturePanel();
+			JButton backButton = signaturePanel.getBackButton();
+			ActionListener backAction = new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent arg0) { //go back action
+					prepareForWelcomeView();
+					
+				}
+			};
+			backButton.addActionListener(backAction);
+			JButton signatureButton = signaturePanel.getCreateSignatureButton();
+			ActionListener signatureAction = new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent arg0) {
+					doSignatures();
+				}
+			};
+			signatureButton.addActionListener(signatureAction);
+			view.setMainPanel(signaturePanel);
+		}
+	
 	
 	private void prepareForWebAttachmentView() {
 		setCurrentView(OmViewConstant.WEBATTACHMENT);
@@ -397,6 +419,10 @@ public class OmController {
 	
 	public void doCreatePublications(){
 		model.doCreatePublications();
+	}
+	
+	public void doSignatures(){
+		model.doSignatures();
 	}
 	
 	public void doCreateWebAttachments(){

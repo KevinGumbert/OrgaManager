@@ -17,6 +17,7 @@ import orgamanager.model.development.selenium.ehc.EhcTests;
 import orgamanager.model.development.selenium.joba.JobaTests;
 import orgamanager.model.development.selenium.skp.SkpTests;
 import orgamanager.model.publications.PublicationsList;
+import orgamanager.model.signatures.*;
 import orgamanager.model.webAttachment.UploadTask;
 import orgamanager.tests.OmModelTest;
 import orgamanager.utilities.OmOperatingSystemConstant;
@@ -35,47 +36,7 @@ public class OmModel {
 		isAuthorized = false;
 	}
 
-	public boolean doSignatures() {
-		System.out.println("doSignatures");
-		
-		// Hinweise zum Aufbau.
-		// php-Skript mit Prozedur um Platzhalter zu fuellen
-		// HTML-Vorlagen-Verzeichnis mit Mitarbeiterdatei, Bildern, Vorlagen
-		
-		// Idee zum Sequenzdiagramm:
-		// SignatureList erwartet, den Pfad zum Ressourcenverzeichnis;
-		// SignatureList-Konstruktur liest Mitarbeiterdatei;
-		// Liste von SignatureOwner entsteht;
-		// Liste von SignatureOwnern wird abgearbeitet:
-		// je SignatureOwner werden alle Signature-Objekte erzeugt;
-		
-		// Idee zum Klassendiagramm:
-		// es wird eine Klasse Signature und SignatureOwnder gebildet;
-		// die Klasse SignatureOwner
-		// Signature und SignatureOwner sind miteinander verbunden;
-		// alle Signaturen sind in einer Liste gespeichert SignaturesList gespeichert;
-		// diese Liste besitzt eine Methode getListAsArchive() fuer das Archiv;
-		// ... Ende Hinweise
-		
-		// Aufgabe:
-		// Vereinfachung der HTML-Signatur (weg mit Tabellen, hin zu Absaetzen
-		// Testen der Signaturen auf Druckern
-		// ... Ende der Aufgabenliste
-		
-		// Ressourcen-Verzeichnis (Mitarbeiterdatei, Bilder, Vorlagen)
-		
-		// Schleife ...
-			// HTML-Vorlage waehlen		
-			// HTML-Signatur erzeugen
-		// ... end 
-		
-		// Archivdatei bilden
-		
-		// Archivdatei speichern
-		
-		System.out.println("doSignatures - end");
-		return true;
-	}
+
 
 	public boolean doLogin(String username, String password) {
 		if (username.equals(config.getUsername()) && password.equals(config.getPassword())) {
@@ -202,9 +163,9 @@ public class OmModel {
 	}
 	
 	public void doWebAttachment() {
-		JOptionPane.showMessageDialog(null,
-				"Waehlen Sie die Datei fuerr den Anhang aus.",
-				"Anhangauswahl", JOptionPane.WARNING_MESSAGE); 
+//		JOptionPane.showMessageDialog(null,
+//				"Waehlen Sie die Datei fuer den Anhang aus.",
+//				"Anhangauswahl", JOptionPane.WARNING_MESSAGE); 
 		String workingDir = System.getProperty("user.dir");
 		JFileChooser fc = new JFileChooser(workingDir);
 		int state = fc.showOpenDialog(null);
@@ -223,6 +184,78 @@ public class OmModel {
 					"Sie haben keinen Anhang ausgewaehlt. Klicken Sie auf X falls Sie das Programm beenden moechten. ",
 					"Anhangauswahl", JOptionPane.WARNING_MESSAGE); 
 		}
+	}
+	
+	public boolean doSignatures() {
+		System.out.println("doSignatures");
+		
+		//get pathToResourceFolder for SignatureList
+		String workingDir = System.getProperty("user.home");
+		JFileChooser fc = new JFileChooser(workingDir);
+		int state = fc.showOpenDialog(null);
+		
+		if (state == JFileChooser.APPROVE_OPTION) {
+			String file = fc.getSelectedFile().getPath();
+			try{
+				SignatureList signatureList = new SignatureList(file);
+				
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		
+//			try {
+//				// start upload
+//				WebAttachmentConfig webAttachmentConfig = config.getWebAttachmentConfig();
+//				UploadTask task = new UploadTask(webAttachmentConfig.getHost(), webAttachmentConfig.getPort(), webAttachmentConfig.getUsername(), webAttachmentConfig.getPassword(), "/cloud/test", file);
+//				task.execute();
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
+		} else {
+			JOptionPane.showMessageDialog(null,
+					"Sie haben kein Verzeichnis ausgewaehlt. Klicken Sie auf X falls Sie das Programm beenden moechten. ",
+					"Ressourcenverzeichnis", JOptionPane.WARNING_MESSAGE); 
+		}
+		
+		/*
+		// Hinweise zum Aufbau.
+		// php-Skript mit Prozedur um Platzhalter zu fuellen
+		// HTML-Vorlagen-Verzeichnis mit Mitarbeiterdatei, Bildern, Vorlagen
+		
+		// Idee zum Sequenzdiagramm:
+		// SignatureList erwartet, den Pfad zum Ressourcenverzeichnis;
+		// SignatureList-Konstruktur liest Mitarbeiterdatei;
+		// Liste von SignatureOwner entsteht;
+		// Liste von SignatureOwnern wird abgearbeitet:
+		// je SignatureOwner werden alle Signature-Objekte erzeugt;
+		
+		// Idee zum Klassendiagramm:
+		// es wird eine Klasse Signature und SignatureOwnder gebildet;
+		// die Klasse SignatureOwner
+		// Signature und SignatureOwner sind miteinander verbunden;
+		// alle Signaturen sind in einer Liste gespeichert SignatureList gespeichert;
+		// diese Liste besitzt eine Methode getListAsArchive() fuer das Archiv;
+		// ... Ende Hinweise
+		
+		// Aufgabe:
+		// Vereinfachung der HTML-Signatur (weg mit Tabellen, hin zu Absaetzen
+		// Testen der Signaturen auf Druckern
+		// ... Ende der Aufgabenliste
+		
+		// Ressourcen-Verzeichnis (Mitarbeiterdatei, Bilder, Vorlagen)
+		
+		// Schleife ...
+			// HTML-Vorlage waehlen		
+			// HTML-Signatur erzeugen
+		// ... end 
+		
+		// Archivdatei bilden
+		
+		// Archivdatei speichern
+		*/
+		System.out.println("doSignatures - end");
+		return true;
 	}
 
 	public boolean doEhcWebAppTurnSwitchOn(){
