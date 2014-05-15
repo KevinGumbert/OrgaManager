@@ -1,6 +1,7 @@
 package orgamanager;
 
 import java.awt.Frame;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.swing.UIManager;
@@ -10,6 +11,7 @@ import orgamanager.controller.OmController;
 import orgamanager.model.OmModel;
 import orgamanager.utilities.OmSplashScreen;
 import orgamanager.view.OmView;
+import orgamanager.model.signatures.*;
 
 /**
  * Main is the entry point of this application, you can read the core documentation here as well.
@@ -25,6 +27,8 @@ public class Main {
 		// NOTE: use ant to build the tool - folder OrgaManager 'ant';
 		// run by cd in dist and call java -jar orga-manager.jar (Swing-UI);
 		// run with param java -jar orga-manager.jar -tui for terminal UI, i.e. for ssh access on the raspberry pi;
+		
+		
 		String params = "";
 		boolean isTui = false;
 		for(int i=0; i<args.length; i++){

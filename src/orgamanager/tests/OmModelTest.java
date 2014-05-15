@@ -15,6 +15,8 @@ import orgamanager.model.publications.Publication;
 import orgamanager.model.publications.PublicationParent;
 import orgamanager.model.publications.PublicationsList;
 import orgamanager.utilities.OmUtilities;
+import orgamanager.view.OmSignaturePanel;
+import orgamanager.model.signatures.*;
 
 /**
  * OmModelTest contains all test cases related to the model respectively the api.
@@ -387,7 +389,17 @@ public class OmModelTest {
 	public void doSignaturesTest(){
 		OmModel model = new OmModel();
 		boolean act1 = model.doSignatures();
+		
 		boolean exp1 = true;
 		assertEquals("doOxidInstallTest-0", exp1, act1);
 	}
+//	@Test
+//	public void doSignatureListTest(){
+//	    String pathToFile= "D:\\Dropbox\\E-Home\\Arbeitspackete\\Signatures\\SignaturenSergej\\Outlook-Signatur\\Administratives\\Vorlagen";
+//		SignatureList signatureList = new SignatureList(pathToFile);
+//		String act1 = signatureList.parseXmlFile(pathToFile + "\\univis-mitarbeiter-02052014.xml");
+//		
+//		String exp1 = "Mitarbeiter";
+//		assertEquals("doSignatureListTest", exp1, act1);
+//	}
 }
