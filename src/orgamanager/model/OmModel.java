@@ -198,7 +198,7 @@ public class OmModel {
 			String file = fc.getSelectedFile().getPath();
 			try{
 				SignatureList signatureList = new SignatureList(file);
-				
+				//System.out.println(signatureList.parseXmlFile(file));
 				
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -218,6 +218,7 @@ public class OmModel {
 					"Ressourcenverzeichnis", JOptionPane.WARNING_MESSAGE); 
 		}
 		
+		System.out.println("doSignatures - end");
 		/*
 		// Hinweise zum Aufbau.
 		// php-Skript mit Prozedur um Platzhalter zu fuellen
@@ -254,7 +255,7 @@ public class OmModel {
 		
 		// Archivdatei speichern
 		*/
-		System.out.println("doSignatures - end");
+		
 		return true;
 	}
 

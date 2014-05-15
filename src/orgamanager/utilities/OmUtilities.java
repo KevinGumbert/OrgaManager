@@ -30,6 +30,7 @@ import javax.swing.JOptionPane;
 import orgamanager.config.OmConfig;
 import orgamanager.services.office.OfficeService;
 
+
 public class OmUtilities {
 
 	public boolean printStringToFile(String content, String path){
@@ -61,6 +62,8 @@ public class OmUtilities {
         in.close();
 		return content;
 	}
+	
+	
 	
 	public String cutStringAfterFirstOccuranceOfDelimiter(String fullString, char delimiter){
 		String shortString = "";
