@@ -58,7 +58,6 @@ public class OmModelTest {
 	
 	@Test
 	public void doCreatePublicationsTest() throws InterruptedException, FileNotFoundException{ //fail("Not yet implemented!");
-		
 		// Development area, trigger model without gui ...
 		OmModel model = new OmModel();
 		model.doCreatePublications();
