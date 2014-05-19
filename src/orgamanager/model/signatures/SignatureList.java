@@ -18,24 +18,42 @@ import java.io.File;
 public class SignatureList {
 	OmUtilities omUtilities;
 	ArrayList<SignatureOwner> owners;
-	Signature signature;
-	SignatureOwner signatureOwner;
+	ArrayList<Signature> signatures;
 
-	public SignatureList(String pathToResourceFolder) {
+	public SignatureList(String pathToResourceFolder, String fileName) {
 		// Ordnerstruktur muss sein:
 		// mitarbeiter.xml, vorlage_faps_de.html, ...
-
 		// Anlegen der Grundstruktur
 		owners = new ArrayList<SignatureOwner>();
+		signatures =  new ArrayList<Signature>();
 
 		// Schritt: Mitarbeiterdatei 'mitarbeiter.xml'einlesen und
 		// SignatureOwner-Objekte bilden
 		String str;
-		String pathToOwnerFile = pathToResourceFolder
-				+ "\\jochen.xml";//"\\univis-mitarbeiter-02052014.xml"; 
+		String pathToOwnerFile = pathToResourceFolder + "\\" + fileName;//"\\univis-mitarbeiter-02052014.xml"; 
 		owners = parseXmlFile(pathToOwnerFile);
-		createSignatures(owners);
-		getSignatureAsArchive();
+		signatures = new ArrayList<Signature>();
+		Signature fapsDeHtmlSig = new Signature();
+		fapsDeHtmlSig.setName("faps-de-html");
+		fapsDeHtmlSig.setIcon("faps-logo.png");
+		fapsDeHtmlSig.setEvent("");
+		fapsDeHtmlSig.setGreetings("");
+		// do not forget to add relation to owner
+		signatures.add(fapsDeHtmlSig);
+		Signature fapsDeHtmlMfgSig = new Signature();
+		fapsDeHtmlMfgSig.setName("faps-de-html");
+		fapsDeHtmlMfgSig.setIcon("faps-logo.png");
+		fapsDeHtmlMfgSig.setEvent("");
+		fapsDeHtmlMfgSig.setGreetings("Mit freundlichen Grüßen");
+		// do not forget to add relation to owner
+		signatures.add(fapsDeHtmlSig);
+		// create relations for all objects
+		for (SignatureOwner owner : owners){ // iterate through list
+			for (Signature signature : signatures){
+				signature.setOwner(owner); // TODO check if owner-object get copied.
+			}
+		}
+		// all objects should be created!
 	}
 
 	public ArrayList<SignatureOwner> parseXmlFile(String pathToFile) {// TODO set to private
@@ -45,32 +63,20 @@ public class SignatureList {
 
 		// read the file
 		try {
-
 			File fXmlFile = new File(pathToFile);
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			Document doc = dBuilder.parse(fXmlFile);
-
 			doc.getDocumentElement().normalize();
-
 			//System.out.println("Root element :"+ doc.getDocumentElement().getNodeName());
-
 			NodeList nList = doc.getElementsByTagName("Person");
-
 			//System.out.println("----------------------------");
-
 			for (int temp = 0; temp < nList.getLength(); temp++) {
-				
-				
 				Node nNode = nList.item(temp);
-
 				System.out.println("\nCurrent Element :" + nNode.getNodeName());
-
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-
 					Element eElement = (Element) nNode;
-
-					signatureOwner = new SignatureOwner(
+					SignatureOwner signatureOwner = new SignatureOwner(
 							eElement.getElementsByTagName("firstname").item(0).getTextContent(),
 							eElement.getElementsByTagName("lastname").item(0).getTextContent(),
 							eElement.getElementsByTagName("email").item(0).getTextContent(),
@@ -80,7 +86,6 @@ public class SignatureList {
 							eElement.getElementsByTagName("street").item(0).getTextContent(), 
 							eElement.getElementsByTagName("title").item(0).getTextContent(),
 							eElement.getElementsByTagName("id").item(0).getTextContent());
-					
 					owners.add(signatureOwner);
 					
 					//System.out.println("firstname : "+ eElement.getElementsByTagName("firstname").item(0).getTextContent());
@@ -104,24 +109,15 @@ public class SignatureList {
 		return owners;
 	}
 
-	public boolean createSignatures(ArrayList<SignatureOwner> owners) {//TODO PRIVATE
-		// Ziel: pro Mitarbeiter wurde eine Signatur erzeugt;
-		
-		signature = new Signature(owners);
-		
-		return true;
-	}
-
-	public List<Signature> getSignatureAsArchive() {
+	public String getSignaturesAsArchive(String pathToFile) { // TODO
 		// Ziel: Archivdatei bilden
 		
 		/*Vorgehen:
 		 * .txt Datei der Signatur in 
 		 * zu .zip umwandeln un am gewuenschten Ort ablegen
 		 * */
-		omUtilities.createDir("Desktop\\newFile.txt");
-		omUtilities.createFile("Desktop\\newFile.txt");
-		omUtilities.printStringToFile(signature.signature, "Desktop\\newFile.txt");
+//		omUtilities.createFile(pathToFile);
+//		omUtilities.printStringToFile(signature.signature, "Desktop\\newFile.txt");
 		
 		// Siehe dazu CONVERT FILE TO .ZIP FORMAT
 		return null;

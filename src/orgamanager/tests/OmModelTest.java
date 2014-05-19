@@ -58,7 +58,6 @@ public class OmModelTest {
 	
 	@Test
 	public void doCreatePublicationsTest() throws InterruptedException, FileNotFoundException{ //fail("Not yet implemented!");
-		
 		// Development area, trigger model without gui ...
 		OmModel model = new OmModel();
 		model.doCreatePublications();
@@ -389,9 +388,8 @@ public class OmModelTest {
 	public void doSignaturesTest(){
 		OmModel model = new OmModel();
 		boolean act1 = model.doSignatures();
-		
 		boolean exp1 = true;
-		assertEquals("doOxidInstallTest-0", exp1, act1);
+		assertEquals("doSignaturesTest-0", exp1, act1);
 	}
 //	@Test
 //	public void doSignatureListTest(){

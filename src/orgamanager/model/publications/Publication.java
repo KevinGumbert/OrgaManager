@@ -293,7 +293,7 @@ public class Publication {
 					this.parent = parent;
 					break;
 				}
-			} else if (procBooktitle.contains(booktitle)){
+			} else if (procBooktitle.contains(booktitle)  && !booktitle.equals("")){
 				if (year.equals(procYear)){
 					//System.out.println("MATCH! (part of title + year)");
 					this.parent = parent;

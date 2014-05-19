@@ -6,39 +6,70 @@ import orgamanager.utilities.*;
 public class Signature {
 
 	// Ziel: ehome-Sig
-	String name_Signature;// ehome-mfg-de
-	String logo;
-	String schlussformel;
-	String veranstaltungshinweis;
-	String signature;
-	SignatureOwner owner;
+	private String name;// ehome-mfg-de
+	private String icon;
+	private String greetings;
+	private String event;
+	private SignatureOwner owner;
 	
-	public Signature(ArrayList<SignatureOwner> owners){
-		name_Signature = "ehome-mfg-de";
-		logo = "/resources/img/ehome-logo-120px-120px.png";
-		schlussformel = "Mit freundlichen Grüßen";
-		veranstaltungshinweis = "";
-		
-		signature = createSignature(owners);
+	public Signature(){
+		// TODO add constructor which accepts all properties as parameters
 	}
 	
-	public String createSignature(ArrayList<SignatureOwner> owners){
-		
-		String signature = owners.get(0).title + "\n" 
-							+ owners.get(0).firstname + " " + owners.get(0).lastname +"\n"
-							+ "Lehrstuhl für Fertigungsautomatisierung und Produktionssystematik" +"\n"
-							+ "Prof. Dr.-Ing. Jörg Franke Friedrich-Alexander-Universität Erlangen-Nürnberg" +"\n"
-							+ owners.get(0).street + "\n"
-							+ owners.get(0).city + "\n"
-							+ owners.get(0).tel +"\n"
-							+ owners.get(0).fax + "\n" + "\n"
-							+ owners.get(0).email;
-		
-		
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getIcon() {
+		return icon;
+	}
+
+	public void setIcon(String icon) {
+		this.icon = icon;
+	}
+
+	public String getGreetings() {
+		return greetings;
+	}
+
+	public void setGreetings(String greetings) {
+		this.greetings = greetings;
+	}
+
+	public String getEvent() {
+		return event;
+	}
+
+	public void setEvent(String event) {
+		this.event = event;
+	}
+
+	public SignatureOwner getOwner() {
+		return owner;
+	}
+
+	public void setOwner(SignatureOwner owner) {
+		this.owner = owner;
+	}
+
+	public String getSignatureAsString(){
+		String signature = owner.getTitle()
+				+ "\n"
+				+ owner.getFirstname()
+				+ " "
+				+ owner.getLastname()
+				+ "\n"
+				+ "Lehrstuhl für Fertigungsautomatisierung und Produktionssystematik"
+				+ "\n"
+				+ "Prof. Dr.-Ing. Jörg Franke Friedrich-Alexander-Universität Erlangen-Nürnberg"
+				+ "\n" + owner.getStreet() + "\n" + owner.getCity()
+				+ "\n" + owner.getTel() + "\n" + owner.getFax() + "\n"
+				+ "\n" + owner.getEmail();
 		System.out.println(signature);
-		
-		return null;
+		return signature;
 	}
-	
-	
 }

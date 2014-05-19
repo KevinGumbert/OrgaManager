@@ -26,12 +26,6 @@ public class PublicationsList {
 		parseBibtexFile(path);
 	}
 	
-//	public CitationList(ArrayList<Proceeding> proceedings, ArrayList<Citation> citations) { // important for unit tests
-//		config = new OmConfig(); // maybe: use dependancy injection
-//		citations = new ArrayList<Citation>(citations);
-//		proceedings = new ArrayList<Proceeding>(proceedings);
-//	}
-	
 	public List<Publication> getCitations(){
 		return this.publications;
 	}

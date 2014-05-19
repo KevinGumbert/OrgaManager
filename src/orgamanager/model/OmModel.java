@@ -187,75 +187,29 @@ public class OmModel {
 	}
 	
 	public boolean doSignatures() {
-		System.out.println("doSignatures");
-		
-		//get pathToResourceFolder for SignatureList
+		// get pathToResourceFolder for SignatureList
 		String workingDir = System.getProperty("user.home");
 		JFileChooser fc = new JFileChooser(workingDir);
 		int state = fc.showOpenDialog(null);
-		
 		if (state == JFileChooser.APPROVE_OPTION) {
-			String file = fc.getSelectedFile().getPath();
+			String resourcesFolderPath = fc.getSelectedFile().getPath();
 			try{
-				SignatureList signatureList = new SignatureList(file);
-				//System.out.println(signatureList.parseXmlFile(file));
-				
+				String fileName = "testfile3.txt";
+				SignatureList signatureList = new SignatureList(resourcesFolderPath, fileName);
+				JFileChooser fcSave = new JFileChooser(workingDir);
+				int stateSave = fcSave.showSaveDialog(null);
+				if (stateSave == JFileChooser.APPROVE_OPTION) {
+					String pathToZip = fcSave.getSelectedFile().getPath();
+					signatureList.getSignaturesAsArchive(pathToZip);
+				}
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		
-//			try {
-//				// start upload
-//				WebAttachmentConfig webAttachmentConfig = config.getWebAttachmentConfig();
-//				UploadTask task = new UploadTask(webAttachmentConfig.getHost(), webAttachmentConfig.getPort(), webAttachmentConfig.getUsername(), webAttachmentConfig.getPassword(), "/cloud/test", file);
-//				task.execute();
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
 		} else {
 			JOptionPane.showMessageDialog(null,
 					"Sie haben kein Verzeichnis ausgewaehlt. Klicken Sie auf X falls Sie das Programm beenden moechten. ",
 					"Ressourcenverzeichnis", JOptionPane.WARNING_MESSAGE); 
 		}
-		
-		System.out.println("doSignatures - end");
-		/*
-		// Hinweise zum Aufbau.
-		// php-Skript mit Prozedur um Platzhalter zu fuellen
-		// HTML-Vorlagen-Verzeichnis mit Mitarbeiterdatei, Bildern, Vorlagen
-		
-		// Idee zum Sequenzdiagramm:
-		// SignatureList erwartet, den Pfad zum Ressourcenverzeichnis;
-		// SignatureList-Konstruktur liest Mitarbeiterdatei;
-		// Liste von SignatureOwner entsteht;
-		// Liste von SignatureOwnern wird abgearbeitet:
-		// je SignatureOwner werden alle Signature-Objekte erzeugt;
-		
-		// Idee zum Klassendiagramm:
-		// es wird eine Klasse Signature und SignatureOwnder gebildet;
-		// die Klasse SignatureOwner
-		// Signature und SignatureOwner sind miteinander verbunden;
-		// alle Signaturen sind in einer Liste gespeichert SignatureList gespeichert;
-		// diese Liste besitzt eine Methode getListAsArchive() fuer das Archiv;
-		// ... Ende Hinweise
-		
-		// Aufgabe:
-		// Vereinfachung der HTML-Signatur (weg mit Tabellen, hin zu Absaetzen
-		// Testen der Signaturen auf Druckern
-		// ... Ende der Aufgabenliste
-		
-		// Ressourcen-Verzeichnis (Mitarbeiterdatei, Bilder, Vorlagen)
-		
-		// Schleife ...
-			// HTML-Vorlage waehlen		
-			// HTML-Signatur erzeugen
-		// ... end 
-		
-		// Archivdatei bilden
-		
-		// Archivdatei speichern
-		*/
-		
 		return true;
 	}
 
