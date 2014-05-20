@@ -16,6 +16,7 @@ public class OmWelcomePanel extends JPanel {
 	private JPanel innerPanel;
 	private JPanel outerPanel;
 	private JButton assignmentButton;
+	private JButton neuerAnwendungsbereichButton;
 	private JButton signaturesButton;
 	private JButton publicationsButton;
 	private JButton developmentButton;
@@ -39,6 +40,11 @@ public class OmWelcomePanel extends JPanel {
 		assignmentButton = new JButton(config.getMessage("assignmentButtonText"));
 		assignmentButton.setPreferredSize(buttonDim);
 		assignmentButton.setMinimumSize(buttonDim);
+		
+		neuerAnwendungsbereichButton = new JButton(config.getMessage("neuerAnwendugsbereichButtonText"));
+		neuerAnwendungsbereichButton.setPreferredSize(buttonDim);
+		neuerAnwendungsbereichButton.setMinimumSize(buttonDim);
+		
 		signaturesButton = new JButton(config.getMessage("signaturesButtonText"));
 		signaturesButton.setPreferredSize(buttonDim);
 		signaturesButton.setMinimumSize(buttonDim);
@@ -67,6 +73,8 @@ public class OmWelcomePanel extends JPanel {
 		innerPanel.add(Box.createRigidArea(new Dimension(2, 2)));
 		innerPanel.add(webAttachmentButton);
 		innerPanel.add(Box.createRigidArea(new Dimension(2, 2)));
+		innerPanel.add(neuerAnwendungsbereichButton);
+		innerPanel.add(Box.createRigidArea(new Dimension(2, 2)));
 		this.add(innerPanel);
 		outerPanel = new JPanel();
 		outerPanel.setPreferredSize(new Dimension((int) panelWidth, (int) panelHeightOuter));
@@ -84,9 +92,14 @@ public class OmWelcomePanel extends JPanel {
 		this.assignmentButton = assignmentButton;
 	}
 	
+	public JButton getNeuerAnwendungsbereichButton() {
+		return neuerAnwendungsbereichButton;
+	}
+	
 	public JButton getSignaturesButton() {
 		return signaturesButton;
 	}
+	
 
 	public void setSignaturesButton(JButton signaturesButton) {
 		this.signaturesButton = signaturesButton;
