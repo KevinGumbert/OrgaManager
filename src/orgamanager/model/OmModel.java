@@ -22,6 +22,7 @@ import orgamanager.model.webAttachment.UploadTask;
 import orgamanager.tests.OmModelTest;
 import orgamanager.utilities.OmOperatingSystemConstant;
 import orgamanager.utilities.OmUtilities;
+import orgamanager.config.SignatureConfig;
 
 /**
  * OmModel represents the API which got invoked from a corresponding controller.
@@ -29,6 +30,7 @@ import orgamanager.utilities.OmUtilities;
 public class OmModel {
 
 	private OmConfig config;
+	private SignatureConfig signatureConfig;
 	private boolean isAuthorized;
 
 	public OmModel() {
@@ -199,9 +201,11 @@ public class OmModel {
 	}
 	
 	public boolean doSignatures() {
-		// get resourcesFolderPath for SignatureList
-		String workingDir = System.getProperty("user.home");
-		JFileChooser fc = new JFileChooser(workingDir);
+		signatureConfig = new SignatureConfig();
+		
+		//String workingDir = System.getProperty("user.home");
+		
+		JFileChooser fc = new JFileChooser(signatureConfig.getWorkungDir());
 		
 		fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 		
@@ -218,10 +222,9 @@ public class OmModel {
 //				int stateSave = fcSave.showSaveDialog(null);
 //				if (stateSave == JFileChooser.APPROVE_OPTION) {
 //					String pathToZip = fcSave.getSelectedFile().getPath();
-				System.out.println("workingDir : " + workingDir);
-				String pathToSignature = workingDir + "\\workspacejava\\OrgaManager\\src\\orgamanager\\files\\signatures";	
-				String pathToZip = workingDir + "\\signatures.zip";	
-				signatureList.getSignaturesAsArchive(pathToZip, pathToSignature);
+				
+//				
+				signatureList.getSignaturesAsArchive(signatureConfig.getPathToZip(), signatureConfig.getPathToSignatures());
 					JOptionPane.showMessageDialog(null,
 							"Zip-Datei wurde angelegt!",
 							"Operation abgeschlossen", JOptionPane.PLAIN_MESSAGE); 
