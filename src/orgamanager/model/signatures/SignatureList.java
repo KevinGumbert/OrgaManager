@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import orgamanager.utilities.*;
 
 //TODO put this later to OmUtilities
@@ -33,26 +34,35 @@ public class SignatureList {
 		String pathToOwnerFile = pathToResourceFolder + "\\" + fileName;//"\\univis-mitarbeiter-02052014.xml"; 
 		owners = parseXmlFile(pathToOwnerFile);
 		signatures = new ArrayList<Signature>();
-		Signature fapsDeHtmlSig = new Signature();
-		fapsDeHtmlSig.setName("faps-de-html");
-		fapsDeHtmlSig.setIcon("faps-logo.png");
-		fapsDeHtmlSig.setEvent("");
-		fapsDeHtmlSig.setGreetings("");
-		// do not forget to add relation to owner
-		signatures.add(fapsDeHtmlSig);
-		Signature fapsDeHtmlMfgSig = new Signature();
-		fapsDeHtmlMfgSig.setName("faps-de-html");
-		fapsDeHtmlMfgSig.setIcon("faps-logo.png");
-		fapsDeHtmlMfgSig.setEvent("");
-		fapsDeHtmlMfgSig.setGreetings("Mit freundlichen Grüßen");
-		// do not forget to add relation to owner
-		signatures.add(fapsDeHtmlSig);
-		// create relations for all objects
-		for (SignatureOwner owner : owners){ // iterate through list
-			for (Signature signature : signatures){
-				signature.setOwner(owner); // TODO check if owner-object get copied.
-			}
-		}
+		
+		Signature fapsDetxtSig = new Signature();
+		String txtSignature = fapsDetxtSig.getSignatureAsString(owners);
+		omUtilities.createFileAndSave(pathToResourceFolder, "signature.txt");
+		omUtilities.printStringToFile(txtSignature, pathToResourceFolder + "\\signature.txt");
+		
+		
+		
+		//code for HTML-Signatures
+//		Signature fapsDeHtmlSig = new Signature();
+//		fapsDeHtmlSig.setName("faps-de-html");
+//		fapsDeHtmlSig.setIcon("faps-logo.png");
+//		fapsDeHtmlSig.setEvent("");
+//		fapsDeHtmlSig.setGreetings("");
+//		// do not forget to add relation to owner
+//		signatures.add(fapsDeHtmlSig);
+//		Signature fapsDeHtmlMfgSig = new Signature();
+//		fapsDeHtmlMfgSig.setName("faps-de-html");
+//		fapsDeHtmlMfgSig.setIcon("faps-logo.png");
+//		fapsDeHtmlMfgSig.setEvent("");
+//		fapsDeHtmlMfgSig.setGreetings("Mit freundlichen Grüßen");
+//		// do not forget to add relation to owner
+//		signatures.add(fapsDeHtmlSig);
+//		// create relations for all objects
+//		for (SignatureOwner owner : owners){ // iterate through list
+//			for (Signature signature : signatures){
+//				signature.setOwner(owner); // TODO check if owner-object get copied.
+//			}
+//		}
 		// all objects should be created!
 	}
 
@@ -73,7 +83,7 @@ public class SignatureList {
 			//System.out.println("----------------------------");
 			for (int temp = 0; temp < nList.getLength(); temp++) {
 				Node nNode = nList.item(temp);
-				System.out.println("\nCurrent Element :" + nNode.getNodeName());
+				//System.out.println("\nCurrent Element :" + nNode.getNodeName());
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 					Element eElement = (Element) nNode;
 					SignatureOwner signatureOwner = new SignatureOwner(
@@ -109,23 +119,28 @@ public class SignatureList {
 		return owners;
 	}
 
-	public String getSignaturesAsArchive(String pathToFile) { // TODO
+	public String getSignaturesAsArchive(String pathToZip, String pathToTxtFile) { // TODO
 		// Ziel: Archivdatei bilden
 		
 		/*Vorgehen:
 		 * .txt Datei der Signatur in 
 		 * zu .zip umwandeln un am gewuenschten Ort ablegen
 		 * */
-//		omUtilities.createFile(pathToFile);
-//		omUtilities.printStringToFile(signature.signature, "Desktop\\newFile.txt");
-		
-		// Siehe dazu CONVERT FILE TO .ZIP FORMAT
+		OmUtilities omutilities = new OmUtilities();
+
+		  File folder = new File(pathToTxtFile ); //  + "\\signature.txt"   folder = files to be zipped 
+		  File[] files = folder.listFiles(); 
+		  File file=new File(pathToZip);//("C://Answers//Examples//Examples.zip"); 
+		  omutilities.createZip(file, files); 
+
+
 		return null;
 	}
 }
 
 /*
- * CONVERT FILE TO .ZIP FORMAT in OmUtilities packen import java.io.*; import
+ * CONVERT FILE TO .ZIP FORMAT in OmUtilities packen 
+ * import java.io.*; import
  * java.util.zip.*;
  * 
  * public class CreateZip { 

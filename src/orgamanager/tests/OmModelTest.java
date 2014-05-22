@@ -1,6 +1,8 @@
 package orgamanager.tests;
 
 import static org.junit.Assert.*;
+import static junit.framework.Assert.assertEquals;
+import junit.framework.*;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -391,13 +393,13 @@ public class OmModelTest {
 		boolean exp1 = true;
 		assertEquals("doSignaturesTest-0", exp1, act1);
 	}
-//	@Test
-//	public void doSignatureListTest(){
-//	    String pathToFile= "D:\\Dropbox\\E-Home\\Arbeitspackete\\Signatures\\SignaturenSergej\\Outlook-Signatur\\Administratives\\Vorlagen";
-//		SignatureList signatureList = new SignatureList(pathToFile);
-//		String act1 = signatureList.parseXmlFile(pathToFile + "\\univis-mitarbeiter-02052014.xml");
-//		
-//		String exp1 = "Mitarbeiter";
-//		assertEquals("doSignatureListTest", exp1, act1);
-//	}
+
+	@Test
+	public void doNeuerAnwendungsbereichTest() {
+		OmModel model = new OmModel();
+		boolean act1 = model.doNeuerAnwendungsbereich();
+		boolean exp1 = true;
+		assertEquals("doNeuerAnwendungsFall-0", exp1, act1);
+	}
+	
 }

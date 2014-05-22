@@ -17,6 +17,7 @@ import orgamanager.view.OmSignaturePanel;
 import orgamanager.view.OmView;
 import orgamanager.view.OmWebAttachmentPanel;
 import orgamanager.view.OmWelcomePanel;
+import orgamanager.view.NeuerAnwendungsbereichPanel;
 
 /**
  * OmController is the main controller.
@@ -38,6 +39,7 @@ public class OmController {
 	private OmLoginPanel loginPanel;
 	private OmWelcomePanel welcomePanel;
 	private OmDevelopmentPanel developmentPanel;
+	private NeuerAnwendungsbereichPanel neuerAnwendungsbereichPanel;
 	private OmPublicationsPanel publicationsPanel;
 	private OmSignaturePanel signaturePanel; 
 	private OmWebAttachmentPanel webAttachmentPanel;
@@ -63,6 +65,9 @@ public class OmController {
 				break;
 			case LOGIN:
 				prepareForLoginView();
+				break;
+			case NEUERANWENDUNGSBEREICH:
+				prepareForNeuerAnwendungsbereichView();
 				break;
 			case PUBLICATIONS:
 				prepareForPublicationsView();
@@ -145,6 +150,16 @@ public class OmController {
 			}
 		};
 		developmentButton.addActionListener(developmentAction);
+		
+		JButton neuerAnwendungsbereichButton = welcomePanel.getNeuerAnwendungsbereichButton();
+		ActionListener neuerAnwendungsbereichAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				prepareForNeuerAnwendungsbereichView();
+			}
+		};
+		neuerAnwendungsbereichButton.addActionListener(neuerAnwendungsbereichAction);
+		
 		JButton signaturesButton = welcomePanel.getSignaturesButton();
 		ActionListener signaturesAction = new ActionListener() {
 			@Override
@@ -335,6 +350,55 @@ public class OmController {
 		view.setMainPanel(publicationsPanel);
 	}
 	
+	
+	
+	private void prepareForNeuerAnwendungsbereichView() {
+		
+		setCurrentView(OmViewConstant.NEUERANWENDUNGSBEREICH);
+		neuerAnwendungsbereichPanel =  new NeuerAnwendungsbereichPanel();
+		JButton backButton = neuerAnwendungsbereichPanel.getBackButton();
+		ActionListener backAction = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) { //go back action
+				prepareForWelcomeView();
+				
+			}
+		};
+		backButton.addActionListener(backAction);
+		
+		
+		JButton neuerAnwendungsbereichButton_1 = neuerAnwendungsbereichPanel.getCreateNeuerAnwendungsbereichButton(1);
+		ActionListener neuerAnwendungsbereichAction_1 = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doNeuerAnwendungsbereich();
+			}
+		};
+		neuerAnwendungsbereichButton_1.addActionListener(neuerAnwendungsbereichAction_1);
+		view.setMainPanel(neuerAnwendungsbereichPanel);
+		
+		JButton neuerAnwendungsbereichButton_2 = neuerAnwendungsbereichPanel.getCreateNeuerAnwendungsbereichButton(2);
+		ActionListener neuerAnwendungsbereichAction_2 = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doNeuerAnwendungsbereich();
+			}
+		};
+		neuerAnwendungsbereichButton_2.addActionListener(neuerAnwendungsbereichAction_2);
+		view.setMainPanel(neuerAnwendungsbereichPanel);
+		
+		JButton neuerAnwendungsbereichButton_3 = neuerAnwendungsbereichPanel.getCreateNeuerAnwendungsbereichButton(3);
+		ActionListener neuerAnwendungsbereichAction_3 = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				doNeuerAnwendungsbereich();
+			}
+		};
+		neuerAnwendungsbereichButton_3.addActionListener(neuerAnwendungsbereichAction_3);
+		view.setMainPanel(neuerAnwendungsbereichPanel);
+		
+	}
+	
 	private void prepareForSignaturesView() {
 		
 			setCurrentView(OmViewConstant.SIGNATURES);
@@ -419,6 +483,10 @@ public class OmController {
 	
 	public void doCreatePublications(){
 		model.doCreatePublications();
+	}
+	
+	public void doNeuerAnwendungsbereich(){
+		model.doNeuerAnwendungsbereich();
 	}
 	
 	public void doSignatures(){

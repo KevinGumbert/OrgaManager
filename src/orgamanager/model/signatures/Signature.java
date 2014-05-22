@@ -1,6 +1,7 @@
 package orgamanager.model.signatures;
 
 import java.util.ArrayList;
+
 import orgamanager.utilities.*;
 
 public class Signature {
@@ -56,8 +57,13 @@ public class Signature {
 		this.owner = owner;
 	}
 
-	public String getSignatureAsString(){
-		String signature = owner.getTitle()
+	public String getSignatureAsString(ArrayList<SignatureOwner> owners){//only a test method: there is one owner
+		
+		String signature = null;
+		
+		for(SignatureOwner owner : owners){
+		
+		signature = owner.getTitle()
 				+ "\n"
 				+ owner.getFirstname()
 				+ " "
@@ -69,7 +75,10 @@ public class Signature {
 				+ "\n" + owner.getStreet() + "\n" + owner.getCity()
 				+ "\n" + owner.getTel() + "\n" + owner.getFax() + "\n"
 				+ "\n" + owner.getEmail();
+		
 		System.out.println(signature);
+		
+		}
 		return signature;
 	}
 }

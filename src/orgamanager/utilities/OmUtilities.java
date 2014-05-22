@@ -1,5 +1,6 @@
 package orgamanager.utilities;
 
+import java.io.*;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -24,6 +25,7 @@ import java.util.List;
 import java.util.Properties;
 import java.util.Scanner;
 import java.util.StringTokenizer;
+import java.util.zip.*;
 
 import javax.swing.JOptionPane;
 
@@ -168,6 +170,59 @@ public class OmUtilities {
 		} else {
 			return false;
 		}
+	}
+	
+	public boolean createFileAndSave(String location, String fileName){
+		
+		
+		File file = new File(location + "\\" + fileName);
+		
+		try {
+			file.createNewFile();
+			
+		} catch (Exception e) {
+			System.out.println("No file " + fileName +" created");
+		}
+		
+		if (file.exists()){
+		    return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public void createZip(File zipFile, File[] listFiles) {
+		int buffer = 10240;
+		try { 
+			byte b[] = new byte[buffer]; 
+			FileOutputStream fout = new FileOutputStream(zipFile);
+			ZipOutputStream out = new ZipOutputStream(fout); 
+				  
+			for (int i = 0; i < listFiles.length; i++) { 
+				
+				if (listFiles[i] == null || !listFiles[i].exists()|| listFiles[i].isDirectory()) 
+					System.out.println(); 
+				  
+				 ZipEntry addFiles = new ZipEntry(listFiles[i].getName());
+				 addFiles.setTime(listFiles[i].lastModified()); 
+				 out.putNextEntry(addFiles);
+				  
+				 FileInputStream fin = new FileInputStream(listFiles[i]); 
+				 while (true) { 
+				  	int len = fin.read(b, 0, b.length); 
+				  	if (len <= 0) break; 
+				  	out.write(b, 0, len); 
+				}
+				fin.close(); 
+				} 
+				out.close(); 
+				fout.close();
+				System.out.println("Zip File is created successfully."); 
+				} catch (Exception ex) {
+				  
+				}
+	
+
 	}
 	
 	public boolean deleteFile(String path){

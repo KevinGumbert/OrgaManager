@@ -162,6 +162,18 @@ public class OmModel {
 		// Artikel Eigenschaften
 	}
 	
+	public boolean doNeuerAnwendungsbereich() {
+
+		System.out.println("doNeuerAnwendungsfall - begin");
+		
+		
+		JOptionPane.showMessageDialog(null, "Neuer Anwendungsfall","Debug", JOptionPane.WARNING_MESSAGE);
+		
+		System.out.println("doNeuerAnwendungsfall - end");
+	
+		return false;
+	}
+	
 	public void doWebAttachment() {
 //		JOptionPane.showMessageDialog(null,
 //				"Waehlen Sie die Datei fuer den Anhang aus.",
@@ -187,20 +199,25 @@ public class OmModel {
 	}
 	
 	public boolean doSignatures() {
-		// get pathToResourceFolder for SignatureList
+		// get resourcesFolderPath for SignatureList
 		String workingDir = System.getProperty("user.home");
 		JFileChooser fc = new JFileChooser(workingDir);
+		
+		fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+		
 		int state = fc.showOpenDialog(null);
 		if (state == JFileChooser.APPROVE_OPTION) {
 			String resourcesFolderPath = fc.getSelectedFile().getPath();
 			try{
-				String fileName = "testfile3.txt";
+				String fileName = "testfile3.txt"; 
 				SignatureList signatureList = new SignatureList(resourcesFolderPath, fileName);
+				
 				JFileChooser fcSave = new JFileChooser(workingDir);
+				// get pathToZip where the signature.zip will be saved
 				int stateSave = fcSave.showSaveDialog(null);
 				if (stateSave == JFileChooser.APPROVE_OPTION) {
 					String pathToZip = fcSave.getSelectedFile().getPath();
-					signatureList.getSignaturesAsArchive(pathToZip);
+					signatureList.getSignaturesAsArchive(pathToZip, resourcesFolderPath);
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
