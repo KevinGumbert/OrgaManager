@@ -218,8 +218,9 @@ public class OmModel {
 //				int stateSave = fcSave.showSaveDialog(null);
 //				if (stateSave == JFileChooser.APPROVE_OPTION) {
 //					String pathToZip = fcSave.getSelectedFile().getPath();
-				String pathToSignature = "C:\\Eclipse Workspace\\OrgaManager\\signatures";	
-				String pathToZip = "C:\\Eclipse Workspace\\OrgaManager\\signatures\\signature.zip";	
+				System.out.println("workingDir : " + workingDir);
+				String pathToSignature = workingDir + "\\workspacejava\\OrgaManager\\src\\orgamanager\\files\\signatures";	
+				String pathToZip = workingDir + "\\signatures.zip";	
 				signatureList.getSignaturesAsArchive(pathToZip, pathToSignature);
 					JOptionPane.showMessageDialog(null,
 							"Zip-Datei wurde angelegt!",

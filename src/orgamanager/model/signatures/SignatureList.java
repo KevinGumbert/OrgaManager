@@ -27,7 +27,7 @@ public class SignatureList {
 		// Ordnerstruktur muss sein:
 		// mitarbeiter.xml, vorlage_faps_de.html, ...
 		// Anlegen der Grundstruktur
-		String pathToSignatures = "C:\\Eclipse Workspace\\OrgaManager\\signatures";
+		//String pathToSignatures = "C:\\Eclipse Workspace\\OrgaManager\\signatures";
 		owners = new ArrayList<SignatureOwner>();
 		signatures =  new ArrayList<Signature>();
 
@@ -38,19 +38,17 @@ public class SignatureList {
 		String pathToOwnerFile = pathToResourceFolder + "\\" + fileName;//"\\univis-mitarbeiter-02052014.xml"; 
 		owners = parseXmlFile(pathToOwnerFile);
 		signatures = new ArrayList<Signature>();
-		
 		Signature fapsDetxtSig = new Signature();
 		String txtSignature = fapsDetxtSig.getSignatureAsString(owners);
-		
-		omUtilities.createFileAndSave(pathToSignatures, "signature.txt");
-		omUtilities.printStringToFile(txtSignature, pathToSignatures + "\\signature.txt");
+		omUtilities.createFileAndSave(pathToResourceFolder, "signature.txt");
+		omUtilities.printStringToFile(txtSignature, pathToResourceFolder + "\\signature.txt");
 		
 		
 		//create signature.html
 		Signature fapsDeHtmlSig = new Signature();
 		String htmlSignature = fapsDeHtmlSig.getSignatureAsStringHtml(owners);
-		omUtilities.createFileAndSave(pathToSignatures, "signature.html");
-		omUtilities.printStringToFile(htmlSignature, pathToSignatures + "\\signature.html");
+		omUtilities.createFileAndSave(pathToResourceFolder, "signature.html");
+		omUtilities.printStringToFile(htmlSignature, pathToResourceFolder + "\\signature.html");
 		
 		//code for HTML-Signatures
 //		Signature fapsDeHtmlSig = new Signature();
@@ -131,21 +129,20 @@ public class SignatureList {
 
 	public String getSignaturesAsArchive(String pathToZip, String pathToTxtFile) { // TODO
 		// Ziel: Archivdatei bilden
-		
-		/*Vorgehen:
-		 * .txt Datei der Signatur in 
-		 * zu .zip umwandeln un am gewuenschten Ort ablegen
-		 * */
+
+		/*
+		 * Vorgehen: .txt Datei der Signatur in zu .zip umwandeln un am
+		 * gewuenschten Ort ablegen
+		 */
 		try {
 			OmUtilities omutilities = new OmUtilities();
-
-			  File folder = new File(pathToTxtFile ); //  + "\\signature.txt"   folder = files to be zipped 
-			  File[] files = folder.listFiles(); 
-			  File file=new File(pathToZip);//("C://Answers//Examples//Examples.zip"); 
-			  omutilities.createZip(file, files); 
+			File folder = new File(pathToTxtFile); 
+			File[] files = folder.listFiles();
+			File file = new File(pathToZip);
+			omutilities.createZip(file, files);
 		} catch (Exception e) {
 			e.printStackTrace();
-		}	
+		}
 		return null;
 	}
 }
