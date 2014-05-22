@@ -27,22 +27,30 @@ public class SignatureList {
 		// Ordnerstruktur muss sein:
 		// mitarbeiter.xml, vorlage_faps_de.html, ...
 		// Anlegen der Grundstruktur
+		String pathToSignatures = "C:\\Eclipse Workspace\\OrgaManager\\signatures";
 		owners = new ArrayList<SignatureOwner>();
 		signatures =  new ArrayList<Signature>();
 
 		// Schritt: Mitarbeiterdatei 'mitarbeiter.xml'einlesen und
 		// SignatureOwner-Objekte bilden
-		String str;
+		
+		//create signature.txt
 		String pathToOwnerFile = pathToResourceFolder + "\\" + fileName;//"\\univis-mitarbeiter-02052014.xml"; 
 		owners = parseXmlFile(pathToOwnerFile);
 		signatures = new ArrayList<Signature>();
 		
 		Signature fapsDetxtSig = new Signature();
 		String txtSignature = fapsDetxtSig.getSignatureAsString(owners);
-		omUtilities.createFileAndSave(pathToResourceFolder, "signature.txt");
-		omUtilities.printStringToFile(txtSignature, pathToResourceFolder + "\\signature.txt");
+		
+		omUtilities.createFileAndSave(pathToSignatures, "signature.txt");
+		omUtilities.printStringToFile(txtSignature, pathToSignatures + "\\signature.txt");
 		
 		
+		//create signature.html
+		Signature fapsDeHtmlSig = new Signature();
+		String htmlSignature = fapsDeHtmlSig.getSignatureAsStringHtml(owners);
+		omUtilities.createFileAndSave(pathToSignatures, "signature.html");
+		omUtilities.printStringToFile(htmlSignature, pathToSignatures + "\\signature.html");
 		
 		//code for HTML-Signatures
 //		Signature fapsDeHtmlSig = new Signature();

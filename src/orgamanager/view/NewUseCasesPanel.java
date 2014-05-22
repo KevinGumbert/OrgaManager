@@ -22,12 +22,12 @@ public class NewUseCasesPanel extends JPanel {
 	public NewUseCasesPanel() {
 		config = new OmConfig();
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-		this.setBorder(BorderFactory.createTitledBorder(config.getMessage("neuerAnwendugsbereichPanelTitleText")));
+		this.setBorder(BorderFactory.createTitledBorder(config.getMessage("newUseCasesPanelTitleText")));
 		this.setPreferredSize(config.getMainPanelDimension());
 		newUseCasePackagePanel = new JPanel(); // FlowLayout
-		newUseCaseButton1 = new JButton(config.getMessage("neuerAnwendugsbereichPanelCreateButton1"));
-		newUseCaseButton2 = new JButton(config.getMessage("neuerAnwendugsbereichPanelCreateButton2"));
-		newUseCaseButton3 = new JButton(config.getMessage("neuerAnwendugsbereichPanelCreateButton3"));
+		newUseCaseButton1 = new JButton(config.getMessage("newUseCasesPanelCreateButton1"));
+		newUseCaseButton2 = new JButton(config.getMessage("newUseCasesPanelCreateButton2"));
+		newUseCaseButton3 = new JButton(config.getMessage("newUseCasesPanelCreateButton3"));
 		newUseCasePackagePanel.add(newUseCaseButton1);
 		newUseCasePackagePanel.add(newUseCaseButton2);
 		newUseCasePackagePanel.add(newUseCaseButton3);

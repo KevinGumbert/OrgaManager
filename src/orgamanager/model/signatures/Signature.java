@@ -74,11 +74,37 @@ public class Signature {
 				+ "Prof. Dr.-Ing. Jörg Franke Friedrich-Alexander-Universität Erlangen-Nürnberg"
 				+ "\n" + owner.getStreet() + "\n" + owner.getCity()
 				+ "\n" + owner.getTel() + "\n" + owner.getFax() + "\n"
-				+ "\n" + owner.getEmail();
-		
-		System.out.println(signature);
+				+ "\n" + owner.getEmail();		
 		
 		}
 		return signature;
+	}
+	
+	public String getSignatureAsStringHtml(ArrayList<SignatureOwner> owners){//only a test method: there is one owner
+		
+		String signatureHml = null;
+		
+		for(SignatureOwner owner : owners){
+		
+			signatureHml = 
+				"<html>" 
+				+"<head>"
+				+ "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>"		
+				+ "<title>HTML-Signatur</title></head>"
+				+"<body>"
+				+ "<p>"+owner.getTitle()+"</p>"
+				+ "<h1>"+owner.getFirstname() + owner.getLastname() + "</h1>"
+				+ "<p>Lehrstuhl für Fertigungsautomatisierung<br> und Produktionssystematik</p>"
+				+ "<p><img src=\"C:\\Eclipse Workspace\\OrgaManager\\resources\\faps_logo.png\" alt=\"faps_logo.png\"></p>"
+				+ "<h2>Prof. Dr.-Ing. Jörg Franke Friedrich-Alexander-Universität Erlangen-Nürnberg</h2>"
+				+ "<h3>" + owner.getStreet() + "</h3>" + "<h4>"+owner.getCity()+"</h4>"
+				+ "<h4> Tel.: " + owner.getTel() + "</h4>" +"<h5> Fax:" + owner.getFax() + "</h5>"
+				+ "<h6>" + owner.getEmail()+"</h6>"
+				+ "<h6>www.faps.uni-erlangen.de</h6>"
+				
+			+"</body></html>";
+		
+		}
+		return signatureHml;
 	}
 }
