@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE UnivIS SYSTEM "http://univis.uni-erlangen.de/univis.dtd">
+<UnivIS version="1.7" semester="2014s">
+<Person key="Person.tech.FT.FT-FAPS.bauerj">
+<firstname>Jochen</firstname>
+<id>21330437</id>
+<lastname>Bauer</lastname>
+<locations>
+<location>
+<email>jochen.bauer@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nuernberg</ort>
+<office>16.02.21 Geb.75.4.05</office>
+<street>Fuerther Str. 246b</street>
+<tel>+49 911 5302-9112</tel>
+</location>
+</locations>
+<title>M.Sc</title>
+</Person>
+</UnivIS>
