@@ -17,7 +17,7 @@ import orgamanager.view.OmSignaturePanel;
 import orgamanager.view.OmView;
 import orgamanager.view.OmWebAttachmentPanel;
 import orgamanager.view.OmWelcomePanel;
-import orgamanager.view.NeuerAnwendungsbereichPanel;
+import orgamanager.view.NewUseCasesPanel;
 
 /**
  * OmController is the main controller.
@@ -39,7 +39,7 @@ public class OmController {
 	private OmLoginPanel loginPanel;
 	private OmWelcomePanel welcomePanel;
 	private OmDevelopmentPanel developmentPanel;
-	private NeuerAnwendungsbereichPanel neuerAnwendungsbereichPanel;
+	private NewUseCasesPanel neuerAnwendungsbereichPanel;
 	private OmPublicationsPanel publicationsPanel;
 	private OmSignaturePanel signaturePanel; 
 	private OmWebAttachmentPanel webAttachmentPanel;
@@ -355,7 +355,7 @@ public class OmController {
 	private void prepareForNeuerAnwendungsbereichView() {
 		
 		setCurrentView(OmViewConstant.NEUERANWENDUNGSBEREICH);
-		neuerAnwendungsbereichPanel =  new NeuerAnwendungsbereichPanel();
+		neuerAnwendungsbereichPanel =  new NewUseCasesPanel();
 		JButton backButton = neuerAnwendungsbereichPanel.getBackButton();
 		ActionListener backAction = new ActionListener() {
 			@Override

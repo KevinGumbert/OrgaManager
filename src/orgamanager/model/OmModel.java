@@ -218,6 +218,9 @@ public class OmModel {
 				if (stateSave == JFileChooser.APPROVE_OPTION) {
 					String pathToZip = fcSave.getSelectedFile().getPath();
 					signatureList.getSignaturesAsArchive(pathToZip, resourcesFolderPath);
+					JOptionPane.showMessageDialog(null,
+							"Zip-Datei wurde angelegt!",
+							"Operation abgeschlossen", JOptionPane.PLAIN_MESSAGE); 
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
