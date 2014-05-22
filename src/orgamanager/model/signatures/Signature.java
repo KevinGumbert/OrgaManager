@@ -81,9 +81,8 @@ public class Signature {
 	}
 	
 	public String getSignatureAsStringHtml(ArrayList<SignatureOwner> owners){//only a test method: there is one owner
-		
+		String imgPathFapsLogo = "file:\\C:\\Users\\jobauer\\workspacejava\\OrgaManager\\src\\orgamanager\\files\\signatures\\faps_logo.png";
 		String signatureHml = null;
-		
 		for(SignatureOwner owner : owners){
 		
 			signatureHml = 
@@ -95,7 +94,7 @@ public class Signature {
 				+ "<p>"+owner.getTitle()+"</p>"
 				+ "<h1>"+owner.getFirstname() + owner.getLastname() + "</h1>"
 				+ "<p>Lehrstuhl für Fertigungsautomatisierung<br> und Produktionssystematik</p>"
-				+ "<p><img src=\"C:\\Eclipse Workspace\\OrgaManager\\resources\\faps_logo.png\" alt=\"faps_logo.png\"></p>"
+				+ "<p><img src='" + imgPathFapsLogo + "' alt='faps_logo.png'></p>"
 				+ "<h2>Prof. Dr.-Ing. Jörg Franke Friedrich-Alexander-Universität Erlangen-Nürnberg</h2>"
 				+ "<h3>" + owner.getStreet() + "</h3>" + "<h4>"+owner.getCity()+"</h4>"
 				+ "<h4> Tel.: " + owner.getTel() + "</h4>" +"<h5> Fax:" + owner.getFax() + "</h5>"
