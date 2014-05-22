@@ -22,6 +22,8 @@ public class SignatureList {
 	ArrayList<Signature> signatures;
 
 	public SignatureList(String pathToResourceFolder, String fileName) {
+		// TODO start Spinner
+		
 		// Ordnerstruktur muss sein:
 		// mitarbeiter.xml, vorlage_faps_de.html, ...
 		// Anlegen der Grundstruktur
@@ -126,14 +128,16 @@ public class SignatureList {
 		 * .txt Datei der Signatur in 
 		 * zu .zip umwandeln un am gewuenschten Ort ablegen
 		 * */
-		OmUtilities omutilities = new OmUtilities();
+		try {
+			OmUtilities omutilities = new OmUtilities();
 
-		  File folder = new File(pathToTxtFile ); //  + "\\signature.txt"   folder = files to be zipped 
-		  File[] files = folder.listFiles(); 
-		  File file=new File(pathToZip);//("C://Answers//Examples//Examples.zip"); 
-		  omutilities.createZip(file, files); 
-
-
+			  File folder = new File(pathToTxtFile ); //  + "\\signature.txt"   folder = files to be zipped 
+			  File[] files = folder.listFiles(); 
+			  File file=new File(pathToZip);//("C://Answers//Examples//Examples.zip"); 
+			  omutilities.createZip(file, files); 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}	
 		return null;
 	}
 }
