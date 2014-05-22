@@ -41,7 +41,7 @@ public class OmWelcomePanel extends JPanel {
 		assignmentButton.setPreferredSize(buttonDim);
 		assignmentButton.setMinimumSize(buttonDim);
 		
-		neuerAnwendungsbereichButton = new JButton(config.getMessage("neuerAnwendugsbereichButtonText"));
+		neuerAnwendungsbereichButton = new JButton(config.getMessage("newUseCasesButtonText"));
 		neuerAnwendungsbereichButton.setPreferredSize(buttonDim);
 		neuerAnwendungsbereichButton.setMinimumSize(buttonDim);
 		

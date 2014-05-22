@@ -209,19 +209,22 @@ public class OmModel {
 		if (state == JFileChooser.APPROVE_OPTION) {
 			String resourcesFolderPath = fc.getSelectedFile().getPath();
 			try{
-				String fileName = "testfile3.txt"; 
+				String fileName = "owners.txt"; 
 				SignatureList signatureList = new SignatureList(resourcesFolderPath, fileName);
 				
-				JFileChooser fcSave = new JFileChooser(workingDir);
+				//commented dialog: asks where to store the .zip file that includes signature
+//				JFileChooser fcSave = new JFileChooser(workingDir);
 				// get pathToZip where the signature.zip will be saved
-				int stateSave = fcSave.showSaveDialog(null);
-				if (stateSave == JFileChooser.APPROVE_OPTION) {
-					String pathToZip = fcSave.getSelectedFile().getPath();
-					signatureList.getSignaturesAsArchive(pathToZip, resourcesFolderPath);
+//				int stateSave = fcSave.showSaveDialog(null);
+//				if (stateSave == JFileChooser.APPROVE_OPTION) {
+//					String pathToZip = fcSave.getSelectedFile().getPath();
+				String pathToSignature = "C:\\Eclipse Workspace\\OrgaManager\\signatures";	
+				String pathToZip = "C:\\Eclipse Workspace\\OrgaManager\\signatures\\signature.zip";	
+				signatureList.getSignaturesAsArchive(pathToZip, pathToSignature);
 					JOptionPane.showMessageDialog(null,
 							"Zip-Datei wurde angelegt!",
 							"Operation abgeschlossen", JOptionPane.PLAIN_MESSAGE); 
-				}
+//				}
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
