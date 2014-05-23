@@ -4,16 +4,17 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import orgamanager.utilities.*;
 
 //TODO put this later to OmUtilities
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
+
 import java.io.File;
 
 public class SignatureList {
@@ -38,6 +39,11 @@ public class SignatureList {
 		String pathToOwnerFile = pathToResourceFolder + "\\" + fileName;//"\\univis-mitarbeiter-02052014.xml"; 
 		owners = parseXmlFile(pathToOwnerFile);
 		signatures = new ArrayList<Signature>();
+		
+		
+			
+		
+		
 		Signature fapsDetxtSig = new Signature();
 		String txtSignature = fapsDetxtSig.getSignatureAsString(owners);
 		omUtilities.createFileAndSave(pathToResourceFolder, "signature.txt");
@@ -49,6 +55,7 @@ public class SignatureList {
 		String htmlSignature = fapsDeHtmlSig.getSignatureAsStringHtml(owners);
 		omUtilities.createFileAndSave(pathToResourceFolder, "signature.html");
 		omUtilities.printStringToFile(htmlSignature, pathToResourceFolder + "\\signature.html");
+		
 		
 		//code for HTML-Signatures
 //		Signature fapsDeHtmlSig = new Signature();
@@ -127,7 +134,7 @@ public class SignatureList {
 		return owners;
 	}
 
-	public String getSignaturesAsArchive(String pathToZip, String pathToTxtFile) { // TODO
+	public String getSignaturesAsArchive(String pathToZip, String pathToSignatureFile) { // TODO
 		// Ziel: Archivdatei bilden
 
 		/*
@@ -136,7 +143,7 @@ public class SignatureList {
 		 */
 		try {
 			OmUtilities omutilities = new OmUtilities();
-			File folder = new File(pathToTxtFile); 
+			File folder = new File(pathToSignatureFile); 
 			File[] files = folder.listFiles();
 			File file = new File(pathToZip);
 			omutilities.createZip(file, files);

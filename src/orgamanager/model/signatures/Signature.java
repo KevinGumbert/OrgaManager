@@ -3,6 +3,7 @@ package orgamanager.model.signatures;
 import java.util.ArrayList;
 
 import orgamanager.utilities.*;
+import orgamanager.config.SignatureConfig;;
 
 public class Signature {
 
@@ -12,6 +13,8 @@ public class Signature {
 	private String greetings;
 	private String event;
 	private SignatureOwner owner;
+	private SignatureConfig signatureConfig;
+	
 	
 	public Signature(){
 		// TODO add constructor which accepts all properties as parameters
@@ -81,27 +84,51 @@ public class Signature {
 	}
 	
 	public String getSignatureAsStringHtml(ArrayList<SignatureOwner> owners){//only a test method: there is one owner
-		String imgPathFapsLogo = "file:\\C:\\Users\\jobauer\\workspacejava\\OrgaManager\\src\\orgamanager\\files\\signatures\\faps_logo.png";
+		
 		String signatureHml = null;
+		signatureConfig = new SignatureConfig();
+		
 		for(SignatureOwner owner : owners){
 		
 			signatureHml = 
+					
 				"<html>" 
 				+"<head>"
-				+ "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>"		
-				+ "<title>HTML-Signatur</title></head>"
+				+"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>"		
+				+"<title>HTML-Signatur</title></head>"
 				+"<body>"
-				+ "<p>"+owner.getTitle()+"</p>"
-				+ "<h1>"+owner.getFirstname() + owner.getLastname() + "</h1>"
-				+ "<p>Lehrstuhl für Fertigungsautomatisierung<br> und Produktionssystematik</p>"
-				+ "<p><img src='" + imgPathFapsLogo + "' alt='faps_logo.png'></p>"
-				+ "<h2>Prof. Dr.-Ing. Jörg Franke Friedrich-Alexander-Universität Erlangen-Nürnberg</h2>"
-				+ "<h3>" + owner.getStreet() + "</h3>" + "<h4>"+owner.getCity()+"</h4>"
-				+ "<h4> Tel.: " + owner.getTel() + "</h4>" +"<h5> Fax:" + owner.getFax() + "</h5>"
-				+ "<h6>" + owner.getEmail()+"</h6>"
-				+ "<h6>www.faps.uni-erlangen.de</h6>"
+				+"<table border= '0' cellspacing='0' cellpadding='0' style='width:420px;'>"
+				+	"<tr>"
+				+		"<td style='border-top: 1px solid black; width:110px; height:40px;'><span style='font-family: Arial, Helvetica, sans-serif;font-size:1px;color:#FFF;'>--</span></td>"
+				+ 		"<td colspan='3' style='border-top: 1px solid black; width:310px; height:40px; vertical-align:bottom;'><span style='font-family: Arial, Helvetica, sans-serif; font-size:11px; color:#000;'>"+ owner.getTitle() +"</span><br />"
+				+			"<span style='font-family: Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; color:#000;'>"+owner.getFirstname() + owner.getLastname()+"</span></td>"
+				+	"</tr>"
 				
-			+"</body></html>";
+				+	"<tr>"
+			    +		"<td style='width:110px; height:48px;'>&nbsp;</td>"
+			    +		"<td colspan='3' style='width:310px; height:48px; vertical-align:middle;'><span style='font-family: Arial, Helvetica, sans-serif; font-size:13px; color:#000;'>Lehrstuhl für Fertigungsautomatisierung<br />und Produktionssystematik</span></td>"
+			    +	"</tr>"
+
+			    +	"<tr>"
+			    +		"<td rowspan='3' style='width:110px; height:93px;'><img width='93' height='93' src='"+signatureConfig.getImgPathFapsLogo()+"' alt='FAPS Logo' title='FAPS Logo' /></td>"
+			    +		"<td colspan='3' style='width:310px; height:31px; vertical-align:top;'><span style='font-family: Arial, Helvetica, sans-serif; font-size:11px; color:#000;'>Prof. Dr.-Ing. Jörg Franke<br />"
+			    +  		"Friedrich-Alexander-Universität Erlangen-Nürnberg</span></td>"
+			    +	"</tr>"
+
+			    +	"<tr>"
+			    +		"<td style='width:125px; height:31px; vertical-align:middle;'><span style='font-family: Arial, Helvetica, sans-serif; font-size:11px; color:#000;'>"+owner.getStreet()+"<br />"
+			    +  		 owner.getCity() + "</span></td>"
+			    +		"<td style='width:25px; height:31px; vertical-align:middle;'><span style='font-family: Arial, Helvetica, sans-serif; font-size:11px; color:#000;'>Tel.:<br />Fax: </span></td>"
+			    +		"<td style='width:160px; height:31px; vertical-align:middle;'><span style='font-family: Arial, Helvetica, sans-serif; font-size:11px; color:#000;'>"+owner.getTel()+"<br />"
+			    +  		owner.getFax()+"</span></td>"
+			    +	"</tr>"
+
+			    +	"<tr>"
+			    +		"<td colspan='3' style='width:310px; height:31px; vertical-align:bottom;'><span style='font-family: Arial, Helvetica, sans-serif; font-size:11px; color:#000;'><a style='color:#000; text-decoration:none;' href='mailto:jochen.bauer@faps.uni-erlangen.de'>"+owner.getEmail()+"</a><br />"
+			    + 		"<a style='color:#000; text-decoration:none;' href='http://www.faps.uni-erlangen.de/'>www.faps.uni-erlangen.de</a></span></td>"
+			    +		"</tr>"
+			  	+"</table>"
+				+"</body></html>";
 		
 		}
 		return signatureHml;
