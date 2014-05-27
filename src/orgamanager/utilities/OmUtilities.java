@@ -30,6 +30,7 @@ import java.util.zip.*;
 import javax.swing.JOptionPane;
 
 import orgamanager.config.OmConfig;
+import orgamanager.config.SignatureConfig;
 import orgamanager.services.office.OfficeService;
 
 
@@ -192,6 +193,7 @@ public class OmUtilities {
 	}
 	
 	public void createZip(File zipFile, File[] listFiles) {
+		SignatureConfig signatureConfig = new SignatureConfig();
 		int buffer = 10240;
 		try {
 			byte b[] = new byte[buffer];
@@ -202,7 +204,16 @@ public class OmUtilities {
 
 				if (listFiles[i] == null || !listFiles[i].exists()
 						|| listFiles[i].isDirectory())
-					System.out.println();
+					System.out.println("There are no files to zip");
+				
+				// don't put this files into the .zip file
+				if (listFiles[i].getName().contains(signatureConfig.getNameFapsLogo()) 
+						|| listFiles[i].getName().contains(signatureConfig.getNameEDPCLogo())
+						|| listFiles[i].getName().contains(signatureConfig.getNameMidLogo())
+						|| listFiles[i].getName().contains(signatureConfig.getNameOwnerFile())) {
+					
+					continue;					
+				}
 
 				ZipEntry addFiles = new ZipEntry(listFiles[i].getName());
 				addFiles.setTime(listFiles[i].lastModified());

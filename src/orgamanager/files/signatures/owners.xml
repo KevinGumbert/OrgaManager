@@ -1,0 +1,1416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE UnivIS SYSTEM "http://univis.uni-erlangen.de/univis.dtd">
+<UnivIS version="1.7" semester="2014s">
+<Person key="Person.tech.FT.FT-FAPS.asbach">
+<firstname>Alexander</firstname>
+<id>41324514</id>
+<lastname>Asbach</lastname>
+<locations>
+<location>
+<email>asbach@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.035</office>
+<street>Egerlandstr. 9</street>
+<tel>+49 9131 8527859</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.bauerj">
+<firstname>Jochen</firstname>
+<id>21330437</id>
+<lastname>Bauer</lastname>
+<locations>
+<location>
+<email>jochen.bauer@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>16.02.21 Geb.75.4.05</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9112</tel>
+</location>
+</locations>
+<title>M.Sc</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.beckmi">
+<firstname>Michael</firstname>
+<id>21339421</id>
+<lastname>Beck</lastname>
+<locations>
+<location>
+<email>michael.beck@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9111</tel>
+</location>
+</locations>
+<title>M.Sc.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.beimle">
+<firstname>Martina</firstname>
+<id>41217428</id>
+<lastname>Beimler</lastname>
+<locations>
+<location>
+<email>martina.beimler@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9109</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.bickel">
+<firstname>Benjamin</firstname>
+<id>41169127</id>
+<lastname>Bickel</lastname>
+<locations>
+<location>
+<email>benjamin.bickel@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.058-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9068</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.bhmral">
+<firstname>Ralf</firstname>
+<id>41396326</id>
+<lastname>Böhm</lastname>
+<locations>
+<location>
+<email>boehm@faps.uni-erlangen.de</email>
+<ort>90429 Nürnberg</ort>
+<office>EnCN  16.2.22</office>
+<street>Fürther Str 246b</street>
+<tel>0911 5302 96254</tel>
+</location>
+</locations>
+<title>Dipl.-Wirtsch.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.bnigjo">
+<firstname>Jochen</firstname>
+<id>41190627</id>
+<lastname>Bönig</lastname>
+<locations>
+<location>
+<email>jochen.boenig@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.023</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-28314</tel>
+</location>
+</locations>
+<title>M.Sc.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.brandm">
+<atitle>M. Sc.</atitle>
+<firstname>Markus</firstname>
+<id>41320515</id>
+<lastname>Brandmeier</lastname>
+<locations>
+<location>
+<email>brandmeier@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.027</office>
+<street>Egerlandstr. 7</street>
+<tel>+49 9131 85-20193</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.braunt">
+<firstname>Thomas</firstname>
+<id>21315739</id>
+<lastname>Braun</lastname>
+<locations>
+<location>
+<email>thomas.braun@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>16.02.21 Geb. 75.4.05</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.brelam">
+<firstname>Matthäus</firstname>
+<id>21152290</id>
+<lastname>Brela</lastname>
+<locations>
+<location>
+<email>matthaeus.brela@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.026</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-28871</tel>
+</location>
+</locations>
+<title>M.Eng.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.brosso">
+<firstname>Matthias</firstname>
+<id>40435166</id>
+<lastname>Brossog</lastname>
+<locations>
+<location>
+<email>matthias.brossog@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.039</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-27991</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.buorte">
+<firstname>Stefan</firstname>
+<id>29898324</id>
+<lastname>Buortesch</lastname>
+<locations>
+<location>
+<email>stefan.buortesch@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9094</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.brnerj">
+<firstname>Johannes</firstname>
+<id>21347927</id>
+<lastname>Bürner</lastname>
+<locations>
+<location>
+<email>johannes.buerner@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>16.02.21 Geb. 75.4.05</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9115</tel>
+</location>
+</locations>
+<title>M.Sc</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.buschh">
+<firstname>Arnd</firstname>
+<id>41029662</id>
+<lastname>Buschhaus</lastname>
+<locations>
+<location>
+<email>arnd.buschhaus@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.025</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-27822</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.danesc">
+<firstname>Payam</firstname>
+<id>21285168</id>
+<lastname>Daneschwar</lastname>
+<locations>
+<location>
+<email>payam.daneschwar@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9098</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.donhau">
+<atitle>M. Sc.</atitle>
+<firstname>Toni</firstname>
+<id>21338024</id>
+<lastname>Donhauser</lastname>
+<locations>
+<location>
+<email>toni.donhauser@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.027</office>
+<street>Egerlandstraße 7</street>
+<tel>+49 9131 85-27965</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.eberle">
+<firstname>Lukas</firstname>
+<id>41271644</id>
+<lastname>Eberlein</lastname>
+<locations>
+<location>
+<email>lukas.eberlein@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9115</tel>
+</location>
+</locations>
+<title>Dipl.-Wirtsch.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.egerme">
+<firstname>Peter</firstname>
+<id>41288705</id>
+<lastname>Egermeier</lastname>
+<locations>
+<location>
+<email>peter.egermeier@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.059-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9110</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.esfand">
+<firstname>Alireza</firstname>
+<id>21043041</id>
+<lastname>Esfandyari</lastname>
+<locations>
+<location>
+<email>alireza.esfandyari@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9080</tel>
+</location>
+</locations>
+<title>M.Sc.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.fapsas">
+<firstname>Assistenten</firstname>
+<id>21296167</id>
+<lastname>FAPS</lastname>
+<locations>
+<location>
+<email>hofmann@faps.uni-erlangen.de</email>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.feldma">
+<firstname>Klaus</firstname>
+<id>49638184</id>
+<lastname>Feldmann</lastname>
+<locations>
+<location>
+<email>klaus.feldmann@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.039</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-27252</tel>
+</location>
+</locations>
+<pospruefer>100601</pospruefer>
+<title>Prof. Dr.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.fische">
+<firstname>Bernd</firstname>
+<id>29881124</id>
+<lastname>Fischer</lastname>
+<locations>
+<location>
+<email>bernd.fischer@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlanden</ort>
+<office>0.036</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-28017</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.fische_5">
+<firstname>Christian</firstname>
+<id>40710415</id>
+<lastname>Fischer</lastname>
+<locations>
+<location>
+<email>christian.fischer@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.038</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-27177</tel>
+</location>
+</locations>
+<title>Dipl.-Inf.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.fleisc">
+<atitle>M. Sc.</atitle>
+<firstname>Hans</firstname>
+<id>21417992</id>
+<lastname>Fleischmann</lastname>
+<locations>
+<location>
+<email>fleischmann@faps.uni-erlangen.de</email>
+<fax>+ 499131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.027</office>
+<street>Egerlandstraße 7</street>
+<tel>+49 9131 85-28783</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.franke">
+<firstname>Jörg</firstname>
+<id>20950185</id>
+<lastname>Franke</lastname>
+<locations>
+<location>
+<email>joerg.franke@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.036</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-27569</tel>
+</location>
+</locations>
+<officehours>
+<officehour>
+<comment>aktuelle Termine für Sprechstunden hängen am Schwarzen Brett aus.</comment>
+</officehour>
+</officehours>
+<pospruefer>100615</pospruefer>
+<title>Prof. Dr.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.gionge">
+<firstname>Gerald</firstname>
+<id>40158884</id>
+<lastname>Gion</lastname>
+<locations>
+<location>
+<email>gerald.gion@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9081</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.gtzjoh">
+<firstname>Johannes</firstname>
+<id>41036478</id>
+<lastname>Götz</lastname>
+<locations>
+<location>
+<email>johannes.goetz@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.025</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-27712</tel>
+</location>
+</locations>
+<title>Dipl.-Wirtsch.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.gnther">
+<firstname>Stefan</firstname>
+<id>41105935</id>
+<lastname>Günther</lastname>
+<locations>
+<location>
+<email>stefan.guenther@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.058-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9067</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.hansen">
+<firstname>Astrid</firstname>
+<id>40863508</id>
+<lastname>Hansen</lastname>
+<locations>
+<location>
+<email>astrid.hansen@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.026</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-28758</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.hrters">
+<firstname>Stefan</firstname>
+<id>40951694</id>
+<lastname>Härter</lastname>
+<locations>
+<location>
+<email>stefan.haerter@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9088</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.herold">
+<firstname>Georg</firstname>
+<id>29836316</id>
+<lastname>Herold</lastname>
+<locations>
+<location>
+<email>georg.herold@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.023</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-27966</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.heyder">
+<firstname>Andreas</firstname>
+<id>41389711</id>
+<lastname>Heyder</lastname>
+<locations>
+<location>
+<email>andreas.heyder@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<street>Fürther Str. 246 b</street>
+<tel>+49 911 5302-9067</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.hofman">
+<firstname>Benjamin</firstname>
+<id>21279387</id>
+<lastname>Hofmann</lastname>
+<locations>
+<location>
+<email>benjamin.hofmann@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.058-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9073</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.hftann">
+<firstname>Annika</firstname>
+<id>21321233</id>
+<lastname>Höft</lastname>
+<locations>
+<location>
+<email>annika.hoeft@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.039</office>
+<street>Egerlandstr. 7</street>
+<tel>+49 9131 85-27970</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.hrberj">
+<firstname>Johannes</firstname>
+<id>40741948</id>
+<lastname>Hörber</lastname>
+<locations>
+<location>
+<email>johannes.hoerber@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9091</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.hubert">
+<firstname>Markus</firstname>
+<id>21215182</id>
+<lastname>Hubert</lastname>
+<locations>
+<location>
+<email>markus.hubert@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.058-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9086</tel>
+</location>
+</locations>
+<title>Dipl.-Ing. (FH)</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.javied">
+<firstname>Tallal</firstname>
+<id>41268250</id>
+<lastname>Javied</lastname>
+<locations>
+<location>
+<email>tallal.javied@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.026</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-20160</tel>
+</location>
+</locations>
+<title>MBE</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.johnwo">
+<firstname>Wolfgang</firstname>
+<id>41329904</id>
+<lastname>John</lastname>
+<locations>
+<location>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-27971</tel>
+</location>
+</locations>
+<title>Dr.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.kstlec">
+<firstname>Christopher</firstname>
+<id>21214062</id>
+<lastname>Kästle</lastname>
+<locations>
+<location>
+<email>christopher.kaestle@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9078</tel>
+</location>
+</locations>
+<title>Dipl.-Wirtsch.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.kettsc">
+<atitle>M.A.</atitle>
+<firstname>Anna</firstname>
+<id>41207039</id>
+<lastname>Kettschau</lastname>
+<locations>
+<location>
+<email>anna.kettschau@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246 b</street>
+<tel>+49 911 5302-9410</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.kleine">
+<firstname>Gerhard</firstname>
+<id>21292668</id>
+<lastname>Kleineidam</lastname>
+<locations>
+<location>
+<email>gerhard.kleineidam@faps.uni-erlangen.de</email>
+<fax>+49 911 5302 96250</fax>
+<ort>90429 Nürnberg</ort>
+<office>EnCN  16.2.22</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9083</tel>
+</location>
+</locations>
+<title>Dr.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.kliert">
+<firstname>Tobias</firstname>
+<id>21088314</id>
+<lastname>Klier</lastname>
+<locations>
+<location>
+<email>tobias.klier@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.059-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9062</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.kohljo">
+<firstname>Johannes</firstname>
+<id>41171976</id>
+<lastname>Kohl</lastname>
+<locations>
+<location>
+<email>johannes.kohl@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.023</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-28997</tel>
+</location>
+</locations>
+<title>Dipl.-Inf.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.kordas">
+<firstname>Timo</firstname>
+<id>41378850</id>
+<lastname>Kordass</lastname>
+<locations>
+<location>
+<email>timo.kordass@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-96279</tel>
+</location>
+</locations>
+<title>Dipl.-Wirtsch. Ing. (FH)</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.kozicd">
+<firstname>Denis</firstname>
+<id>40130563</id>
+<lastname>Kozic</lastname>
+<locations>
+<location>
+<email>denis.kozic@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9099</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.kreitl">
+<firstname>Sven</firstname>
+<id>21197328</id>
+<lastname>Kreitlein</lastname>
+<locations>
+<location>
+<email>sven.kreitlein@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.058-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9069</tel>
+</location>
+</locations>
+<title>Dipl.-Ing. (FH)</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.kriebi">
+<firstname>Ingo</firstname>
+<id>21179237</id>
+<lastname>Kriebitzsch</lastname>
+<locations>
+<location>
+<email>Ingo.Kriebitzsch@bmw.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-27971</tel>
+</location>
+</locations>
+<title>Dr.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.khlale">
+<firstname>Alexander</firstname>
+<id>40836434</id>
+<lastname>Kühl</lastname>
+<locations>
+<location>
+<email>alexander.kuehl@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.059-3</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9066</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.kuhnth">
+<firstname>Thomas</firstname>
+<id>41173241</id>
+<lastname>Kuhn</lastname>
+<locations>
+<location>
+<email>thomas.kuhn@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9102</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.053-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9101</tel>
+</location>
+</locations>
+<title>Dipl.-Wirtsch.-Ing. (FH)</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.landgr">
+<firstname>Maximilian</firstname>
+<id>21246180</id>
+<lastname>Landgraf</lastname>
+<locations>
+<location>
+<email>maximilian.landgraf@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.026</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-28740</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.lwenul">
+<firstname>Ulrich</firstname>
+<id>41137394</id>
+<lastname>Löwen</lastname>
+<locations>
+<location>
+<email>ulrich.loewen@siemens.com</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-27971</tel>
+</location>
+</locations>
+<title>Dr. rer. nat.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.malysi">
+<firstname>Siegfried</firstname>
+<id>20653864</id>
+<lastname>Maly</lastname>
+<locations>
+<location>
+<email>siegfried.maly@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9087</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.mauner">
+<firstname>Leonhard</firstname>
+<id>40160362</id>
+<lastname>Maußner</lastname>
+<locations>
+<location>
+<email>leonhard.maussner@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9093</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.meinel">
+<firstname>David</firstname>
+<id>41304144</id>
+<lastname>Meinel</lastname>
+<locations>
+<location>
+<email>meinel@faps.uni-erlangen.de</email>
+<fax>09131/302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.024</office>
+<street>Egerlandstr. 7</street>
+<tel>09131/85-20195</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.merhof">
+<firstname>Jochen</firstname>
+<id>40717167</id>
+<lastname>Merhof</lastname>
+<locations>
+<location>
+<email>jochen.merhof@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.038</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-27241</tel>
+</location>
+</locations>
+<title>Dipl.-Inf.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.meyera">
+<firstname>Alexander</firstname>
+<id>41309724</id>
+<lastname>Meyer</lastname>
+<locations>
+<location>
+<email>alexander.meyer@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.059-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9063</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.michlm">
+<firstname>Markus</firstname>
+<id>20620750</id>
+<lastname>Michl</lastname>
+<locations>
+<location>
+<email>markus.michl@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-96250</fax>
+<ort>90429 Nürnberg</ort>
+<street>Fürther Str. 246 B</street>
+<tel>+49 911 5302-96251</tel>
+</location>
+</locations>
+<title>Dipl.-Inf.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.mniusk">
+<firstname>Karl-Heinz</firstname>
+<id>29864749</id>
+<lastname>Mönius</lastname>
+<locations>
+<location>
+<email>karl-heinz.moenius@fau.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.035</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-27859</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.mllerm">
+<firstname>Martin</firstname>
+<id>21142364</id>
+<lastname>Müller</lastname>
+<locations>
+<location>
+<email>martin.mueller@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9077</tel>
+</location>
+</locations>
+<title>Dipl.-Wirtsch.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.paryan">
+<id>41126036</id>
+<lastname>Paryanto</lastname>
+<locations>
+<location>
+<email>paryanto@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.037</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-27967</tel>
+</location>
+</locations>
+<title>M.Eng.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.pfeffe">
+<firstname>Michael</firstname>
+<id>20644325</id>
+<lastname>Pfeffer</lastname>
+<locations>
+<location>
+<email>michael.pfeffer@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.049-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9075</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.purkot">
+<firstname>Michael</firstname>
+<id>29867855</id>
+<lastname>Purkott</lastname>
+<locations>
+<location>
+<email>michael.purkott@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.036</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-28868</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.rackow">
+<firstname>Tobias</firstname>
+<id>41248092</id>
+<lastname>Rackow</lastname>
+<locations>
+<location>
+<email>tobias.rackow@faps.uni-erlangen.de</email>
+<fax>09131/302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.027</office>
+<street>Egerlandstraße 9</street>
+<tel>09131/85-27176</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.ramerc">
+<firstname>Christina</firstname>
+<id>21008761</id>
+<lastname>Ramer</lastname>
+<locations>
+<location>
+<email>christina.ramer@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.022</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-27711</tel>
+</location>
+</locations>
+<title>Dipl.-Wirtsch.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.rattay">
+<firstname>Claudia</firstname>
+<id>41170759</id>
+<lastname>Rattay</lastname>
+<locations>
+<location>
+<email>claudia.rattay@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.059-2</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9061</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.reitel">
+<firstname>Sebastian</firstname>
+<id>41141378</id>
+<lastname>Reitelshöfer</lastname>
+<locations>
+<location>
+<email>sebastian.reitelshoefer@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.022</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-27962</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.rischf">
+<firstname>Florian</firstname>
+<id>20873129</id>
+<lastname>Risch</lastname>
+<locations>
+<location>
+<email>florian.risch@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.059-3</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9065</tel>
+</location>
+</locations>
+<title>Dipl.-Wirtsch.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.russwu">
+<firstname>Siegfried</firstname>
+<id>20928984</id>
+<lastname>Russwurm</lastname>
+<locations>
+<location>
+<email>siegfried.russwurm@siemens.com</email>
+<fax>+49 9131 7-47033</fax>
+<ort>91052 Erlangen</ort>
+<street>Werner-von-Siemens-Str. 50</street>
+<tel>+49 9131 7-47073</tel>
+</location>
+</locations>
+<pospruefer>100613</pospruefer>
+<title>Prof. Dr.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.sahrma">
+<firstname>Katja</firstname>
+<id>21170117</id>
+<lastname>Sahrmann-Rössler</lastname>
+<locations>
+<location>
+<email>Katja.Sahrmann-Roessler@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.038</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-28156</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.schaef">
+<firstname>Franziska</firstname>
+<id>40941430</id>
+<lastname>Schäfer</lastname>
+<locations>
+<location>
+<email>franziska.schaefer@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-96250</fax>
+<ort>90429 Nürnberg</ort>
+<office>16.2.20</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-96255</tel>
+</location>
+</locations>
+<title>Dipl. Math.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.scheue">
+<firstname>Uwe</firstname>
+<id>21279166</id>
+<lastname>Scheuermann</lastname>
+<locations>
+<location>
+<email>uwe.scheuermann@semikron.com</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-27971</tel>
+</location>
+</locations>
+<title>Dr. rer. nat.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.schnei">
+<firstname>Michael</firstname>
+<id>21233373</id>
+<lastname>Schneider</lastname>
+<locations>
+<location>
+<email>michael.schneider@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.058-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9089</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.scholz">
+<firstname>Michael</firstname>
+<id>41370096</id>
+<lastname>Scholz</lastname>
+<locations>
+<location>
+<email>michael.scholz@faps.uni-erlangen.de</email>
+<fax>+49 9131-302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.024</office>
+<street>Egerlandstr. 7</street>
+<tel>+49 9131 85-20196</tel>
+</location>
+</locations>
+<title>M. Eng.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.schram">
+<firstname>René</firstname>
+<id>21104231</id>
+<lastname>Schramm</lastname>
+<locations>
+<location>
+<email>rene.schramm@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9085</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.schust">
+<firstname>Horst</firstname>
+<id>41387737</id>
+<lastname>Schuster</lastname>
+<locations>
+<location>
+<email>schuster@faps.uni-erlangen.de</email>
+<fax>+49 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246 b</street>
+<tel>+49 911 5302-9092</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.spahrm">
+<firstname>Michael</firstname>
+<id>41319094</id>
+<lastname>Spahr</lastname>
+<locations>
+<location>
+<email>spahr@faps.uni-erlangen.de</email>
+<fax>+49 911 9070</fax>
+<ort>90429 Nürnberg</ort>
+<street>Fürther Str. 246 b</street>
+<tel>+49 911 5302 96278</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.spreng">
+<firstname>Simon</firstname>
+<id>41264954</id>
+<lastname>Spreng</lastname>
+<locations>
+<location>
+<email>simon.spreng@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.059-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9064</tel>
+</location>
+</locations>
+<title>Dipl.-Wirtsch.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.anjast">
+<firstname>Anja</firstname>
+<id>21298150</id>
+<lastname>Stöckigt</lastname>
+<locations>
+<location>
+<email>anja.stoeckigt@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-96250</fax>
+<ort>90429 Nürnberg</ort>
+<office>EnCN  16.2.22?</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9084</tel>
+</location>
+</locations>
+<title>Dipl.-Kffr.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.stretz">
+<firstname>Gertrud</firstname>
+<id>29811968</id>
+<lastname>Stretz</lastname>
+<locations>
+<location>
+<email>gertrud.stretz@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.037</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-27971</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.swolfr">
+<firstname>Robert</firstname>
+<id>41397973</id>
+<lastname>Süß-Wolf</lastname>
+<locations>
+<location>
+<email>robert.süß-wolf@faps.uni-erlangen.de</email>
+<fax>+49 9115302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>1.053-3</office>
+<street>Fürther Str. 246 b</street>
+<tel>+49 9115302-9095</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.syedkh">
+<firstname>Aarief</firstname>
+<id>21273742</id>
+<lastname>Syed Khaja</lastname>
+<locations>
+<location>
+<email>syed-khaja@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9079</tel>
+</location>
+</locations>
+<title>M.Sc.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.wangli">
+<firstname>Li</firstname>
+<id>21453872</id>
+<lastname>Wang</lastname>
+<locations>
+<location>
+<email>li.wang@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9091</tel>
+</location>
+</locations>
+<title>M. Sc.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.wasile">
+<firstname>Regina</firstname>
+<id>41102566</id>
+<lastname>Wasilewski-Becker</lastname>
+<locations>
+<location>
+<email>regina.wasilewski@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9102</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.053-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9100</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.weberj">
+<firstname>Johannes</firstname>
+<id>41231211</id>
+<lastname>Weber</lastname>
+<locations>
+<location>
+<email>johannes.weber@faps.uni-erlangen.de</email>
+<fax>+49 911 5302-9070</fax>
+<ort>90429 Nürnberg</ort>
+<office>01.041-1</office>
+<street>Fürther Str. 246b</street>
+<tel>+49 911 5302-9411</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.weller">
+<firstname>Wilhelm-Friedrich</firstname>
+<id>29877447</id>
+<lastname>Weller</lastname>
+<locations>
+<location>
+<email>wilhelm.weller@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.034</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-27968</tel>
+</location>
+</locations>
+<title>Dipl.-Ing. (FH)</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.werthm">
+<firstname>Robert</firstname>
+<id>29852557</id>
+<lastname>Werthmann</lastname>
+<locations>
+<location>
+<email>robert.werthmann@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.034</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-28018</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.yooins">
+<firstname>In Seong</firstname>
+<id>41378560</id>
+<lastname>Yoo</lastname>
+<locations>
+<location>
+<email>in.seong.yoo@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.026</office>
+<street>Egerlandstr. 7</street>
+<tel>+49 9131 85 20187</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.zeitle">
+<atitle>M. Sc.</atitle>
+<firstname>Jochen</firstname>
+<id>21346929</id>
+<lastname>Zeitler</lastname>
+<locations>
+<location>
+<email>jochen.zeitler@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.026</office>
+<street>Egerlandstr. 7</street>
+<tel>+49 9131 85-28972</tel>
+</location>
+</locations>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.zhangx">
+<firstname>Xu</firstname>
+<id>41154865</id>
+<lastname>Zhang</lastname>
+<locations>
+<location>
+<email>Zhang.xu@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.026</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-28871</tel>
+</location>
+</locations>
+<title>Dipl.-Ing.</title>
+</Person>
+<Person key="Person.tech.FT.FT-FAPS.ziegle">
+<firstname>Christian</firstname>
+<id>40659921</id>
+<lastname>Ziegler</lastname>
+<locations>
+<location>
+<email>christian.ziegler@faps.uni-erlangen.de</email>
+<fax>+49 9131 302528</fax>
+<ort>91058 Erlangen</ort>
+<office>0.027</office>
+<street>Egerlandstr. 7-9</street>
+<tel>+49 9131 85-28783</tel>
+</location>
+</locations>
+<title>Dr.-Ing.</title>
+</Person>
+</UnivIS>
