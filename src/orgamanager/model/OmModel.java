@@ -213,7 +213,7 @@ public class OmModel {
 		if (state == JFileChooser.APPROVE_OPTION) {
 			String resourcesFolderPath = fc.getSelectedFile().getPath();
 			try{
-				String fileName = "owners.txt"; 
+				String fileName = "owners.xml"; 
 				SignatureList signatureList = new SignatureList(resourcesFolderPath, fileName);
 				
 				//commented dialog: asks where to store the .zip file that includes signature

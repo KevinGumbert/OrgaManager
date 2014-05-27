@@ -9,7 +9,10 @@ public class SignatureConfig {
 	private String pathToResourceFolder; // path to the resources: pics, owners ...
 	private String pathToSignatures; //where to store the created signature files
 	private String pathToZip; //where to store the .zip file
-	
+	private String nameFapsLogo;
+	private String nameEDPCLogo;
+	private String nameMidLogo;
+	private String nameOwnerFile;
 	
 	public SignatureConfig() {
 		this.setWorkungDir("C:\\Eclipse Workspace\\OrgaManager\\src\\");
@@ -18,7 +21,11 @@ public class SignatureConfig {
 		this.setGifPathLogoEDPC("file:\\" +  getWorkungDir() + "orgamanager\\files\\signatures\\LogoEDPC.gif");
 		this.setPathToResourceFolder(getWorkungDir() + "orgamanager\\files\\signatures");
 		this.setPathToSignatures(getWorkungDir() +"orgamanager\\files\\signatures");
-		this.setPathToZip(getPathToSignatures() +"\\signatures.zip");
+		this.setPathToZip(getPathToSignatures() +"\\signatures.zip");	
+		this.setNameFapsLogo("faps_logo.png");
+		this.setNameEDPCLogo("LogoEDPC.gif");
+		this.setNameMidLogo("mid_logo.jpg");
+		this.setNameOwnerFile("owners.xml");
 		
 	}
 
@@ -77,5 +84,39 @@ public class SignatureConfig {
 	public void setPathToZip(String pathToZip) {
 		this.pathToZip = pathToZip;
 	}
+
+	public String getNameFapsLogo() {
+		return nameFapsLogo;
+	}
+
+	public void setNameFapsLogo(String nameFapsLogo) {
+		this.nameFapsLogo = nameFapsLogo;
+	}
+
+	public String getNameEDPCLogo() {
+		return nameEDPCLogo;
+	}
+
+	public void setNameEDPCLogo(String nameEDPCLogo) {
+		this.nameEDPCLogo = nameEDPCLogo;
+	}
+
+	public String getNameMidLogo() {
+		return nameMidLogo;
+	}
+
+	public void setNameMidLogo(String nameMidLogo) {
+		this.nameMidLogo = nameMidLogo;
+	}
+
+	public String getNameOwnerFile() {
+		return nameOwnerFile;
+	}
+
+	public void setNameOwnerFile(String nameOwnerFile) {
+		this.nameOwnerFile = nameOwnerFile;
+	}
+	
+
 
 }
