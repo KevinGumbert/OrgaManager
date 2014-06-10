@@ -31,6 +31,7 @@ public class OmModel {
 
 	private OmConfig config;
 	private SignatureConfig signatureConfig;
+	private OmUtilities omUtilities;
 	private boolean isAuthorized;
 
 	public OmModel() {
@@ -201,7 +202,13 @@ public class OmModel {
 	}
 	
 	public boolean doSignatures() {
+		
 		signatureConfig = new SignatureConfig();
+		omUtilities = new OmUtilities();
+		
+		//delete existing signatures before starting
+		omUtilities.deleteFilesFromFolder(signatureConfig.getPathToSignatures());
+		
 		
 		//String workingDir = System.getProperty("user.home");
 		
@@ -222,13 +229,13 @@ public class OmModel {
 //				int stateSave = fcSave.showSaveDialog(null);
 //				if (stateSave == JFileChooser.APPROVE_OPTION) {
 //					String pathToZip = fcSave.getSelectedFile().getPath();
+//				}
 				
-//				
-				signatureList.getSignaturesAsArchive(signatureConfig.getPathToZip(), signatureConfig.getPathToSignatures());
+					signatureList.getSignaturesAsArchive(signatureConfig.getPathToZip(), signatureConfig.getPathToSignatures());
 					JOptionPane.showMessageDialog(null,
 							"Zip-Datei wurde angelegt!",
 							"Operation abgeschlossen", JOptionPane.PLAIN_MESSAGE); 
-//				}
+
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
