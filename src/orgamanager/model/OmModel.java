@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
@@ -210,17 +211,17 @@ public class OmModel {
 		omUtilities.deleteFilesFromFolder(signatureConfig.getPathToSignatures());
 		
 		
-		//String workingDir = System.getProperty("user.home");
+	
 		
-		JFileChooser fc = new JFileChooser(signatureConfig.getWorkungDir());
 		
+		
+		JFileChooser fc = new JFileChooser(signatureConfig.getWorkungDir()); //String workingDir = System.getProperty("user.home");
 		fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-		
 		int state = fc.showOpenDialog(null);
 		if (state == JFileChooser.APPROVE_OPTION) {
-			String resourcesFolderPath = fc.getSelectedFile().getPath();
+			String resourcesFolderPath = fc.getSelectedFile().getPath();//path to resources
 			try{
-				String fileName = "owners.xml"; 
+				String fileName = signatureConfig.getNameOwnerFile();//"owners.xml"; 
 				SignatureList signatureList = new SignatureList(resourcesFolderPath, fileName);
 				
 				//commented dialog: asks where to store the .zip file that includes signature
@@ -230,6 +231,16 @@ public class OmModel {
 //				if (stateSave == JFileChooser.APPROVE_OPTION) {
 //					String pathToZip = fcSave.getSelectedFile().getPath();
 //				}
+				
+				//comboBox menu
+				String[] namesOfOwners = signatureList.getNamesOfOwners();
+
+				//Create the combo box, select item at index 4.
+				//Indices start at 0, so 4 specifies the pig.
+				JComboBox listOfOwners = new JComboBox(namesOfOwners);				
+				listOfOwners.addActionListener(listOfOwners);
+			
+				
 				
 					signatureList.getSignaturesAsArchive(signatureConfig.getPathToZip(), signatureConfig.getPathToSignatures());
 					JOptionPane.showMessageDialog(null,
