@@ -1,5 +1,7 @@
 package orgamanager.model;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -13,17 +15,17 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 
 import orgamanager.config.OmConfig;
+import orgamanager.config.SignatureConfig;
 import orgamanager.config.WebAttachmentConfig;
 import orgamanager.model.development.selenium.ehc.EhcTests;
 import orgamanager.model.development.selenium.joba.JobaTests;
 import orgamanager.model.development.selenium.skp.SkpTests;
 import orgamanager.model.publications.PublicationsList;
-import orgamanager.model.signatures.*;
+import orgamanager.model.signatures.SignatureList;
 import orgamanager.model.webAttachment.UploadTask;
 import orgamanager.tests.OmModelTest;
 import orgamanager.utilities.OmOperatingSystemConstant;
 import orgamanager.utilities.OmUtilities;
-import orgamanager.config.SignatureConfig;
 
 /**
  * OmModel represents the API which got invoked from a corresponding controller.
@@ -39,8 +41,6 @@ public class OmModel {
 		config = new OmConfig();
 		isAuthorized = false;
 	}
-
-
 
 	public boolean doLogin(String username, String password) {
 		if (username.equals(config.getUsername()) && password.equals(config.getPassword())) {
@@ -207,24 +207,25 @@ public class OmModel {
 		signatureConfig = new SignatureConfig();
 		omUtilities = new OmUtilities();
 		
-		//delete existing signatures before starting
+		// delete existing signatures before starting
 		omUtilities.deleteFilesFromFolder(signatureConfig.getPathToSignatures());
 		
-		
-	
-		
-		
-		
-		JFileChooser fc = new JFileChooser(signatureConfig.getWorkungDir()); //String workingDir = System.getProperty("user.home");
+		// ask for resource folder
+		JFileChooser fc = new JFileChooser(signatureConfig.getWorkungDir()); 
+		// TODO check if this can be guessed, maybe: String workingDir = System.getProperty("user.home");
 		fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 		int state = fc.showOpenDialog(null);
 		if (state == JFileChooser.APPROVE_OPTION) {
-			String resourcesFolderPath = fc.getSelectedFile().getPath();//path to resources
+			String resourcesFolderPath = fc.getSelectedFile().getPath();// path to resources
 			try{
-				String fileName = signatureConfig.getNameOwnerFile();//"owners.xml"; 
+				String fileName = signatureConfig.getNameOwnerFile(); // owners.xml; 
 				SignatureList signatureList = new SignatureList(resourcesFolderPath, fileName);
+				// TODO ask for user to pick or all users
 				
-				//commented dialog: asks where to store the .zip file that includes signature
+				// note: roaming dir C:\Users\jobauer\AppData\Roaming\Microsoft\Signatures
+				
+				// TODO save files in Outlook Roaming directory for one user
+				// commented dialog: asks where to store the .zip file that includes signature
 //				JFileChooser fcSave = new JFileChooser(workingDir);
 				// get pathToZip where the signature.zip will be saved
 //				int stateSave = fcSave.showSaveDialog(null);
@@ -232,20 +233,38 @@ public class OmModel {
 //					String pathToZip = fcSave.getSelectedFile().getPath();
 //				}
 				
-				//comboBox menu
+				// comboBox menu
 				String[] namesOfOwners = signatureList.getNamesOfOwners();
-
+				
 				//Create the combo box, select item at index 4.
 				//Indices start at 0, so 4 specifies the pig.
-				JComboBox listOfOwners = new JComboBox(namesOfOwners);				
-				listOfOwners.addActionListener(listOfOwners);
-			
-				
-				
-					signatureList.getSignaturesAsArchive(signatureConfig.getPathToZip(), signatureConfig.getPathToSignatures());
-					JOptionPane.showMessageDialog(null,
-							"Zip-Datei wurde angelegt!",
-							"Operation abgeschlossen", JOptionPane.PLAIN_MESSAGE); 
+				JComboBox listOfOwners = new JComboBox();
+				for (String item : namesOfOwners){
+					listOfOwners.addItem(item);
+				}
+				// extra options to add
+				listOfOwners.addItem("Ende");
+				Object[] message = {"Choose:\n", listOfOwners};
+			    int resp = JOptionPane.showConfirmDialog(null, message, "Test",
+			                JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+//				listOfOwners.addActionListener(
+//						new ActionListener() {
+//							@Override
+//							public void actionPerformed(ActionEvent e) {
+//								JComboBox selectedChoice = (JComboBox) e.getSource();
+//								// process input 
+//								if ("Ende".equals(selectedChoice.getSelectedItem())){
+//									System.out.println("BP0");
+//									System.exit(0);
+//								}
+//							}
+//						}
+//				);
+				signatureList.getSignaturesAsArchive(signatureConfig.getPathToZip(), signatureConfig.getPathToSignatures());
+				JOptionPane.showMessageDialog(null,
+					"Zip-Datei wurde angelegt!",
+					"Operation abgeschlossen", 
+					JOptionPane.PLAIN_MESSAGE); 
 
 			} catch (Exception e) {
 				e.printStackTrace();

@@ -15,10 +15,10 @@ public class SignatureConfig {
 	private String nameOwnerFile;
 	
 	public SignatureConfig() {
-		this.setWorkungDir("C:\\Eclipse Workspace\\OrgaManager\\src\\");
-		this.setImgPathFapsLogo("file:\\" + getWorkungDir() + "orgamanager\\files\\signatures\\faps_logo.png");
-		this.setImgPathMidLogo("file:\\" +  getWorkungDir() + "orgamanager\\files\\signatures\\mid_logo.jpg");
-		this.setGifPathLogoEDPC("file:\\" +  getWorkungDir() + "orgamanager\\files\\signatures\\LogoEDPC.gif");
+		this.setWorkungDir("C:\\Users\\jobauer\\workspacejava\\OrgaManager\\src\\"); // Check
+		this.setImgPathFapsLogo("file:\\\\\\" + getWorkungDir() + "orgamanager\\files\\signatures\\faps_logo.png");
+		this.setImgPathMidLogo("file:\\\\\\" +  getWorkungDir() + "orgamanager\\files\\signatures\\mid_logo.jpg");
+		this.setGifPathLogoEDPC("file:\\\\\\" +  getWorkungDir() + "orgamanager\\files\\signatures\\LogoEDPC.gif");
 		this.setPathToResourceFolder(getWorkungDir() + "orgamanager\\files\\signatures");
 		this.setPathToSignatures(getWorkungDir() +"orgamanager\\files\\signatures");
 		this.setPathToZip(getPathToSignatures() +"\\signatures.zip");	

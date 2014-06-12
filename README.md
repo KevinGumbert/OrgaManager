@@ -33,6 +33,7 @@ Abhaengigkeiten bestehen zu folgenden Bibliotheken/Projekten [Properties - Add E
 [selenium: selenium.jar; jars aus lib-Verzeichnis]
 * SQLite und SQLite-JDBC - Datenbankdriver
 [sqlite-java, Version 3.7.2]
+* Zeichenencoding des Eclipse-Editors auf UTF-8 setzen
 
 Pakete controller, model und view
 ---------------------------------
