@@ -28,7 +28,6 @@ public class Main {
 		// run by cd in dist and call java -jar orga-manager.jar (Swing-UI);
 		// run with param java -jar orga-manager.jar -tui for terminal UI, i.e. for ssh access on the raspberry pi;
 		
-		
 		String params = "";
 		boolean isTui = false;
 		for(int i=0; i<args.length; i++){
