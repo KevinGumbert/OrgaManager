@@ -1,19 +1,6 @@
 package orgamanager.utilities;
 
 import java.io.*;
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.io.Reader;
-import java.io.UnsupportedEncodingException;
-import java.io.Writer;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.sql.Connection;
@@ -65,8 +52,6 @@ public class OmUtilities {
         in.close();
 		return content;
 	}
-	
-	
 	
 	public String cutStringAfterFirstOccuranceOfDelimiter(String fullString, char delimiter){
 		String shortString = "";
@@ -245,6 +230,34 @@ public class OmUtilities {
 		} else {
 			return false;
 		}
+				
+	}
+	
+	public void deleteFilesFromFolder(String pathToFolder){
+		
+		SignatureConfig signatureConfig = new SignatureConfig();
+		
+		File folder = new File(pathToFolder);
+		File[] filesInFolder = folder.listFiles();
+		
+		
+		for (int i = 0; i < filesInFolder.length; i++) {
+			try {
+				// Files that shouldn't be deleted
+				if (filesInFolder[i].getName().contains(signatureConfig.getNameFapsLogo()) 
+						|| filesInFolder[i].getName().contains(signatureConfig.getNameEDPCLogo())
+						|| filesInFolder[i].getName().contains(signatureConfig.getNameMidLogo())
+						|| filesInFolder[i].getName().contains(signatureConfig.getNameOwnerFile())) {
+					
+					continue;					
+				}
+				
+				filesInFolder[i].delete();		
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}					
+		}
 	}
 	
 	public String getProperty(String key){
@@ -390,6 +403,21 @@ public class OmUtilities {
 			}
 		}
 	}
+	
+	public String translateToEnglish(String word){
+	
+		if(word.contains("Nürnberg")){
+			word = word.replace("ürn", "urem");
+		}else {
+			word = word.replace("ä", "ae");
+			word = word.replace("ö", "oe");
+			word = word.replace("ü", "ue");	
+		}
+	
+		return word;
+	}
+	
+	
 	
 	// TODO delete when other dialog wizards are existing
 //	public String askForInvoiceJob(InvoicingParty party) {
