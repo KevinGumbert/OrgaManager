@@ -1,8 +1,10 @@
 package orgamanager.model.signatures;
 
 import java.util.ArrayList;
+
 import orgamanager.utilities.*;
 import orgamanager.config.SignatureConfig;
+
 
 //TODO put this later to OmUtilities
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -18,21 +20,21 @@ import java.io.File;
 public class SignatureList {
 	OmUtilities omUtilities;
 	SignatureConfig signatureConfig;
-	ArrayList<SignatureOwner> owners;
+	private ArrayList<SignatureOwner> owners;
 	ArrayList<Signature> signatures;
 
 	public SignatureList(String pathToResourceFolder, String fileName) {
 		omUtilities = new OmUtilities();
 		signatureConfig = new SignatureConfig();		
-		owners = new ArrayList<SignatureOwner>();
+		setOwners(new ArrayList<SignatureOwner>());
 		signatures =  new ArrayList<Signature>();
 		
 		//create signatures for each owner
 		String pathToOwnerFile = pathToResourceFolder + "\\" + fileName; 
-		owners = parseXmlFile(pathToOwnerFile);
+		setOwners(parseXmlFile(pathToOwnerFile));
 		signatures = new ArrayList<Signature>();
 		
-		createAndSaveSignatures(owners, pathToResourceFolder);
+		createAndSaveSignatures(getOwners(), pathToResourceFolder);
 		
 		
 		//code for HTML-Signatures
@@ -129,13 +131,13 @@ public class SignatureList {
 							title,
 							id);
 					
-					owners.add(signatureOwner);					
+					getOwners().add(signatureOwner);					
 				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return owners;
+		return getOwners();
 	}
 	
 	private void createAndSaveSignatures(ArrayList<SignatureOwner> owners, String pathToResourceFolder){
@@ -269,4 +271,27 @@ public class SignatureList {
 		}
 		return null;
 	}
+
+	
+	private ArrayList<SignatureOwner> getOwners() {
+		return owners;
+	}
+
+	
+	private void setOwners(ArrayList<SignatureOwner> owners) {
+		this.owners = owners;
+	}
+
+	public String[] getNamesOfOwners(){
+	
+		String[] namesOfOwners = new String[200];
+		
+	for (SignatureOwner currentOwner : getOwners()) {
+		for (int pos = 0; pos < namesOfOwners.length; pos++) {
+			namesOfOwners[pos]= currentOwner.getLastname() + "," + currentOwner.getFirstname();
+		}		
+	}		
+		return namesOfOwners;
+	}
+
 }
