@@ -282,15 +282,13 @@ public class SignatureList {
 		this.owners = owners;
 	}
 
-	public String[] getNamesOfOwners(){
-	
+	public String[] getNamesOfOwners() {
 		String[] namesOfOwners = new String[200];
-		
-	for (SignatureOwner currentOwner : getOwners()) {
-		for (int pos = 0; pos < namesOfOwners.length; pos++) {
-			namesOfOwners[pos]= currentOwner.getLastname() + "," + currentOwner.getFirstname();
-		}		
-	}		
+		for (SignatureOwner currentOwner : getOwners()) {
+			for (int pos = 0; pos < namesOfOwners.length; pos++) {
+				namesOfOwners[pos] = currentOwner.getLastname() + "," + currentOwner.getFirstname();
+			}
+		}
 		return namesOfOwners;
 	}
 
