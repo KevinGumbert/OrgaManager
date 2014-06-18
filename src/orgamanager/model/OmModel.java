@@ -296,6 +296,30 @@ public class OmModel {
         return true;
     }
     
+    
+    
+    public boolean doEhcWebAppGrabAirQuality(){
+    	// TODO
+        OmUtilities utils = new OmUtilities();
+        String fhemServerIp = config.getDevelopmentFhemServerIp();
+        String targetURL = "http://" + fhemServerIp + ":8083/fhem";
+        String urlParameters = "cmd.steckdose=set Ventilator off&room=Infotainment";
+        String res = utils.executeHttpPost(targetURL, urlParameters);
+        System.out.println("HTTP-Response: " + res);
+        return true;
+    }
+    
+    public boolean doEhcWebAppGrabJawboneUpData(){
+    	// TODO
+        OmUtilities utils = new OmUtilities();
+        String fhemServerIp = config.getDevelopmentFhemServerIp();
+        String targetURL = "http://" + fhemServerIp + ":8083/fhem";
+        String urlParameters = "cmd.steckdose=set Ventilator off&room=Infotainment";
+        String res = utils.executeHttpPost(targetURL, urlParameters);
+        System.out.println("HTTP-Response: " + res);
+        return true;
+    }
+    
     public boolean doEhcWebAppSelfInstall(){
         JOptionPane.showMessageDialog(null, "BP0", "Debug", JOptionPane.WARNING_MESSAGE);
         // configuration access data
