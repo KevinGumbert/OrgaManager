@@ -399,10 +399,18 @@ public class OmModel {
 	
 	public String doEhcWebAppJsonApiAccess(int... optionalUseCaseParam){
 		OmUtilities utils = new OmUtilities();
+		String serverIp = "131.188.209.50";
+		String username = "xxx";
+		String password = "yyy";
 		String targetURL = "";
 		String urlParameters = "";
 		if (optionalUseCaseParam[0] == 1){ // check connection
-			targetURL = "http://ehcserver.local/ehomejson/";
+			targetURL += "http://";
+			targetURL += serverIp;
+			targetURL += "/ehomejson/temp/";
+			targetURL += username;
+			targetURL += "/";
+			targetURL += password;
 			String response = utils.executeHttpPost(targetURL, urlParameters);
 			return response;
 		} else if (optionalUseCaseParam[0] == 2){

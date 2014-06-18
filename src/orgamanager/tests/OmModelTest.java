@@ -345,10 +345,10 @@ public class OmModelTest {
 	@Test
 	public void doEhcWebAppJsonApiAccessTest(){
 		OmModel model = new OmModel();
-		// Test 0: check connection
-//		String act0 = model.doEhcWebAppJsonApiAccess(1).trim();
-//		String exp0 = "{\"connection\":\"ok\"}"; // {"connection":"ok"}
-//		assertEquals("doEhcWebAppJsonApiAccessTest-0", exp0, act0);
+		// Test 0: check connection, runs!
+		String act0 = model.doEhcWebAppJsonApiAccess(1).trim();
+		String exp0 = "{\"connection\":\"ok\"}"; // {"connection":"ok"}
+		assertEquals("doEhcWebAppJsonApiAccessTest-0", exp0, act0);
 		
 		// Test 1: trigger event through webapp, ehcserver.local/ehomejson/togglelightone/1
 //		String act1 = model.doEhcWebAppJsonApiAccess(2).trim();
@@ -357,9 +357,9 @@ public class OmModelTest {
 		
 		// TODO: create test suite for fhem 
 		// Test 1: trigger event through fhem, $uri = 'http://' . $ip . ':8083/fhem?cmd.steckdose=set steckdose on&room=Buero'; 
-		String act1 = model.doEhcWebAppJsonApiAccess(3).trim();
-		String exp1 = "Test";
-		assertEquals("doEhcWebAppJsonApiAccessTest-2", exp1, act1);
+//		String act1 = model.doEhcWebAppJsonApiAccess(3).trim();
+//		String exp1 = "Test";
+//		assertEquals("doEhcWebAppJsonApiAccessTest-2", exp1, act1);
 	}
 	
 	@Test
