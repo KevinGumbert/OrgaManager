@@ -151,105 +151,109 @@ public class SignatureList {
 				
 				String firstLastName = owner.getLastname()+"_"+owner.getFirstname();
 				
+				//create a folder for each sognature owner
+				File signatureFolder = new File(pathToResourceFolder + "\\" + firstLastName);
+				signatureFolder.mkdir();						    
+				
 				//create signature.txt
 				Signature fapsDetxtSig = new Signature();
 				String txtSignature = fapsDetxtSig.getSignatureAsString(owner);
-				omUtilities.createFileAndSave(pathToResourceFolder, firstLastName+"_FAPS_de.txt");
-				omUtilities.printStringToFile(txtSignature, pathToResourceFolder + "\\" + firstLastName+"_FAPS_de.txt");
+				omUtilities.createFileAndSave(signatureFolder.getAbsolutePath(), firstLastName+"_FAPS_de.txt");
+				omUtilities.printStringToFile(txtSignature, signatureFolder.getAbsolutePath() + "\\" + firstLastName+"_FAPS_de.txt");
 				
 				//create signatureMFG.txt
 				Signature fapsDetxtSigMFG = new Signature();
 				String txtSignatureMFG = fapsDetxtSigMFG.getSignatureAsStringMFG(owner);
-				omUtilities.createFileAndSave(pathToResourceFolder, firstLastName+"_FAPS_de_MFG.txt");
-				omUtilities.printStringToFile(txtSignatureMFG, pathToResourceFolder+ "\\" +firstLastName+"_FAPS_de_MFG.txt");
+				omUtilities.createFileAndSave(signatureFolder.getAbsolutePath(), firstLastName+"_FAPS_de_MFG.txt");
+				omUtilities.printStringToFile(txtSignatureMFG, signatureFolder.getAbsolutePath()+ "\\" +firstLastName+"_FAPS_de_MFG.txt");
 				
 				//create signatureVeranst.txt
 				Signature fapsDetxtSigVeranst = new Signature();
 				String txtSignatureVeranst = fapsDetxtSigVeranst.getSignatureAsStringVeranst(owner);
-				omUtilities.createFileAndSave(pathToResourceFolder, firstLastName+"_FAPS_de_Veranst.txt");
-				omUtilities.printStringToFile(txtSignatureVeranst, pathToResourceFolder + "\\" + firstLastName+"_FAPS_de_Veranst.txt");
+				omUtilities.createFileAndSave(signatureFolder.getAbsolutePath(), firstLastName+"_FAPS_de_Veranst.txt");
+				omUtilities.printStringToFile(txtSignatureVeranst, signatureFolder.getAbsolutePath() + "\\" + firstLastName+"_FAPS_de_Veranst.txt");
 				
 				//create signatureVeranstMFG.txt
 				Signature fapsDetxtSigVeranstMFG = new Signature();
 				String txtSignatureVeranstMFG = fapsDetxtSigVeranstMFG.getSignatureAsStringVeranstMFG(owner);
-				omUtilities.createFileAndSave(pathToResourceFolder, firstLastName+"_FAPS_de_Veranst_MFG.txt");
-				omUtilities.printStringToFile(txtSignatureVeranstMFG, pathToResourceFolder + "\\" + firstLastName+"_FAPS_de_Veranst_MFG.txt");
+				omUtilities.createFileAndSave(signatureFolder.getAbsolutePath(), firstLastName+"_FAPS_de_Veranst_MFG.txt");
+				omUtilities.printStringToFile(txtSignatureVeranstMFG, signatureFolder.getAbsolutePath() + "\\" + firstLastName+"_FAPS_de_Veranst_MFG.txt");
 					
 				//create signatureEng.html
 				Signature fapsEngtxtSig = new Signature();
 				String txtSignatureEng = fapsEngtxtSig.getSignatureAsStringEng(owner);
-				omUtilities.createFileAndSave(pathToResourceFolder, firstLastName+"_FAPS_eng.txt");
-				omUtilities.printStringToFile(txtSignatureEng, pathToResourceFolder + "\\" + firstLastName+"_FAPS_eng.txt");
+				omUtilities.createFileAndSave(signatureFolder.getAbsolutePath(), firstLastName+"_FAPS_eng.txt");
+				omUtilities.printStringToFile(txtSignatureEng, signatureFolder.getAbsolutePath() + "\\" + firstLastName+"_FAPS_eng.txt");
 				
 				//create signatureBR.txt
 				Signature fapsEngtxtSigMFG = new Signature();
 				String txtSignatureBR = fapsEngtxtSigMFG.getSignatureAsStringEngBR(owner);
-				omUtilities.createFileAndSave(pathToResourceFolder, firstLastName+"_FAPS_eng_BR.txt");
-				omUtilities.printStringToFile(txtSignatureBR, pathToResourceFolder + "\\" + firstLastName+"_FAPS_eng_BR.txt");
+				omUtilities.createFileAndSave(signatureFolder.getAbsolutePath(), firstLastName+"_FAPS_eng_BR.txt");
+				omUtilities.printStringToFile(txtSignatureBR, signatureFolder.getAbsolutePath() + "\\" + firstLastName+"_FAPS_eng_BR.txt");
 				
 				//create signatureVeranstEng.txt
 				Signature fapsEngtxtSigVeranst = new Signature();
 				String txtSignatureVeranstEng = fapsEngtxtSigVeranst.getSignatureAsStringVeranstEng(owner);
-				omUtilities.createFileAndSave(pathToResourceFolder, firstLastName+"_FAPS_eng_Veranst.txt");
-				omUtilities.printStringToFile(txtSignatureVeranstEng, pathToResourceFolder + "\\" + firstLastName+"_FAPS_eng_Veranst.txt");
+				omUtilities.createFileAndSave(signatureFolder.getAbsolutePath(), firstLastName+"_FAPS_eng_Veranst.txt");
+				omUtilities.printStringToFile(txtSignatureVeranstEng, signatureFolder.getAbsolutePath() + "\\" + firstLastName+"_FAPS_eng_Veranst.txt");
 				
 				
 				//create signatureVeranstEngBR.txt
 				Signature fapsEngtxtSigVeranstBR = new Signature();
 				String txtSignatureVeranstEngBR = fapsEngtxtSigVeranstBR.getSignatureAsStringVeranstEngBR(owner);
-				omUtilities.createFileAndSave(pathToResourceFolder, firstLastName+"_FAPS_eng_Veranst_BR.txt");
-				omUtilities.printStringToFile(txtSignatureVeranstEngBR, pathToResourceFolder + "\\" + firstLastName+"_FAPS_eng_Veranst_BR.txt");
+				omUtilities.createFileAndSave(signatureFolder.getAbsolutePath(), firstLastName+"_FAPS_eng_Veranst_BR.txt");
+				omUtilities.printStringToFile(txtSignatureVeranstEngBR, signatureFolder.getAbsolutePath() + "\\" + firstLastName+"_FAPS_eng_Veranst_BR.txt");
 				
 				
 				
 				//create signature.html
 				Signature fapsDeHtmlSig = new Signature();
 				String htmlSignature = fapsDeHtmlSig.getSignatureAsStringHtml(owner);
-				omUtilities.createFileAndSave(pathToResourceFolder, firstLastName+"_FAPS_de.html");
-				omUtilities.printStringToFile(htmlSignature, pathToResourceFolder + "\\" + firstLastName+"_FAPS_de.html");
+				omUtilities.createFileAndSave(signatureFolder.getAbsolutePath(), firstLastName+"_FAPS_de.html");
+				omUtilities.printStringToFile(htmlSignature, signatureFolder.getAbsolutePath() + "\\" + firstLastName+"_FAPS_de.html");
 				
 				//create signatureMFG.html
 				Signature fapsDeHtmlSigMFG = new Signature();
 				String htmlSignatureMFG = fapsDeHtmlSigMFG.getSignatureAsStringHtmlMFG(owner);
-				omUtilities.createFileAndSave(pathToResourceFolder, firstLastName+"_FAPS_de_MFG.html");
-				omUtilities.printStringToFile(htmlSignatureMFG, pathToResourceFolder + "\\" + firstLastName+"_FAPS_de_MFG.html");
+				omUtilities.createFileAndSave(signatureFolder.getAbsolutePath(), firstLastName+"_FAPS_de_MFG.html");
+				omUtilities.printStringToFile(htmlSignatureMFG, signatureFolder.getAbsolutePath() + "\\" + firstLastName+"_FAPS_de_MFG.html");
 				
 				//create signatureVeranst.html
 				Signature fapsDeHtmlSigVeranst = new Signature();
 				String htmlSignatureVeranst = fapsDeHtmlSigVeranst.getSignatureAsStringHtmlVeranst(owner);
-				omUtilities.createFileAndSave(pathToResourceFolder, firstLastName+"_FAPS_de_Veranst.html");
-				omUtilities.printStringToFile(htmlSignatureVeranst, pathToResourceFolder + "\\" + firstLastName+"_FAPS_de_Veranst.html");
+				omUtilities.createFileAndSave(signatureFolder.getAbsolutePath(), firstLastName+"_FAPS_de_Veranst.html");
+				omUtilities.printStringToFile(htmlSignatureVeranst, signatureFolder.getAbsolutePath() + "\\" + firstLastName+"_FAPS_de_Veranst.html");
 				
 				
 				//create signatureVeranstMFG.html
 				Signature fapsDeHtmlSigVeranstMFG = new Signature();
 				String htmlSignatureVeranstMFG = fapsDeHtmlSigVeranstMFG.getSignatureAsStringHtmlVeranstMFG(owner);
-				omUtilities.createFileAndSave(pathToResourceFolder, firstLastName+"_FAPS_de_Veranst_MFG.html");
-				omUtilities.printStringToFile(htmlSignatureVeranstMFG, pathToResourceFolder + "\\" + firstLastName+"_FAPS_de_Veranst_MFG.html");
+				omUtilities.createFileAndSave(signatureFolder.getAbsolutePath(), firstLastName+"_FAPS_de_Veranst_MFG.html");
+				omUtilities.printStringToFile(htmlSignatureVeranstMFG, signatureFolder.getAbsolutePath() + "\\" + firstLastName+"_FAPS_de_Veranst_MFG.html");
 										
 				//create signatureEng.html
 				Signature fapsEngHtmlSig = new Signature();
 				String htmlSignatureEng = fapsEngHtmlSig.getSignatureAsStringHtmlEng(owner);
-				omUtilities.createFileAndSave(pathToResourceFolder, firstLastName+"_FAPS_eng.html");
-				omUtilities.printStringToFile(htmlSignatureEng, pathToResourceFolder + "\\" + firstLastName+"_FAPS_eng.html");
+				omUtilities.createFileAndSave(signatureFolder.getAbsolutePath(), firstLastName+"_FAPS_eng.html");
+				omUtilities.printStringToFile(htmlSignatureEng, signatureFolder.getAbsolutePath() + "\\" + firstLastName+"_FAPS_eng.html");
 			
 				//create signatureEngBR.html
 				Signature fapsEngHtmlSigBR = new Signature();
 				String htmlSignatureEngBR = fapsEngHtmlSigBR.getSignatureAsStringHtmlEngBR(owner);
-				omUtilities.createFileAndSave(pathToResourceFolder, firstLastName+"_FAPS_eng_BR.html");
-				omUtilities.printStringToFile(htmlSignatureEngBR, pathToResourceFolder + "\\" + firstLastName+"_FAPS_eng_BR.html");
+				omUtilities.createFileAndSave(signatureFolder.getAbsolutePath(), firstLastName+"_FAPS_eng_BR.html");
+				omUtilities.printStringToFile(htmlSignatureEngBR, signatureFolder.getAbsolutePath() + "\\" + firstLastName+"_FAPS_eng_BR.html");
 				
 				//create signatureVeranstEng.html
 				Signature fapsEngHtmlSigVeranst = new Signature();
 				String htmlSignatureVeranstEng = fapsEngHtmlSigVeranst.getSignatureAsStringHtmlVeranstEng(owner);
-				omUtilities.createFileAndSave(pathToResourceFolder, firstLastName+"_FAPS_eng_Veranst.html");
-				omUtilities.printStringToFile(htmlSignatureVeranstEng, pathToResourceFolder + "\\" + firstLastName+"_FAPS_eng_Veranst.html");
+				omUtilities.createFileAndSave(signatureFolder.getAbsolutePath(), firstLastName+"_FAPS_eng_Veranst.html");
+				omUtilities.printStringToFile(htmlSignatureVeranstEng, signatureFolder.getAbsolutePath() + "\\" + firstLastName+"_FAPS_eng_Veranst.html");
 				
 				//create signatureVeranstEngBR.html
 				Signature fapsEngHtmlSigVeranstBR = new Signature();
 				String htmlSignatureVeranstEngBR = fapsEngHtmlSigVeranstBR.getSignatureAsStringHtmlVeranstEngBR(owner);
-				omUtilities.createFileAndSave(pathToResourceFolder,firstLastName+"_FAPS_eng_Veranst_BR.html");
-				omUtilities.printStringToFile(htmlSignatureVeranstEngBR, pathToResourceFolder+ "\\" +firstLastName+"_FAPS_eng_Veranst_BR.html");
+				omUtilities.createFileAndSave(signatureFolder.getAbsolutePath(),firstLastName+"_FAPS_eng_Veranst_BR.html");
+				omUtilities.printStringToFile(htmlSignatureVeranstEngBR, signatureFolder.getAbsolutePath()+ "\\" +firstLastName+"_FAPS_eng_Veranst_BR.html");
 				
 			}	
 			
@@ -258,18 +262,25 @@ public class SignatureList {
 		}
 	}
 		
-	public String getSignaturesAsArchive(String pathToZip, String pathToSignatureFile) { 
+	
+	public void getSignaturesAsArchive(String pathToZipFile, String pathToSignatures, String signaturesToZip) { 
 		// Ziel: Archivdatei bilden
+//		try {
+//			OmUtilities omutilities = new OmUtilities();
+//			File folder = new File(pathToSignatureFile); 
+//			File[] files = folder.listFiles();
+//			File file = new File(pathToZip);
+//			omutilities.createZip(file, files, signaturesToZip);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+		
 		try {
-			OmUtilities omutilities = new OmUtilities();
-			File folder = new File(pathToSignatureFile); 
-			File[] files = folder.listFiles();
-			File file = new File(pathToZip);
-			omutilities.createZip(file, files);
+			ZipDirectory zipDirectory = new ZipDirectory(pathToZipFile, pathToSignatures);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return null;
+        
 	}
 
 	
@@ -282,13 +293,15 @@ public class SignatureList {
 		this.owners = owners;
 	}
 
-	public String[] getNamesOfOwners() {
-		String[] namesOfOwners = new String[200];
-		for (SignatureOwner currentOwner : getOwners()) {
-			for (int pos = 0; pos < namesOfOwners.length; pos++) {
-				namesOfOwners[pos] = currentOwner.getLastname() + "," + currentOwner.getFirstname();
-			}
+	public ArrayList<String> getNamesOfOwners() {
+				
+		ArrayList<String> namesOfOwners = new ArrayList<String>();
+		
+		for (int pos = 0; pos < getOwners().size(); pos++) {
+			namesOfOwners.add(getOwners().get(pos).getLastname() + "_" + getOwners().get(pos).getFirstname());
 		}
+		
+		namesOfOwners.add("Alle");
 		return namesOfOwners;
 	}
 

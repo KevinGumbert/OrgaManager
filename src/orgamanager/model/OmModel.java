@@ -208,7 +208,7 @@ public class OmModel {
 		omUtilities = new OmUtilities();
 		
 		// delete existing signatures before starting
-		omUtilities.deleteFilesFromFolder(signatureConfig.getPathToSignatures());
+		omUtilities.deleteFolders(new File(signatureConfig.getPathToSignatures()));
 		
 		// ask for resource folder
 		JFileChooser fc = new JFileChooser(signatureConfig.getWorkungDir()); 
@@ -220,7 +220,32 @@ public class OmModel {
 			try{
 				String fileName = signatureConfig.getNameOwnerFile(); // owners.xml; 
 				SignatureList signatureList = new SignatureList(resourcesFolderPath, fileName);
-				// TODO ask for user to pick or all users
+				
+				   //Ask users to pick or all names 				
+				Object[] namesToSelect = signatureList.getNamesOfOwners().toArray();				
+			    Object selectedValue = JOptionPane.showInputDialog(null,
+			    		"Auswahl", "Wählen Sie den Namen aus",
+			    		JOptionPane.INFORMATION_MESSAGE, null,
+			    		namesToSelect, namesToSelect[0]);
+			    
+			    if (selectedValue != null) { // OK was clicked
+					
+			    	
+			    	String selectedChoise = selectedValue.toString();
+			    	
+			    	signatureList.getSignaturesAsArchive(signatureConfig.getPathToZip(), signatureConfig.getPathToSignatures(), selectedChoise);
+					JOptionPane.showMessageDialog(null,
+						"Zip-Datei wurde angelegt!",
+						"Operation abgeschlossen", 
+						JOptionPane.PLAIN_MESSAGE); 
+			    	
+				}else {
+				
+					JOptionPane.showMessageDialog(null,
+							"Sie haben keinen Namen ausgewaehlt. Klicken Sie auf X falls Sie das Programm beenden moechten. ",
+							"Ressourcenverzeichnis", JOptionPane.WARNING_MESSAGE); 
+				}
+				
 				
 				// note: roaming dir C:\Users\jobauer\AppData\Roaming\Microsoft\Signatures
 				
@@ -233,38 +258,12 @@ public class OmModel {
 //					String pathToZip = fcSave.getSelectedFile().getPath();
 //				}
 				
-				// comboBox menu
-				String[] namesOfOwners = signatureList.getNamesOfOwners();
-				
-				//Create the combo box, select item at index 4.
-				//Indices start at 0, so 4 specifies the pig.
-				JComboBox listOfOwners = new JComboBox();
-				for (String item : namesOfOwners){
-					listOfOwners.addItem(item);
-				}
-				// extra options to add
-				listOfOwners.addItem("Ende");
-				Object[] message = {"Choose:\n", listOfOwners};
-			    int resp = JOptionPane.showConfirmDialog(null, message, "Test",
-			                JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
-//				listOfOwners.addActionListener(
-//						new ActionListener() {
-//							@Override
-//							public void actionPerformed(ActionEvent e) {
-//								JComboBox selectedChoice = (JComboBox) e.getSource();
-//								// process input 
-//								if ("Ende".equals(selectedChoice.getSelectedItem())){
-//									System.out.println("BP0");
-//									System.exit(0);
-//								}
-//							}
-//						}
-//				);
-				signatureList.getSignaturesAsArchive(signatureConfig.getPathToZip(), signatureConfig.getPathToSignatures());
-				JOptionPane.showMessageDialog(null,
-					"Zip-Datei wurde angelegt!",
-					"Operation abgeschlossen", 
-					JOptionPane.PLAIN_MESSAGE); 
+
+//				signatureList.getSignaturesAsArchive(signatureConfig.getPathToZip(), signatureConfig.getPathToSignatures(), selectedChoise);
+//				JOptionPane.showMessageDialog(null,
+//					"Zip-Datei wurde angelegt!",
+//					"Operation abgeschlossen", 
+//					JOptionPane.PLAIN_MESSAGE); 
 
 			} catch (Exception e) {
 				e.printStackTrace();

@@ -15,7 +15,7 @@ public class SignatureConfig {
 	private String nameOwnerFile;
 	
 	public SignatureConfig() {
-		this.setWorkungDir("C:\\Users\\jobauer\\workspacejava\\OrgaManager\\src\\"); // Check
+		this.setWorkungDir("C:\\Eclipse Workspace\\OrgaManager\\src\\"); // Check
 		this.setImgPathFapsLogo("file:\\\\\\" + getWorkungDir() + "orgamanager\\files\\signatures\\faps_logo.png");
 		this.setImgPathMidLogo("file:\\\\\\" +  getWorkungDir() + "orgamanager\\files\\signatures\\mid_logo.jpg");
 		this.setGifPathLogoEDPC("file:\\\\\\" +  getWorkungDir() + "orgamanager\\files\\signatures\\LogoEDPC.gif");
