@@ -8,6 +8,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
 import java.util.Scanner;
@@ -177,7 +179,14 @@ public class OmUtilities {
 		}
 	}
 	
-	public void createZip(File zipFile, File[] listFiles) {
+	
+	
+	
+	
+	public void createZip(File zipFile, File[] listFiles, String signaturesToZip) {
+		
+		
+		
 		SignatureConfig signatureConfig = new SignatureConfig();
 		int buffer = 10240;
 		try {
@@ -185,37 +194,69 @@ public class OmUtilities {
 			FileOutputStream fout = new FileOutputStream(zipFile);
 			ZipOutputStream out = new ZipOutputStream(fout);
 
-			for (int i = 0; i < listFiles.length; i++) {
-
-				if (listFiles[i] == null || !listFiles[i].exists()
-						|| listFiles[i].isDirectory())
-					System.out.println("There are no files to zip");
+			if (signaturesToZip == "Alle") { // zip all signatures
 				
-				// don't put this files into the .zip file
-				if (listFiles[i].getName().contains(signatureConfig.getNameFapsLogo()) 
+				for (int i = 0; i < listFiles.length; i++) {
+					
+					if (listFiles[i] == null || !listFiles[i].exists()
+						|| listFiles[i].isDirectory())
+						System.out.println("There are no files to zip");
+				
+					// don't put this files into the .zip file
+					if (listFiles[i].getName().contains(signatureConfig.getNameFapsLogo()) 
 						|| listFiles[i].getName().contains(signatureConfig.getNameEDPCLogo())
 						|| listFiles[i].getName().contains(signatureConfig.getNameMidLogo())
 						|| listFiles[i].getName().contains(signatureConfig.getNameOwnerFile())) {
 					
-					continue;					
-				}
+						continue;					
+					}
+					
+					ZipEntry addFiles = new ZipEntry(listFiles[i].getName());
+					addFiles.setTime(listFiles[i].lastModified());
+					out.putNextEntry(addFiles);
 
-				ZipEntry addFiles = new ZipEntry(listFiles[i].getName());
-				addFiles.setTime(listFiles[i].lastModified());
-				out.putNextEntry(addFiles);
-
-				FileInputStream fin = new FileInputStream(listFiles[i]);
-				while (true) {
-					int len = fin.read(b, 0, b.length);
-					if (len <= 0)
-						break;
-					out.write(b, 0, len);
+					FileInputStream fin = new FileInputStream(listFiles[i]);
+					while (true) {
+						int len = fin.read(b, 0, b.length);
+						if (len <= 0)
+							break;
+						out.write(b, 0, len);
+					}
+					fin.close();
 				}
-				fin.close();
+				out.close();
+				fout.close();
+				System.out.println("Zip File is created successfully.");
+				
+			}else{ // if only one name was chosen to be zipped
+				
+				for (int i = 0; i < listFiles.length; i++) {
+					
+					if (listFiles[i] == null || !listFiles[i].exists()
+							|| listFiles[i].isDirectory())
+							System.out.println("There are no files to zip");
+					
+					if (listFiles[i].getName().contains(signaturesToZip)) {
+						ZipEntry addFiles = new ZipEntry(listFiles[i].getName());
+						addFiles.setTime(listFiles[i].lastModified());
+						out.putNextEntry(addFiles);
+
+						FileInputStream fin = new FileInputStream(listFiles[i]);
+						while (true) {
+							int len = fin.read(b, 0, b.length);
+							if (len <= 0)
+								break;
+							out.write(b, 0, len);
+						}
+						fin.close();
+					}
+					out.close();
+					fout.close();
+					System.out.println("Zip File is created successfully.");
+					
+				}
 			}
-			out.close();
-			fout.close();
-			System.out.println("Zip File is created successfully.");
+			
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
@@ -233,25 +274,44 @@ public class OmUtilities {
 				
 	}
 	
-	public void deleteFilesFromFolder(String pathToFolder){
+	public void deleteFolders(File pathToFolders){
 		
 		SignatureConfig signatureConfig = new SignatureConfig();
+		try {
+			for ( File file : pathToFolders.listFiles() )
+		    {
+				if (file.getName().contains(signatureConfig.getNameFapsLogo()) 
+						|| file.getName().contains(signatureConfig.getNameEDPCLogo())
+						|| file.getName().contains(signatureConfig.getNameMidLogo())
+						|| file.getName().contains(signatureConfig.getNameOwnerFile())) {
+					
+					continue;					
+				}
+				
+		      if ( file.isDirectory() ){
+		    	  deleteFolders( file );
+		      }else
+		        if ( ! file.delete() ) {
+		          System.err.println( file + " could not be deleted!" );	    
+		        }
+		    }
+					
+			if ( ! pathToFolders.delete() )
+			      System.err.println( pathToFolders + " could not be deleted!" );
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}	
+	}
+	
+	public void deleteFilesFromFolder(String pathToFolder){
 		
 		File folder = new File(pathToFolder);
 		File[] filesInFolder = folder.listFiles();
 		
 		
 		for (int i = 0; i < filesInFolder.length; i++) {
-			try {
-				// Files that shouldn't be deleted
-				if (filesInFolder[i].getName().contains(signatureConfig.getNameFapsLogo()) 
-						|| filesInFolder[i].getName().contains(signatureConfig.getNameEDPCLogo())
-						|| filesInFolder[i].getName().contains(signatureConfig.getNameMidLogo())
-						|| filesInFolder[i].getName().contains(signatureConfig.getNameOwnerFile())) {
-					
-					continue;					
-				}
-				
+			try {				
 				filesInFolder[i].delete();		
 				
 			} catch (Exception e) {
