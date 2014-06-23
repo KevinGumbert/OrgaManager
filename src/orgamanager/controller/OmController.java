@@ -371,7 +371,7 @@ public class OmController {
 		ActionListener neuerAnwendungsbereichAction_1 = new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				doNeuerAnwendungsbereich();
+				doNeuerAnwendungsbereichButton1();
 			}
 		};
 		neuerAnwendungsbereichButton_1.addActionListener(neuerAnwendungsbereichAction_1);
@@ -487,6 +487,10 @@ public class OmController {
 	
 	public void doNeuerAnwendungsbereich(){
 		model.doNeuerAnwendungsbereich();
+	}
+	
+	public void doNeuerAnwendungsbereichButton1(){
+		model.doNeuerAnwendungsbereichButton1();
 	}
 	
 	public void doSignatures(){

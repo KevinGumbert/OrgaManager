@@ -402,4 +402,12 @@ public class OmModelTest {
 		assertEquals("doNeuerAnwendungsFall-0", exp1, act1);
 	}
 	
+	@Test
+	public void doNeuerAnwendungsbereichButton1Test(){
+		OmModel model = new OmModel();
+		boolean act1 = model.doNeuerAnwendungsbereichButton1();
+		boolean exp1 = true;
+		assertEquals("doNeuerAnwendungsFallButton1-0", exp1, act1);
+	}
+	
 }

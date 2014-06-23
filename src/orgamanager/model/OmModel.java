@@ -178,6 +178,20 @@ public class OmModel {
 		return false;
 	}
 	
+	public boolean doNeuerAnwendungsbereichButton1() {
+		System.out.println("doNeuerAnwendungsfallButton1 - begin");
+		OmUtilities utils = new OmUtilities();
+		String ip = "192.168.1.3";
+		String user = "XXX";
+		String pass = "XXX";
+		String targetURL = "http://" + ip + "/ehomejson/turnVentilatorOn/" + user + "/" + pass;
+		String urlParameters = "";
+		String res = utils.executeHttpPost(targetURL, urlParameters);
+		System.out.println("HTTP-Response: " + res);
+		System.out.println("doNeuerAnwendungsfallButton1 - end");
+		return true;
+	}
+	
 	public void doWebAttachment() {
 //		JOptionPane.showMessageDialog(null,
 //				"Waehlen Sie die Datei fuer den Anhang aus.",
