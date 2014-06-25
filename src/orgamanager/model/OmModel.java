@@ -192,6 +192,20 @@ public class OmModel {
 		return true;
 	}
 	
+	public boolean doNeuerAnwendungsbereichButton2() {
+		System.out.println("doNeuerAnwendungsfallButton2 - begin");
+		OmUtilities utils = new OmUtilities();
+		String ip = "10.11.12.1:8083";
+		//String user = "XXX";
+		//String pass = "XXX";
+		String targetURL = "http://" + ip + "/ZWaveAPI/Data/0";			// + user + "/" + pass; braucht man da denke ich nicht.
+		String urlParameters = "";
+		String res = utils.executeHttpPost(targetURL, urlParameters);
+		System.out.println("HTTP-Response: " + res);
+		System.out.println("doNeuerAnwendungsfallButton2 - end");
+		return true;
+	}
+	
 	public void doWebAttachment() {
 //		JOptionPane.showMessageDialog(null,
 //				"Waehlen Sie die Datei fuer den Anhang aus.",
